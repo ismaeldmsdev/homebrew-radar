@@ -1,0 +1,13 @@
+{
+  "name": "Homebrew Radar",
+  "short_name": "Radar",
+  "description": "Descubre homebrew para Nintendo 3DS, DSi y DS.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0d120e",
+  "theme_color": "#0d120e",
+  "icons": [
+    { "src": "./pwa-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" },
+    { "src": "./apple-touch-icon.png", "sizes": "180x180", "type": "image/png", "purpose": "any" }
+  ]
+}

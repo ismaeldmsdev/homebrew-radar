@@ -1,0 +1,62 @@
+name: Homebrew Radar — recopilar y publicar
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: homebrew-radar-pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Obtener el código
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Instalar dependencias
+        run: npm ci
+      - name: Ejecutar pruebas
+        run: npm test
+      - name: Recopilar proyectos de GitHub
+        run: npm run collect
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Guardar el catálogo actualizado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/projects.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualizar catálogo de Homebrew Radar"
+            git push
+          fi
+      - name: Compilar la web
+        run: npm run build
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Preparar artefacto de Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

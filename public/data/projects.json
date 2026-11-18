@@ -1,6 +1,51 @@
 {
-  "generatedAt": "2026-11-18T11:44:34.323Z",
+  "generatedAt": "2026-11-18T12:24:00.131Z",
   "projects": [
+    {
+      "id": 1405585119,
+      "name": "Half-Life-NDS-Port",
+      "fullName": "CrowbarDS/Half-Life-NDS-Port",
+      "owner": "CrowbarDS",
+      "description": "Nintendo DS(i) port of Half Life (1998)",
+      "url": "https://github.com/CrowbarDS/Half-Life-NDS-Port",
+      "homepage": "https://crowbards.github.io/Half-Life-NDS-Port/",
+      "stars": 30,
+      "updatedAt": "2026-11-17T23:20:15Z",
+      "createdAt": "2026-10-05T10:45:06Z",
+      "pushedAt": "2026-11-17T22:17:55Z",
+      "category": "Otros proyectos interesantes",
+      "consoles": [
+        "DSi",
+        "DS"
+      ],
+      "version": "v0.4.2",
+      "releasePublishedAt": "2026-11-15T23:45:17Z",
+      "releaseUrl": "https://github.com/CrowbarDS/Half-Life-NDS-Port/releases/tag/v0.4.2",
+      "score": 98,
+      "reasons": [
+        "Menciona compatibilidad con DSi, DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "README con contenido y secciones de documentación.",
+        "Tiene una versión publicada: v0.4.2.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "language": "C++",
+      "topics": [
+        "blocksds",
+        "dsi",
+        "half-life",
+        "halflife",
+        "homebrew",
+        "nds",
+        "nintendo-ds",
+        "port",
+        "valve"
+      ]
+    },
     {
       "id": 1454641530,
       "name": "forge.store",
@@ -30,7 +75,6 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
         "Poco conocido"
       ],
       "language": "C",
@@ -44,8 +88,8 @@
       "description": "Pokémon SoulLinks for 2–4 players and solo Nuzlockes on macOS, Windows and Linux – emulator from Game Boy to 3DS, live tracking, randomizer, real-time sync and OBS overlays in one app.",
       "url": "https://github.com/souldewapp/souldew",
       "homepage": "https://souldew.app/",
-      "stars": 46,
-      "updatedAt": "2026-11-18T10:49:43Z",
+      "stars": 47,
+      "updatedAt": "2026-11-18T12:15:11Z",
       "createdAt": "2026-11-04T13:23:10Z",
       "pushedAt": "2026-11-18T08:17:53Z",
       "category": "Emuladores",
@@ -65,7 +109,6 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
         "Poco conocido"
       ],
       "language": "JavaScript",
@@ -83,6 +126,55 @@
       ]
     },
     {
+      "id": 1450713950,
+      "name": "gloam-shell-ndx",
+      "fullName": "nextcode4u/gloam-shell-ndx",
+      "owner": "nextcode4u",
+      "description": "Gloam Shell NDX — a lightweight BlocksDS frontend for Nintendo DSi.",
+      "url": "https://github.com/nextcode4u/gloam-shell-ndx",
+      "homepage": null,
+      "stars": 0,
+      "updatedAt": "2026-11-14T06:46:45Z",
+      "createdAt": "2026-11-08T22:26:37Z",
+      "pushedAt": "2026-11-18T03:50:06Z",
+      "category": "Otros proyectos interesantes",
+      "consoles": [
+        "DSi",
+        "DS"
+      ],
+      "version": "v1.2.0",
+      "releasePublishedAt": "2026-11-18T03:50:06Z",
+      "releaseUrl": "https://github.com/nextcode4u/gloam-shell-ndx/releases/tag/v1.2.0",
+      "score": 92,
+      "reasons": [
+        "Menciona compatibilidad con DSi, DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "README con contenido y secciones de documentación.",
+        "Tiene una versión publicada: v1.2.0.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "language": "C",
+      "topics": [
+        "blocksds",
+        "c",
+        "dsi",
+        "dsiware",
+        "frontend",
+        "homebrew",
+        "launcher",
+        "nds",
+        "nds-bootstrap",
+        "nintendo-ds",
+        "nintendo-dsi",
+        "theming"
+      ]
+    },
+    {
       "id": 1460926681,
       "name": "PuebloCTR",
       "fullName": "lonelyversemaker/PuebloCTR",
@@ -90,8 +182,8 @@
       "description": "Unofficial port of a 2005 GameCube game to the New Nintendo 3DS, built on CubeEvil4 (beta). No game data included.",
       "url": "https://github.com/lonelyversemaker/PuebloCTR",
       "homepage": null,
-      "stars": 20,
-      "updatedAt": "2026-11-18T09:16:47Z",
+      "stars": 21,
+      "updatedAt": "2026-11-18T11:51:08Z",
       "createdAt": "2026-11-17T04:50:19Z",
       "pushedAt": "2026-11-18T11:12:07Z",
       "category": "Juegos homebrew",
@@ -111,194 +203,9 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
         "Poco conocido"
       ],
       "language": "C",
-      "topics": []
-    },
-    {
-      "id": 1432788252,
-      "name": "BreadBox",
-      "fullName": "BreadChaser/BreadBox",
-      "owner": "BreadChaser",
-      "description": "Multi-system emulator for the Nintendo 3DS: PlayStation and Game Boy Advance",
-      "url": "https://github.com/BreadChaser/BreadBox",
-      "homepage": null,
-      "stars": 20,
-      "updatedAt": "2026-11-16T18:58:55Z",
-      "createdAt": "2026-10-25T03:14:04Z",
-      "pushedAt": "2026-11-18T07:45:48Z",
-      "category": "Emuladores",
-      "consoles": [
-        "3DS"
-      ],
-      "version": "v0.9.4",
-      "releasePublishedAt": "2026-11-17T21:22:22Z",
-      "releaseUrl": "https://github.com/BreadChaser/BreadBox/releases/tag/v0.9.4",
-      "score": 90,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "README con contenido y secciones de documentación.",
-        "Tiene una versión publicada: v0.9.4.",
-        "Proyecto poco conocido: menos de 100 estrellas.",
-        "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Nuevo",
-        "Poco conocido"
-      ],
-      "language": "C",
-      "topics": []
-    },
-    {
-      "id": 1458945616,
-      "name": "PocketPKMN",
-      "fullName": "Medarotter26/PocketPKMN",
-      "owner": "Medarotter26",
-      "description": "Pokéwalker companion app for the Nintendo 3DS (homebrew): walk Pokémon from your 3DS games on a real Pokéwalker over IR",
-      "url": "https://github.com/Medarotter26/PocketPKMN",
-      "homepage": null,
-      "stars": 13,
-      "updatedAt": "2026-11-17T14:49:17Z",
-      "createdAt": "2026-11-15T15:30:29Z",
-      "pushedAt": "2026-11-18T05:51:34Z",
-      "category": "Otros proyectos interesantes",
-      "consoles": [
-        "3DS"
-      ],
-      "version": "v0.97",
-      "releasePublishedAt": "2026-11-18T05:51:34Z",
-      "releaseUrl": "https://github.com/Medarotter26/PocketPKMN/releases/tag/v0.97",
-      "score": 90,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "README con contenido y secciones de documentación.",
-        "Tiene una versión publicada: v0.97.",
-        "Proyecto poco conocido: menos de 100 estrellas.",
-        "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Nuevo",
-        "Poco conocido"
-      ],
-      "language": "C++",
-      "topics": []
-    },
-    {
-      "id": 807895328,
-      "name": "MH-HP-Overlay-For-3DS-Emulator",
-      "fullName": "Alexander-Lancellott/MH-HP-Overlay-For-3DS-Emulator",
-      "owner": "Alexander-Lancellott",
-      "description": "A simple open-source HP overlay that I've developed for MH 3G/3U, MH 4/U/G, and MH X/GEN/XX in Python.",
-      "url": "https://github.com/Alexander-Lancellott/MH-HP-Overlay-For-3DS-Emulator",
-      "homepage": "https://ko-fi.com/alexander_lancellott",
-      "stars": 19,
-      "updatedAt": "2026-10-18T12:47:49Z",
-      "createdAt": "2024-05-30T01:39:34Z",
-      "pushedAt": "2026-11-18T05:41:12Z",
-      "category": "Emuladores",
-      "consoles": [
-        "3DS"
-      ],
-      "version": "v1.1.11",
-      "releasePublishedAt": "2026-11-18T05:42:23Z",
-      "releaseUrl": "https://github.com/Alexander-Lancellott/MH-HP-Overlay-For-3DS-Emulator/releases/tag/v1.1.11",
-      "score": 90,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "README con contenido y secciones de documentación.",
-        "Tiene una versión publicada: v1.1.11.",
-        "Proyecto poco conocido: menos de 100 estrellas.",
-        "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Poco conocido"
-      ],
-      "language": "Python",
-      "topics": []
-    },
-    {
-      "id": 1412941414,
-      "name": "neo3ds",
-      "fullName": "zzcx88/neo3ds",
-      "owner": "zzcx88",
-      "description": "NeoGeo (Neo Geo) emulator for Nintendo 3DS: converts MAME romsets to installable CIAs, full speed on Old 3DS",
-      "url": "https://github.com/zzcx88/neo3ds",
-      "homepage": "https://zzcx88.github.io/neo3ds/",
-      "stars": 11,
-      "updatedAt": "2026-11-12T06:38:43Z",
-      "createdAt": "2026-10-10T08:13:51Z",
-      "pushedAt": "2026-11-18T06:09:27Z",
-      "category": "Emuladores",
-      "consoles": [
-        "3DS"
-      ],
-      "version": "v1.5.0",
-      "releasePublishedAt": "2026-11-06T14:06:35Z",
-      "releaseUrl": "https://github.com/zzcx88/neo3ds/releases/tag/v1.5.0",
-      "score": 89,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "README con contenido y secciones de documentación.",
-        "Tiene una versión publicada: v1.5.0.",
-        "Proyecto poco conocido: menos de 100 estrellas.",
-        "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Poco conocido"
-      ],
-      "language": "Assembly",
-      "topics": [
-        "3ds",
-        "3ds-homebrew",
-        "cia",
-        "emulator",
-        "homebrew",
-        "mame",
-        "neo-geo",
-        "neogeo",
-        "nintendo-3ds",
-        "snk"
-      ]
-    },
-    {
-      "id": 1443995227,
-      "name": "Airwaves-3D-releases",
-      "fullName": "SoulJustSad/Airwaves-3D-releases",
-      "owner": "SoulJustSad",
-      "description": "Radio station application for Nintendo 3DS consoles ",
-      "url": "https://github.com/SoulJustSad/Airwaves-3D-releases",
-      "homepage": null,
-      "stars": 3,
-      "updatedAt": "2026-11-14T12:15:44Z",
-      "createdAt": "2026-11-03T08:12:41Z",
-      "pushedAt": "2026-11-18T08:03:41Z",
-      "category": "Otros proyectos interesantes",
-      "consoles": [
-        "3DS"
-      ],
-      "version": "v2.0",
-      "releasePublishedAt": "2026-11-18T08:03:41Z",
-      "releaseUrl": "https://github.com/SoulJustSad/Airwaves-3D-releases/releases/tag/v2.0",
-      "score": 87,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "README con contenido y secciones de documentación.",
-        "Tiene una versión publicada: v2.0.",
-        "Proyecto poco conocido: menos de 100 estrellas.",
-        "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Nuevo",
-        "Poco conocido"
-      ],
-      "language": null,
       "topics": []
     },
     {
@@ -330,7 +237,6 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
         "Poco conocido"
       ],
       "language": "C",
@@ -347,6 +253,89 @@
         "uid",
         "wii-u"
       ]
+    },
+    {
+      "id": 1440549278,
+      "name": "verity",
+      "fullName": "llamington/verity",
+      "owner": "llamington",
+      "description": "Legality-aware Pokémon Gen 4/5 save editor (DPPt, HGSS, BW, B2W2) for the browser and DS homebrew. PKHeX-compatible legality checks, Rust core.",
+      "url": "https://github.com/llamington/verity",
+      "homepage": "https://verity.llamington.workers.dev",
+      "stars": 1,
+      "updatedAt": "2026-11-13T22:28:01Z",
+      "createdAt": "2026-10-31T05:46:15Z",
+      "pushedAt": "2026-11-18T02:16:19Z",
+      "category": "Herramientas para partidas guardadas",
+      "consoles": [
+        "DS"
+      ],
+      "version": "v0.1.0",
+      "releasePublishedAt": "2026-11-14T00:35:24Z",
+      "releaseUrl": "https://github.com/llamington/verity/releases/tag/v0.1.0",
+      "score": 86,
+      "reasons": [
+        "Menciona compatibilidad con DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "README con contenido y secciones de documentación.",
+        "Tiene una versión publicada: v0.1.0.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "language": "Rust",
+      "topics": [
+        "gen4",
+        "gen5",
+        "homebrew",
+        "nds",
+        "nintendo-ds",
+        "pkhex",
+        "pokemon",
+        "pokemon-save-editor",
+        "rust",
+        "save-editor",
+        "svelte",
+        "webassembly"
+      ]
+    },
+    {
+      "id": 1459360503,
+      "name": "lotus",
+      "fullName": "estyseesghosts/lotus",
+      "owner": "estyseesghosts",
+      "description": "Independent 3DS emulator: Rust + GPUI application with a native Azahar worker",
+      "url": "https://github.com/estyseesghosts/lotus",
+      "homepage": null,
+      "stars": 0,
+      "updatedAt": "2026-11-17T01:00:14Z",
+      "createdAt": "2026-11-16T00:06:22Z",
+      "pushedAt": "2026-11-18T12:03:51Z",
+      "category": "Emuladores",
+      "consoles": [
+        "3DS"
+      ],
+      "version": "v0.0.5",
+      "releasePublishedAt": "2026-11-18T06:38:21Z",
+      "releaseUrl": "https://github.com/estyseesghosts/lotus/releases/tag/v0.0.5",
+      "score": 85,
+      "reasons": [
+        "Menciona compatibilidad con 3DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "README con contenido y secciones de documentación.",
+        "Tiene una versión publicada: v0.0.5.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Actualizado",
+        "Poco conocido"
+      ],
+      "language": "Rust",
+      "topics": []
     },
     {
       "id": 1462317223,
@@ -377,7 +366,6 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
         "Poco conocido"
       ],
       "language": "Go",
@@ -412,7 +400,6 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
         "Poco conocido"
       ],
       "language": "C++",
@@ -423,41 +410,6 @@
         "nintendo-switch",
         "nintendo-switch-2"
       ]
-    },
-    {
-      "id": 1459360503,
-      "name": "lotus",
-      "fullName": "estyseesghosts/lotus",
-      "owner": "estyseesghosts",
-      "description": "Independent 3DS emulator: Rust + GPUI application with a native Azahar worker",
-      "url": "https://github.com/estyseesghosts/lotus",
-      "homepage": null,
-      "stars": 0,
-      "updatedAt": "2026-11-17T01:00:14Z",
-      "createdAt": "2026-11-16T00:06:22Z",
-      "pushedAt": "2026-11-18T11:05:20Z",
-      "category": "Emuladores",
-      "consoles": [
-        "3DS"
-      ],
-      "version": "v0.0.5",
-      "releasePublishedAt": "2026-11-18T06:38:21Z",
-      "releaseUrl": "https://github.com/estyseesghosts/lotus/releases/tag/v0.0.5",
-      "score": 85,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "README con contenido y secciones de documentación.",
-        "Tiene una versión publicada: v0.0.5.",
-        "Proyecto poco conocido: menos de 100 estrellas.",
-        "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Nuevo",
-        "Poco conocido"
-      ],
-      "language": "Rust",
-      "topics": []
     },
     {
       "id": 1461883445,
@@ -488,7 +440,6 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
         "Poco conocido"
       ],
       "language": "C",
@@ -504,29 +455,69 @@
       ]
     },
     {
-      "id": 1437598342,
-      "name": "FlashGame-Lego-Dino-Attack-3dsport",
-      "fullName": "isaiahboland-dotcom/FlashGame-Lego-Dino-Attack-3dsport",
-      "owner": "isaiahboland-dotcom",
-      "description": "Porting the old Flash game for Lego Dino Attack to the 3ds with the assistance of generative AI to help with troubleshooting and speeding up overall development",
-      "url": "https://github.com/isaiahboland-dotcom/FlashGame-Lego-Dino-Attack-3dsport",
-      "homepage": null,
-      "stars": 0,
-      "updatedAt": "2026-11-09T18:54:11Z",
-      "createdAt": "2026-10-28T20:30:27Z",
-      "pushedAt": "2026-11-18T04:52:12Z",
+      "id": 603501606,
+      "name": "libnds",
+      "fullName": "blocksds/libnds",
+      "owner": "blocksds",
+      "description": "[MIRROR] Development library for Nintendo DS and DSi. https://codeberg.org/blocksds/libnds",
+      "url": "https://github.com/blocksds/libnds",
+      "homepage": "https://blocksds.skylyrac.net/libnds/index.html",
+      "stars": 78,
+      "updatedAt": "2026-11-12T01:40:01Z",
+      "createdAt": "2023-02-18T17:51:50Z",
+      "pushedAt": "2026-11-18T02:05:24Z",
+      "category": "Herramientas de desarrollo",
+      "consoles": [
+        "DSi",
+        "DS"
+      ],
+      "version": null,
+      "releasePublishedAt": null,
+      "releaseUrl": null,
+      "score": 83,
+      "reasons": [
+        "Menciona compatibilidad con DSi, DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "Dispone de README en el repositorio.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "language": "C",
+      "topics": [
+        "blocksds",
+        "nintendo-ds",
+        "nintendo-ds-homebrew",
+        "nintendo-dsi"
+      ]
+    },
+    {
+      "id": 1445217332,
+      "name": "gtasands",
+      "fullName": "sammwyy/gtasands",
+      "owner": "sammwyy",
+      "description": "Native Nintendo DS reimplementation (port/demake) of PC Game; Grand Theft Auto: San Andreas.",
+      "url": "https://github.com/sammwyy/gtasands",
+      "homepage": "https://sammwyy.github.io/gtasands/",
+      "stars": 36,
+      "updatedAt": "2026-11-17T14:27:03Z",
+      "createdAt": "2026-11-04T05:49:09Z",
+      "pushedAt": "2026-11-17T06:11:41Z",
       "category": "Juegos homebrew",
       "consoles": [
-        "3DS"
+        "DSi",
+        "DS"
       ],
       "version": "v0.1.0",
-      "releasePublishedAt": "2026-11-18T04:55:48Z",
-      "releaseUrl": "https://github.com/isaiahboland-dotcom/FlashGame-Lego-Dino-Attack-3dsport/releases/tag/v0.1.0",
-      "score": 85,
+      "releasePublishedAt": "2026-11-16T19:37:24Z",
+      "releaseUrl": "https://github.com/sammwyy/gtasands/releases/tag/v0.1.0",
+      "score": 83,
       "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
+        "Menciona compatibilidad con DSi, DS en sus metadatos.",
         "Actividad detectada en los últimos 30 días.",
-        "README con contenido y secciones de documentación.",
+        "Documentación no verificada.",
         "Tiene una versión publicada: v0.1.0.",
         "Proyecto poco conocido: menos de 100 estrellas.",
         "Descripción del proyecto disponible en GitHub."
@@ -535,27 +526,68 @@
         "Nuevo",
         "Poco conocido"
       ],
-      "language": "Python",
+      "language": "C++",
       "topics": [
-        "3ds",
+        "game",
+        "gta",
+        "gtasa",
         "homebrew",
-        "reverse-enginnering",
-        "rust"
+        "nds",
+        "nintendo-d",
+        "nintendo-ds-homebrew",
+        "nintendo-dsi",
+        "nintendods",
+        "port"
       ]
     },
     {
-      "id": 845320549,
-      "name": "Minecraft-3ds-unistore",
-      "fullName": "Minecraft-3DS-Community/Minecraft-3ds-unistore",
-      "owner": "Minecraft-3DS-Community",
-      "description": "A storefront for all your modding needs, download and play your favorite mods right on your New Nintendo 3DS",
-      "url": "https://github.com/Minecraft-3DS-Community/Minecraft-3ds-unistore",
+      "id": 1435557891,
+      "name": "TWL-HD",
+      "fullName": "zerofrip/TWL-HD",
+      "owner": "zerofrip",
+      "description": "Experimental high-resolution rendering framework for Nintendo DS games running on Nintendo 3DS hardware.",
+      "url": "https://github.com/zerofrip/TWL-HD",
       "homepage": null,
-      "stars": 66,
-      "updatedAt": "2026-11-15T05:06:49Z",
-      "createdAt": "2024-08-21T02:52:12Z",
-      "pushedAt": "2026-11-18T07:47:59Z",
+      "stars": 3,
+      "updatedAt": "2026-11-16T22:15:10Z",
+      "createdAt": "2026-10-27T10:10:27Z",
+      "pushedAt": "2026-11-18T12:12:17Z",
       "category": "Otros proyectos interesantes",
+      "consoles": [
+        "3DS",
+        "DS"
+      ],
+      "version": null,
+      "releasePublishedAt": null,
+      "releaseUrl": null,
+      "score": 82,
+      "reasons": [
+        "Menciona compatibilidad con 3DS, DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "README con contenido y secciones de documentación.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "language": "C",
+      "topics": []
+    },
+    {
+      "id": 500875838,
+      "name": "osus-revented",
+      "fullName": "ohasanov-hbrw/osus-revented",
+      "owner": "ohasanov-hbrw",
+      "description": "Cross Platform osu! Game Client written in C++. Currently supports Windows, Linux and Nintendo 3DS",
+      "url": "https://github.com/ohasanov-hbrw/osus-revented",
+      "homepage": null,
+      "stars": 61,
+      "updatedAt": "2026-11-15T05:49:08Z",
+      "createdAt": "2022-06-07T14:29:43Z",
+      "pushedAt": "2026-11-18T10:46:03Z",
+      "category": "Juegos homebrew",
       "consoles": [
         "3DS"
       ],
@@ -573,31 +605,108 @@
       "labels": [
         "Poco conocido"
       ],
-      "language": "Python",
+      "language": "C++",
       "topics": []
     },
     {
-      "id": 1432448483,
-      "name": "Pokemon-HeartGold-SoulSilver-New3ds",
-      "fullName": "unowncollectables/Pokemon-HeartGold-SoulSilver-New3ds",
-      "owner": "unowncollectables",
-      "description": "Native New Nintendo 3DS port of Pokémon HeartGold & SoulSilver (HGSS) built from the pret decompilation: stereoscopic 3D, Wide View, touch-screen Pokégear map/party/bag, GTS & Mystery Gift. Bring your own ROM; no ROMs included.",
-      "url": "https://github.com/unowncollectables/Pokemon-HeartGold-SoulSilver-New3ds",
-      "homepage": null,
-      "stars": 14,
-      "updatedAt": "2026-11-16T13:27:41Z",
-      "createdAt": "2026-10-24T17:54:36Z",
-      "pushedAt": "2026-11-18T06:15:38Z",
-      "category": "Otros proyectos interesantes",
+      "id": 1457913893,
+      "name": "gloam-shell-theme-directory",
+      "fullName": "nextcode4u/gloam-shell-theme-directory",
+      "owner": "nextcode4u",
+      "description": "Community themes and original designs for Gloam Shell NDX on Nintendo DSi.",
+      "url": "https://github.com/nextcode4u/gloam-shell-theme-directory",
+      "homepage": "https://github.com/nextcode4u/gloam-shell-ndx",
+      "stars": 0,
+      "updatedAt": "2026-11-14T16:44:17Z",
+      "createdAt": "2026-11-14T15:56:21Z",
+      "pushedAt": "2026-11-18T03:50:26Z",
+      "category": "Personalización",
       "consoles": [
-        "3DS"
+        "DSi",
+        "DS"
       ],
       "version": null,
       "releasePublishedAt": null,
       "releaseUrl": null,
-      "score": 78,
+      "score": 80,
       "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
+        "Menciona compatibilidad con DSi, DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "README con contenido y secciones de documentación.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "language": "Python",
+      "topics": [
+        "blocksds",
+        "gloam",
+        "homebrew",
+        "nintendo-dsi",
+        "themes"
+      ]
+    },
+    {
+      "id": 1461787072,
+      "name": "DS-PROJECT-001",
+      "fullName": "emilyoprog/DS-PROJECT-001",
+      "owner": "emilyoprog",
+      "description": "Nintendo DSi XL homebrew project exploring a dual-screen macro controller and dashboard for Windows 11. Built with C/C++, libnds and devkitPro.",
+      "url": "https://github.com/emilyoprog/DS-PROJECT-001",
+      "homepage": null,
+      "stars": 0,
+      "updatedAt": "2026-11-17T18:04:11Z",
+      "createdAt": "2026-11-17T18:04:09Z",
+      "pushedAt": "2026-11-17T20:43:35Z",
+      "category": "Herramientas de desarrollo",
+      "consoles": [
+        "DSi",
+        "DS"
+      ],
+      "version": null,
+      "releasePublishedAt": null,
+      "releaseUrl": null,
+      "score": 80,
+      "reasons": [
+        "Menciona compatibilidad con DSi, DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "README con contenido y secciones de documentación.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "language": null,
+      "topics": []
+    },
+    {
+      "id": 1436535232,
+      "name": "ocarina-of-time-dsi",
+      "fullName": "agonisingbasher/ocarina-of-time-dsi",
+      "owner": "agonisingbasher",
+      "description": "Experimental project for a native port of Ocarina of Time to the Nintendo DSi, written in C/C++ using libnds and integrating components from zeldaret/oot. Currently in development.",
+      "url": "https://github.com/agonisingbasher/ocarina-of-time-dsi",
+      "homepage": null,
+      "stars": 0,
+      "updatedAt": "2026-11-11T03:41:44Z",
+      "createdAt": "2026-10-28T03:01:41Z",
+      "pushedAt": "2026-11-17T20:07:56Z",
+      "category": "Herramientas de desarrollo",
+      "consoles": [
+        "DSi",
+        "DS"
+      ],
+      "version": null,
+      "releasePublishedAt": null,
+      "releaseUrl": null,
+      "score": 80,
+      "reasons": [
+        "Menciona compatibilidad con DSi, DS en sus metadatos.",
         "Actividad detectada en los últimos 30 días.",
         "README con contenido y secciones de documentación.",
         "Proyecto poco conocido: menos de 100 estrellas.",
@@ -608,18 +717,7 @@
         "Poco conocido"
       ],
       "language": "C",
-      "topics": [
-        "3ds-homebrew",
-        "decompilation",
-        "hgss",
-        "new-3ds",
-        "nintendo-3ds",
-        "pokemon",
-        "pokemon-heartgold",
-        "pokemon-soulsilver",
-        "pret",
-        "stereoscopic-3d"
-      ]
+      "topics": []
     },
     {
       "id": 1460214881,
@@ -632,7 +730,7 @@
       "stars": 9,
       "updatedAt": "2026-11-18T07:23:38Z",
       "createdAt": "2026-11-16T15:38:40Z",
-      "pushedAt": "2026-11-18T11:33:35Z",
+      "pushedAt": "2026-11-18T12:18:39Z",
       "category": "Otros proyectos interesantes",
       "consoles": [
         "3DS"
@@ -649,60 +747,11 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
+        "Actualizado",
         "Poco conocido"
       ],
       "language": "C",
       "topics": []
-    },
-    {
-      "id": 1440731329,
-      "name": "Zakuroishi",
-      "fullName": "Sekyleky/Zakuroishi",
-      "owner": "Sekyleky",
-      "description": "Experimental 3DS emulator for Android handhelds like the AYN Thor and other dual-screen devices. Games run as ahead-of-time recompiled native code (Zakuro fork): Vulkan, HD texture packs, frame generation, mods.",
-      "url": "https://github.com/Sekyleky/Zakuroishi",
-      "homepage": "https://github.com/Sekyleky/Zakuroishi/releases/latest",
-      "stars": 5,
-      "updatedAt": "2026-11-18T03:17:55Z",
-      "createdAt": "2026-10-31T10:07:36Z",
-      "pushedAt": "2026-11-18T07:13:13Z",
-      "category": "Emuladores",
-      "consoles": [
-        "3DS"
-      ],
-      "version": null,
-      "releasePublishedAt": null,
-      "releaseUrl": null,
-      "score": 76,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "README con contenido y secciones de documentación.",
-        "Proyecto poco conocido: menos de 100 estrellas.",
-        "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Nuevo",
-        "Poco conocido"
-      ],
-      "language": "Rust",
-      "topics": [
-        "3ds",
-        "3ds-emulator",
-        "android",
-        "android-emulator",
-        "aot",
-        "ayn-thor",
-        "dual-screen",
-        "emulator",
-        "handheld",
-        "hd-textures",
-        "nintendo-3ds",
-        "rust",
-        "static-recompilation",
-        "vulkan"
-      ]
     },
     {
       "id": 1462536037,
@@ -715,8 +764,76 @@
       "stars": 0,
       "updatedAt": "2026-11-18T08:47:33Z",
       "createdAt": "2026-11-18T08:45:16Z",
-      "pushedAt": "2026-11-18T11:42:06Z",
+      "pushedAt": "2026-11-18T12:21:41Z",
       "category": "Aplicaciones y utilidades",
+      "consoles": [
+        "3DS"
+      ],
+      "version": null,
+      "releasePublishedAt": null,
+      "releaseUrl": null,
+      "score": 73,
+      "reasons": [
+        "Menciona compatibilidad con 3DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "README con contenido y secciones de documentación.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Actualizado",
+        "Poco conocido"
+      ],
+      "language": "C++",
+      "topics": []
+    },
+    {
+      "id": 1286522041,
+      "name": "mm3d-decomp",
+      "fullName": "SomeoneIsWorking/mm3d-decomp",
+      "owner": "SomeoneIsWorking",
+      "description": "Reverse-engineering lab for Majora's Mask 3D (Nintendo 3DS) — sibling of oot3d-decomp, ground-truth research for soh3d MM3D coverage.",
+      "url": "https://github.com/SomeoneIsWorking/mm3d-decomp",
+      "homepage": null,
+      "stars": 0,
+      "updatedAt": "2026-11-13T18:50:05Z",
+      "createdAt": "2026-07-01T21:41:25Z",
+      "pushedAt": "2026-11-18T12:14:18Z",
+      "category": "Otros proyectos interesantes",
+      "consoles": [
+        "3DS"
+      ],
+      "version": null,
+      "releasePublishedAt": null,
+      "releaseUrl": null,
+      "score": 73,
+      "reasons": [
+        "Menciona compatibilidad con 3DS en sus metadatos.",
+        "Actividad detectada en los últimos 30 días.",
+        "README con contenido y secciones de documentación.",
+        "Proyecto poco conocido: menos de 100 estrellas.",
+        "Descripción del proyecto disponible en GitHub."
+      ],
+      "labels": [
+        "Actualizado",
+        "Poco conocido"
+      ],
+      "language": "Python",
+      "topics": []
+    },
+    {
+      "id": 1430931231,
+      "name": "3ds-ai-agent-tool",
+      "fullName": "mgeuddlyii/3ds-ai-agent-tool",
+      "owner": "mgeuddlyii",
+      "description": "AI agent for New Nintendo 3DS: chat + 211-game offline guide model + voice input. Homebrew, direct-to-provider API, no server. Beta v0.99.5. Design by acrac, built by DeepSeek V4.1-Flash.",
+      "url": "https://github.com/mgeuddlyii/3ds-ai-agent-tool",
+      "homepage": null,
+      "stars": 0,
+      "updatedAt": "2026-10-30T10:28:47Z",
+      "createdAt": "2026-10-23T11:01:05Z",
+      "pushedAt": "2026-11-18T12:00:12Z",
+      "category": "Juegos homebrew",
       "consoles": [
         "3DS"
       ],
@@ -735,8 +852,21 @@
         "Nuevo",
         "Poco conocido"
       ],
-      "language": "C++",
-      "topics": []
+      "language": "C",
+      "topics": [
+        "3ds",
+        "ai",
+        "c",
+        "chinese",
+        "deepseek",
+        "devkitpro",
+        "embedded",
+        "homebrew",
+        "libctru",
+        "llm",
+        "nintendo-3ds",
+        "offline"
+      ]
     },
     {
       "id": 1453666019,
@@ -766,7 +896,6 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
         "Poco conocido"
       ],
       "language": "Java",
@@ -800,138 +929,37 @@
         "Descripción del proyecto disponible en GitHub."
       ],
       "labels": [
-        "Nuevo",
         "Poco conocido"
       ],
       "language": "JavaScript",
       "topics": []
     },
     {
-      "id": 1286522041,
-      "name": "mm3d-decomp",
-      "fullName": "SomeoneIsWorking/mm3d-decomp",
-      "owner": "SomeoneIsWorking",
-      "description": "Reverse-engineering lab for Majora's Mask 3D (Nintendo 3DS) — sibling of oot3d-decomp, ground-truth research for soh3d MM3D coverage.",
-      "url": "https://github.com/SomeoneIsWorking/mm3d-decomp",
+      "id": 1461731812,
+      "name": "wiil",
+      "fullName": "will324E/wiil",
+      "owner": "will324E",
+      "description": "Wiil : un menu d'accueil homebrew moderne pour la Wii, et Wiil DSi : une DSi comme télécommande et second écran.",
+      "url": "https://github.com/will324E/wiil",
       "homepage": null,
       "stars": 0,
-      "updatedAt": "2026-11-13T18:50:05Z",
-      "createdAt": "2026-07-01T21:41:25Z",
-      "pushedAt": "2026-11-18T09:50:32Z",
+      "updatedAt": "2026-11-17T17:17:20Z",
+      "createdAt": "2026-11-17T17:16:53Z",
+      "pushedAt": "2026-11-17T17:17:15Z",
       "category": "Otros proyectos interesantes",
       "consoles": [
-        "3DS"
+        "DSi"
       ],
       "version": null,
       "releasePublishedAt": null,
       "releaseUrl": null,
       "score": 73,
       "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
+        "Menciona compatibilidad con DSi en sus metadatos.",
         "Actividad detectada en los últimos 30 días.",
         "README con contenido y secciones de documentación.",
         "Proyecto poco conocido: menos de 100 estrellas.",
         "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Poco conocido"
-      ],
-      "language": "Python",
-      "topics": []
-    },
-    {
-      "id": 1462328399,
-      "name": "Laura_WordProcessor_3DS",
-      "fullName": "fabianquilpue/Laura_WordProcessor_3DS",
-      "owner": "fabianquilpue",
-      "description": "Laura: minimalist word processor for the New Nintendo 3DS.",
-      "url": "https://github.com/fabianquilpue/Laura_WordProcessor_3DS",
-      "homepage": null,
-      "stars": 0,
-      "updatedAt": "2026-11-18T04:50:50Z",
-      "createdAt": "2026-11-18T04:50:03Z",
-      "pushedAt": "2026-11-18T05:34:19Z",
-      "category": "Otros proyectos interesantes",
-      "consoles": [
-        "3DS"
-      ],
-      "version": null,
-      "releasePublishedAt": null,
-      "releaseUrl": null,
-      "score": 68,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "Dispone de README en el repositorio.",
-        "Proyecto poco conocido: menos de 100 estrellas.",
-        "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Nuevo",
-        "Poco conocido"
-      ],
-      "language": "Makefile",
-      "topics": []
-    },
-    {
-      "id": 1462262109,
-      "name": "Tomodachi-Life-Save-Editor-",
-      "fullName": "Darknesstate/Tomodachi-Life-Save-Editor-",
-      "owner": "Darknesstate",
-      "description": "Editor do save do Tomodachi Life de Nintendo 3DS ",
-      "url": "https://github.com/Darknesstate/Tomodachi-Life-Save-Editor-",
-      "homepage": null,
-      "stars": 0,
-      "updatedAt": "2026-11-18T04:48:44Z",
-      "createdAt": "2026-11-18T03:23:33Z",
-      "pushedAt": "2026-11-18T04:52:27Z",
-      "category": "Herramientas para partidas guardadas",
-      "consoles": [
-        "3DS"
-      ],
-      "version": null,
-      "releasePublishedAt": null,
-      "releaseUrl": null,
-      "score": 58,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "Documentación no verificada.",
-        "Proyecto poco conocido: menos de 100 estrellas.",
-        "Descripción del proyecto disponible en GitHub."
-      ],
-      "labels": [
-        "Nuevo",
-        "Poco conocido"
-      ],
-      "language": "C",
-      "topics": []
-    },
-    {
-      "id": 1462382795,
-      "name": "3ds-homebrew-collection",
-      "fullName": "lixu143/3ds-homebrew-collection",
-      "owner": "lixu143",
-      "description": "",
-      "url": "https://github.com/lixu143/3ds-homebrew-collection",
-      "homepage": null,
-      "stars": 0,
-      "updatedAt": "2026-11-18T06:01:21Z",
-      "createdAt": "2026-11-18T05:59:12Z",
-      "pushedAt": "2026-11-18T08:15:12Z",
-      "category": "Otros proyectos interesantes",
-      "consoles": [
-        "3DS"
-      ],
-      "version": null,
-      "releasePublishedAt": null,
-      "releaseUrl": null,
-      "score": 53,
-      "reasons": [
-        "Menciona compatibilidad con 3DS en sus metadatos.",
-        "Actividad detectada en los últimos 30 días.",
-        "Documentación no verificada.",
-        "Proyecto poco conocido: menos de 100 estrellas."
       ],
       "labels": [
         "Nuevo",

@@ -1,0 +1,78 @@
+{
+  "$comment": "Temáticas públicas que GitHub Actions recopila cada 12 horas. Para seguir una temática nueva, añade un objeto con id, label, description y queries (sintaxis de búsqueda de GitHub). Las preferencias guardadas en el navegador NO llegan aquí: este archivo es el mecanismo explícito para el seguimiento automático.",
+  "defaults": {
+    "qualifiers": "stars:3..5000 pushed:>{days:120} archived:false",
+    "limit": 16
+  },
+  "topics": [
+    {
+      "id": "nintendo",
+      "label": "Nintendo homebrew",
+      "description": "Homebrew para Nintendo 3DS, DSi y DS.",
+      "featured": true,
+      "mode": "nintendo",
+      "limit": 25,
+      "queries": ["3ds homebrew", "nintendo 3ds", "dsi homebrew", "nds homebrew", "libnds", "3ds emulator", "nintendo ds game homebrew"]
+    },
+    {
+      "id": "ia",
+      "label": "Inteligencia artificial",
+      "description": "Herramientas y aplicaciones que usan modelos de IA.",
+      "queries": ["topic:llm tool", "topic:ai-tools", "topic:local-llm"]
+    },
+    {
+      "id": "windows",
+      "label": "Software para Windows",
+      "description": "Utilidades y aplicaciones para Windows.",
+      "queries": ["topic:windows topic:utility", "topic:windows-app", "topic:windows topic:tool"]
+    },
+    {
+      "id": "automatizacion",
+      "label": "Automatización",
+      "description": "Herramientas para automatizar tareas y flujos de trabajo.",
+      "queries": ["topic:automation tool", "topic:workflow-automation"]
+    },
+    {
+      "id": "emuladores",
+      "label": "Emuladores",
+      "description": "Emuladores y herramientas de emulación.",
+      "queries": ["topic:emulator", "topic:emulation"]
+    },
+    {
+      "id": "retro",
+      "label": "Retro y consolas",
+      "description": "Proyectos para consolas clásicas y retrogaming.",
+      "queries": ["topic:retrogaming", "topic:retro-gaming", "topic:homebrew"]
+    },
+    {
+      "id": "terminal",
+      "label": "Herramientas de terminal",
+      "description": "Utilidades de línea de comandos.",
+      "queries": ["topic:cli topic:tool", "topic:terminal-app", "topic:tui"]
+    },
+    {
+      "id": "self-hosted",
+      "label": "Autoalojado",
+      "description": "Aplicaciones que puedes instalar en tu propio servidor.",
+      "queries": ["topic:self-hosted", "topic:selfhosted"]
+    },
+    {
+      "id": "ios",
+      "label": "iPhone y iOS",
+      "description": "Aplicaciones de código abierto para iPhone y iPad.",
+      "queries": ["topic:ios-app", "topic:ios language:swift app"]
+    },
+    {
+      "id": "productividad",
+      "label": "Productividad y organización",
+      "description": "Notas, tareas, colecciones y organización personal.",
+      "queries": ["topic:productivity", "topic:note-taking", "topic:collection-manager"]
+    },
+    {
+      "id": "archivos",
+      "label": "Archivos y datos",
+      "description": "Herramientas para gestionar, convertir y analizar archivos.",
+      "queries": ["topic:file-manager", "topic:file-converter", "topic:file-analysis"]
+    }
+  ]
+}

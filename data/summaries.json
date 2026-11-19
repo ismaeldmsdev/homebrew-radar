@@ -792,6 +792,27 @@
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
     },
+    "190206784": {
+      "id": 190206784,
+      "fullName": "autobase-tech/autobase",
+      "text": "Autobase es una plataforma de base de datos para PostgreSQL que se instala en tu propia infraestructura. Permite automatizar la instalación, el cambio de servidor si falla, las copias de seguridad y las actualizaciones. Está diseñada para equipos que quieren gestionar sus bases de datos sin depender de servicios externos.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "jbq69l",
+        "readmeLength": 3161
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:46:57.245Z"
+    },
     "191712234": {
       "id": 191712234,
       "fullName": "nicoverbruggen/phpmon",
@@ -956,6 +977,27 @@
         "readmeLength": 2290
       },
       "updatedAt": "2026-11-19T08:25:51.666Z"
+    },
+    "305793798": {
+      "id": 305793798,
+      "fullName": "sablierapp/sablier",
+      "text": "Es un software de código abierto que arranca y detiene cargas de trabajo automáticamente según la actividad. Permite gestionar contenedores de Docker, Kubernetes, Podman y otros sistemas para ahorrar recursos cuando no se usan. Es útil para reducir costes en entornos de prueba o dispositivos con recursos limitados.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "c9fuys",
+        "readmeLength": 14171
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:46:33.396Z"
     },
     "307191665": {
       "id": 307191665,
@@ -1189,6 +1231,26 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "436513172": {
+      "id": 436513172,
+      "fullName": "retronas/retronas",
+      "text": "Es un proyecto para usar una Raspberry Pi u otro ordenador antiguo como almacenamiento de red para consolas retro. La documentación menciona que se usa para guardar datos en servidores propios, pero faltan datos sobre las funciones concretas que ofrece.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "10g8d3k",
+        "readmeLength": 179
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:50:39.759Z"
+    },
     "441600120": {
       "id": 441600120,
       "fullName": "Livinglist/Hacki",
@@ -1370,6 +1432,27 @@
       },
       "updatedAt": "2026-11-19T08:25:51.666Z"
     },
+    "535751429": {
+      "id": 535751429,
+      "fullName": "wizarrrr/wizarr",
+      "text": "Wizarr es un sistema de gestión de usuarios para servidores multimedia como Plex, Jellyfin o Emby. Permite crear enlaces de invitación únicos que añaden automáticamente a los usuarios al servidor y guían su instalación de aplicaciones. Funciona como un sistema alojado en tu propio servidor para simplificar la gestión de invitados.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "14kq8v6",
+        "readmeLength": 1976
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:47:19.253Z"
+    },
     "561467736": {
       "id": 561467736,
       "fullName": "Xpl0itU/WiiUDownloader",
@@ -1399,6 +1482,27 @@
         "readmeLength": 5296
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
+    },
+    "590327621": {
+      "id": 590327621,
+      "fullName": "WinDurango/WinDurango",
+      "text": "WinDurango es una capa de compatibilidad para Windows que permite ejecutar juegos de Xbox One. Funciona integrando interfaces específicas de la consola y soporta títulos como Sonic Mania o Minecraft: Xbox One Edition. Está diseñado para desarrolladores que quieren probar juegos en PC sin consola, aunque su soporte para Kinect es experimental.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "l819os",
+        "readmeLength": 3991
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:51:03.073Z"
     },
     "603501606": {
       "id": 603501606,
@@ -1597,6 +1701,27 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "712673423": {
+      "id": 712673423,
+      "fullName": "project-robius/robrix",
+      "text": "Robrix es una aplicación de chat para Matrix escrita en Rust que funciona en Windows, macOS, iOS, Android y Linux. Permite organizar múltiples conversaciones en pestañas deslizantes y sincroniza listas de salas sin esperas largas. Está diseñada para ser rápida y ligera, sin usar motores web ni JavaScript.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "szthgi",
+        "readmeLength": 12967
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:49:15.381Z"
+    },
     "715842891": {
       "id": 715842891,
       "fullName": "xoureldeen/Vectras-VM-Android",
@@ -1611,6 +1736,27 @@
         "readmeLength": 8038
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
+    },
+    "721069510": {
+      "id": 721069510,
+      "fullName": "ironcalc/IronCalc",
+      "text": "IronCalc es el motor principal del ecosistema de hojas de cálculo, programado en Rust. Permite leer y escribir archivos xlsx desde lenguajes como Python, JavaScript o Go, y sirve como base para crear aplicaciones web, de escritorio o en terminal. Está diseñado para integrarse en otros proyectos o usarse como herramienta de desarrollo.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "di1xnf",
+        "readmeLength": 3232
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:47:41.922Z"
     },
     "725184343": {
       "id": 725184343,
@@ -1767,6 +1913,27 @@
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
     },
+    "842757506": {
+      "id": 842757506,
+      "fullName": "mumu-lhl/Ciyue",
+      "text": "Ciyue es una aplicación de diccionario que funciona en Android, Windows, Linux y macOS. Permite buscar en diccionarios de múltiples formatos, consultar traducciones con servicios de IA y practicar vocabulario con tarjetas de memoria. También incluye lectura en voz alta y sincronización en la nube para guardar tu progreso.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "4pef8h",
+        "readmeLength": 2267
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:48:04.294Z"
+    },
     "842883987": {
       "id": 842883987,
       "fullName": "momo5502/sogen",
@@ -1892,6 +2059,28 @@
       },
       "updatedAt": "2026-11-19T08:25:51.666Z"
     },
+    "894433723": {
+      "id": 894433723,
+      "fullName": "ASCIT31/Dark-Moon",
+      "text": "Es una herramienta de prueba de penetración autónoma basada en IA de código abierto. Permite ejecutar evaluaciones completas en infraestructuras propias, detectando y probando vulnerabilidades en sistemas como Active Directory o Kubernetes. Funciona como una herramienta de línea de comandos que se integra con plataformas como GitHub, GitLab o Jenkins para automatizar el análisis de seguridad.",
+      "detail": null,
+      "kinds": [
+        "selfhosted",
+        "cli"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1euqeeg",
+        "readmeLength": 11362
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:48:30.741Z"
+    },
     "897595329": {
       "id": 897595329,
       "fullName": "basicmachines-co/basic-memory",
@@ -1907,6 +2096,27 @@
         "readmeLength": 15487
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
+    },
+    "912164685": {
+      "id": 912164685,
+      "fullName": "roryclear/clearcam",
+      "text": "Es un software que se instala en tu propio servidor para añadir detección de objetos y seguimiento a cámaras de seguridad. Permite recibir notificaciones móviles, generar resúmenes con IA y buscar clips en tiempo real. Útil para usuarios que quieren gestionar sus cámaras sin depender de servicios externos.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1m73ac",
+        "readmeLength": 1762
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:46:09.951Z"
     },
     "918778709": {
       "id": 918778709,
@@ -2001,6 +2211,27 @@
         "readmeLength": 18165
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
+    },
+    "942966306": {
+      "id": 942966306,
+      "fullName": "TwintailTeam/TwintailLauncher",
+      "text": "Es un lanzador multiplataforma para juegos de anime en Windows y Linux. Permite descargar, gestionar y lanzar títulos como Genshin Impact o Honkai: StarRail, además de ofrecer soporte para mods y mejoras de usabilidad. Es útil para jugadores que quieren centralizar el acceso a varios juegos en un solo lugar.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "tqtuko",
+        "readmeLength": 1819
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:48:52.473Z"
     },
     "944080744": {
       "id": 944080744,
@@ -2413,6 +2644,27 @@
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
     },
+    "1192378543": {
+      "id": 1192378543,
+      "fullName": "nicedreamzapp/claude-code-local",
+      "text": "Es una solución en Python que ejecuta modelos de IA locales en tu ordenador sin necesidad de claves ni conexión a la nube. Permite continuar usando herramientas como las de Claude Code cuando se agota el límite de uso, ejecutando modelos como Qwen 3.8 o Gemma 4 directamente en tu hardware. Funciona en Macs con Apple Silicon, Linux y Windows, manteniendo todos los datos en tu máquina.",
+      "detail": null,
+      "kinds": [
+        "config"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "18t96cm",
+        "readmeLength": 21503
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:49:43.949Z"
+    },
     "1201960789": {
       "id": 1201960789,
       "fullName": "xiufengsun/TokenTracker",
@@ -2476,6 +2728,27 @@
         "readmeLength": 6101
       },
       "updatedAt": "2026-11-19T08:28:38.807Z"
+    },
+    "1406192780": {
+      "id": 1406192780,
+      "fullName": "lilfourn/Imago-Emulator",
+      "text": "Imago Emulator es una aplicación para Windows, macOS y Linux que permite jugar consolas como Game Boy, Game Boy Advance, Nintendo DS y 3DS. Permite cargar juegos desde tus propios archivos, acceder a una tienda de software libre integrado y gestionar estados guardados con miniaturas. Funciona en Macs con Apple silicon y macOS 13 o superior, utilizando Rust y GPUI para su ejecución.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "jwflzi",
+        "readmeLength": 36653
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:51:55.588Z"
     },
     "1431538743": {
       "id": 1431538743,
@@ -2567,6 +2840,27 @@
         "readmeLength": null
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1445691160": {
+      "id": 1445691160,
+      "fullName": "souldewapp/souldew",
+      "text": "Es una aplicación para Windows, macOS y Linux que permite jugar Pokémon SoulLinks con hasta cuatro jugadores o en modo solo. Permite ejecutar emuladores de consolas como 3DS, DS, GBA y Game Boy, gestionar reglas de partida, generar códigos de invitación para sincronizar en tiempo real y mostrar superposiciones para transmisión en vivo. Útil para grupos de amigos que quieren jugar juntos sin necesidad de servidores externos.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "y9mae",
+        "readmeLength": 21054
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:50:11.356Z"
     },
     "1450078301": {
       "id": 1450078301,
@@ -2662,6 +2956,27 @@
         "readmeLength": 869
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1460214881": {
+      "id": 1460214881,
+      "fullName": "devilAPI/ios3ds",
+      "text": "Es un proyecto de investigación que ejecuta iOS 4.2.1 nativamente en una Nintendo 3DS antigua usando C. Permite arrancar el sistema operativo original de Apple en el hardware real de la consola, con soporte para pantalla, botones y aplicaciones. Útil para investigadores que estudian la arquitectura de la 3DS o quieren probar software antiguo en un dispositivo físico.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1ci8g3d",
+        "readmeLength": 6587
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-19T20:51:29.055Z"
     },
     "1461731812": {
       "id": 1461731812,

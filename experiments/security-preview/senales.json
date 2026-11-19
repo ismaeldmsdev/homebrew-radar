@@ -1,0 +1,350 @@
+{
+  "at": "2026-11-19T13:47:24.289Z",
+  "repos": [
+    {
+      "fullName": "cli/cli",
+      "release": "v2.105.0",
+      "immutable": true,
+      "executables": [
+        {
+          "name": "gh_2.105.0_windows_386.msi",
+          "digest": "sha256:856c5c7bacb59efa69d0ce227fc61ba6cc4619d0e53b2e26fecfc51a9e136505",
+          "attestations": 2
+        },
+        {
+          "name": "gh_2.105.0_windows_386.zip",
+          "digest": "sha256:df02ca46a6655ffa0dd6d2f6d1387d1ebff63ab05272ff76301246925f67b8c7",
+          "attestations": 2
+        },
+        {
+          "name": "gh_2.105.0_windows_amd64.msi",
+          "digest": "sha256:d18367836c7dcf689ad2052730acf3ec6b9e8b1259a8bae3d512584f680d7525",
+          "attestations": 2
+        },
+        {
+          "name": "gh_2.105.0_windows_amd64.zip",
+          "digest": "sha256:8813a72c899900afaa10e3fec8fbc64b908c89dbfe837e95ed2fa500fc140627",
+          "attestations": null
+        },
+        {
+          "name": "gh_2.105.0_windows_arm64.msi",
+          "digest": "sha256:f5e567f5beb56eb6368f01f5fc68c384dd957b7b4dfa41a663582f23c5bb6f56",
+          "attestations": null
+        },
+        {
+          "name": "gh_2.105.0_windows_arm64.zip",
+          "digest": "sha256:5282a09c7757210c6e2dfb11a56b11e14e646df9b3b6a49f155465f5f881c3b7",
+          "attestations": null
+        }
+      ],
+      "advisories": [
+        "GHSA-4mq3-hpgx-9cx8 (low)",
+        "GHSA-wjmr-j3rp-mh2g (low)",
+        "GHSA-39wj-f2f4-978v (medium)",
+        "GHSA-qcwj-mr2r-2cx7 (low)",
+        "GHSA-vfhh-p7hm-pxfh (low)",
+        "GHSA-4fjg-2h4q-fwg3 (low)",
+        "GHSA-3m3g-3wcr-px46 (medium)",
+        "GHSA-cg6r-mpgc-h9mm (low)",
+        "GHSA-mm27-mwq9-fr5g (low)",
+        "GHSA-8cg3-r6g9-fpg2 (medium)",
+        "GHSA-8xvp-7hj6-mcj9 (high)",
+        "GHSA-crc3-h8v6-qh57 (low)",
+        "GHSA-fgw4-v983-mgp8 (medium)",
+        "GHSA-2m9h-r57g-45pj (low)",
+        "GHSA-p2h2-3vg9-4p87 (high)",
+        "GHSA-jwcm-9g39-pmcw (medium)",
+        "GHSA-fqfh-778m-2v32 (medium)"
+      ],
+      "scorecard": "2026-11-16",
+      "signals": [
+        "[verified] Trayectoria pública del repositorio",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[warning] 17 avisos de seguridad publicados",
+        "[verified] Release oficial v2.105.0",
+        "[verified] Release inmutable",
+        "[verified] Huellas SHA-256 publicadas por GitHub",
+        "[manual] El autor publica sumas o firmas",
+        "[verified] Atestación de procedencia registrada en GitHub",
+        "[manual] 6 ejecutables para Windows sin revisar",
+        "[verified] Sus flujos de GitHub Actions no usan patrones peligrosos conocidos.",
+        "[verified] El código fuente no incluye binarios sin compilar desde el propio código.",
+        "[verified] Publica una política de seguridad (SECURITY.md) para informar de vulnerabilidades.",
+        "[verified] Los cambios recientes pasan por revisión de código."
+      ]
+    },
+    {
+      "fullName": "LenovoLegionToolkit-Team/LenovoLegionToolkit",
+      "release": "v2.36.0.0",
+      "immutable": false,
+      "executables": [
+        {
+          "name": "LenovoLegionToolkitSetup-v2.36.0.0.exe",
+          "digest": "sha256:446f8bc434c6e4d270539b059d44e76e7a072535e41d84b470105dad8f486416",
+          "attestations": 0
+        }
+      ],
+      "advisories": [],
+      "scorecard": "sin datos",
+      "signals": [
+        "[verified] Trayectoria pública del repositorio",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[unknown] Sin avisos de seguridad publicados",
+        "[verified] Release oficial v2.36.0.0",
+        "[manual] Release modificable",
+        "[verified] Huellas SHA-256 publicadas por GitHub",
+        "[unknown] Sin atestación de procedencia",
+        "[manual] Ejecutable para Windows sin revisar",
+        "[unknown] Sin evaluación de OpenSSF Scorecard"
+      ]
+    },
+    {
+      "fullName": "Tyrrrz/YoutubeDownloader",
+      "release": "1.17.1",
+      "immutable": false,
+      "executables": [
+        {
+          "name": "YoutubeDownloader.linux-x64.zip",
+          "digest": "sha256:17d8757253c9c817e215ff631b1a81817640358f7d759fa280b2321a9e79b9b0",
+          "attestations": 0
+        },
+        {
+          "name": "YoutubeDownloader.osx-x64.zip",
+          "digest": "sha256:9e6bec1f3d8d1f54b63c4f5437cb96ec59ae1c7717925305e731afc24a2b45c6",
+          "attestations": 0
+        },
+        {
+          "name": "YoutubeDownloader.win-arm64.zip",
+          "digest": "sha256:d0add7590d46775683d0ddde09c3fa0aba9d6ce3cf87852a2fc98dbb06659039",
+          "attestations": 0
+        },
+        {
+          "name": "YoutubeDownloader.win-x64.zip",
+          "digest": "sha256:5a74c9318e926543e18f0106aa16517258b2628e05670d347ee435c47d60aeb1",
+          "attestations": null
+        },
+        {
+          "name": "YoutubeDownloader.win-x86.zip",
+          "digest": "sha256:b9a36a7f19505e6d0d303a46907e6d2502c4afc8a59a1d79eb4e5ba71afa8b44",
+          "attestations": null
+        }
+      ],
+      "advisories": [
+        "GHSA-j83h-c54c-6234 (high)"
+      ],
+      "scorecard": "2026-11-16",
+      "signals": [
+        "[verified] Trayectoria pública del repositorio",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[warning] 1 aviso de seguridad publicado",
+        "[verified] Release oficial 1.17.1",
+        "[manual] Release modificable",
+        "[verified] Huellas SHA-256 publicadas por GitHub",
+        "[unknown] Sin atestación de procedencia",
+        "[manual] 5 ejecutables para Windows sin revisar",
+        "[verified] Sus flujos de GitHub Actions no usan patrones peligrosos conocidos.",
+        "[verified] El código fuente no incluye binarios sin compilar desde el propio código.",
+        "[manual] No publica una política de seguridad para informar de vulnerabilidades.",
+        "[manual] Los cambios recientes no suelen pasar por revisión de código."
+      ]
+    },
+    {
+      "fullName": "nilsteampassnet/TeamPass",
+      "release": "3.2.4.3",
+      "immutable": false,
+      "executables": [],
+      "advisories": [
+        "GHSA-32hp-p55x-wr8v (medium)",
+        "GHSA-grv6-m9pj-4cf2 (medium)",
+        "GHSA-rwmr-96mp-w36x (high)",
+        "GHSA-9f44-82r9-8878 (high)",
+        "GHSA-vrhq-38vx-9vjp (high)",
+        "GHSA-5mff-6g7v-9v6v (medium)",
+        "GHSA-7wvw-wxqx-v364 (medium)",
+        "GHSA-57ww-wx2c-hx7x (medium)",
+        "GHSA-28mq-vx4v-72h8 (medium)",
+        "GHSA-5cwc-6hfp-2mr7 (medium)",
+        "GHSA-2vf9-2qw7-8hmr (medium)",
+        "GHSA-jgmv-3gr2-fjpw (high)",
+        "GHSA-h66m-8w9q-86r2 (medium)",
+        "GHSA-jxj9-mcx4-h34j (medium)",
+        "GHSA-p84q-3h9h-qvh6 (medium)",
+        "GHSA-75qw-h7p8-ppr3 (medium)",
+        "GHSA-6x8j-28p6-mmfm (high)",
+        "GHSA-r6r4-5mr3-rppm (high)",
+        "GHSA-pxjv-6qgf-xhcg (low)",
+        "GHSA-8xp7-fh3p-5pcr (critical)"
+      ],
+      "scorecard": "2026-10-19",
+      "signals": [
+        "[verified] Trayectoria pública del repositorio",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[warning] 20 avisos de seguridad publicados",
+        "[verified] Release oficial 3.2.4.3",
+        "[manual] Release modificable",
+        "[verified] Huellas SHA-256 publicadas por GitHub",
+        "[verified] Sus flujos de GitHub Actions no usan patrones peligrosos conocidos.",
+        "[verified] El código fuente no incluye binarios sin compilar desde el propio código.",
+        "[verified] Publica una política de seguridad (SECURITY.md) para informar de vulnerabilidades.",
+        "[manual] Los cambios recientes no suelen pasar por revisión de código."
+      ]
+    },
+    {
+      "fullName": "hrydgard/ppsspp",
+      "release": "v1.20.4",
+      "immutable": false,
+      "executables": [
+        {
+          "name": "PPSSPP-v1.20.4-Windows-ARM64.zip",
+          "digest": "sha256:ba73fe968f06086286174539c4e127e2bd1ec602c2fbd0bc173c5193ded0960c",
+          "attestations": 0
+        },
+        {
+          "name": "PPSSPP-v1.20.4-Windows-x64.zip",
+          "digest": "sha256:fbc9cd2f5131b159a92424e5c458c35ce43ba603cdded64dfc98e4bd4f17ff93",
+          "attestations": 0
+        }
+      ],
+      "advisories": [],
+      "scorecard": "2026-11-09",
+      "signals": [
+        "[verified] Trayectoria pública del repositorio",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[unknown] Sin avisos de seguridad publicados",
+        "[verified] Release oficial v1.20.4",
+        "[manual] Release modificable",
+        "[verified] Huellas SHA-256 publicadas por GitHub",
+        "[unknown] Sin atestación de procedencia",
+        "[manual] 2 ejecutables para Windows sin revisar",
+        "[verified] Sus flujos de GitHub Actions no usan patrones peligrosos conocidos.",
+        "[verified] El código fuente no incluye binarios sin compilar desde el propio código.",
+        "[manual] No publica una política de seguridad para informar de vulnerabilidades.",
+        "[manual] Los cambios recientes no suelen pasar por revisión de código."
+      ]
+    },
+    {
+      "fullName": "erez-c137/NetSpeedTray",
+      "release": "v2.2.0",
+      "immutable": false,
+      "executables": [
+        {
+          "name": "NetSpeedTray-2.2.0-x64-Setup.exe",
+          "digest": "sha256:fb549c6f2644086a4146f90e0f856748755da7bf17f9dbec058c15f7a95738bc",
+          "attestations": 0
+        },
+        {
+          "name": "NetSpeedTray-Portable-2.2.0.zip",
+          "digest": "sha256:79ff9879318149b56765554b394fe0f370d84c5d537d9bb82c27b48e5eb5102a",
+          "attestations": 0
+        }
+      ],
+      "advisories": [],
+      "scorecard": "sin datos",
+      "signals": [
+        "[verified] Trayectoria pública del repositorio",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[unknown] Sin avisos de seguridad publicados",
+        "[verified] Release oficial v2.2.0",
+        "[manual] Release modificable",
+        "[verified] Huellas SHA-256 publicadas por GitHub",
+        "[manual] El autor publica sumas o firmas",
+        "[unknown] Sin atestación de procedencia",
+        "[manual] 2 ejecutables para Windows sin revisar",
+        "[unknown] Sin evaluación de OpenSSF Scorecard"
+      ]
+    },
+    {
+      "fullName": "ryanlua/auraclick",
+      "release": "v0.0.1.0",
+      "immutable": false,
+      "executables": [
+        {
+          "name": "AuraClick_0.0.1.0.msixbundle",
+          "digest": "sha256:ea3980564838e1367d3d582c304cef4b4526c41bac11388cb878f4ecba4c12dd",
+          "attestations": 0
+        }
+      ],
+      "advisories": [],
+      "scorecard": "sin datos",
+      "signals": [
+        "[verified] Trayectoria pública del repositorio",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[unknown] Sin avisos de seguridad publicados",
+        "[verified] Release oficial v0.0.1.0",
+        "[manual] Release modificable",
+        "[verified] Huellas SHA-256 publicadas por GitHub",
+        "[unknown] Sin atestación de procedencia",
+        "[manual] Ejecutable para Windows sin revisar",
+        "[unknown] Sin evaluación de OpenSSF Scorecard"
+      ]
+    },
+    {
+      "fullName": "genesistoxical/drop-icons",
+      "release": "4.0.0",
+      "immutable": false,
+      "executables": [
+        {
+          "name": "Drop-Icons-Installer.exe",
+          "digest": "sha256:84656fbf8cef8c726bc64f4b1c5939686e5582cba0a0bc4a8e7628f2abf9db1d",
+          "attestations": 0
+        }
+      ],
+      "advisories": [],
+      "scorecard": "sin datos",
+      "signals": [
+        "[verified] Trayectoria pública del repositorio",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[unknown] Sin avisos de seguridad publicados",
+        "[verified] Release oficial 4.0.0",
+        "[manual] Release modificable",
+        "[verified] Huellas SHA-256 publicadas por GitHub",
+        "[unknown] Sin atestación de procedencia",
+        "[manual] Ejecutable para Windows sin revisar",
+        "[unknown] Sin evaluación de OpenSSF Scorecard"
+      ]
+    },
+    {
+      "fullName": "crossterm-rs/crossterm",
+      "release": "0.28",
+      "immutable": false,
+      "executables": [],
+      "advisories": [],
+      "scorecard": "2026-11-16",
+      "signals": [
+        "[verified] Trayectoria pública del repositorio",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[unknown] Sin avisos de seguridad publicados",
+        "[verified] Release oficial 0.28",
+        "[manual] Release modificable",
+        "[verified] Sus flujos de GitHub Actions no usan patrones peligrosos conocidos.",
+        "[verified] El código fuente no incluye binarios sin compilar desde el propio código.",
+        "[manual] No publica una política de seguridad para informar de vulnerabilidades.",
+        "[manual] Los cambios recientes no suelen pasar por revisión de código."
+      ]
+    },
+    {
+      "fullName": "fabianquilpue/Laura_WordProcessor_3DS",
+      "release": null,
+      "immutable": null,
+      "executables": [],
+      "advisories": [],
+      "scorecard": "sin datos",
+      "signals": [
+        "[manual] Repositorio y cuenta muy recientes",
+        "[verified] Mantenimiento activo",
+        "[verified] Código fuente público",
+        "[unknown] Sin avisos de seguridad publicados",
+        "[manual] Sin releases oficiales"
+      ]
+    }
+  ]
+}

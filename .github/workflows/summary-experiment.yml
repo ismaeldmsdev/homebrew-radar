@@ -1,0 +1,84 @@
+name: Experimento — resúmenes con IA local
+
+# Prueba de viabilidad aislada: NO toca data/summaries.json ni publica la web.
+# Ejecuta varios modelos abiertos con llama.cpp en los servidores estándar de
+# GitHub Actions (gratuitos en repositorios públicos) y guarda un informe con
+# calidad, tiempos y memoria en experiments/. Ronda 2: solo los dos mejores modelos
+# de la ronda 1, con el prompt 2026-11-19.3 y el validador mejorado.
+on:
+  push:
+    branches: ['radar-2.2-**']
+    paths: ['scripts/experiments/**', 'scripts/summarizer.mjs', 'src/core/grounding.ts', '.github/workflows/summary-experiment.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: summary-experiment-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  LLAMA_CPP: b12532
+
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: qwen3-4b-instruct-2507, url: 'https://huggingface.co/unsloth/Qwen3-4B-Instruct-2507-GGUF/resolve/main/Qwen3-4B-Instruct-2507-Q4_K_M.gguf' }
+          - { name: qwen3.5-4b, url: 'https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/main/Qwen3.5-4B-Q4_K_M.gguf' }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Máquina
+        run: |
+          echo "CPU: $(lscpu | grep 'Model name' | sed 's/.*: *//') · $(nproc) hilos"
+          free -m | head -2
+          df -h / | tail -1
+          cat /etc/os-release | grep PRETTY
+      - name: Descargar llama.cpp y el modelo
+        run: |
+          mkdir -p "$RUNNER_TEMP/llama" "$RUNNER_TEMP/models"
+          curl -sSfL "https://github.com/ggml-org/llama.cpp/releases/download/$LLAMA_CPP/llama-$LLAMA_CPP-bin-ubuntu-x64.tar.gz" | tar -xz -C "$RUNNER_TEMP/llama"
+          SERVER=$(find "$RUNNER_TEMP/llama" -name llama-server -type f | head -1)
+          echo "SERVER=$SERVER" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=$(dirname "$SERVER")" >> "$GITHUB_ENV"
+          start=$(date +%s)
+          curl -sSfL -o "$RUNNER_TEMP/models/model.gguf" "${{ matrix.url }}"
+          echo "Modelo descargado en $(( $(date +%s) - start )) s: $(du -h "$RUNNER_TEMP/models/model.gguf" | cut -f1)"
+          sha256sum "$RUNNER_TEMP/models/model.gguf"
+      - name: Generar resúmenes de la muestra
+        run: node --experimental-strip-types scripts/experiments/bench-summaries.mjs --binary "$SERVER" --models "$RUNNER_TEMP/models" --only model.gguf --threads "$(nproc)" --out "report-${{ matrix.name }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: report-${{ matrix.name }}
+          path: report-${{ matrix.name }}.json
+          if-no-files-found: ignore
+
+  save:
+    needs: bench
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: experiments/actions-ronda2
+          merge-multiple: true
+      - name: Guardar informes en la rama
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/actions-ronda2
+          git diff --cached --quiet && exit 0
+          git commit -m "Informe del experimento de resúmenes con IA local"
+          git push origin HEAD:${{ github.ref_name }}

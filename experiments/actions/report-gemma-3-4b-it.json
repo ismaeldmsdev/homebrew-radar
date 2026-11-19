@@ -1,0 +1,540 @@
+{
+  "machine": {
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "cores": 4,
+    "memGB": 16.8,
+    "platform": "linux",
+    "threads": 4
+  },
+  "models": [
+    {
+      "model": "model.gguf",
+      "loadMs": 3013,
+      "totalMs": 398398,
+      "peakMemoryMB": 10409,
+      "accepted": 12,
+      "total": 18,
+      "avgRequestMs": 22730,
+      "avgGenTokensPerSec": 9.6,
+      "avgPromptTokensPerSec": 44,
+      "results": [
+        {
+          "fullName": "wickenico/WailBrew",
+          "ok": false,
+          "error": "El modelo respondió 400.",
+          "attempts": []
+        },
+        {
+          "fullName": "crossterm-rs/crossterm",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una biblioteca de código Rust para manipular terminales en diferentes sistemas operativos. Permite controlar la posición del cursor, los colores del texto y la forma de mostrar la información en la consola. Es útil para programadores que necesitan crear interfaces de texto en aplicaciones.",
+          "kinds": [
+            "library"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 24138,
+              "usage": {
+                "completion_tokens": 69,
+                "prompt_tokens": 1320,
+                "total_tokens": 1389,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 742,
+                "prompt_ms": 16810.814,
+                "prompt_per_token_ms": 22.65608355795148,
+                "prompt_per_second": 44.13825529209948,
+                "predicted_n": 69,
+                "predicted_ms": 7256.004,
+                "predicted_per_token_ms": 106.70594117647059,
+                "predicted_per_second": 9.371549409289191
+              },
+              "text": "Es una biblioteca de código Rust para manipular terminales en diferentes sistemas operativos. Permite controlar la posición del cursor, los colores del texto y la forma de mostrar la información en la consola. Es útil para programadores que necesitan crear interfaces de texto en aplicaciones.",
+              "kinds": [
+                "library"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "autobrr/qui",
+          "readmeChars": 3442,
+          "ok": true,
+          "text": "Es una interfaz web para qBittorrent, que se ejecuta como una sola aplicación. Permite gestionar varias instancias de qBittorrent y automatizar flujos de trabajo de torrents.  Se puede usar desde un servidor propio (selfhosted) mediante Docker.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 25132,
+              "usage": {
+                "completion_tokens": 72,
+                "prompt_tokens": 1377,
+                "total_tokens": 1449,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 799,
+                "prompt_ms": 17940.971,
+                "prompt_per_token_ms": 22.454281602002506,
+                "prompt_per_second": 44.53493626404055,
+                "predicted_n": 72,
+                "predicted_ms": 7113.659,
+                "predicted_per_token_ms": 100.19238028169013,
+                "predicted_per_second": 9.980798910940207
+              },
+              "text": "Es una interfaz web para qBittorrent, que se ejecuta como una sola aplicación. Permite gestionar varias instancias de qBittorrent y automatizar flujos de trabajo de torrents.  Se puede usar desde un servidor propio (selfhosted) mediante Docker.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "bahdotsh/wrkflw",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una herramienta de línea de comandos para validar y ejecutar flujos de trabajo de GitHub Actions. Te permite probar tus flujos de trabajo localmente antes de subirlos a GitHub.",
+          "kinds": [
+            "cli"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 19534,
+              "usage": {
+                "completion_tokens": 53,
+                "prompt_tokens": 1223,
+                "total_tokens": 1276,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 645,
+                "prompt_ms": 14366.036,
+                "prompt_per_token_ms": 22.27292403100775,
+                "prompt_per_second": 44.89756255657441,
+                "predicted_n": 53,
+                "predicted_ms": 5094.326,
+                "predicted_per_token_ms": 97.96780769230769,
+                "predicted_per_second": 10.20743470284391
+              },
+              "text": "Es una herramienta de línea de comandos para validar y ejecutar flujos de trabajo de GitHub Actions. Te permite probar tus flujos de trabajo localmente antes de subirlos a GitHub.",
+              "kinds": [
+                "cli"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "julyx10/lap",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una aplicación para escritorio (app) para macOS, Windows y Linux. Permite organizar tus fotos y vídeos, gestionando grandes bibliotecas de medios de forma offline.  Organiza las fotos por fecha y te ayuda a encontrar rápidamente viejas fotos.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 22564,
+              "usage": {
+                "completion_tokens": 68,
+                "prompt_tokens": 1264,
+                "total_tokens": 1332,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 686,
+                "prompt_ms": 15622.599,
+                "prompt_per_token_ms": 22.773467930029156,
+                "prompt_per_second": 43.910747501104005,
+                "predicted_n": 68,
+                "predicted_ms": 6870.492,
+                "predicted_per_token_ms": 102.54465671641792,
+                "predicted_per_second": 9.751848921445509
+              },
+              "text": "Es una aplicación para escritorio (app) para macOS, Windows y Linux. Permite organizar tus fotos y vídeos, gestionando grandes bibliotecas de medios de forma offline.  Organiza las fotos por fecha y te ayuda a encontrar rápidamente viejas fotos.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "langroid/langroid",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un framework de Python para crear aplicaciones impulsadas por modelos de lenguaje (LLM). Permite configurar agentes que colaboran para resolver problemas, intercambiando mensajes. Es útil para desarrollar aplicaciones que necesitan la capacidad de procesar y entender el lenguaje natural.",
+          "kinds": [
+            "library"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 22353,
+              "usage": {
+                "completion_tokens": 69,
+                "prompt_tokens": 1252,
+                "total_tokens": 1321,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 674,
+                "prompt_ms": 15309.034,
+                "prompt_per_token_ms": 22.713700296735905,
+                "prompt_per_second": 44.02629192671464,
+                "predicted_n": 69,
+                "predicted_ms": 6974.078,
+                "predicted_per_token_ms": 102.5599705882353,
+                "predicted_per_second": 9.750392811780998
+              },
+              "text": "Es un framework de Python para crear aplicaciones impulsadas por modelos de lenguaje (LLM). Permite configurar agentes que colaboran para resolver problemas, intercambiando mensajes. Es útil para desarrollar aplicaciones que necesitan la capacidad de procesar y entender el lenguaje natural.",
+              "kinds": [
+                "library"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "zelon88/HRConvert2",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un programa que se instala en tu propio servidor (selfhosted) para convertir archivos. Permite trabajar con más de 560 formatos diferentes y en 26 idiomas. Es útil si necesitas convertir muchos archivos de distintos tipos de forma segura y controlada.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 23143,
+              "usage": {
+                "completion_tokens": 72,
+                "prompt_tokens": 1272,
+                "total_tokens": 1344,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 694,
+                "prompt_ms": 15659.484,
+                "prompt_per_token_ms": 22.564097982708933,
+                "prompt_per_second": 44.31819081650455,
+                "predicted_n": 72,
+                "predicted_ms": 7412.767,
+                "predicted_per_token_ms": 104.4051690140845,
+                "predicted_per_second": 9.578069835460902
+              },
+              "text": "Es un programa que se instala en tu propio servidor (selfhosted) para convertir archivos. Permite trabajar con más de 560 formatos diferentes y en 26 idiomas. Es útil si necesitas convertir muchos archivos de distintos tipos de forma segura y controlada.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "gopher64/gopher64",
+          "readmeChars": 2577,
+          "ok": true,
+          "text": "Es un programa que emula una consola de videojuegos N64. Permite jugar a juegos antiguos de N64 en tu ordenador. Incluye funciones como jugar en red con otros usuarios y guardar partidas.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 22863,
+              "usage": {
+                "completion_tokens": 59,
+                "prompt_tokens": 1317,
+                "total_tokens": 1376,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 739,
+                "prompt_ms": 16733.269,
+                "prompt_per_token_ms": 22.64312449255751,
+                "prompt_per_second": 44.16351640555112,
+                "predicted_n": 59,
+                "predicted_ms": 6059.472,
+                "predicted_per_token_ms": 104.47365517241379,
+                "predicted_per_second": 9.571791073545683
+              },
+              "text": "Es un programa que emula una consola de videojuegos N64. Permite jugar a juegos antiguos de N64 en tu ordenador. Incluye funciones como jugar en red con otros usuarios y guardar partidas.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "IvanMurzak/Unity-MCP",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un conjunto de herramientas para el motor de juego Unity. Permite que agentes de inteligencia artificial interactúen con el editor de Unity, modificando escenas y código. Se usa a través de una interfaz de línea de comandos y un paquete para Unity.",
+          "kinds": [
+            "library"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 25048,
+              "usage": {
+                "completion_tokens": 68,
+                "prompt_tokens": 1364,
+                "total_tokens": 1432,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 786,
+                "prompt_ms": 17981.118,
+                "prompt_per_token_ms": 22.876740458015266,
+                "prompt_per_second": 43.71252110130194,
+                "predicted_n": 68,
+                "predicted_ms": 6996.716,
+                "predicted_per_token_ms": 104.42859701492537,
+                "predicted_per_second": 9.575921046388046
+              },
+              "text": "Es un conjunto de herramientas para el motor de juego Unity. Permite que agentes de inteligencia artificial interactúen con el editor de Unity, modificando escenas y código. Se usa a través de una interfaz de línea de comandos y un paquete para Unity.",
+              "kinds": [
+                "library"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "neo-engine/neo",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un motor experimental para juegos Pokémon para Nintendo DS.  Está escrito en C++ y permite crear un juego Pokémon con características como batallas, mapas y música.  Es un proyecto en desarrollo, por lo que algunas funciones aún no están completas.",
+          "kinds": [
+            "experimental"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 23423,
+              "usage": {
+                "completion_tokens": 68,
+                "prompt_tokens": 1293,
+                "total_tokens": 1361,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 715,
+                "prompt_ms": 16289.167,
+                "prompt_per_token_ms": 22.782051748251746,
+                "prompt_per_second": 43.89420281589599,
+                "predicted_n": 68,
+                "predicted_ms": 7062.063,
+                "predicted_per_token_ms": 105.40392537313433,
+                "predicted_per_second": 9.487312701685045
+              },
+              "text": "Es un motor experimental para juegos Pokémon para Nintendo DS.  Está escrito en C++ y permite crear un juego Pokémon con características como batallas, mapas y música.  Es un proyecto en desarrollo, por lo que algunas funciones aún no están completas.",
+              "kinds": [
+                "experimental"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "TASEmulators/desmume",
+          "ok": false,
+          "error": "El modelo respondió 400.",
+          "attempts": []
+        },
+        {
+          "fullName": "fabianquilpue/Laura_WordProcessor_3DS",
+          "ok": false,
+          "error": "El modelo respondió 400.",
+          "attempts": []
+        },
+        {
+          "fullName": "cwuom/NeriPlayer",
+          "ok": false,
+          "error": "El modelo respondió 400.",
+          "attempts": []
+        },
+        {
+          "fullName": "hledgerorg/hledger",
+          "ok": false,
+          "error": "El modelo respondió 400.",
+          "attempts": []
+        },
+        {
+          "fullName": "pgaskin/kepubify",
+          "readmeChars": 999,
+          "ok": true,
+          "text": "Es una herramienta de línea de comandos que convierte archivos EPUB a formato Kobo EPUB. Permite realizar la conversión muy rápido, gestionando incluso archivos EPUB con errores. Es útil para usuarios que necesitan convertir libros electrónicos a formato Kobo.",
+          "kinds": [
+            "cli"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 14564,
+              "usage": {
+                "completion_tokens": 67,
+                "prompt_tokens": 912,
+                "total_tokens": 979,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 334,
+                "prompt_ms": 7854.379,
+                "prompt_per_token_ms": 23.51610479041916,
+                "prompt_per_second": 42.52404932331378,
+                "predicted_n": 67,
+                "predicted_ms": 6641.608,
+                "predicted_per_token_ms": 100.63042424242424,
+                "predicted_per_second": 9.937352520654636
+              },
+              "text": "Es una herramienta de línea de comandos que convierte archivos EPUB a formato Kobo EPUB. Permite realizar la conversión muy rápido, gestionando incluso archivos EPUB con errores. Es útil para usuarios que necesitan convertir libros electrónicos a formato Kobo.",
+              "kinds": [
+                "cli"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "awaseem/foqos",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una app para iPhone que te ayuda a bloquear aplicaciones y sitios web. Permite iniciar y detener sesiones de enfoque usando un tag NFC, un código QR o un temporizador. Es una alternativa gratuita y de código abierto a otros bloqueadores de aplicaciones.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 21032,
+              "usage": {
+                "completion_tokens": 68,
+                "prompt_tokens": 1183,
+                "total_tokens": 1251,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 605,
+                "prompt_ms": 13876.758,
+                "prompt_per_token_ms": 22.936790082644627,
+                "prompt_per_second": 43.59807960908448,
+                "predicted_n": 68,
+                "predicted_ms": 7145.315,
+                "predicted_per_token_ms": 106.64649253731342,
+                "predicted_per_second": 9.37677345225508
+              },
+              "text": "Es una app para iPhone que te ayuda a bloquear aplicaciones y sitios web. Permite iniciar y detener sesiones de enfoque usando un tag NFC, un código QR o un temporizador. Es una alternativa gratuita y de código abierto a otros bloqueadores de aplicaciones.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "BolgarMaxym97/3ds-recorder",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una aplicación para Nintendo 3DS que graba la pantalla del juego, el menú de inicio y las aplicaciones.  Permite grabar ambos tamaños de pantalla con sonido y convertir los vídeos en formato MP4 para verlos en el teléfono. Necesita un sistema operativo personalizado (Luma3DS) y una tarjeta SD.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 28969,
+              "usage": {
+                "completion_tokens": 83,
+                "prompt_tokens": 1458,
+                "total_tokens": 1541,
+                "prompt_tokens_details": {
+                  "cached_tokens": 578
+                }
+              },
+              "timings": {
+                "cache_n": 578,
+                "prompt_n": 880,
+                "prompt_ms": 19965.793,
+                "prompt_per_token_ms": 22.688401136363638,
+                "prompt_per_second": 44.07538433359496,
+                "predicted_n": 83,
+                "predicted_ms": 8933.184,
+                "predicted_per_token_ms": 108.94126829268292,
+                "predicted_per_second": 9.17925792192347
+              },
+              "text": "Es una aplicación para Nintendo 3DS que graba la pantalla del juego, el menú de inicio y las aplicaciones.  Permite grabar ambos tamaños de pantalla con sonido y convertir los vídeos en formato MP4 para verlos en el teléfono. Necesita un sistema operativo personalizado (Luma3DS) y una tarjeta SD.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "blocksds/libnds",
+          "ok": false,
+          "error": "El modelo respondió 400.",
+          "attempts": []
+        }
+      ]
+    }
+  ]
+}

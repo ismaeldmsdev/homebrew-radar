@@ -5,6 +5,11 @@ name: Radar — publicar y actualizar datos
 #   config/topics.json), así un fallo o límite de la API nunca bloquea un despliegue.
 # · Actualizar los datos: cada 12 horas o manualmente. Si la recopilación falla,
 #   se publica igualmente con el último catálogo válido guardado en el repositorio.
+# · Resúmenes en español: tras recopilar, una IA local y gratuita (llama.cpp con un
+#   modelo abierto, config/summarizer.json) resume los proyectos nuevos. Si falla, se
+#   publica igual con la descripción básica. Sin APIs de pago ni claves.
+# · Solicitudes: una issue titulada «Resumen: owner/repo» abierta por el propietario
+#   genera ese resumen (para resultados de búsquedas en vivo) y publica.
 
 on:
   push:
@@ -17,11 +22,14 @@ on:
         description: 'Recopilar datos nuevos de GitHub antes de publicar'
         type: boolean
         default: true
+  issues:
+    types: [opened]
 
 permissions:
   contents: write
   pages: write
   id-token: write
+  issues: write
 
 concurrency:
   group: homebrew-radar-pages
@@ -29,8 +37,10 @@ concurrency:
 
 jobs:
   build-and-deploy:
+    # Las issues solo cuentan si son solicitudes del propietario; el resto se ignora.
+    if: github.event_name != 'issues' || (startsWith(github.event.issue.title, 'Resumen:') && github.event.issue.author_association == 'OWNER')
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 75
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -78,21 +88,69 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
-      # Resúmenes en español: se reutiliza la caché versionada (data/summaries.json).
-      # La generación automática con un modelo de lenguaje es OPCIONAL y está apagada
-      # mientras no existan la variable SUMMARY_API_URL, SUMMARY_MODEL y el secreto
-      # SUMMARY_API_KEY (cualquier API compatible con OpenAI). Sin ellos no hay coste.
-      - name: Resúmenes en español
-        if: steps.collect.outcome == 'success'
+      - name: ¿Hay que generar resúmenes?
+        id: llm
+        if: steps.collect.outcome == 'success' || github.event_name == 'issues'
+        run: |
+          enabled=$(node -p "require('./config/summarizer.json').enabled !== false")
+          echo "enabled=$enabled" >> "$GITHUB_OUTPUT"
+          node -e "const c=require('./config/summarizer.json');console.log('MODEL_URL='+c.model.url);console.log('MODEL_SHA256='+c.model.sha256);console.log('LLAMA_CPP='+c.runtime.llamaCpp)" >> "$GITHUB_ENV"
+
+      # Modelo y llama.cpp se guardan en la caché de Actions (no en el repositorio) y se
+      # verifican con SHA-256; solo se descargan cuando cambia config/summarizer.json.
+      - name: Caché de la IA local
+        if: steps.llm.outputs.enabled == 'true'
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/summarizer
+          key: summarizer-${{ hashFiles('config/summarizer.json') }}
+
+      - name: Preparar la IA local
+        id: model
+        if: steps.llm.outputs.enabled == 'true'
         continue-on-error: true
         run: |
-          npm run --silent summaries -- auto
-          npm run --silent summaries -- sync
+          dir="$RUNNER_TEMP/summarizer"; mkdir -p "$dir/llama"
+          if [ ! -f "$dir/model.gguf" ]; then curl -sSfL --retry 3 -o "$dir/model.gguf" "$MODEL_URL"; fi
+          echo "$MODEL_SHA256  $dir/model.gguf" | sha256sum -c -
+          if [ -z "$(find "$dir/llama" -name llama-server -type f)" ]; then
+            curl -sSfL --retry 3 "https://github.com/ggml-org/llama.cpp/releases/download/$LLAMA_CPP/llama-$LLAMA_CPP-bin-ubuntu-x64.tar.gz" | tar -xz -C "$dir/llama"
+          fi
+          server=$(find "$dir/llama" -name llama-server -type f | head -1)
+          echo "SUMMARY_LOCAL_SERVER=$server" >> "$GITHUB_ENV"
+          echo "SUMMARY_LOCAL_MODEL=$dir/model.gguf" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=$(dirname "$server")" >> "$GITHUB_ENV"
+
+      - name: Resúmenes automáticos con IA local
+        if: steps.collect.outcome == 'success' && steps.model.outcome == 'success'
+        continue-on-error: true
+        timeout-minutes: 45
+        run: npm run --silent summaries -- auto
         env:
-          SUMMARY_API_URL: ${{ vars.SUMMARY_API_URL }}
-          SUMMARY_MODEL: ${{ vars.SUMMARY_MODEL }}
-          SUMMARY_API_KEY: ${{ secrets.SUMMARY_API_KEY }}
           SUMMARY_MAX: ${{ vars.SUMMARY_MAX }}
+
+      - name: Solicitud de resumen
+        id: request
+        if: github.event_name == 'issues'
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          TITLE: ${{ github.event.issue.title }}
+          NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          repo=$(node --experimental-strip-types -e "import('./scripts/summaries.mjs').then(m=>console.log(m.parseRequest(process.env.TITLE) ?? ''))")
+          if [ -z "$repo" ]; then echo "Título no válido" > comment.md; else
+            if [ "${{ steps.model.outcome }}" = "success" ]; then npm run --silent summaries -- request "$repo" --comment comment.md || true
+            else echo "⚠️ No se pudo preparar la IA local en esta ejecución; vuelve a intentarlo más tarde." > comment.md; fi
+          fi
+          gh issue comment "$NUMBER" --repo "$GITHUB_REPOSITORY" --body-file comment.md
+          gh issue close "$NUMBER" --repo "$GITHUB_REPOSITORY"
+
+      - name: Sincronizar resúmenes con el catálogo
+        if: steps.collect.outcome == 'success' || github.event_name == 'issues'
+        run: npm run --silent summaries -- sync
 
       - name: Validar el catálogo (o restaurar el último válido)
         run: |
@@ -103,11 +161,11 @@ jobs:
           fi
 
       - name: Guardar el catálogo actualizado
-        if: steps.collect.outcome == 'success'
+        if: steps.collect.outcome == 'success' || github.event_name == 'issues'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/projects.json public/data/summaries.json data/summaries.json
+          git add public/data/projects.json public/data/summaries.json data/summaries.json data/summary-attempts.json
           if git diff --cached --quiet; then echo "Sin cambios en el catálogo."; exit 0; fi
           git commit -m "Actualizar datos del radar"
           for attempt in 1 2 3; do

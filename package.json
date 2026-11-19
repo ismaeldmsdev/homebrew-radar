@@ -13,7 +13,7 @@
     "summaries": "node --experimental-strip-types scripts/summaries.mjs",
     "check:feed": "node scripts/check-feed.mjs",
     "check:dist": "node scripts/check-dist.mjs",
-    "test": "node --experimental-strip-types --test src/library.test.ts src/core/core.test.ts scripts/collector.test.mjs scripts/summaries.test.mjs"
+    "test": "node --experimental-strip-types --test src/library.test.ts src/core/core.test.ts scripts/collector.test.mjs scripts/summaries.test.mjs scripts/auto-summaries.test.mjs"
   },
   "dependencies": {
     "react": "^19.3.1",

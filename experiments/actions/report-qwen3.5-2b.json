@@ -1,0 +1,1213 @@
+{
+  "machine": {
+    "cpu": "AMD EPYC 9V45 96-Core Processor",
+    "cores": 4,
+    "memGB": 16.8,
+    "platform": "linux",
+    "threads": 4
+  },
+  "models": [
+    {
+      "model": "model.gguf",
+      "loadMs": 1006,
+      "totalMs": 152485,
+      "peakMemoryMB": 3633,
+      "accepted": 11,
+      "total": 18,
+      "avgRequestMs": 5445,
+      "avgGenTokensPerSec": 27.4,
+      "avgPromptTokensPerSec": 187.8,
+      "results": [
+        {
+          "fullName": "wickenico/WailBrew",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una aplicación gráfica para macOS que gestiona el gestor Homebrew. Permite instalar, actualizar y administrar paquetes, casks y servicios directamente desde la interfaz sin necesidad de terminal.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 8026,
+              "usage": {
+                "completion_tokens": 52,
+                "prompt_tokens": 1284,
+                "total_tokens": 1336,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0
+                }
+              },
+              "timings": {
+                "cache_n": 0,
+                "prompt_n": 1284,
+                "prompt_ms": 6185.229,
+                "prompt_per_token_ms": 4.817156542056075,
+                "prompt_per_second": 207.59134382898353,
+                "predicted_n": 52,
+                "predicted_ms": 1832.203,
+                "predicted_per_token_ms": 35.92554901960784,
+                "predicted_per_second": 27.8353435727373
+              },
+              "text": "Es una aplicación gráfica para macOS que gestiona el gestor Homebrew. Permite instalar, actualizar y administrar paquetes, casks y servicios directamente desde la interfaz sin necesidad de terminal.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "crossterm-rs/crossterm",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una librería de Rust para manejar interfaces de texto en la terminal de forma cross-platform. Permite controlar el cursor, colores y eventos de teclado y ratón. Útil para programadores que necesitan crear aplicaciones de consola robustas sin depender de librerías externas.",
+          "kinds": [
+            "library"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 6362,
+              "usage": {
+                "completion_tokens": 72,
+                "prompt_tokens": 1327,
+                "total_tokens": 1399,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 739,
+                "prompt_ms": 3767.712,
+                "prompt_per_token_ms": 5.098392422192152,
+                "prompt_per_second": 196.1402570047817,
+                "predicted_n": 72,
+                "predicted_ms": 2575.168,
+                "predicted_per_token_ms": 36.26997183098592,
+                "predicted_per_second": 27.57101672589905
+              },
+              "text": "Es una librería de Rust para manejar interfaces de texto en la terminal de forma cross-platform. Permite controlar el cursor, colores y eventos de teclado y ratón. Útil para programadores que necesitan crear aplicaciones de consola robustas sin depender de librerías externas.",
+              "kinds": [
+                "library"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "autobrr/qui",
+          "readmeChars": 3442,
+          "ok": true,
+          "text": "Es una interfaz web rápida para qBittorrent que permite gestionar múltiples instancias desde un solo lugar. Soporta autoseeding cruzado y automatización de trabajos de torrents. Útil para usuarios que desean controlar su torrent sin instalar múltiples programas.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 6452,
+              "usage": {
+                "completion_tokens": 69,
+                "prompt_tokens": 1384,
+                "total_tokens": 1453,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 796,
+                "prompt_ms": 4000.826,
+                "prompt_per_token_ms": 5.026163316582915,
+                "prompt_per_second": 198.9589149840558,
+                "predicted_n": 69,
+                "predicted_ms": 2431.272,
+                "predicted_per_token_ms": 35.754,
+                "predicted_per_second": 27.968898584773733
+              },
+              "text": "Es una interfaz web rápida para qBittorrent que permite gestionar múltiples instancias desde un solo lugar. Soporta autoseeding cruzado y automatización de trabajos de torrents. Útil para usuarios que desean controlar su torrent sin instalar múltiples programas.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "bahdotsh/wrkflw",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un comando de línea en Rust para validar y ejecutar workflows de GitHub Actions en tu máquina. Permite probar tus scripts antes de enviarlos a GitHub y ofrece una interfaz de terminal interactiva con pestañas para gestión de tareas.",
+          "kinds": [
+            "cli"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 5576,
+              "usage": {
+                "completion_tokens": 63,
+                "prompt_tokens": 1219,
+                "total_tokens": 1282,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 631,
+                "prompt_ms": 3279.409,
+                "prompt_per_token_ms": 5.197161648177496,
+                "prompt_per_second": 192.41271826722436,
+                "predicted_n": 63,
+                "predicted_ms": 2274.994,
+                "predicted_per_token_ms": 36.693451612903225,
+                "predicted_per_second": 27.252819128314183
+              },
+              "text": "Es un comando de línea en Rust para validar y ejecutar workflows de GitHub Actions en tu máquina. Permite probar tus scripts antes de enviarlos a GitHub y ofrece una interfaz de terminal interactiva con pestañas para gestión de tareas.",
+              "kinds": [
+                "cli"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "julyx10/lap",
+          "readmeChars": 3500,
+          "ok": false,
+          "ms": 5788,
+          "usage": {
+            "completion_tokens": 76,
+            "prompt_tokens": 1298,
+            "total_tokens": 1374,
+            "prompt_tokens_details": {
+              "cached_tokens": 740
+            }
+          },
+          "timings": {
+            "cache_n": 740,
+            "prompt_n": 558,
+            "prompt_ms": 2965.908,
+            "prompt_per_token_ms": 5.315247311827957,
+            "prompt_per_second": 188.13800023466675,
+            "predicted_n": 76,
+            "predicted_ms": 2813.934,
+            "predicted_per_token_ms": 37.51912,
+            "predicted_per_second": 26.65307715106324
+          },
+          "text": "Es una aplicación de escritorio para Windows, macOS y Linux que gestiona fotos sin necesidad de conexión a internet. Permite buscar imágenes localmente, detectar duplicados y organizarlas por fecha o etiquetas. Útil para usuarios que prefieren procesar sus propios archivos sin subirlos a servidores externos.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "problems": [
+            "El tipo «selfhosted» no tiene respaldo en la documentación."
+          ],
+          "attempts": [
+            {
+              "ms": 5790,
+              "usage": {
+                "completion_tokens": 63,
+                "prompt_tokens": 1256,
+                "total_tokens": 1319,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 668,
+                "prompt_ms": 3499.035,
+                "prompt_per_token_ms": 5.238076347305389,
+                "prompt_per_second": 190.90977941060893,
+                "predicted_n": 63,
+                "predicted_ms": 2270.411,
+                "predicted_per_token_ms": 36.61953225806452,
+                "predicted_per_second": 27.30783104909199
+              },
+              "text": "Es un gestor de fotos de escritorio que funciona sin conexión. Permite buscar imágenes en tu ordenador usando IA y gestionar miles de archivos sin subirlos a internet. Útil para organizar grandes colecciones locales sin depender de servicios externos.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "El tipo «selfhosted» no tiene respaldo en la documentación."
+              ]
+            },
+            {
+              "ms": 5788,
+              "usage": {
+                "completion_tokens": 76,
+                "prompt_tokens": 1298,
+                "total_tokens": 1374,
+                "prompt_tokens_details": {
+                  "cached_tokens": 740
+                }
+              },
+              "timings": {
+                "cache_n": 740,
+                "prompt_n": 558,
+                "prompt_ms": 2965.908,
+                "prompt_per_token_ms": 5.315247311827957,
+                "prompt_per_second": 188.13800023466675,
+                "predicted_n": 76,
+                "predicted_ms": 2813.934,
+                "predicted_per_token_ms": 37.51912,
+                "predicted_per_second": 26.65307715106324
+              },
+              "text": "Es una aplicación de escritorio para Windows, macOS y Linux que gestiona fotos sin necesidad de conexión a internet. Permite buscar imágenes localmente, detectar duplicados y organizarlas por fecha o etiquetas. Útil para usuarios que prefieren procesar sus propios archivos sin subirlos a servidores externos.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "El tipo «selfhosted» no tiene respaldo en la documentación."
+              ]
+            }
+          ]
+        },
+        {
+          "fullName": "langroid/langroid",
+          "readmeChars": 3500,
+          "ok": false,
+          "ms": 5499,
+          "usage": {
+            "completion_tokens": 62,
+            "prompt_tokens": 1321,
+            "total_tokens": 1383,
+            "prompt_tokens_details": {
+              "cached_tokens": 740
+            }
+          },
+          "timings": {
+            "cache_n": 740,
+            "prompt_n": 581,
+            "prompt_ms": 3192.387,
+            "prompt_per_token_ms": 5.494641996557659,
+            "prompt_per_second": 181.99547861835046,
+            "predicted_n": 62,
+            "predicted_ms": 2297.582,
+            "predicted_per_token_ms": 37.66527868852459,
+            "predicted_per_second": 26.549650893852757
+          },
+          "text": "Es un framework de Python para crear aplicaciones con Inteligencia Artificial. Permite configurar Agentes que trabajan juntos para resolver problemas usando herramientas y modelos de lenguaje. Útil para desarrolladores que buscan simplificar la creación de sistemas de IA.",
+          "kinds": [
+            "library"
+          ],
+          "problems": [
+            "El nombre «Inteligencia» no aparece en la documentación.",
+            "El nombre «Artificial» no aparece en la documentación.",
+            "El nombre «Agentes» no aparece en la documentación."
+          ],
+          "attempts": [
+            {
+              "ms": 6169,
+              "usage": {
+                "completion_tokens": 72,
+                "prompt_tokens": 1256,
+                "total_tokens": 1328,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 668,
+                "prompt_ms": 3415.482,
+                "prompt_per_token_ms": 5.112997005988024,
+                "prompt_per_second": 195.5800089123585,
+                "predicted_n": 72,
+                "predicted_ms": 2734.353,
+                "predicted_per_token_ms": 38.512014084507044,
+                "predicted_per_second": 25.96592320011352
+              },
+              "text": "Es un framework de Python para crear aplicaciones con Inteligencia Artificial. Permite configurar Agentes, equiparlos con herramientas y asignarles tareas para resolver problemas colaborativamente. Útil para desarrolladores que buscan simplificar el uso de modelos de lenguaje sin depender de frameworks como Langchain.",
+              "kinds": [
+                "library"
+              ],
+              "problems": [
+                "El nombre «Inteligencia» no aparece en la documentación.",
+                "El nombre «Artificial» no aparece en la documentación.",
+                "El nombre «Agentes» no aparece en la documentación."
+              ]
+            },
+            {
+              "ms": 5499,
+              "usage": {
+                "completion_tokens": 62,
+                "prompt_tokens": 1321,
+                "total_tokens": 1383,
+                "prompt_tokens_details": {
+                  "cached_tokens": 740
+                }
+              },
+              "timings": {
+                "cache_n": 740,
+                "prompt_n": 581,
+                "prompt_ms": 3192.387,
+                "prompt_per_token_ms": 5.494641996557659,
+                "prompt_per_second": 181.99547861835046,
+                "predicted_n": 62,
+                "predicted_ms": 2297.582,
+                "predicted_per_token_ms": 37.66527868852459,
+                "predicted_per_second": 26.549650893852757
+              },
+              "text": "Es un framework de Python para crear aplicaciones con Inteligencia Artificial. Permite configurar Agentes que trabajan juntos para resolver problemas usando herramientas y modelos de lenguaje. Útil para desarrolladores que buscan simplificar la creación de sistemas de IA.",
+              "kinds": [
+                "library"
+              ],
+              "problems": [
+                "El nombre «Inteligencia» no aparece en la documentación.",
+                "El nombre «Artificial» no aparece en la documentación.",
+                "El nombre «Agentes» no aparece en la documentación."
+              ]
+            }
+          ]
+        },
+        {
+          "fullName": "zelon88/HRConvert2",
+          "readmeChars": 3500,
+          "ok": false,
+          "ms": 5747,
+          "usage": {
+            "completion_tokens": 73,
+            "prompt_tokens": 1324,
+            "total_tokens": 1397,
+            "prompt_tokens_details": {
+              "cached_tokens": 767
+            }
+          },
+          "timings": {
+            "cache_n": 767,
+            "prompt_n": 557,
+            "prompt_ms": 3033.577,
+            "prompt_per_token_ms": 5.4462782764811495,
+            "prompt_per_second": 183.6116241651357,
+            "predicted_n": 73,
+            "predicted_ms": 2703.367,
+            "predicted_per_token_ms": 37.54676388888889,
+            "predicted_per_second": 26.633453763399494
+          },
+          "text": "Es una aplicación de servidor propio que convierte archivos en más de 500 formatos y 26 idiomas. Permite ejecutar conversiones en tu propia infraestructura sin que los datos se envíen a terceros. Útil para usuarios que necesitan control total sobre sus archivos.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "problems": [
+            "La cifra «500» no aparece en la documentación."
+          ],
+          "attempts": [
+            {
+              "ms": 6069,
+              "usage": {
+                "completion_tokens": 67,
+                "prompt_tokens": 1283,
+                "total_tokens": 1350,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 695,
+                "prompt_ms": 3597.001,
+                "prompt_per_token_ms": 5.175541007194245,
+                "prompt_per_second": 193.21651564734066,
+                "predicted_n": 67,
+                "predicted_ms": 2452.07,
+                "predicted_per_token_ms": 37.15257575757576,
+                "predicted_per_second": 26.916034207832563
+              },
+              "text": "Es un servidor propio para convertir archivos en 26 idiomas y más de 500 formatos. Permite ejecutar procesos en tu propio hardware sin que los datos salgan de tu control. Útil para usuarios que quieren evitar servicios de terceros.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "La cifra «500» no aparece en la documentación."
+              ]
+            },
+            {
+              "ms": 5747,
+              "usage": {
+                "completion_tokens": 73,
+                "prompt_tokens": 1324,
+                "total_tokens": 1397,
+                "prompt_tokens_details": {
+                  "cached_tokens": 767
+                }
+              },
+              "timings": {
+                "cache_n": 767,
+                "prompt_n": 557,
+                "prompt_ms": 3033.577,
+                "prompt_per_token_ms": 5.4462782764811495,
+                "prompt_per_second": 183.6116241651357,
+                "predicted_n": 73,
+                "predicted_ms": 2703.367,
+                "predicted_per_token_ms": 37.54676388888889,
+                "predicted_per_second": 26.633453763399494
+              },
+              "text": "Es una aplicación de servidor propio que convierte archivos en más de 500 formatos y 26 idiomas. Permite ejecutar conversiones en tu propia infraestructura sin que los datos se envíen a terceros. Útil para usuarios que necesitan control total sobre sus archivos.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "La cifra «500» no aparece en la documentación."
+              ]
+            }
+          ]
+        },
+        {
+          "fullName": "gopher64/gopher64",
+          "readmeChars": 2577,
+          "ok": true,
+          "text": "Es una aplicación de escritorio para Windows y macOS que ordena tus fotos. Permite repartirlas automáticamente en carpetas por año y mes y detectar archivos duplicados. Útil si tienes muchas fotos desordenadas en el ordenador.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 6381,
+              "usage": {
+                "completion_tokens": 73,
+                "prompt_tokens": 1307,
+                "total_tokens": 1380,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 719,
+                "prompt_ms": 3716.329,
+                "prompt_per_token_ms": 5.168746870653686,
+                "prompt_per_second": 193.47049198281422,
+                "predicted_n": 73,
+                "predicted_ms": 2642.247,
+                "predicted_per_token_ms": 36.697874999999996,
+                "predicted_per_second": 27.249534203274717
+              },
+              "text": "Es un emulador de consola N64 que permite ejecutar juegos originales en Windows, macOS y Linux. Funciona con un lenguaje llamado Rust y soporta funciones como rollback netplay, homebrew y cheats. Útil para jugar a juegos clásicos en tu ordenador.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "El tipo «selfhosted» no tiene respaldo en la documentación."
+              ]
+            },
+            {
+              "ms": 5343,
+              "usage": {
+                "completion_tokens": 63,
+                "prompt_tokens": 1349,
+                "total_tokens": 1412,
+                "prompt_tokens_details": {
+                  "cached_tokens": 791
+                }
+              },
+              "timings": {
+                "cache_n": 791,
+                "prompt_n": 558,
+                "prompt_ms": 3005.532,
+                "prompt_per_token_ms": 5.386258064516129,
+                "prompt_per_second": 185.65764729838176,
+                "predicted_n": 63,
+                "predicted_ms": 2329.163,
+                "predicted_per_token_ms": 37.56714516129032,
+                "predicted_per_second": 26.619004337609688
+              },
+              "text": "Es una aplicación de escritorio para Windows y macOS que ordena tus fotos. Permite repartirlas automáticamente en carpetas por año y mes y detectar archivos duplicados. Útil si tienes muchas fotos desordenadas en el ordenador.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "IvanMurzak/Unity-MCP",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una herramienta para Unity que conecta agentes de IA con el motor de juego. Permite ejecutar herramientas o habilidades directamente dentro de la edición y en el juego final. Útil para desarrolladores que necesitan automatizar tareas en C# sin escribir código adicional.",
+          "kinds": [
+            "plugin"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 6810,
+              "usage": {
+                "completion_tokens": 74,
+                "prompt_tokens": 1375,
+                "total_tokens": 1449,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 787,
+                "prompt_ms": 4106.335,
+                "prompt_per_token_ms": 5.2177064803049555,
+                "prompt_per_second": 191.65508902707646,
+                "predicted_n": 74,
+                "predicted_ms": 2683.268,
+                "predicted_per_token_ms": 36.75709589041096,
+                "predicted_per_second": 27.205631342079883
+              },
+              "text": "Es un plugin para Unity que conecta agentes de IA con el motor de desarrollo. Permite ejecutar herramientas en el editor de Unity o dentro de los juegos compilados. Funciona con Claude Code, Copilot y otros clientes MCP. Requiere Unity 2022.3 o superior.",
+              "kinds": [
+                "plugin"
+              ],
+              "problems": [
+                "Debe tener 2 o 3 frases (tiene 4)."
+              ]
+            },
+            {
+              "ms": 5378,
+              "usage": {
+                "completion_tokens": 66,
+                "prompt_tokens": 1417,
+                "total_tokens": 1483,
+                "prompt_tokens_details": {
+                  "cached_tokens": 859
+                }
+              },
+              "timings": {
+                "cache_n": 859,
+                "prompt_n": 558,
+                "prompt_ms": 3003.154,
+                "prompt_per_token_ms": 5.381996415770609,
+                "prompt_per_second": 185.8046573702181,
+                "predicted_n": 66,
+                "predicted_ms": 2367.305,
+                "predicted_per_token_ms": 36.42007692307692,
+                "predicted_per_second": 27.45738297346561
+              },
+              "text": "Es una herramienta para Unity que conecta agentes de IA con el motor de juego. Permite ejecutar herramientas o habilidades directamente dentro de la edición y en el juego final. Útil para desarrolladores que necesitan automatizar tareas en C# sin escribir código adicional.",
+              "kinds": [
+                "plugin"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "neo-engine/neo",
+          "readmeChars": 3500,
+          "ok": false,
+          "ms": 4966,
+          "usage": {
+            "completion_tokens": 52,
+            "prompt_tokens": 1372,
+            "total_tokens": 1424,
+            "prompt_tokens_details": {
+              "cached_tokens": 799
+            }
+          },
+          "timings": {
+            "cache_n": 799,
+            "prompt_n": 573,
+            "prompt_ms": 3128.004,
+            "prompt_per_token_ms": 5.4589947643979055,
+            "prompt_per_second": 183.1839089719834,
+            "predicted_n": 52,
+            "predicted_ms": 1829.848,
+            "predicted_per_token_ms": 35.87937254901961,
+            "predicted_per_second": 27.871167441230092
+          },
+          "text": "Es un motor de juegos para Nintendo DS escrito desde cero. Permite jugar a Pokémon en el navegador sin instalar nada. Útil para probar motores o juegos en dispositivos antiguos.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "problems": [
+            "Menciona «navegador» pero la documentación no lo respalda.",
+            "El tipo «selfhosted» no tiene respaldo en la documentación."
+          ],
+          "attempts": [
+            {
+              "ms": 6276,
+              "usage": {
+                "completion_tokens": 68,
+                "prompt_tokens": 1315,
+                "total_tokens": 1383,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 727,
+                "prompt_ms": 3809.553,
+                "prompt_per_token_ms": 5.240100412654745,
+                "prompt_per_second": 190.83603771886098,
+                "predicted_n": 68,
+                "predicted_ms": 2446.248,
+                "predicted_per_token_ms": 36.511164179104476,
+                "predicted_per_second": 27.388882893312534
+              },
+              "text": "Es un motor de juego experimental para Nintendo DS escrito desde cero en C++. Permite jugar a Pokémon en el navegador sin instalar nada, aunque incluye mapas y sprites de juegos oficiales. Útil para probar motores de juego o crear juegos personalizados en el navegador.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "Menciona «navegador» pero la documentación no lo respalda.",
+                "El tipo «selfhosted» no tiene respaldo en la documentación."
+              ]
+            },
+            {
+              "ms": 4966,
+              "usage": {
+                "completion_tokens": 52,
+                "prompt_tokens": 1372,
+                "total_tokens": 1424,
+                "prompt_tokens_details": {
+                  "cached_tokens": 799
+                }
+              },
+              "timings": {
+                "cache_n": 799,
+                "prompt_n": 573,
+                "prompt_ms": 3128.004,
+                "prompt_per_token_ms": 5.4589947643979055,
+                "prompt_per_second": 183.1839089719834,
+                "predicted_n": 52,
+                "predicted_ms": 1829.848,
+                "predicted_per_token_ms": 35.87937254901961,
+                "predicted_per_second": 27.871167441230092
+              },
+              "text": "Es un motor de juegos para Nintendo DS escrito desde cero. Permite jugar a Pokémon en el navegador sin instalar nada. Útil para probar motores o juegos en dispositivos antiguos.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "Menciona «navegador» pero la documentación no lo respalda.",
+                "El tipo «selfhosted» no tiene respaldo en la documentación."
+              ]
+            }
+          ]
+        },
+        {
+          "fullName": "TASEmulators/desmume",
+          "readmeChars": 72,
+          "ok": false,
+          "ms": 2706,
+          "usage": {
+            "completion_tokens": 49,
+            "prompt_tokens": 748,
+            "total_tokens": 797,
+            "prompt_tokens_details": {
+              "cached_tokens": 588
+            }
+          },
+          "timings": {
+            "cache_n": 588,
+            "prompt_n": 160,
+            "prompt_ms": 974.419,
+            "prompt_per_token_ms": 6.09011875,
+            "prompt_per_second": 164.2004107062773,
+            "predicted_n": 49,
+            "predicted_ms": 1724.369,
+            "predicted_per_token_ms": 35.92435416666667,
+            "predicted_per_second": 27.836269383177267
+          },
+          "text": "Es un emulador de Nintendo DS escrito en C++. Permite ejecutar juegos en el navegador sin conexión. Falta información sobre la instalación y los requisitos.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "problems": [
+            "Menciona «sin conexión» pero la documentación no lo respalda.",
+            "El tipo «selfhosted» no tiene respaldo en la documentación.",
+            "Con documentación escasa el texto debe decir que faltan datos."
+          ],
+          "attempts": [
+            {
+              "ms": 2856,
+              "usage": {
+                "completion_tokens": 66,
+                "prompt_tokens": 680,
+                "total_tokens": 746,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 92,
+                "prompt_ms": 556.059,
+                "prompt_per_token_ms": 6.044119565217391,
+                "prompt_per_second": 165.4500691473387,
+                "predicted_n": 66,
+                "predicted_ms": 2281.877,
+                "predicted_per_token_ms": 35.1058,
+                "predicted_per_second": 28.485321513823926
+              },
+              "text": "DeSmuME es un emulador para la Nintendo DS escrito en C++. Permite ejecutar juegos de la consola en tu ordenador. Útil para probar versiones antiguas o jugar en modo offline sin necesidad de una consola física.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "Menciona «offline» pero la documentación no lo respalda.",
+                "El tipo «selfhosted» no tiene respaldo en la documentación.",
+                "Con documentación escasa el texto debe decir que faltan datos."
+              ]
+            },
+            {
+              "ms": 2706,
+              "usage": {
+                "completion_tokens": 49,
+                "prompt_tokens": 748,
+                "total_tokens": 797,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 160,
+                "prompt_ms": 974.419,
+                "prompt_per_token_ms": 6.09011875,
+                "prompt_per_second": 164.2004107062773,
+                "predicted_n": 49,
+                "predicted_ms": 1724.369,
+                "predicted_per_token_ms": 35.92435416666667,
+                "predicted_per_second": 27.836269383177267
+              },
+              "text": "Es un emulador de Nintendo DS escrito en C++. Permite ejecutar juegos en el navegador sin conexión. Falta información sobre la instalación y los requisitos.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "Menciona «sin conexión» pero la documentación no lo respalda.",
+                "El tipo «selfhosted» no tiene respaldo en la documentación.",
+                "Con documentación escasa el texto debe decir que faltan datos."
+              ]
+            }
+          ]
+        },
+        {
+          "fullName": "fabianquilpue/Laura_WordProcessor_3DS",
+          "readmeChars": 84,
+          "ok": false,
+          "ms": 2856,
+          "usage": {
+            "completion_tokens": 57,
+            "prompt_tokens": 731,
+            "total_tokens": 788,
+            "prompt_tokens_details": {
+              "cached_tokens": 588
+            }
+          },
+          "timings": {
+            "cache_n": 588,
+            "prompt_n": 143,
+            "prompt_ms": 876.31,
+            "prompt_per_token_ms": 6.128041958041957,
+            "prompt_per_second": 163.18426127740184,
+            "predicted_n": 57,
+            "predicted_ms": 1973.449,
+            "predicted_per_token_ms": 35.240160714285715,
+            "predicted_per_second": 28.376715081058595
+          },
+          "text": "Laura es un procesador de texto minimalista diseñado para el Nintendo 3DS. No se puede ejecutar directamente en el dispositivo, por lo que faltan datos sobre cómo instalarlo o usarlo.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "problems": [
+            "El tipo «selfhosted» no tiene respaldo en la documentación."
+          ],
+          "attempts": [
+            {
+              "ms": 2781,
+              "usage": {
+                "completion_tokens": 64,
+                "prompt_tokens": 676,
+                "total_tokens": 740,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 88,
+                "prompt_ms": 523.668,
+                "prompt_per_token_ms": 5.950772727272727,
+                "prompt_per_second": 168.04540281246895,
+                "predicted_n": 64,
+                "predicted_ms": 2252.047,
+                "predicted_per_token_ms": 35.74677777777778,
+                "predicted_per_second": 27.974549376633792
+              },
+              "text": "Laura es un procesador de texto minimalista diseñado específicamente para el Nintendo 3DS. Está escrito en C++ y permite crear documentos sin necesidad de instalar nada adicional. Útil para escribir notas o documentos en el dispositivo portátil.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "El tipo «selfhosted» no tiene respaldo en la documentación.",
+                "Con documentación escasa el texto debe decir que faltan datos."
+              ]
+            },
+            {
+              "ms": 2856,
+              "usage": {
+                "completion_tokens": 57,
+                "prompt_tokens": 731,
+                "total_tokens": 788,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 143,
+                "prompt_ms": 876.31,
+                "prompt_per_token_ms": 6.128041958041957,
+                "prompt_per_second": 163.18426127740184,
+                "predicted_n": 57,
+                "predicted_ms": 1973.449,
+                "predicted_per_token_ms": 35.240160714285715,
+                "predicted_per_second": 28.376715081058595
+              },
+              "text": "Laura es un procesador de texto minimalista diseñado para el Nintendo 3DS. No se puede ejecutar directamente en el dispositivo, por lo que faltan datos sobre cómo instalarlo o usarlo.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "El tipo «selfhosted» no tiene respaldo en la documentación."
+              ]
+            }
+          ]
+        },
+        {
+          "fullName": "cwuom/NeriPlayer",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un reproductor de audio nativo para Android que integra múltiples fuentes de streaming y servidores de música propios. Permite gestionar archivos locales, sincronizar listas de reproducción y acceder a contenido de plataformas como YouTube Music o Bilibili sin necesidad de claves de pago.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 9783,
+              "usage": {
+                "completion_tokens": 69,
+                "prompt_tokens": 2041,
+                "total_tokens": 2110,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 1453,
+                "prompt_ms": 7267.936,
+                "prompt_per_token_ms": 5.002020646937371,
+                "prompt_per_second": 199.91920677342236,
+                "predicted_n": 69,
+                "predicted_ms": 2504.984,
+                "predicted_per_token_ms": 36.838,
+                "predicted_per_second": 27.145881969705197
+              },
+              "text": "Es un reproductor de audio nativo para Android que integra múltiples fuentes de streaming y servidores de música propios. Permite gestionar archivos locales, sincronizar listas de reproducción y acceder a contenido de plataformas como YouTube Music o Bilibili sin necesidad de claves de pago.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "hledgerorg/hledger",
+          "readmeChars": 3104,
+          "ok": true,
+          "text": "Es un programa de contabilidad escrito en Haskell que permite registrar gastos e ingresos. Permite crear archivos de texto para guardar tus datos y generar informes financieros. Útil para aprender contabilidad o gestionar finanzas personales.",
+          "kinds": [
+            "cli"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 5390,
+              "usage": {
+                "completion_tokens": 58,
+                "prompt_tokens": 1249,
+                "total_tokens": 1307,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 661,
+                "prompt_ms": 3288.864,
+                "prompt_per_token_ms": 4.975588502269289,
+                "prompt_per_second": 200.981250668924,
+                "predicted_n": 58,
+                "predicted_ms": 2078.593,
+                "predicted_per_token_ms": 36.46654385964912,
+                "predicted_per_second": 27.42239582255882
+              },
+              "text": "Es un programa de contabilidad escrito en Haskell que permite registrar gastos e ingresos. Permite crear archivos de texto para guardar tus datos y generar informes financieros. Útil para aprender contabilidad o gestionar finanzas personales.",
+              "kinds": [
+                "cli"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "pgaskin/kepubify",
+          "readmeChars": 999,
+          "ok": true,
+          "text": "Es un programa de línea de comandas escrito en Go que convierte archivos EPUB en formato Kobo. Funciona como una herramienta independiente o como una biblioteca para desarrolladores. Útil para transformar libros en formato compatible con Kobo sin necesidad de instalar software adicional.",
+          "kinds": [
+            "cli"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 4160,
+              "usage": {
+                "completion_tokens": 68,
+                "prompt_tokens": 921,
+                "total_tokens": 989,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 333,
+                "prompt_ms": 1749.729,
+                "prompt_per_token_ms": 5.2544414414414415,
+                "prompt_per_second": 190.3151859516531,
+                "predicted_n": 68,
+                "predicted_ms": 2391.068,
+                "predicted_per_token_ms": 35.687582089552244,
+                "predicted_per_second": 28.020951307114643
+              },
+              "text": "Es un programa de línea de comandas escrito en Go que convierte archivos EPUB en formato Kobo. Funciona como una herramienta independiente o como una biblioteca para desarrolladores. Útil para transformar libros en formato compatible con Kobo sin necesidad de instalar software adicional.",
+              "kinds": [
+                "cli"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "awaseem/foqos",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Foqos es una aplicación de iOS que bloquea aplicaciones y sitios web mediante etiquetas NFC o códigos QR. Permite crear perfiles personalizados para rutinas como trabajo o estudio y bloquear apps específicas. Útil para usuarios que buscan privacidad sin necesidad de cuentas o suscripciones.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 5834,
+              "usage": {
+                "completion_tokens": 71,
+                "prompt_tokens": 1209,
+                "total_tokens": 1280,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 621,
+                "prompt_ms": 3198.784,
+                "prompt_per_token_ms": 5.151020933977456,
+                "prompt_per_second": 194.13627178327764,
+                "predicted_n": 71,
+                "predicted_ms": 2626.205,
+                "predicted_per_token_ms": 37.51721428571428,
+                "predicted_per_second": 26.654431013572818
+              },
+              "text": "Foqos es una aplicación de iOS que bloquea aplicaciones y sitios web mediante etiquetas NFC o códigos QR. Permite crear perfiles personalizados para rutinas como trabajo o estudio y bloquear apps específicas. Útil para usuarios que buscan privacidad sin necesidad de cuentas o suscripciones.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "BolgarMaxym97/3ds-recorder",
+          "readmeChars": 3500,
+          "ok": false,
+          "ms": 6048,
+          "usage": {
+            "completion_tokens": 87,
+            "prompt_tokens": 1510,
+            "total_tokens": 1597,
+            "prompt_tokens_details": {
+              "cached_tokens": 952
+            }
+          },
+          "timings": {
+            "cache_n": 952,
+            "prompt_n": 558,
+            "prompt_ms": 2875.108,
+            "prompt_per_token_ms": 5.152523297491039,
+            "prompt_per_second": 194.07966587689924,
+            "predicted_n": 87,
+            "predicted_ms": 3165.07,
+            "predicted_per_token_ms": 36.80313953488372,
+            "predicted_per_second": 27.171594941028157
+          },
+          "text": "Es un sistema de grabación para Nintendo 3DS que captura todo el contenido de la consola, incluyendo juegos, menús y aplicaciones, con sonido en ambas pantallas. Permite grabar en tiempo real y convertir los archivos grabados en formato MP4 para enviarlos a un teléfono móvil mediante un código QR sin necesidad de hardware adicional.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "problems": [
+            "Menciona «tiempo real» pero la documentación no lo respalda.",
+            "El tipo «selfhosted» no tiene respaldo en la documentación."
+          ],
+          "attempts": [
+            {
+              "ms": 7464,
+              "usage": {
+                "completion_tokens": 84,
+                "prompt_tokens": 1468,
+                "total_tokens": 1552,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 880,
+                "prompt_ms": 4409.428,
+                "prompt_per_token_ms": 5.010713636363636,
+                "prompt_per_second": 199.5723708381223,
+                "predicted_n": 84,
+                "predicted_ms": 3035.507,
+                "predicted_per_token_ms": 36.5723734939759,
+                "predicted_per_second": 27.343043517936213
+              },
+              "text": "Es un sistema de grabación para Nintendo 3DS que captura todo el juego, menú principal y aplicaciones con sonido. Permite guardar grabaciones en formato MP4 y enviarlas a tu teléfono mediante un código QR sin necesidad de PC ni tarjetas de captura. Útil para copiar juegos completos y menú de inicio en alta calidad.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "El tipo «selfhosted» no tiene respaldo en la documentación."
+              ]
+            },
+            {
+              "ms": 6048,
+              "usage": {
+                "completion_tokens": 87,
+                "prompt_tokens": 1510,
+                "total_tokens": 1597,
+                "prompt_tokens_details": {
+                  "cached_tokens": 952
+                }
+              },
+              "timings": {
+                "cache_n": 952,
+                "prompt_n": 558,
+                "prompt_ms": 2875.108,
+                "prompt_per_token_ms": 5.152523297491039,
+                "prompt_per_second": 194.07966587689924,
+                "predicted_n": 87,
+                "predicted_ms": 3165.07,
+                "predicted_per_token_ms": 36.80313953488372,
+                "predicted_per_second": 27.171594941028157
+              },
+              "text": "Es un sistema de grabación para Nintendo 3DS que captura todo el contenido de la consola, incluyendo juegos, menús y aplicaciones, con sonido en ambas pantallas. Permite grabar en tiempo real y convertir los archivos grabados en formato MP4 para enviarlos a un teléfono móvil mediante un código QR sin necesidad de hardware adicional.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": [
+                "Menciona «tiempo real» pero la documentación no lo respalda.",
+                "El tipo «selfhosted» no tiene respaldo en la documentación."
+              ]
+            }
+          ]
+        },
+        {
+          "fullName": "blocksds/libnds",
+          "readmeChars": 274,
+          "ok": true,
+          "text": "Es una biblioteca de desarrollo para crear aplicaciones en Nintendo DS y DSi. No se incluye documentación ni ejemplos, por lo que faltan datos para su uso.",
+          "kinds": [
+            "library"
+          ],
+          "limited": true,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 3263,
+              "usage": {
+                "completion_tokens": 69,
+                "prompt_tokens": 735,
+                "total_tokens": 804,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 147,
+                "prompt_ms": 807.377,
+                "prompt_per_token_ms": 5.492360544217687,
+                "prompt_per_second": 182.0710770804717,
+                "predicted_n": 69,
+                "predicted_ms": 2437.615,
+                "predicted_per_token_ms": 35.8472794117647,
+                "predicted_per_second": 27.89611977281072
+              },
+              "text": "Es una biblioteca de desarrollo para crear aplicaciones en Nintendo DS y DSi. Permite programar con el lenguaje C y usar librerías externas como el sistema de archivos FATFs. Útil para desarrolladores que necesitan crear juegos o programas para esta consola específica.",
+              "kinds": [
+                "library"
+              ],
+              "problems": [
+                "Con documentación escasa el texto debe decir que faltan datos."
+              ]
+            },
+            {
+              "ms": 2693,
+              "usage": {
+                "completion_tokens": 47,
+                "prompt_tokens": 776,
+                "total_tokens": 823,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 188,
+                "prompt_ms": 1052.667,
+                "prompt_per_token_ms": 5.599292553191489,
+                "prompt_per_second": 178.59399031222603,
+                "predicted_n": 47,
+                "predicted_ms": 1633.165,
+                "predicted_per_token_ms": 35.50358695652174,
+                "predicted_per_second": 28.166168145900752
+              },
+              "text": "Es una biblioteca de desarrollo para crear aplicaciones en Nintendo DS y DSi. No se incluye documentación ni ejemplos, por lo que faltan datos para su uso.",
+              "kinds": [
+                "library"
+              ],
+              "problems": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

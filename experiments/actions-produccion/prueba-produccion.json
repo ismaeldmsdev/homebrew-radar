@@ -1,0 +1,73 @@
+{
+  "pairs": [
+    {
+      "fullName": "kiwix/kiwix-apple",
+      "revisado": "Es la aplicación de Kiwix para iPhone, iPad y Mac, que permite leer Wikipedia y otros sitios web sin conexión a internet. Descargas el contenido una vez en archivos comprimidos ZIM y luego lo consultas en cualquier lugar. Útil para viajes, zonas sin cobertura o para tener una enciclopedia siempre disponible.",
+      "automatico": "Es una aplicación para leer contenido web sin conexión, diseñada principalmente para acceder a Wikipedia de forma offline en dispositivos Apple. Permite abrir archivos con formato ZIM y funciona en iOS, iPadOS y macOS. Es útil para usuarios que necesitan consultar información enciclopédica sin depender de internet.",
+      "tipos": [
+        "app"
+      ],
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      }
+    },
+    {
+      "fullName": "sayanarijit/xplr",
+      "revisado": "Es un explorador de archivos para la terminal, rápido y muy personalizable. Permite moverse por las carpetas con el teclado y combinarlo con otras herramientas de línea de comandos mediante complementos y scripts. Pensado para usuarios avanzados que trabajan mucho en la terminal.",
+      "automatico": "Es una herramienta de línea de comandos para gestionar archivos que funciona directamente en la terminal. Permite navegar y organizar archivos de forma rápida e interactiva mediante un control por teclado y una interfaz visual en tiempo real. Es útil para desarrolladores o usuarios avanzados que quieren aumentar su productividad en la consola sin usar gestores de archivos gráficos.",
+      "tipos": [
+        "cli"
+      ],
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      }
+    },
+    {
+      "fullName": "Daminoup88/WattSeal",
+      "revisado": "Es una aplicación que muestra en tiempo real cuánta electricidad consume tu ordenador, desglosada por componente y por programa. Guarda un historial y estima el coste y la huella de carbono. Útil para detectar qué programas gastan más energía o batería.",
+      "automatico": "WattSeal es una aplicación para Windows, Linux y macOS que monitoriza el consumo de energía de tu ordenador en tiempo real. Permite ver cuántos vatios consume cada aplicación y cada componente como el procesador o la tarjeta gráfica, además de generar gráficos históricos y estimaciones de huella de carbono y coste eléctrico. Útil para usuarios que quieren saber dónde va la energía de su equipo o integrarlo en su hogar inteligente mediante MQTT y Home Assistant.",
+      "tipos": [
+        "app"
+      ],
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      }
+    }
+  ],
+  "request": {
+    "id": 117356231,
+    "fullName": "sharkdp/hyperfine",
+    "text": "Es una herramienta de línea de comandos para medir el rendimiento de programas. Permite ejecutar órdenes en la terminal, analizar estadísticamente múltiples ejecuciones y exportar resultados a formatos como CSV o Markdown. Útil para comparar la velocidad de diferentes aplicaciones en sistemas operativos distintos.",
+    "detail": null,
+    "kinds": [
+      "cli"
+    ],
+    "origin": "llm",
+    "basis": {
+      "description": "1wmr89v",
+      "readmeLength": 12243
+    },
+    "generator": {
+      "model": "Qwen3.5-4B (Q4_K_M)",
+      "file": "Qwen3.5-4B-Q4_K_M.gguf",
+      "llamaCpp": "b12532",
+      "promptVersion": "2026-11-19.3"
+    },
+    "updatedAt": "2026-11-19T09:55:02.495Z"
+  },
+  "attempts": {
+    "version": 1,
+    "attempts": {}
+  },
+  "log": "Resúmenes pendientes: 3. En esta ejecución: hasta 3.\nllama-server listo en 3.1 s\n  ✔ sayanarijit/xplr (55 s)\n  ✔ kiwix/kiwix-apple (34 s)\n  ✔ Daminoup88/WattSeal (41 s)\nMemoria máxima de llama-server: 4770 MB\nGenerados 3, rechazados 0, pendientes 0.\nDuración: 134 s\n",
+  "comment": "✅ Resumen generado automáticamente con IA local para **sharkdp/hyperfine** (sin revisión humana):\n\n> Es una herramienta de línea de comandos para medir el rendimiento de programas. Permite ejecutar órdenes en la terminal, analizar estadísticamente múltiples ejecuciones y exportar resultados a formatos como CSV o Markdown. Útil para comparar la velocidad de diferentes aplicaciones en sistemas operativos distintos.\n\nAparecerá en Radar en cuanto termine esta publicación."
+}

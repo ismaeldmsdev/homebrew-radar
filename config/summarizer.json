@@ -1,0 +1,21 @@
+{
+  "$comment": "Generador automático de resúmenes en español. Se ejecuta GRATIS en GitHub Actions (servidores estándar de repositorios públicos) con llama.cpp y un modelo abierto; no usa APIs de pago ni claves. El modelo no se guarda en el repositorio: se descarga a la caché de Actions y se verifica con SHA-256. Elegido tras el experimento del 19/11/2026 (experiments/): 18/18 resúmenes válidos, ~23 s por resumen, ~8 GB de memoria máxima. Pon enabled en false para desactivarlo.",
+  "enabled": true,
+  "model": {
+    "name": "Qwen3.5-4B (Q4_K_M)",
+    "file": "Qwen3.5-4B-Q4_K_M.gguf",
+    "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/e87f176479d0855a907a41277aca2f8ee7a09523/Qwen3.5-4B-Q4_K_M.gguf",
+    "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+    "sizeBytes": 2740937888,
+    "license": "Apache-2.0",
+    "source": "https://huggingface.co/Qwen/Qwen3.5-4B"
+  },
+  "runtime": {
+    "llamaCpp": "b12532",
+    "source": "https://github.com/ggml-org/llama.cpp/releases/tag/b12532"
+  },
+  "context": 4096,
+  "maxPerRun": 15,
+  "timeBudgetMinutes": 30,
+  "retryAfterDays": 14
+}

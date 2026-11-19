@@ -50,21 +50,32 @@ Una **joya oculta** necesita: 3-400 estrellas, actividad en el último año, des
 
 ## Resúmenes en español
 
-Cada tarjeta explica en 2-3 frases **qué es el proyecto, qué permite hacer y para qué sirve**, e indica su tipo: aplicación lista para usar, autoalojado, requiere configuración, línea de comandos, biblioteca para programadores, complemento, experimental o lista de recursos. La ficha añade detalles concretos del README y explica cada tipo.
+Cada tarjeta explica en 2-3 frases **qué es el proyecto, qué permite hacer y para qué sirve**, e indica su tipo: aplicación lista para usar, autoalojado, requiere configuración, línea de comandos, biblioteca para programadores, complemento, experimental o lista de recursos. La ficha añade detalles y explica cada tipo.
 
-Hay tres orígenes, y la ficha siempre dice cuál es:
+Cada tarjeta indica el origen de su resumen:
 
-| Origen | Cuándo | Cómo se marca |
+| Etiqueta | Origen | Cuándo |
 | --- | --- | --- |
-| Caché revisada (`data/summaries.json`) | Proyectos del catálogo ya resumidos | «Resumen redactado con IA a partir del README…» |
-| Proveedor automático (opcional) | Proyectos nuevos, si configuras un proveedor | «Generado automáticamente… sin revisión humana» |
-| Descripción básica | Todo lo demás, incluidas búsquedas en vivo nuevas | «Descripción básica: aún no hay un resumen verificado» + descripción original |
+| **Revisado** | `data/summaries.json`, redactado a partir del README y revisado | Los 181 proyectos del catálogo inicial |
+| **Automático** | IA local y gratuita en GitHub Actions, sin revisión humana | Proyectos nuevos del catálogo y solicitudes |
+| **Básico** | Solo metadatos de GitHub (categoría, lenguaje, etiquetas) | Lo demás, incluidas búsquedas en vivo nuevas |
 
-- **No se inventa nada.** La descripción básica solo usa categoría, lenguaje y etiquetas; si faltan datos lo dice. Los resúmenes con documentación escasa llevan `limited` y lo indican en el texto.
-- **Caché y rendimiento.** Los resúmenes se guardan con una huella de la documentación (hash de la descripción y longitud del README). Si cambian de forma significativa, la tarjeta avisa de que puede estar desactualizado y el proyecto vuelve a la cola. La web no genera nada: lee el catálogo, y la caché pública `public/data/summaries.json` (≈90 KB) solo se descarga al buscar en vivo.
-- **Validación.** `scripts/summaries.mjs apply` rechaza textos que no tengan 2-3 frases, no parezcan español o usen frases genéricas o sin pruebas («potente», «fácil de usar»…). Las pruebas comprueban 24 proyectos reales de distintas categorías y los casos con documentación escasa.
+### Generación automática con IA local (sin coste ni claves)
 
-### Añadir o actualizar resúmenes
+Tras cada recopilación (cada 12 h), GitHub Actions ejecuta un modelo abierto con [llama.cpp](https://github.com/ggml-org/llama.cpp) en los servidores estándar, gratuitos para repositorios públicos. No usa APIs de pago ni claves, y el modelo no se guarda en el repositorio: se descarga a la caché de Actions y se verifica con SHA-256. La configuración está en `config/summarizer.json`: modelo **Qwen3.5-4B Q4_K_M** (Apache-2.0, 2,7 GB), llama.cpp `b12532`, `maxPerRun`, `timeBudgetMinutes` y `enabled`.
+
+1. Detecta los proyectos sin resumen o con la documentación cambiada (huella de la descripción y del README), primero los nuevos y los mejor puntuados.
+2. Descarga su README y genera el resumen.
+3. Lo valida: formato (2-3 frases, español, sin frases genéricas ni promesas de facilidad), respaldo en la documentación (plataformas, nombres propios, cifras y tipos deben aparecer en ella) y mención de la plataforma principal. Si falla, reintenta una vez; si vuelve a fallar, queda la descripción básica y el intento se anota en `data/summary-attempts.json` para no repetirlo en 14 días salvo que cambie la documentación.
+4. Guarda en `data/summaries.json` con la huella del generador (modelo, llama.cpp y versión del prompt) y publica.
+
+Nunca sustituye un resumen revisado vigente. Si la IA falla, se publica igual. La validación es una red de seguridad heurística: **no garantiza que cada afirmación sea exacta**, y por eso la etiqueta «Automático» lo indica.
+
+**Búsquedas en vivo.** GitHub Pages no tiene servidor y Actions no conoce tus búsquedas, así que no hay resumen instantáneo para un repositorio nuevo, y el iPhone no descarga ningún modelo. Si el repositorio ya está en la caché pública (`public/data/summaries.json`, que solo se descarga al buscar en vivo), se usa. Si no, la ficha ofrece **«Pedir resumen automático»**: abre una issue «Resumen: owner/repo»; si la abre el propietario de Radar, Actions genera el resumen en unos minutos, responde en la issue, la cierra y publica. Las issues de otras personas se ignoran.
+
+Detalles del experimento que justificó la elección (6 modelos, 18 repositorios, tiempos y memoria): [`experiments/README.md`](experiments/README.md).
+
+### Añadir o revisar resúmenes a mano
 
 ```bash
 npm run summaries -- prepare            # descarga el README de los proyectos sin resumen → summaries-work.json
@@ -72,15 +83,6 @@ npm run summaries -- prepare            # descarga el README de los proyectos si
 npm run summaries -- apply resumenes.json --work summaries-work.json
 npm run summaries -- sync               # copia la caché al catálogo y a la caché pública
 ```
-
-### Generación automática (opcional, apagada por defecto)
-
-GitHub Models, la opción gratuita integrada en Actions, se retiró el 30 de julio de 2026, así que no hay un modelo gratuito sin clave. El workflow admite cualquier API compatible con OpenAI y **no hace nada** hasta que configures en *Settings → Secrets and variables → Actions*:
-
-- Variables: `SUMMARY_API_URL` (por ejemplo, el endpoint compatible con OpenAI de tu proveedor), `SUMMARY_MODEL` y, opcionalmente, `SUMMARY_MAX` (resúmenes por ejecución, 20 por defecto).
-- Secreto: `SUMMARY_API_KEY`.
-
-Antes de activarlo, revisa en tu proveedor límites, coste y uso de datos (los niveles gratuitos suelen cambiar sin aviso y algunos usan las peticiones para entrenar). Las respuestas pasan la misma validación y se marcan como «sin revisión humana».
 
 ## Seguimiento automático de temáticas
 

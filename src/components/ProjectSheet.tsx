@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { gemOf, summaryOf } from '../core/feed.ts'
 import { KIND_HELP, KIND_LABELS } from '../core/summary.ts'
+import { platformLabel, toolTypeLabel } from '../core/consoles.ts'
+import { toolTypeOf } from '../core/consoleRadar.ts'
+import { platformsOf } from '../core/query.ts'
 import { projectStatus } from '../core/scoring.ts'
 import { relativeDays } from '../core/text.ts'
 import { formatDate, whyInteresting } from '../explain.ts'
@@ -66,6 +69,7 @@ export function ProjectSheet({ project, topics, isFavorite, isHidden, onClose, o
   const gem = gemOf(project)
   const why = whyInteresting(project, topics)
   const summary = summaryOf(project)
+  const platforms = platformsOf(project)
   const when = summary.updatedAt ? ` (${formatDate(summary.updatedAt)})` : ''
   const provenance = summary.origin === 'curated'
     ? `Resumen revisado: redactado con IA a partir del README y la descripción del repositorio${when}, revisado y validado. Puede contener errores: compruébalo en GitHub antes de instalar nada.`
@@ -121,6 +125,21 @@ export function ProjectSheet({ project, topics, isFavorite, isHidden, onClose, o
         {project.description
           ? <blockquote className="source-description"><span>Descripción original en GitHub</span>{project.description}</blockquote>
           : <p className="muted">El autor no ha escrito una descripción en GitHub.</p>}
+
+        {(platforms.length > 0 || project.compat) && (
+          <section className="compat-box" aria-labelledby="compat-title">
+            <h3 id="compat-title"><Icon name="gamepad" size={16} /> Consola y compatibilidad</h3>
+            <dl>
+              {platforms.length > 0 && <div><dt>Plataformas detectadas en sus metadatos</dt><dd>{platforms.map(platformLabel).join(', ')}</dd></div>}
+              {platforms.length > 0 && <div><dt>Tipo de herramienta</dt><dd>{toolTypeLabel(toolTypeOf(project))}</dd></div>}
+              <div><dt>Estado</dt><dd>{status.label} · última actividad {relativeDays(project.pushedAt)}{project.version ? ` · versión ${project.version}` : ''}</dd></div>
+              {project.compat?.models.length ? <div><dt>Modelos mencionados en el README</dt><dd>{project.compat.models.join(', ')}</dd></div> : null}
+              {project.compat?.firmware.length ? <div><dt>Firmware mencionado en el README</dt><dd>{project.compat.firmware.map((item) => `«${item}»`).join(' · ')}</dd></div> : null}
+              {project.compat?.requires.length ? <div><dt>Requisitos citados del README</dt><dd>{project.compat.requires.map((item) => `«${item}»`).join(' · ')}</dd></div> : null}
+            </dl>
+            <p className="fine-print">{project.compat ? 'Son citas literales del README, no comprobadas: confirma siempre la compatibilidad con tu modelo y firmware en el repositorio antes de instalar nada.' : 'El README no menciona modelos, versiones de firmware ni requisitos concretos (o aún no se ha comprobado). No se afirma ninguna compatibilidad.'}</p>
+          </section>
+        )}
 
         {gem && <div className="gem-box"><Icon name="gem" size={18} /><div><strong>{gem.verified ? 'Joya oculta' : 'Posible joya oculta'} · {gem.score}/100</strong><p>{gem.summary}</p></div></div>}
 

@@ -1,5 +1,6 @@
 // Clasificación por palabras clave de los metadatos públicos (nombre, descripción y temas).
 import { looksLikeList } from './text.ts'
+import { detectPlatforms, isMacHomebrew, PLATFORMS } from './consoles.ts'
 
 type Evidence = { name: string; description?: string | null; topics?: string[]; full_name?: string; fullName?: string }
 
@@ -17,8 +18,11 @@ export function classifyConsoles(repo: Evidence) {
 }
 
 export function isNintendoRelevant(repo: Evidence) {
-  return classifyConsoles(repo).length > 0 ||
-    /\bhomebrew\b|nds-bootstrap|twilight.?menu|nds.?bootstrap|libnds|3dsx|\.cia\b|\bcia\b|\bfbi\b/i.test(evidenceText(repo))
+  if (classifyConsoles(repo).length > 0) return true
+  // «Homebrew» a secas también es el gestor de paquetes de macOS (WailBrew, brew…): no cuenta.
+  if (isMacHomebrew(repo)) return false
+  return /nds-bootstrap|twilight.?menu|nds.?bootstrap|libnds|3dsx|\.cia\b|\bcia\b|\bfbi\b/i.test(evidenceText(repo)) ||
+    (/\bhomebrew\b/i.test(evidenceText(repo)) && detectPlatforms(repo).some((id) => PLATFORMS.find((platform) => platform.id === id)?.family === 'Nintendo'))
 }
 
 const nintendoRules: [string, RegExp][] = [

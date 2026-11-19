@@ -132,3 +132,30 @@ test('no sobrescribe el catálogo si todas las temáticas fallan', async () => {
   await assert.rejects(collect({ output, config, fetch: failing, sleep: async () => {}, log: () => {} }))
   assert.equal(await readFile(output, 'utf8'), valid)
 })
+
+test('Radar de Consolas: excluye piratería y Homebrew de macOS, clasifica y extrae compatibilidad', async () => {
+  const dir = await mkdtemp(join(tmpdir(), 'radar-consolas-'))
+  const output = join(dir, 'projects.json')
+  const summariesPath = join(dir, 'summaries.json')
+  await writeFile(summariesPath, JSON.stringify({ version: 1, summaries: {} }))
+  const items = [
+    repo(41, { name: 'vita-saves', full_name: 'dev41/vita-saves', owner: { login: 'dev41', type: 'User' }, description: 'Save manager homebrew for PS Vita', topics: ['psvita', 'homebrew'] }),
+    repo(42, { name: 'nsp-links', full_name: 'dev42/nsp-links', owner: { login: 'dev42', type: 'User' }, description: 'Free NSP download links for Switch', topics: ['switch'] }),
+    repo(43, { name: 'brew-gui', full_name: 'dev43/brew-gui', owner: { login: 'dev43', type: 'User' }, description: 'GUI for Homebrew packages and casks on macOS', topics: ['homebrew', 'macos'] }),
+  ]
+  const readme = '# Vita saves\nWorks on PS Vita 2000 and PS TV. Supports firmware 3.60 - 3.74. Requires HENkaku Ensō installed.'
+  const fake = async (url) => {
+    const path = new URL(url).pathname
+    if (path.startsWith('/search/repositories')) return response(200, { items })
+    if (path.endsWith('/readme')) return response(200, { content: Buffer.from(readme).toString('base64'), encoding: 'base64' })
+    return response(404, {})
+  }
+  const consoleConfig = { defaults: { qualifiers: '' }, topics: [{ id: 'consolas', label: 'Radar de Consolas', mode: 'consoles', queries: ['topic:homebrew'] }] }
+  const feed = await collect({ output, config: consoleConfig, fetch: fake, sleep: async () => {}, log: () => {}, summariesPath })
+  assert.deepEqual(feed.projects.map((project) => project.id), [41], 'sin enlaces a juegos ni gestores de paquetes de macOS')
+  const project = feed.projects[0]
+  assert.equal(project.category, 'Partidas guardadas')
+  assert.deepEqual(project.platforms, ['vita'])
+  assert.deepEqual(project.compat.models, ['PS Vita 2000', 'PS TV'])
+  assert.deepEqual(project.compat.firmware, ['firmware 3.60 - 3.74'])
+})

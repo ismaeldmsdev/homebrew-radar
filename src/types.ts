@@ -1,4 +1,5 @@
 import type { Summary } from './core/summary.ts'
+import type { Compat } from './core/consoles.ts'
 
 export type Project = {
   id: number
@@ -36,6 +37,8 @@ export type Project = {
   source: 'catalog' | 'live'
   /** Resumen en español guardado en caché (null: la web genera la descripción básica). */
   summary: Summary | null
+  /** Modelos, firmware y requisitos mencionados literalmente en el README (sin verificar). */
+  compat: Compat | null
 }
 
 export type Topic = {

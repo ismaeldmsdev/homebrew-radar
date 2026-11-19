@@ -107,3 +107,50 @@ test('extrae menciones literales de compatibilidad del README sin interpretarlas
   assert.equal(compat?.requires.length, 1)
   assert.equal(extractCompat('A small text editor written in Rust.'), null)
 })
+
+test('no confunde 3ds Max, pantallas DSI ni módulos de 3DS con consolas', async () => {
+  const { detectPlatforms } = await import('./consoles.ts')
+  assert.deepEqual(detectPlatforms({ name: 'tm', description: 'Custom UI themes for 3ds Max 2026' }), [])
+  assert.deepEqual(detectPlatforms({ name: 'cm4', description: 'SD-card image for a CM4 with a MIPI DSI display' }), [])
+  assert.deepEqual(detectPlatforms({ name: '3ds-recorder', description: 'Record your 3DS screen with a Luma3DS sysmodule' }), ['3ds'])
+})
+
+test('una consola que solo es el origen de un port no cuenta como homebrew para ella', () => {
+  const x360 = interpretQuery('Homebrew para Xbox 360')
+  const port = project(20, { description: 'Prototype (Xbox 360) homebrew recompilation for Nintendo Switch' })
+  const native = project(21, { description: 'Homebrew app launcher for the Xbox 360 with RGH', topics: ['xbox360', 'homebrew'] })
+  assert.equal(relevanceOf(port, x360, NOW).value, 0)
+  assert.ok(relevanceOf(native, x360, NOW).value > 0.8)
+  const multi = project(22, { description: 'Fast homebrew save manager for 3DS and Switch' })
+  assert.ok(relevanceOf(multi, interpretQuery('homebrew para Switch'), NOW).value > 0.8, 'las listas heredan el destino')
+})
+
+test('siglas cortas en la descripción no bastan («AI» de pasada no es una herramienta de IA)', () => {
+  const ai = interpretQuery('herramientas de inteligencia artificial')
+  const incidental = project(23, { name: 'chipset-updater', description: 'Intel chipset INF installer reviewed by 6 AI systems' })
+  const real = project(24, { name: 'local-ai-tool', description: 'Chat with local models', topics: ['ai', 'llm'] })
+  assert.equal(relevanceOf(incidental, ai, NOW).value, 0)
+  assert.ok(relevanceOf(real, ai, NOW).value > 0.8)
+})
+
+test('busca en la escena de la consola cuando se pide CFW', () => {
+  const { fallbacks } = buildGithubQueries(interpretQuery('Custom firmware para PS Vita'), { now: NOW })
+  assert.match(fallbacks[0], /^henkaku /)
+})
+
+test('Radar de Consolas: separa proyectos nuevos, versiones nuevas y recuperados', async () => {
+  const { consoleSections, consoleFacets } = await import('./consoleRadar.ts')
+  const fresh = project(30, { name: 'new-vita-tool', description: 'Homebrew file manager for PS Vita', createdAt: '2026-10-20T00:00:00Z', channels: ['consolas'] })
+  const released = project(31, { name: 'goldhen-plugin', description: 'GoldHEN plugin for PS4', createdAt: '2023-01-01T00:00:00Z', version: 'v2.0', releasePublishedAt: '2026-11-10T00:00:00Z', channels: ['consolas'] })
+  const touched = project(32, { name: 'old-wii-app', description: 'Wii homebrew channel app', createdAt: '2019-01-01T00:00:00Z', pushedAt: '2026-11-18T00:00:00Z', channels: ['consolas'] })
+  const revived = project(33, { name: 'n64-tool', description: 'Nintendo 64 homebrew utility', createdAt: '2020-01-01T00:00:00Z', labels: ['Reactivado', 'Actualizado'], channels: ['consolas'] })
+  const unrelated = project(34, { name: 'notes', description: 'Markdown notes app' })
+  const sections = consoleSections([fresh, released, touched, revived, unrelated], NOW)
+  assert.deepEqual(sections.newProjects.map((item) => item.id), [30])
+  assert.deepEqual(sections.releases.map((item) => item.id), [31])
+  assert.deepEqual(sections.revived.map((item) => item.id), [33])
+  assert.ok(!sections.newProjects.some((item) => item.id === 32), 'un commit reciente en un proyecto antiguo no es un proyecto nuevo')
+  assert.equal(sections.total, 4)
+  const facets = consoleFacets([fresh, released, touched, revived, unrelated])
+  assert.deepEqual(facets.platforms.map(([id]) => id).sort(), ['n64', 'ps4', 'vita', 'wii'])
+})

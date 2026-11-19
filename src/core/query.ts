@@ -2,7 +2,7 @@
 // No usa inteligencia artificial: traduce expresiones conocidas en español a
 // términos y filtros de la API de búsqueda de GitHub, y deja el resto como texto libre.
 import { isoDaysAgo, normalize } from './text.ts'
-import { detectPlatforms, looksLikePiracy, PLATFORMS } from './consoles.ts'
+import { detectPlatforms, isOtherPlatformTarget, looksLikePiracy, PLATFORMS } from './consoles.ts'
 import { inferKinds } from './summary.ts'
 
 /**
@@ -11,7 +11,7 @@ import { inferKinds } from './summary.ts'
  * negative: si la documentación encaja con este patrón, el concepto NO se cumple
  * (p. ej. «terminal emulator» no es un emulador de consolas).
  */
-export type Concept = { id: string; label: string; triggers: RegExp; terms: string[]; channel?: string; soft?: boolean; platform?: string; negative?: RegExp }
+export type Concept = { id: string; label: string; triggers: RegExp; terms: string[]; channel?: string; soft?: boolean; platform?: string; negative?: RegExp; summaryTriggers?: RegExp }
 
 export type SortMode = 'interest' | 'gems' | 'recent' | 'stars' | 'new'
 
@@ -39,7 +39,7 @@ const NINTENDO_DS_FAMILY = ['nds', 'dsi', '3ds']
 export const concepts: Concept[] = [
   { id: 'home-automation', label: 'domótica', triggers: /\b(domotica|casa inteligente|home assistant|hogar inteligente)\b/, terms: ['home-automation', 'home-assistant'] },
   { id: 'ai', label: 'inteligencia artificial', triggers: /\b(inteligencia artificial|ia|ai|machine learning|aprendizaje automatico|llms?|chatgpt|gpt|modelos? de lenguaje|redes neuronales)\b/, terms: ['ai', 'llm', 'machine-learning'], channel: 'ia' },
-  { id: 'browser-automation', label: 'automatizar el navegador', triggers: /\b(automatiza\w* (tareas )?(en |del |el )?(navegador|web)|navegador automatico|web scraping|scraping|extraer datos de (la )?web)\b/, terms: ['browser-automation', 'playwright', 'puppeteer', 'selenium', 'scraper'] },
+  { id: 'browser-automation', label: 'automatizar el navegador', triggers: /\b(automatiza\w* (tareas )?(en (el )?|del |el )?(navegador|web)|navegador automatico|web scraping|scraping|extraer datos de (la )?web)\b/, terms: ['browser-automation', 'playwright', 'puppeteer', 'selenium', 'scraper'] },
   { id: 'automation', label: 'automatización', triggers: /\b(automatizacion(es)?|automatizar|automatic[oa]s?|automation|flujos? de trabajo)\b/, terms: ['automation', 'workflow'], channel: 'automatizacion' },
   // Consolas: plataformas concretas antes que «Nintendo» o «consolas» en general.
   ...PLATFORMS.map((platform): Concept => ({
@@ -64,7 +64,7 @@ export const concepts: Concept[] = [
   { id: 'homebrew', label: 'homebrew', triggers: /\bhomebrew\b/, terms: ['homebrew'] },
   { id: 'retro', label: 'retro', triggers: /\b(retro|retrogaming|consolas? antiguas?|clasicos)\b/, terms: ['retro', 'retrogaming'], channel: 'retro' },
   { id: 'modding', label: 'modificación', triggers: /\b(modificar|modificacion|modding|mods?)\b/, terms: ['modding', 'mod'] },
-  { id: 'customize', label: 'personalización', triggers: /\b(personaliza\w*|customiza\w*|tematizar|temas visuales|temas?|menu|launcher|lanzador)\b/, terms: ['customization', 'theme', 'launcher', 'menu'] },
+  { id: 'customize', label: 'personalización', triggers: /\b(personaliza\w*|customiza\w*|tematizar|temas visuales|temas?|menu|launcher|lanzador)\b/, summaryTriggers: /\b(personaliza\w*|temas? (visuales|personalizados|de la comunidad)|cambiar (el )?aspecto)\b/, terms: ['customization', 'theme', 'themes', 'launcher', 'home-menu'] },
   { id: 'consoles', label: 'consolas', triggers: /\b(videoconsolas?|consolas?)\b/, terms: ['console'], soft: true },
   { id: 'games', label: 'videojuegos', triggers: /\b(videojuegos?|juegos?|gaming|gamers?|jugar)\b/, terms: ['game', 'gaming'] },
   { id: 'passwords', label: 'contraseñas', triggers: /\b(contrasenas?|passwords?|gestor(es)? de claves)\b/, terms: ['password-manager', 'password', 'passwords'] },
@@ -84,7 +84,8 @@ export const concepts: Concept[] = [
   { id: 'download', label: 'descargas', triggers: /\b(descargas?|descargar|descargador(es)?|downloader)\b/, terms: ['downloader', 'download'] },
   { id: 'music', label: 'música y audio', triggers: /\b(musica|audio|sonido|podcasts?)\b/, terms: ['music', 'audio'] },
   { id: 'video', label: 'vídeo', triggers: /\b(video|videos|peliculas|streaming)\b/, terms: ['video'] },
-  { id: 'images', label: 'fotos e imágenes', triggers: /\b(fotos?|fotografias?|imagen(es)?)\b/, terms: ['photo', 'photos', 'image', 'gallery'] },
+  { id: 'photos', label: 'fotos', triggers: /\b(fotos?|fotografias?)\b/, terms: ['photo', 'photos', 'photography', 'gallery'] },
+  { id: 'images', label: 'imágenes', triggers: /\b(imagen(es)?)\b/, terms: ['image', 'images'] },
   { id: 'pdf', label: 'PDF', triggers: /\bpdf\b/, terms: ['pdf'] },
   { id: 'network', label: 'redes', triggers: /\b(redes?|wifi|network)\b/, terms: ['network'] },
   { id: 'browser', label: 'navegador', triggers: /\b(navegador(es)?|browser)\b/, terms: ['browser'] },
@@ -246,6 +247,9 @@ export function buildGithubQueries(interp: Interpretation, { now = Date.now(), i
   // Plataforma + escena con el segundo término (p. ej. «psvita» → «vita»).
   const platform = used.find((concept) => concept.platform)
   if (platform && platform.terms[1]) candidates.push(join([platform.terms[1], ...conceptTerms.filter((term) => term !== platform.terms[0]), ...interp.freeTerms]))
+  // CFW o jailbreak de una consola concreta: el nombre de su escena (henkaku, goldhen, luma3ds…).
+  const scene = platform && PLATFORMS.find((item) => item.id === platform.platform)?.scene
+  if (scene && used.some((concept) => concept.id === 'cfw' || concept.id === 'exploit' || concept.id === 'homebrew')) candidates.unshift(join([scene]))
   if (interp.freeTerms.length > 0 && conceptTerms.length > 0) candidates.push(join(conceptTerms))
   if (conceptTerms.length > 2) candidates.push(join(conceptTerms.slice(0, 2)))
   if (platform && conceptTerms.length > 1) {
@@ -322,11 +326,15 @@ export function relevanceOf(project: Matchable, interp: Interpretation, now = Da
     const definition = concepts.find((item) => item.id === concept.id)
     let weight = 0
     if (concept.platform) {
-      weight = platformsOf(project).includes(concept.platform) ? 1 : 0
+      // La consola debe detectarse y no ser solo el origen de algo hecho para otra consola.
+      weight = platformsOf(project).includes(concept.platform) && !isOtherPlatformTarget(project, concept.platform) ? 1 : 0
     } else if (!(definition?.negative && definition.negative.test(all))) {
       for (const field of Object.keys(FIELD_WEIGHT) as (keyof Fields)[]) {
-        const byTerm = concept.terms.some((term) => hasWord(fields[field], term))
-        const bySpanish = field === 'summary' && definition ? definition.triggers.test(` ${fields.summary} `) : false
+        // Siglas cortas («ai», «sd»…): en la descripción suelen ser menciones de pasada;
+        // solo cuentan en el nombre, los temas o el resumen.
+        const byTerm = concept.terms.some((term) => (field !== 'description' || term.replace(/\W/g, '').length > 3) && hasWord(fields[field], term))
+        const spanish = definition?.summaryTriggers ?? definition?.triggers
+        const bySpanish = field === 'summary' && spanish ? spanish.test(` ${fields.summary} `) : false
         if (byTerm || bySpanish) weight = Math.max(weight, FIELD_WEIGHT[field])
       }
       if (!weight && concept.channel && project.channels.includes(concept.channel)) weight = 0.55
@@ -358,6 +366,8 @@ export function relevanceOf(project: Matchable, interp: Interpretation, now = Da
     else if (interp.kind === 'cli' && kinds.includes('cli')) value = Math.min(1, value + 0.08)
   }
   if (project.isList) value *= 0.6
+  // Webs de organizaciones o blogs no son herramientas (salvo que se busque una web).
+  if (/\b(website|homepage|blog)\b|\.github\.io\b/.test(`${fields.name} ${fields.description}`) && !/\b(web|pagina|sitio)\b/.test(normalize(interp.original))) value *= 0.7
   return { value: Math.round(value * 1000) / 1000, why }
 }
 

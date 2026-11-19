@@ -8,6 +8,7 @@ import { classifyCategory, classifyConsoles, classifyGeneralCategory, isNintendo
 import { interestScore } from '../src/core/scoring.ts'
 import { looksLikeList } from '../src/core/text.ts'
 import { cleanReadme } from '../src/core/summary.ts'
+import { detectPlatforms, detectToolType, extractCompat, isConsoleRelated, looksLikePiracy, platformLabel, toolTypeLabel } from '../src/core/consoles.ts'
 import { readStore, summaryFor } from './summaries.mjs'
 
 export { classifyCategory, classifyConsoles } from '../src/core/categories.ts'
@@ -31,6 +32,11 @@ function relevanceFor(repo, topic) {
     const consoles = classifyConsoles(repo)
     if (consoles.length) return { value: Math.min(1, 0.5 + consoles.length * 0.2), reason: `Menciona compatibilidad con ${consoles.join(', ')} en sus metadatos.` }
     return { value: 0.15, reason: null }
+  }
+  if (topic?.mode === 'consoles') {
+    const platforms = detectPlatforms(repo)
+    if (platforms.length) return { value: Math.min(1, 0.6 + platforms.length * 0.1), reason: `Relacionado con ${platforms.map(platformLabel).join(', ')} según sus metadatos.` }
+    return { value: 0.45, reason: 'Relacionado con la modificación de consolas según sus metadatos.' }
   }
   if (!topic) return { value: 0.5, reason: null }
   const names = topicNames(topic)
@@ -98,6 +104,37 @@ export function selectGeneralCandidates(repositories, topic, limit = 16) {
     if (picked.length >= limit) break
   }
   return picked
+}
+
+/**
+ * Radar de Consolas: reparte los puestos entre plataformas (ronda por consola, de mayor a
+ * menor interés) para no recomendar siempre los mismos proyectos famosos, y reserva un
+ * tercio para proyectos con pocas estrellas (posibles joyas de la comunidad).
+ */
+export function selectConsoleCandidates(repositories, topic, limit = 60) {
+  const ranked = [...repositories]
+    .filter((repo) => !looksLikeList(repo.name ?? '', repo.description ?? '', repo.topics ?? []))
+    .map((repo) => ({ repo, score: scoreRepository(repo, topic).score, platform: detectPlatforms(repo)[0] ?? 'otras' }))
+    .sort((a, b) => b.score - a.score || b.repo.pushed_at.localeCompare(a.repo.pushed_at))
+  const perOwner = new Map()
+  const picked = new Map()
+  const take = (item) => {
+    const owner = item.repo.owner?.login ?? ''
+    if (picked.has(item.repo.id) || (perOwner.get(owner) ?? 0) >= 2) return false
+    perOwner.set(owner, (perOwner.get(owner) ?? 0) + 1)
+    picked.set(item.repo.id, item.repo)
+    return true
+  }
+  for (const item of ranked.filter((entry) => entry.repo.stargazers_count < 150).slice(0, Math.floor(limit / 3))) take(item)
+  const groups = new Map()
+  for (const item of ranked) groups.set(item.platform, [...(groups.get(item.platform) ?? []), item])
+  while (picked.size < limit && [...groups.values()].some((group) => group.length)) {
+    for (const group of groups.values()) {
+      while (group.length && !take(group.shift())) { /* siguiente candidato de la misma consola */ }
+      if (picked.size >= limit) break
+    }
+  }
+  return [...picked.values()]
 }
 
 function validDate(value) {
@@ -192,7 +229,10 @@ async function searchTopic(topic, defaults, ctx, now) {
     const result = await request(`/search/repositories?q=${encodeURIComponent(q)}${sort}&per_page=${topic.mode === 'nintendo' ? 25 : 40}`, ctx)
     for (const repo of result.items ?? []) {
       if (repo.fork || repo.archived || !(repo.size > 0) || !validDate(repo.pushed_at)) continue
+      // Nada de copias no autorizadas de juegos (enlaces a ROM, ISO, PKG, NSP…).
+      if (looksLikePiracy(repo)) continue
       if (topic.mode === 'nintendo' && !isNintendoRelevant(repo)) continue
+      if (topic.mode === 'consoles' && !isConsoleRelated(repo)) continue
       repositories.set(repo.id, repo)
     }
     await ctx.sleep(ctx.searchDelay)
@@ -211,6 +251,8 @@ async function enrich(repo, ctx) {
     readme_length: readmeText ? cleanReadme(readmeText, 1e9).length : null,
     readme_quality: readmeText.length >= 500 && (/^#{1,3}\s/m.test(readmeText) || /^[=-]{3,}\s*$/m.test(readmeText)),
     release: release && !release.draft && !release.prerelease ? release : null,
+    // Modelos, firmware y requisitos mencionados literalmente en el README (sin verificar).
+    compat: readmeText && isConsoleRelated(repo) ? extractCompat(cleanReadme(readmeText, 20_000)) : null,
   }
 }
 
@@ -219,6 +261,7 @@ function fromPrevious(old) {
     has_readme: typeof old.hasReadme === 'boolean' ? old.hasReadme : undefined,
     readme_quality: typeof old.readmeQuality === 'boolean' ? old.readmeQuality : undefined,
     readme_length: typeof old.readmeLength === 'number' ? old.readmeLength : null,
+    compat: old.compat ?? null,
     release: old.releaseChecked === false ? undefined : old.version ? { tag_name: old.version, published_at: old.releasePublishedAt, html_url: old.releaseUrl } : null,
   }
 }
@@ -242,8 +285,11 @@ function toProject(repo, extra, channels, topic, previous, generatedAt, previous
     updatedAt: repo.updated_at,
     createdAt: repo.created_at,
     pushedAt: repo.pushed_at,
-    category: nintendo && topic.mode === 'nintendo' ? classifyCategory(repo) : classifyGeneralCategory(repo),
+    category: topic.mode === 'consoles' ? toolTypeLabel(detectToolType(repo) ?? 'homebrew')
+      : nintendo && topic.mode === 'nintendo' ? classifyCategory(repo) : classifyGeneralCategory(repo),
     consoles: classifyConsoles(repo),
+    platforms: detectPlatforms(repo),
+    ...(extra.compat ? { compat: extra.compat } : {}),
     channels,
     version: extra.release?.tag_name ?? null,
     releasePublishedAt: extra.release?.published_at ?? null,
@@ -304,7 +350,7 @@ export async function collect({
     try {
       if (rateLimited) throw new RateLimitError('Se omitió por el límite de la API.')
       const repos = await searchTopic(topic, defaults, ctx, now)
-      const candidates = topic.mode === 'nintendo' ? selectCandidates(repos, limit) : selectGeneralCandidates(repos, topic, limit)
+      const candidates = topic.mode === 'nintendo' ? selectCandidates(repos, limit) : topic.mode === 'consoles' ? selectConsoleCandidates(repos, topic, limit) : selectGeneralCandidates(repos, topic, limit)
       if (candidates.length === 0 && staleProjects(oldFeed, topic.id, legacy).length > 0) throw new Error('La búsqueda no devolvió resultados válidos.')
       for (const repo of candidates) {
         const entry = found.get(repo.id)

@@ -5,6 +5,7 @@ import { matchProject, type Interpretation } from './query.ts'
 import { gemAnalysis, type Gem, type RepoSignals } from './scoring.ts'
 import { looksLikeList } from './text.ts'
 import { fallbackSummary, normalizeSummary, type Summary } from './summary.ts'
+import type { Compat } from './consoles.ts'
 
 const NINTENDO: Topic = { id: 'nintendo', label: 'Nintendo homebrew', description: 'Homebrew para Nintendo 3DS, DSi y DS.', featured: true, status: 'ok', count: 0, collectedAt: null }
 
@@ -12,6 +13,13 @@ function str(value: unknown, fallback = '') { return typeof value === 'string' ?
 function strOrNull(value: unknown) { return typeof value === 'string' && value ? value : null }
 function num(value: unknown, fallback = 0) { return typeof value === 'number' && Number.isFinite(value) ? value : fallback }
 function strings(value: unknown) { return Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : [] }
+
+function normalizeCompat(value: unknown): Compat | null {
+  if (!value || typeof value !== 'object') return null
+  const raw = value as Record<string, unknown>
+  const compat = { models: strings(raw.models).slice(0, 6), firmware: strings(raw.firmware).slice(0, 3), requires: strings(raw.requires).slice(0, 2) }
+  return compat.models.length || compat.firmware.length || compat.requires.length ? compat : null
+}
 
 export function normalizeProject(raw: unknown, legacy = false): Project | null {
   if (!raw || typeof raw !== 'object') return null
@@ -64,6 +72,7 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
     starsDeltaDays: typeof value.starsDeltaDays === 'number' ? value.starsDeltaDays : null,
     source: value.source === 'live' ? 'live' : 'catalog',
     summary: normalizeSummary(value.summary),
+    compat: normalizeCompat(value.compat),
   }
 }
 

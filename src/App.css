@@ -656,3 +656,20 @@ h1 em { font-family: Georgia, serif; font-weight: 400; color: var(--lime); lette
 .origin-badge.origin-rules { color: var(--faint); border-style: dashed; }
 .summary-request { margin-top: 12px; display: grid; gap: 6px; }
 .summary-request .secondary-button { justify-self: start; }
+
+/* ---------- Radar de Consolas ---------- */
+.consoles-view .view-lead { margin-top: 6px; }
+.facet-group { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.chip.is-active { border-color: var(--lime); color: var(--lime); background: var(--lime-soft); }
+.chip small { color: var(--faint); font-size: 12px; margin-left: 4px; }
+.link-button { background: none; border: 0; padding: 0; color: var(--lime); font: inherit; text-decoration: underline; cursor: pointer; }
+.compat-box { margin: 14px 0 4px; padding: 12px 14px; border: 1px dashed #3a4a33; border-radius: var(--radius); background: #121812; }
+.compat-box h3 { margin: 0 0 8px; font-size: 15px; }
+.compat-box dl { display: grid; gap: 6px; margin: 0; }
+.compat-box dt { color: var(--faint); font-size: 12px; }
+.compat-box dd { margin: 0; color: var(--text); font-size: 14px; line-height: 1.45; }
+@media (max-width: 680px) {
+  .facet-group { flex-wrap: nowrap; overflow-x: auto; margin: 8px -16px; padding: 0 16px 4px; scrollbar-width: none; }
+  .facet-group::-webkit-scrollbar { display: none; }
+  .facet-group .chip { flex: none; }
+}

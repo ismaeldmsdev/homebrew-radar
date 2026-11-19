@@ -34,6 +34,8 @@ npm run collect    # recopilación real; usa GITHUB_TOKEN si existe
   - `scoring.ts`: puntuación de interés (0-100), estado del proyecto (activo, poco activo, posiblemente abandonado, archivado) y detección de **joyas ocultas**.
   - `feed.ts`: normalización del catálogo (lee también el formato v1) y secciones de la portada: destacados, joyas, novedades, ganando atención y «Para ti».
   - `categories.ts`: categorías y consolas a partir de los metadatos.
+  - `search.ts`: motor del buscador. Combina catálogo y resultados en vivo y los ordena por relevancia real (ver «Cómo ordena el buscador»).
+  - `consoles.ts` y `consoleRadar.ts`: plataformas, tipos de herramienta, exclusión de piratería, compatibilidad citada del README y secciones del Radar de Consolas.
 - `src/github.ts` — búsqueda en vivo y verificación bajo demanda (README y última versión) al abrir la ficha de un resultado en vivo.
 - `src/library.ts` — biblioteca local con migración desde v1.
 - `src/update.ts` — detección de versiones nuevas.
@@ -47,6 +49,33 @@ Interés (0-100): relevancia 25 · actividad 20 · README 15 · versión publica
 Una **joya oculta** necesita: 3-400 estrellas, actividad en el último año, descripción, no estar archivada ni ser una lista, y README documentado **o** versión publicada. Si README y versiones aún no se han comprobado (resultados en vivo), se exigen varias señales indirectas y se marca como «posible joya». Cada joya muestra una explicación con sus señales. Las puntuaciones son orientativas, no garantías de calidad o seguridad.
 
 «Ganando atención» compara las estrellas con las recopilaciones anteriores (historial de hasta 30 días en el propio catálogo).
+
+### Cómo ordena el buscador
+
+- **Interpretación:** reconoce más de 60 conceptos en español con su traducción al inglés: plataformas, 25 consolas, escena de CFW/jailbreak, partidas guardadas, tarjetas SD, contraseñas, notas, reproductores…
+  - Detecta si pides una **aplicación**, una **biblioteca** o una herramienta de **terminal**.
+  - Las palabras españolas sin traducción no se envían a GitHub, porque vaciarían la búsqueda.
+- **Relevancia (68 %):** los conceptos deben aparecer como palabra completa, con este peso: nombre > temas > descripción > resumen en español.
+  - Las consolas se comprueban con detección de plataforma, no por texto suelto. Una consola que solo es el origen de un port para otra no cuenta.
+  - Las siglas cortas («AI», «SD») mencionadas de pasada en la descripción no bastan.
+  - Se descarta por debajo de 0,40.
+- **Calidad (32 %):** actividad, documentación, versiones y licencia. Las estrellas solo cuentan en escala logarítmica dentro de la calidad.
+- **Orden pedido:** «poco conocidos», «populares» y «nuevos» cambian el orden, salvo que elijas otro en el selector.
+- **Variedad:** máximo dos proyectos del mismo autor entre los primeros.
+- **Sin personalización:** tus intereses (por ejemplo, consolas) no alteran las búsquedas explícitas.
+
+La calidad se mide con 24 búsquedas reales (`scripts/experiments/search-eval.mjs`). GitHub Actions las ejecuta con el motor de `main` y el de la rama en la misma ejecución, y los resultados se evalúan a mano. Ver `experiments/search-eval/`.
+
+## Radar de Consolas
+
+Pestaña dedicada al homebrew y la modificación de consolas: DS/DSi/3DS, Wii/Wii U, Switch, PSP/Vita, PS1-PS5, Xbox/360, Sega, retro y portátiles. GitHub Actions la actualiza cada 12 h con la temática `consolas` de `config/topics.json`.
+
+- **Proyectos nuevos:** repositorios creados en los últimos 90 días. Un commit reciente en un proyecto antiguo **no** cuenta como nuevo.
+- **Nuevas versiones:** publicaciones oficiales (releases) de los últimos 45 días.
+- **Joyas poco conocidas, recuperados** (actividad tras más de 6 meses parados) y **destacados**, variando de consola y autor. Un tercio de los puestos se reserva a proyectos con menos de 150 estrellas.
+- **Filtros** por consola y por tipo: CFW y jailbreak, partidas guardadas, emuladores, desarrollo, SD y almacenamiento, personalización, mantenimiento, juegos y ports, homebrew.
+- **Compatibilidad:** la ficha muestra los modelos, versiones de firmware y requisitos **citados literalmente del README**, marcados como no verificados. Nunca se afirma una compatibilidad que no esté escrita.
+- **Exclusiones:** proyectos que enlazan copias no autorizadas de juegos (ROM, ISO, PKG, NSP…) y el «Homebrew» de macOS (gestor de paquetes).
 
 ## Resúmenes en español
 

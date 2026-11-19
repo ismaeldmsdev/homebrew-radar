@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-19T13:47:24.289Z",
+  "at": "2026-11-19T14:00:03.960Z",
   "repos": [
     {
       "fullName": "cli/cli",
@@ -12,29 +12,14 @@
           "attestations": 2
         },
         {
-          "name": "gh_2.105.0_windows_386.zip",
-          "digest": "sha256:df02ca46a6655ffa0dd6d2f6d1387d1ebff63ab05272ff76301246925f67b8c7",
-          "attestations": 2
-        },
-        {
           "name": "gh_2.105.0_windows_amd64.msi",
           "digest": "sha256:d18367836c7dcf689ad2052730acf3ec6b9e8b1259a8bae3d512584f680d7525",
           "attestations": 2
         },
         {
-          "name": "gh_2.105.0_windows_amd64.zip",
-          "digest": "sha256:8813a72c899900afaa10e3fec8fbc64b908c89dbfe837e95ed2fa500fc140627",
-          "attestations": null
-        },
-        {
           "name": "gh_2.105.0_windows_arm64.msi",
           "digest": "sha256:f5e567f5beb56eb6368f01f5fc68c384dd957b7b4dfa41a663582f23c5bb6f56",
-          "attestations": null
-        },
-        {
-          "name": "gh_2.105.0_windows_arm64.zip",
-          "digest": "sha256:5282a09c7757210c6e2dfb11a56b11e14e646df9b3b6a49f155465f5f881c3b7",
-          "attestations": null
+          "attestations": 2
         }
       ],
       "advisories": [
@@ -67,7 +52,7 @@
         "[verified] Huellas SHA-256 publicadas por GitHub",
         "[manual] El autor publica sumas o firmas",
         "[verified] Atestación de procedencia registrada en GitHub",
-        "[manual] 6 ejecutables para Windows sin revisar",
+        "[manual] 3 ejecutables para Windows sin revisar",
         "[verified] Sus flujos de GitHub Actions no usan patrones peligrosos conocidos.",
         "[verified] El código fuente no incluye binarios sin compilar desde el propio código.",
         "[verified] Publica una política de seguridad (SECURITY.md) para informar de vulnerabilidades.",
@@ -106,16 +91,6 @@
       "immutable": false,
       "executables": [
         {
-          "name": "YoutubeDownloader.linux-x64.zip",
-          "digest": "sha256:17d8757253c9c817e215ff631b1a81817640358f7d759fa280b2321a9e79b9b0",
-          "attestations": 0
-        },
-        {
-          "name": "YoutubeDownloader.osx-x64.zip",
-          "digest": "sha256:9e6bec1f3d8d1f54b63c4f5437cb96ec59ae1c7717925305e731afc24a2b45c6",
-          "attestations": 0
-        },
-        {
           "name": "YoutubeDownloader.win-arm64.zip",
           "digest": "sha256:d0add7590d46775683d0ddde09c3fa0aba9d6ce3cf87852a2fc98dbb06659039",
           "attestations": 0
@@ -123,12 +98,12 @@
         {
           "name": "YoutubeDownloader.win-x64.zip",
           "digest": "sha256:5a74c9318e926543e18f0106aa16517258b2628e05670d347ee435c47d60aeb1",
-          "attestations": null
+          "attestations": 0
         },
         {
           "name": "YoutubeDownloader.win-x86.zip",
           "digest": "sha256:b9a36a7f19505e6d0d303a46907e6d2502c4afc8a59a1d79eb4e5ba71afa8b44",
-          "attestations": null
+          "attestations": 0
         }
       ],
       "advisories": [
@@ -144,7 +119,7 @@
         "[manual] Release modificable",
         "[verified] Huellas SHA-256 publicadas por GitHub",
         "[unknown] Sin atestación de procedencia",
-        "[manual] 5 ejecutables para Windows sin revisar",
+        "[manual] 3 ejecutables para Windows sin revisar",
         "[verified] Sus flujos de GitHub Actions no usan patrones peligrosos conocidos.",
         "[verified] El código fuente no incluye binarios sin compilar desde el propio código.",
         "[manual] No publica una política de seguridad para informar de vulnerabilidades.",

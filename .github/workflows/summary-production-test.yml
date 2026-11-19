@@ -1,0 +1,108 @@
+name: Prueba — proceso de producción de resúmenes
+
+# Ensayo del proceso real (mismos pasos que refresh-and-deploy.yml) sin publicar ni
+# guardar datos: simula 3 proyectos sin resumen y 1 solicitud fuera del catálogo y
+# guarda un informe en experiments/actions-produccion.
+on:
+  push:
+    branches: ['radar-2.2-**']
+    paths: ['config/summarizer.json', '.github/workflows/summary-production-test.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: summary-production-test-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ensayo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Leer configuración
+        run: node -e "const c=require('./config/summarizer.json');console.log('MODEL_URL='+c.model.url);console.log('MODEL_SHA256='+c.model.sha256);console.log('LLAMA_CPP='+c.runtime.llamaCpp)" >> "$GITHUB_ENV"
+      - name: Caché de la IA local
+        uses: actions/cache@v4
+        with:
+          path: ${{ runner.temp }}/summarizer
+          key: summarizer-${{ hashFiles('config/summarizer.json') }}
+      - name: Preparar la IA local
+        run: |
+          dir="$RUNNER_TEMP/summarizer"; mkdir -p "$dir/llama"
+          start=$(date +%s)
+          if [ ! -f "$dir/model.gguf" ]; then curl -sSfL --retry 3 -o "$dir/model.gguf" "$MODEL_URL"; fi
+          echo "$MODEL_SHA256  $dir/model.gguf" | sha256sum -c -
+          if [ -z "$(find "$dir/llama" -name llama-server -type f)" ]; then
+            curl -sSfL --retry 3 "https://github.com/ggml-org/llama.cpp/releases/download/$LLAMA_CPP/llama-$LLAMA_CPP-bin-ubuntu-x64.tar.gz" | tar -xz -C "$dir/llama"
+          fi
+          echo "Preparación: $(( $(date +%s) - start )) s"
+          server=$(find "$dir/llama" -name llama-server -type f | head -1)
+          echo "SUMMARY_LOCAL_SERVER=$server" >> "$GITHUB_ENV"
+          echo "SUMMARY_LOCAL_MODEL=$dir/model.gguf" >> "$GITHUB_ENV"
+          echo "LD_LIBRARY_PATH=$(dirname "$server")" >> "$GITHUB_ENV"
+      - name: Simular 3 proyectos nuevos (solo en esta ejecución)
+        run: |
+          node -e "
+            const fs=require('fs');const s=JSON.parse(fs.readFileSync('data/summaries.json','utf8'));
+            const names=['sayanarijit/xplr','Daminoup88/WattSeal','kiwix/kiwix-apple'];
+            const removed={};for(const [id,e] of Object.entries(s.summaries)) if(names.includes(e.fullName)){removed[id]=e;delete s.summaries[id]}
+            fs.writeFileSync('data/summaries.json',JSON.stringify(s,null,2));fs.writeFileSync('removed.json',JSON.stringify(removed,null,2));
+            console.log('Quitados:',Object.values(removed).map(e=>e.fullName).join(', '))"
+      - name: Generación automática (como en producción)
+        run: |
+          start=$(date +%s)
+          npm run --silent summaries -- auto | tee auto.log
+          echo "Duración: $(( $(date +%s) - start )) s" | tee -a auto.log
+          npm run --silent summaries -- sync
+          npm run --silent check:feed
+        env:
+          SUMMARY_MAX: 3
+      - name: Solicitud de un repositorio fuera del catálogo
+        env:
+          TITLE: 'Resumen: sharkdp/hyperfine'
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          repo=$(node --experimental-strip-types -e "import('./scripts/summaries.mjs').then(m=>console.log(m.parseRequest(process.env.TITLE) ?? ''))")
+          npm run --silent summaries -- request "$repo" --comment comment.md
+          cat comment.md
+      - name: Informe
+        run: |
+          mkdir -p out
+          node -e "
+            const fs=require('fs');const s=JSON.parse(fs.readFileSync('data/summaries.json','utf8')).summaries;
+            const removed=JSON.parse(fs.readFileSync('removed.json','utf8'));
+            const pairs=Object.keys(removed).map(id=>({fullName:removed[id].fullName,revisado:removed[id].text,automatico:s[id]?.text??null,tipos:s[id]?.kinds??null,generator:s[id]?.generator??null}));
+            const request=Object.values(s).find(e=>e.fullName==='sharkdp/hyperfine')??null;
+            fs.writeFileSync('out/prueba-produccion.json',JSON.stringify({pairs,request,attempts:JSON.parse(fs.readFileSync('data/summary-attempts.json','utf8')),log:fs.readFileSync('auto.log','utf8'),comment:fs.readFileSync('comment.md','utf8')},null,2))"
+          cat out/prueba-produccion.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prueba-produccion
+          path: out/prueba-produccion.json
+
+  save:
+    needs: ensayo
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: experiments/actions-produccion
+          merge-multiple: true
+      - name: Guardar el informe en la rama
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/actions-produccion
+          git diff --cached --quiet && exit 0
+          git commit -m "Informe del ensayo de producción de resúmenes"
+          git push origin HEAD:${{ github.ref_name }}

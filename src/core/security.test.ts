@@ -132,3 +132,9 @@ test('caché: se vuelve a comprobar si cambia la release o pasan 14 días', () =
   assert.equal(isStale(cli, 'v2.105.0', NOW + 15 * 86_400_000), true)
   assert.equal(isStale(null, null, NOW), true)
 })
+
+test('los comprimidos de Linux o macOS no cuentan como ejecutables de Windows (caso real: YoutubeDownloader)', () => {
+  const names = ['YoutubeDownloader.linux-x64.zip', 'YoutubeDownloader.osx-x64.zip', 'YoutubeDownloader.win-arm64.zip', 'YoutubeDownloader.win-x64.zip', 'YoutubeDownloader.win-x86.zip', 'Setup.exe']
+  const found = executableAssets(names.map((name) => ({ name, size: 1, digest: null, url: '' }))).map((asset) => asset.name)
+  assert.deepEqual(found, ['Setup.exe', 'YoutubeDownloader.win-arm64.zip', 'YoutubeDownloader.win-x64.zip', 'YoutubeDownloader.win-x86.zip'], 'el instalador directo se consulta primero')
+})

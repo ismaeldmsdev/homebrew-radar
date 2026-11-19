@@ -52,7 +52,12 @@ export const isArchive = (name: string) => ARCHIVE.test(name)
 
 /** Archivos ejecutables de Windows o comprimidos que pueden contenerlos (por el nombre). */
 export function executableAssets(assets: ReleaseAsset[]) {
-  return assets.filter((asset) => isWindowsExecutable(asset.name) || (isArchive(asset.name) && /win|windows|x64|x86|setup|portable/i.test(asset.name)))
+  // Un comprimido solo cuenta si su nombre indica Windows («x64» a secas también aparece
+  // en versiones para Linux o macOS). Los ejecutables directos van primero.
+  const windowsArchive = (name: string) => isArchive(name) && /win(dows|32|64)?\b|[-_.]win[-_.]|setup|portable/i.test(name) && !/linux|osx|macos|darwin|android|\bmac\b/i.test(name)
+  return assets
+    .filter((asset) => isWindowsExecutable(asset.name) || windowsArchive(asset.name))
+    .sort((a, b) => Number(isWindowsExecutable(b.name)) - Number(isWindowsExecutable(a.name)))
 }
 
 /** Compara versiones numéricas simples (1.2.10 > 1.2.9). null si el formato no lo permite. */

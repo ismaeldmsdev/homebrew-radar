@@ -1,10 +1,10 @@
 // Generador de resúmenes en español con un modelo de lenguaje servido por una API
 // compatible con OpenAI (llama-server de llama.cpp en GitHub Actions, sin claves).
 // Valida formato y respaldo en la documentación; si no lo supera, no se usa.
-import { groundingProblems, isThinEvidence } from '../src/core/grounding.ts'
+import { coverageProblems, groundingProblems, isThinEvidence, supportedKinds } from '../src/core/grounding.ts'
 import { KIND_LABELS, PROJECT_KINDS, summaryProblems } from '../src/core/summary.ts'
 
-export const PROMPT_VERSION = '2026-11-19.2'
+export const PROMPT_VERSION = '2026-11-19.3'
 
 const KIND_GUIDE = {
   app: 'se descarga o instala y se usa directamente',
@@ -23,9 +23,11 @@ Reglas:
 1. "texto": 2 o 3 frases (entre 150 y 420 caracteres). Frase 1: qué es. Frase 2: qué permite hacer, con funciones concretas que aparezcan en la documentación. Frase 3 (opcional): para quién o para qué es útil.
 2. Usa SOLO la información proporcionada. No añadas plataformas, sistemas, cifras, marcas ni funciones que no aparezcan. Escribe los nombres propios exactamente como aparecen.
 3. Si es una biblioteca, SDK o framework para programadores, dilo claramente; no lo presentes como una aplicación.
-4. Prohibido: "potente", "revolucionario", "increíble", "todo en uno", "fácil de usar", "fácil de instalar", "sencillo de usar".
-5. Si la documentación no basta para saber qué hace, pon "faltan_datos": true y di en el texto que faltan datos.
-6. "tipos": solo los que la documentación respalde, de esta lista: ${PROJECT_KINDS.map((kind) => `"${kind}" (${KIND_GUIDE[kind]})`).join('; ')}.`
+4. Evita anglicismos innecesarios: di "trucos" (no cheats), "partidas guardadas" (no savestates), "flujos de trabajo" (no workflows), "mayor resolución" (no upscaling). Mantén los nombres de productos tal cual.
+5. Si la descripción dice para qué sistema o consola es (Windows, Android, Nintendo DS…), menciónalo.
+6. Prohibido: "potente", "revolucionario", "increíble", "todo en uno", "fácil de usar", "fácil de instalar", "sencillo de usar".
+7. Si la documentación no basta para saber qué hace, pon "faltan_datos": true y di en el texto que faltan datos.
+8. "tipos": solo los que la documentación respalde, de esta lista: ${PROJECT_KINDS.map((kind) => `"${kind}" (${KIND_GUIDE[kind]})`).join('; ')}.`
 
 const EXAMPLE_INPUT = `Repositorio: example/photo-sorter
 Descripción: Desktop app that sorts photos into folders by date and removes duplicates.
@@ -66,12 +68,13 @@ function evidenceOf(item) {
 /** Problemas de un resumen generado: formato, español y respaldo en la documentación. */
 export function validateGenerated(result, item) {
   const text = typeof result?.texto === 'string' ? result.texto.trim() : ''
-  const kinds = Array.isArray(result?.tipos) ? result.tipos.filter((kind) => kind in KIND_LABELS) : []
   const evidence = evidenceOf(item)
-  const problems = [...summaryProblems(text, kinds), ...groundingProblems({ text, kinds }, evidence)]
+  // Los tipos son secundarios: los que no tienen respaldo se descartan sin rechazar el texto.
+  const kinds = supportedKinds(Array.isArray(result?.tipos) ? result.tipos.filter((kind) => kind in KIND_LABELS) : [], evidence)
+  const problems = [...summaryProblems(text, kinds), ...groundingProblems({ text }, evidence), ...coverageProblems(text, evidence)]
   const thin = isThinEvidence(evidence)
   const limited = result?.faltan_datos === true || thin
-  if (limited && !/faltan datos|no hay (suficiente|bastante)|poca informaci|escasa/i.test(text)) problems.push('Con documentación escasa el texto debe decir que faltan datos.')
+  if (limited && !/faltan? datos|falta informaci|no hay (suficiente|bastante)|poca informaci|escasa|no (detalla|describe|explica|especifica)/i.test(text)) problems.push('Con documentación escasa el texto debe decir que faltan datos.')
   return { text, kinds: PROJECT_KINDS.filter((kind) => kinds.includes(kind)), limited, problems }
 }
 

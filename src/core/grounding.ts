@@ -124,6 +124,42 @@ export function groundingProblems(summary: { text: string; detail?: string | nul
   return [...new Set(problems)]
 }
 
+/** Tipos de proyecto con respaldo en la documentación (los demás se descartan). */
+export function supportedKinds(kinds: string[], evidence: Evidence) {
+  const source = evidenceText(evidence)
+  return kinds.filter((kind) => KIND_EVIDENCE[kind as ProjectKind]?.test(source))
+}
+
+// Plataformas: si la descripción del autor nombra alguna, el resumen debe mencionar al
+// menos una de ellas (evita textos genéricos que no dicen para qué sistema es).
+const PLATFORMS: [RegExp, RegExp][] = [
+  [/windows/, /\bwindows\b/i],
+  [/\bmacos\b|\bmac\b|osx/, /\bmac(os)?\b/i],
+  [/\blinux\b/, /\blinux\b/i],
+  [/android/, /\bandroid\b/i],
+  [/\bios\b|iphone|ipad/, /\biphone\b|\bios\b|\bipad\b/i],
+  [/3ds/, /\b3ds\b/i],
+  [/\bdsi\b/, /\bdsi\b/i],
+  [/nintendo ds|\bnds\b/, /\bnintendo ds\b|\bds\b/i],
+  [/wii ?u/, /\bwii u\b/i],
+  [/\bswitch\b/, /\bswitch\b/i],
+  [/game ?boy/, /\bgame ?boy\b/i],
+  [/\bn64\b|nintendo 64/, /\bn64\b|nintendo 64/i],
+  [/playstation|\bps[1-5]\b/, /playstation|\bps[1-5]\b/i],
+  [/xbox/, /\bxbox\b/i],
+  [/steam ?deck/, /\bsteam deck\b/i],
+  [/amiga/, /\bamiga\b/i],
+]
+
+export function coverageProblems(text: string, evidence: Evidence) {
+  const description = fold(`${evidence.description} ${evidence.name.replace(/[-_.]/g, ' ')}`)
+  const named = PLATFORMS.filter(([inDescription]) => inDescription.test(description))
+  if (named.length && !named.some(([, inSummary]) => inSummary.test(text))) {
+    return ['No menciona la plataforma principal que indica la descripción del autor.']
+  }
+  return []
+}
+
 /** Documentación demasiado escasa para un resumen completo. */
 export function isThinEvidence(evidence: Evidence) {
   return evidence.readme.trim().length < 300 && evidence.description.trim().length < 120

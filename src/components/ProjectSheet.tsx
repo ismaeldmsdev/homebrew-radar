@@ -66,11 +66,15 @@ export function ProjectSheet({ project, topics, isFavorite, isHidden, onClose, o
   const gem = gemOf(project)
   const why = whyInteresting(project, topics)
   const summary = summaryOf(project)
+  const when = summary.updatedAt ? ` (${formatDate(summary.updatedAt)})` : ''
   const provenance = summary.origin === 'curated'
-    ? `Resumen redactado con IA a partir del README y la descripción del repositorio${summary.updatedAt ? ` (${formatDate(summary.updatedAt)})` : ''} y validado automáticamente. Puede contener errores: compruébalo en GitHub antes de instalar nada.`
+    ? `Resumen revisado: redactado con IA a partir del README y la descripción del repositorio${when}, revisado y validado. Puede contener errores: compruébalo en GitHub antes de instalar nada.`
     : summary.origin === 'llm'
-      ? `Resumen generado automáticamente por un modelo de lenguaje a partir del README${summary.updatedAt ? ` (${formatDate(summary.updatedAt)})` : ''}, sin revisión humana.`
-      : 'Descripción básica construida solo con los metadatos de GitHub (categoría, lenguaje y etiquetas). No se ha redactado todavía un resumen a partir del README.'
+      ? `Resumen automático: generado con un modelo de IA abierto que se ejecuta gratis en GitHub Actions${summary.generator ? ` (${summary.generator})` : ''}${when}, sin revisión humana. Una validación automática comprueba el formato y que plataformas, nombres y cifras aparezcan en la documentación, pero no garantiza que cada afirmación sea exacta.`
+      : 'Descripción básica construida solo con los metadatos de GitHub (categoría, lenguaje y etiquetas). No se ha generado todavía un resumen a partir del README.'
+  const requestUrl = __REPOSITORY__ && summary.origin === 'rules'
+    ? `https://github.com/${__REPOSITORY__}/issues/new?title=${encodeURIComponent(`Resumen: ${project.fullName}`)}&body=${encodeURIComponent(`Solicitud de resumen automático en español para https://github.com/${project.fullName}\n\nGitHub Actions lo generará con IA local y gratuita (sin revisión humana). Solo se procesan las solicitudes del propietario de Radar.`)}`
+    : null
   const channelLabels = project.channels.map((id) => topics.find((topic) => topic.id === id)?.label).filter(Boolean) as string[]
   const docs = project.hasReadme === null ? (verifying === 'loading' ? 'Comprobando…' : 'No comprobado') : project.readmeQuality ? 'README completo' : project.hasReadme ? 'README básico' : 'Sin README'
   const version = project.version ? `${project.version}${project.releasePublishedAt ? ` · ${formatDate(project.releasePublishedAt)}` : ''}` : project.releaseChecked ? 'Sin versiones publicadas' : verifying === 'loading' ? 'Comprobando…' : 'No comprobado'
@@ -106,6 +110,12 @@ export function ProjectSheet({ project, topics, isFavorite, isHidden, onClose, o
           )}
           {summary.outdated && <p className="inline-error">La descripción del repositorio cambió después de redactar este resumen; puede estar desactualizado.</p>}
           <p className="fine-print">{provenance}</p>
+          {requestUrl && (
+            <div className="summary-request">
+              <a className="secondary-button" href={requestUrl} target="_blank" rel="noreferrer">Pedir resumen automático <Icon name="external" size={15} /></a>
+              <p className="fine-print">Abre una solicitud en GitHub con tu cuenta de propietario de Radar. GitHub Actions genera el resumen con IA local gratuita en unos minutos y lo publica; aparecerá aquí y en futuras búsquedas. Desde el navegador no se puede generar al instante sin un servicio externo.</p>
+            </div>
+          )}
         </section>
 
         {project.description

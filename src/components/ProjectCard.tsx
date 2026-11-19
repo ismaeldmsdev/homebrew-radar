@@ -16,6 +16,13 @@ export type CardActions = {
   onHide: (project: Project) => void
 }
 
+const ORIGIN_LABEL = { curated: 'Revisado', llm: 'Automático', rules: 'Básico' } as const
+const ORIGIN_HELP = {
+  curated: 'Resumen redactado a partir del README y revisado.',
+  llm: 'Resumen generado automáticamente con IA local, sin revisión humana.',
+  rules: 'Descripción básica con metadatos de GitHub: aún no hay resumen del README.',
+} as const
+
 /** Avatar del autor en GitHub (carga diferida); si falla, la inicial del proyecto. */
 export function ProjectAvatar({ project, size = 48 }: { project: Project; size?: number }) {
   const [failed, setFailed] = useState(false)
@@ -58,7 +65,10 @@ export function ProjectCard({ project, actions, note, highlight }: { project: Pr
 
       {/* El botón de la cabecera es el acceso accesible a la ficha; aquí basta con el clic. */}
       <div className="card-summary" onClick={open}>
-        <h3 className="summary-heading">¿Qué es y para qué sirve?</h3>
+        <div className="summary-heading-row">
+          <h3 className="summary-heading">¿Qué es y para qué sirve?</h3>
+          <span className={`origin-badge origin-${summary.origin}`} title={ORIGIN_HELP[summary.origin]}>{ORIGIN_LABEL[summary.origin]}</span>
+        </div>
         <p className={`summary-text${summary.limited ? ' is-limited' : ''}`}>{summary.text}</p>
         {summary.origin === 'rules' && project.description && <p className="summary-original" lang="en">«{project.description}»</p>}
         {summary.kinds.length > 0 && (

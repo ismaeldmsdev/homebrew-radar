@@ -648,3 +648,11 @@ h1 em { font-family: Georgia, serif; font-weight: 400; color: var(--lime); lette
 .kind-list li { display: flex; gap: 10px; align-items: baseline; font-size: 14px; color: var(--muted); line-height: 1.45; }
 .kind-list .kind-chip { flex: none; }
 @media (max-width: 680px) { .kind-list li { flex-direction: column; gap: 4px; } }
+.summary-heading-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin-bottom: 6px; }
+.summary-heading-row .summary-heading { margin: 0; }
+.origin-badge { flex: none; font-size: 11px; font-weight: 600; letter-spacing: .2px; border-radius: 999px; padding: 1px 8px; border: 1px solid #344032; color: #aeb8a8; }
+.origin-badge.origin-curated { color: var(--lime); border-color: #46553a; }
+.origin-badge.origin-llm { color: #b9d4ff; border-color: #2f4560; }
+.origin-badge.origin-rules { color: var(--faint); border-style: dashed; }
+.summary-request { margin-top: 12px; display: grid; gap: 6px; }
+.summary-request .secondary-button { justify-self: start; }

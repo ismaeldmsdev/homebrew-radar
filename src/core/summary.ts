@@ -47,6 +47,8 @@ export type Summary = {
   /** true si la descripción o el README cambiaron desde que se redactó. */
   outdated: boolean
   updatedAt: string | null
+  /** Modelo que lo generó automáticamente (solo origen «llm»). */
+  generator: string | null
 }
 
 /** Huella de la documentación sobre la que se redactó un resumen. */
@@ -59,6 +61,8 @@ export type StoredSummary = {
   detail?: string | null
   kinds: ProjectKind[]
   origin: 'curated' | 'llm'
+  /** Huella reproducible del generador automático: modelo, llama.cpp y versión del prompt. */
+  generator?: { model: string; file?: string; llamaCpp: string; promptVersion: string }
   limited?: boolean
   basis: SummaryBasis
   updatedAt: string
@@ -171,7 +175,7 @@ export function fallbackSummary(project: Evidence & { consoles?: string[] }): Su
   parts.push(description.length >= 20
     ? 'Todavía no hay un resumen en español verificado: abajo tienes la descripción original del autor.'
     : 'El autor apenas describe el proyecto, así que faltan datos para explicar qué hace sin abrir GitHub.')
-  return { text: parts.join(' '), detail: null, kinds, origin: 'rules', limited: true, outdated: false, updatedAt: null }
+  return { text: parts.join(' '), detail: null, kinds, origin: 'rules', limited: true, outdated: false, updatedAt: null, generator: null }
 }
 
 /** ¿Ha cambiado la documentación lo bastante como para revisar el resumen? */
@@ -194,6 +198,7 @@ export function fromStore(entry: StoredSummary, description: string, readmeLengt
     limited: Boolean(entry.limited),
     outdated: isOutdated(entry.basis, description, readmeLength),
     updatedAt: entry.updatedAt,
+    generator: entry.generator?.model ?? null,
   }
 }
 
@@ -234,16 +239,17 @@ export function normalizeSummary(value: unknown): Summary | null {
     limited: raw.limited === true,
     outdated: raw.outdated === true,
     updatedAt: typeof raw.updatedAt === 'string' ? raw.updatedAt : null,
+    generator: typeof raw.generator === 'string' ? raw.generator : null,
   }
 }
 
 /** Entrada de la caché pública compacta (public/data/summaries.json). */
-export type CompactSummary = { t: string; d: string | null; k: string[]; o: 'curated' | 'llm'; l: 0 | 1; h: string; u: string }
+export type CompactSummary = { t: string; d: string | null; k: string[]; o: 'curated' | 'llm'; l: 0 | 1; h: string; u: string; g?: string }
 
 export function fromCompact(entry: CompactSummary, description: string): Summary | null {
   if (!entry || typeof entry.t !== 'string') return null
   return normalizeSummary({
     text: entry.t, detail: entry.d, kinds: entry.k, origin: entry.o, limited: entry.l === 1,
-    outdated: entry.h !== shortHash(description), updatedAt: entry.u,
+    outdated: entry.h !== shortHash(description), updatedAt: entry.u, generator: entry.g ?? null,
   })
 }

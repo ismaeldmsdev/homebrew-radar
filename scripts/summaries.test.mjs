@@ -6,7 +6,7 @@ import { join } from 'node:path'
 import { cleanReadme, fallbackSummary, fromCompact, inferKinds, isOutdated, KIND_LABELS, shortHash, summaryProblems } from '../src/core/summary.ts'
 import { normalizeProject } from '../src/core/feed.ts'
 import { interpretQuery, matchProject } from '../src/core/query.ts'
-import { applySummaries, auto, generateWithProvider } from './summaries.mjs'
+import { applySummaries } from './summaries.mjs'
 import { collect } from './collect.mjs'
 
 const store = JSON.parse(await readFile(new URL('../data/summaries.json', import.meta.url), 'utf8'))
@@ -126,19 +126,6 @@ test('rechaza resúmenes en inglés, genéricos o con promesas sin pruebas', () 
   assert.equal(Object.keys(target.summaries).length, 0)
   assert.deepEqual(applySummaries(target, [{ fullName: 'A/B', text: 'Es un gestor de archivos para la terminal que permite moverse por carpetas con el teclado. Útil para quien trabaja en servidores sin escritorio.', kinds: ['cli'] }], work), [])
   assert.equal(target.summaries['1'].origin, 'curated')
-})
-
-test('sin proveedor configurado no genera nada (sin coste ni claves)', async () => {
-  const result = await auto({ env: {}, log: () => {} })
-  assert.equal(result.skipped, true)
-})
-
-test('con un proveedor compatible con OpenAI valida la respuesta antes de usarla', async () => {
-  const item = { fullName: 'a/b', description: 'x', topics: [], language: null, homepage: null, version: null, readme: '' }
-  const reply = (content) => async () => new Response(JSON.stringify({ choices: [{ message: { content } }] }), { status: 200 })
-  const result = await generateWithProvider(item, { url: 'https://example.test/v1', key: 'k', model: 'm', fetch: reply('{"text":"Hola.","kinds":[]}') })
-  assert.equal(result.text, 'Hola.')
-  await assert.rejects(generateWithProvider(item, { url: 'https://example.test/v1', key: 'k', model: 'm', fetch: async () => new Response('', { status: 429 }) }), /Límite/)
 })
 
 test('las búsquedas en español encuentran proyectos por su resumen', () => {

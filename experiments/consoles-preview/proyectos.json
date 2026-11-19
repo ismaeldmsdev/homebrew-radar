@@ -1,0 +1,1177 @@
+{
+  "at": "2026-11-19T10:57:48.506Z",
+  "topics": [
+    {
+      "id": "consolas",
+      "label": "Radar de Consolas",
+      "description": "Homebrew, CFW, jailbreak, emuladores y utilidades para todo tipo de consolas.",
+      "featured": true,
+      "status": "ok",
+      "count": 60,
+      "collectedAt": "2026-11-19T10:57:48.506Z"
+    }
+  ],
+  "count": 60,
+  "projects": [
+    {
+      "fullName": "premohq/PlayTendoh",
+      "stars": 525,
+      "created": "2021-08-12",
+      "pushed": "2026-11-12",
+      "release": "v5.1.0 2026-10-28",
+      "category": "Emuladores",
+      "platforms": [
+        "3ds",
+        "wii",
+        "wiiu",
+        "switch",
+        "gamecube",
+        "ps5"
+      ],
+      "labels": [],
+      "compat": {
+        "models": [
+          "New 3DS",
+          "Switch 2"
+        ],
+        "firmware": [],
+        "requires": []
+      },
+      "description": "Playtendoh: an all-in-one emulator for PS5 homebrew. Wii U, 3DS, DS, Switch, Switch 2, GameCube, Wii and the classics (Cemu, Azahar, melonDS"
+    },
+    {
+      "fullName": "pocket-nexus/pocketjs",
+      "stars": 1892,
+      "created": "2026-07-03",
+      "pushed": "2026-11-19",
+      "release": "v0.16.0 2026-11-02",
+      "category": "Personalización",
+      "platforms": [
+        "3ds",
+        "psp",
+        "vita"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "PocketJS: create UI on every screen you love. JavaScript components drawn as native pixels on handhelds, desktops and embedded screens."
+    },
+    {
+      "fullName": "elripalda/Porpoise-Dolphin-Emulator-for-PS5",
+      "stars": 245,
+      "created": "2026-10-04",
+      "pushed": "2026-11-03",
+      "release": "v4.5 2026-11-03",
+      "category": "Emuladores",
+      "platforms": [
+        "wii",
+        "gamecube",
+        "ps5"
+      ],
+      "labels": [],
+      "compat": {
+        "models": [],
+        "firmware": [
+          "firmware 13.60"
+        ],
+        "requires": [
+          "needs a jailbreak daemon to free it from the app sandbox so it can see `/data` and USB drives; without one it still runs game"
+        ]
+      },
+      "description": "A native GameCube and Wii emulator for jailbroken PS5, powered by Dolphin. Cover-flow library, box art, memory cards, original music."
+    },
+    {
+      "fullName": "BenoitAdam/nullDC4Wii",
+      "stars": 67,
+      "created": "2026-01-21",
+      "pushed": "2026-11-19",
+      "release": "alpha0.805 2026-11-13",
+      "category": "Emuladores",
+      "platforms": [
+        "wii",
+        "wiiu",
+        "dreamcast"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "Wii mini"
+        ],
+        "firmware": [],
+        "requires": []
+      },
+      "description": "Dreamcast Emulator for Wii"
+    },
+    {
+      "fullName": "XorTroll/uLaunch",
+      "stars": 816,
+      "created": "2019-10-05",
+      "pushed": "2026-11-15",
+      "release": "1.2.6 2026-11-15",
+      "category": "Desarrollo",
+      "platforms": [
+        "switch"
+      ],
+      "labels": [],
+      "compat": {
+        "models": [
+          "DSi"
+        ],
+        "firmware": [],
+        "requires": [
+          "need *devkitPro*, *devkitA64*, *libnx* and all SDL2 libraries for Switch development (make sure their packages are installed",
+          "need master libnx instead of the last devkitPro release"
+        ]
+      },
+      "description": ":rocket: The themeable Nintendo Switch HOME Menu we deserve"
+    },
+    {
+      "fullName": "afska/piugba",
+      "stars": 133,
+      "created": "2020-02-21",
+      "pushed": "2026-11-02",
+      "release": "v1.11.6 2026-01-26",
+      "category": "Juegos y ports",
+      "platforms": [
+        "gb",
+        "gba"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "🎮 PIU simulator for the GBA."
+    },
+    {
+      "fullName": "LNPANDY/NX2Apple",
+      "stars": 7832,
+      "created": "2026-10-20",
+      "pushed": "2026-11-19",
+      "release": "v1.4.0 2026-11-12",
+      "category": "Juegos y ports",
+      "platforms": [
+        "switch"
+      ],
+      "labels": [
+        "Nuevo"
+      ],
+      "compat": {
+        "models": [
+          "Switch 2"
+        ],
+        "firmware": [],
+        "requires": []
+      },
+      "description": "Play your own Switch games on iPhone/iPad — one-click macOS app, no terminal. | 把 Switch 游戏装进 iPhone：图形界面一键构建，不用命令行。Bring your own game."
+    },
+    {
+      "fullName": "arturofuentes1988/EmuSuNi",
+      "stars": 122,
+      "created": "2026-10-15",
+      "pushed": "2026-11-12",
+      "release": "v00.24 2026-11-12",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "nds",
+        "gb",
+        "gba",
+        "nes",
+        "n64",
+        "psp",
+        "ps4",
+        "dreamcast"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "Twenty classic consoles and arcade boards in one launcher for jailbroken PS4 (GoldHEN): HD, cheats, RetroAchievements"
+    },
+    {
+      "fullName": "blue0x1/EmuFive",
+      "stars": 329,
+      "created": "2026-11-09",
+      "pushed": "2026-11-19",
+      "release": "1.0.11 2026-11-19",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ],
+      "labels": [
+        "Nuevo"
+      ],
+      "compat": {
+        "models": [
+          "PS4 Pro",
+          "PS4 Slim"
+        ],
+        "firmware": [],
+        "requires": [
+          "need: - A jailbroken PS4 with **GoldHEN** (for its FTP server and payload loader)"
+        ]
+      },
+      "description": "A PS5 emulator for the PS4. Runs on a jailbroken PS4 with Linux, installed through PS4 Multiboot."
+    },
+    {
+      "fullName": "pspdev/psplinkusb",
+      "stars": 99,
+      "created": "2011-01-14",
+      "pushed": "2026-11-17",
+      "release": "v3.2.1 2025-07-06",
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "psp"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "General purpose homebrew/debugging toolkit for PSP"
+    },
+    {
+      "fullName": "Loopayeh/pkg-viewer",
+      "stars": 227,
+      "created": "2026-09-13",
+      "pushed": "2026-11-17",
+      "release": "v1.20.1 2026-11-17",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "ps3",
+        "ps4",
+        "ps5"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "PKG Viewer by Loopayeh: view PS3/PS4/PS5 package info and cover art"
+    },
+    {
+      "fullName": "knutwurst/ps5-patchdl",
+      "stars": 285,
+      "created": "2026-06-23",
+      "pushed": "2026-11-14",
+      "release": "v0.3.13 2026-11-14",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ],
+      "labels": [],
+      "compat": {
+        "models": [],
+        "firmware": [
+          "firmware 1.00 to 13.60"
+        ],
+        "requires": []
+      },
+      "description": "Official updates for your PS5 and PS4 games, from any browser. PatchDL runs on the PS5, finds the newest update for every installed game, do"
+    },
+    {
+      "fullName": "afska/gba-link-connection",
+      "stars": 302,
+      "created": "2020-10-25",
+      "pushed": "2026-10-29",
+      "release": "v8.0.3 2025-04-21",
+      "category": "Juegos y ports",
+      "platforms": [
+        "gb",
+        "gba"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "🔗 A set of Game Boy Advance (GBA) C++ libraries to interact with the Serial Port. Its main purpose is to provide multiplayer support to hom"
+    },
+    {
+      "fullName": "fortheusers/hb-appstore",
+      "stars": 1484,
+      "created": "2018-03-03",
+      "pushed": "2026-10-18",
+      "release": "v2.3.2 2023-03-23",
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "wiiu",
+        "switch"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "Homebrew App Store - GUI for downloading/managing homebrew apps"
+    },
+    {
+      "fullName": "phantomptr/ps5upload",
+      "stars": 1298,
+      "created": "2026-01-10",
+      "pushed": "2026-11-19",
+      "release": "v12.6.11 2026-11-19",
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "ps5"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "Send games, apps and homebrew to a jailbroken PS5, and manage the console from your computer, phone or browser."
+    },
+    {
+      "fullName": "teclilla18/sonic-riders-recomp",
+      "stars": 73,
+      "created": "2026-10-22",
+      "pushed": "2026-11-19",
+      "release": "v0.8.7 2026-11-19",
+      "category": "Juegos y ports",
+      "platforms": [
+        "switch",
+        "gamecube",
+        "handheld-pc"
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "Switch 2"
+        ],
+        "firmware": [],
+        "requires": []
+      },
+      "description": "Native port of Sonic Riders (GameCube) for Windows, Linux / Steam Deck, Nintendo Switch, Switch 2 (experimental alpha), Android and iPhone /"
+    },
+    {
+      "fullName": "cobanov/PS5LM",
+      "stars": 857,
+      "created": "2026-10-01",
+      "pushed": "2026-11-19",
+      "release": "v0.11.0 2026-11-02",
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "ps5"
+      ],
+      "labels": [],
+      "compat": {
+        "models": [
+          "PS5 Slim"
+        ],
+        "firmware": [
+          "firmware 7.00 to 13.60",
+          "firmware 10.00"
+        ],
+        "requires": []
+      },
+      "description": "llama.cpp on a jailbroken PS5: run any GGUF model natively on the console, starting with Qwen 3.8"
+    },
+    {
+      "fullName": "ShoshinFauteux/GBAdhoc",
+      "stars": 85,
+      "created": "2026-08-11",
+      "pushed": "2026-11-19",
+      "release": "v4.5.0 2026-11-01",
+      "category": "Emuladores",
+      "platforms": [
+        "gba",
+        "psp"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "A GBA emulator for the PSP: renderer on the second CPU, Wireless Adapter multiplayer over ad-hoc WiFi."
+    },
+    {
+      "fullName": "darkxex/SwanStationPS5",
+      "stars": 113,
+      "created": "2026-10-07",
+      "pushed": "2026-11-17",
+      "release": "1.6.6 2026-11-17",
+      "category": "Emuladores",
+      "platforms": [
+        "ps1",
+        "ps5"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "SwanStationPS5: a PlayStation 1 emulator running natively on jailbroken PS5, based on SwanStation.  https://discord.gg/Drx8tsqq3B"
+    },
+    {
+      "fullName": "ohhsodead/arisen-studio",
+      "stars": 274,
+      "created": "2019-01-05",
+      "pushed": "2026-11-15",
+      "release": "0.3.3.4 2026-01-01",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "ps3",
+        "x360"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "Browse, Download and Install Mods for PlayStation 3 & Xbox 360"
+    },
+    {
+      "fullName": "centollOS/SwitchWaker",
+      "stars": 110,
+      "created": "2026-10-04",
+      "pushed": "2026-11-03",
+      "release": "v1.0.2 2026-10-27",
+      "category": "Desarrollo",
+      "platforms": [
+        "switch",
+        "gamecube"
+      ],
+      "labels": [],
+      "compat": {
+        "models": [],
+        "firmware": [],
+        "requires": [
+          "need - A Switch running custom firmware (Atmosphère) with the Homebrew Menu"
+        ]
+      },
+      "description": "Native Nintendo Switch port of The Legend of Zelda: The Wind Waker (GameCube). Bring your own game files."
+    },
+    {
+      "fullName": "sp00nznet/linksawakening-portable",
+      "stars": 14,
+      "created": "2026-05-17",
+      "pushed": "2026-10-30",
+      "release": "v0.2.0 2026-10-30",
+      "category": "Juegos y ports",
+      "platforms": [
+        "3ds",
+        "wii",
+        "gb",
+        "gamecube",
+        "psp",
+        "vita",
+        "ps2",
+        "ps3",
+        "ps4",
+        "xbox",
+        "x360",
+        "dreamcast"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Link's Awakening DX statically recompiled to C and ported to PS4, PS3, PS2, PSP, Vita, 3DS, Wii, GameCube, Dreamcast, Xbox, Xbox 360, Androi"
+    },
+    {
+      "fullName": "Xpl0itU/WiiUDownloader",
+      "stars": 2375,
+      "created": "2022-11-03",
+      "pushed": "2026-10-20",
+      "release": "v3.2 2026-09-15",
+      "category": "Emuladores",
+      "platforms": [
+        "wiiu"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "Cross-platform Wii U NUS downloader for Windows, macOS & Linux. No title keys needed. Alternative to Wii U USB Helper."
+    },
+    {
+      "fullName": "louvenarde/xvy",
+      "stars": 13,
+      "created": "2025-03-14",
+      "pushed": "2026-09-01",
+      "release": "v1.4.1 2025-03-14",
+      "category": "Juegos y ports",
+      "platforms": [
+        "ps3",
+        "xbox",
+        "x360"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Unity game running on Xbox 360 and PS3"
+    },
+    {
+      "fullName": "DC-SWAT/DreamShell",
+      "stars": 569,
+      "created": "2013-10-02",
+      "pushed": "2026-11-19",
+      "release": "v4.0.4.Release 2026-07-14",
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "dreamcast"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "Operating system for the Sega Dreamcast, NAOMI and NAOMI 2"
+    },
+    {
+      "fullName": "DarkFlippers/unleashed-firmware",
+      "stars": 22797,
+      "created": "2022-03-16",
+      "pushed": "2026-11-19",
+      "release": "unlshd-095 2026-11-11",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [],
+      "labels": [],
+      "compat": null,
+      "description": "Flipper Zero Unleashed Firmware"
+    },
+    {
+      "fullName": "KallistiOS/KallistiOS",
+      "stars": 652,
+      "created": "2016-03-04",
+      "pushed": "2026-11-16",
+      "release": "v2.2.2 2026-04-18",
+      "category": "Desarrollo",
+      "platforms": [
+        "dreamcast"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "A homebrew SDK/pseudo-operating system for the Sega Dreamcast. This repository is a mirror of the official SourceForge repository for KOS."
+    },
+    {
+      "fullName": "odelot/wii-ra-adapter",
+      "stars": 45,
+      "created": "2026-06-01",
+      "pushed": "2026-11-16",
+      "release": "v0.0.6 2026-11-16",
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "wii",
+        "gamecube"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "Wii mini"
+        ],
+        "firmware": [],
+        "requires": [
+          "requires a softmodded Wii with the Homebrew Channel",
+          "needs the four vWii base IOS as WAD files in the **root of the SD card**"
+        ]
+      },
+      "description": "RetroAchievements adapter for original Nintendo Wii and GameCube hardware using an ESP32 memory card, custom WiiFlow, d2x and Nintendont."
+    },
+    {
+      "fullName": "XavyProd-Git/pkg-mutant-shop",
+      "stars": 21,
+      "created": "2026-10-06",
+      "pushed": "2026-10-26",
+      "release": "v3.99.5 2026-10-26",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "ps4",
+        "ps5"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [],
+        "firmware": [],
+        "requires": [
+          "needs kernel access to already exist and Payload Manager (PS5) or GoldHEN (PS4) to be running, because those are what load a"
+        ]
+      },
+      "description": "A homebrew package manager and store front-end for a jailbroken PlayStation 5 and PlayStation 4 - from the console, a PC, or your phone."
+    },
+    {
+      "fullName": "fungalspores/prototype-switch",
+      "stars": 42,
+      "created": "2026-10-15",
+      "pushed": "2026-10-24",
+      "release": "v1.4.0 2026-10-24",
+      "category": "Juegos y ports",
+      "platforms": [
+        "switch",
+        "x360"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "Switch Lite",
+          "Switch (Erista)",
+          "Switch (Mariko)"
+        ],
+        "firmware": [],
+        "requires": [
+          "Needs Atmosphère 1"
+        ]
+      },
+      "description": "Prototype and Prototype 2 (Xbox 360) for Nintendo Switch: static recompilation with ReXGlue, native Vulkan renderer. Free, not for sale. No "
+    },
+    {
+      "fullName": "SvenGDK/PS-Multi-Tools",
+      "stars": 425,
+      "created": "2023-05-08",
+      "pushed": "2026-05-30",
+      "release": "v16.2 2026-01-27",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "psp",
+        "vita",
+        "ps1",
+        "ps2",
+        "ps3",
+        "ps4",
+        "ps5"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "Backup manager with utilities for PS1, PS2, PSX (DVR), PS3, PS4, PS5, PSP & PS Vita, containing downloads for homebrew, firmwares, payloads "
+    },
+    {
+      "fullName": "Jonathan8520/FlashNX",
+      "stars": 57,
+      "created": "2026-05-19",
+      "pushed": "2026-11-19",
+      "release": "v2.1.0 2026-11-10",
+      "category": "Emuladores",
+      "platforms": [
+        "switch"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [],
+        "firmware": [],
+        "requires": [
+          "need a Switch running **Atmosphère**"
+        ]
+      },
+      "description": "Homebrew Flash player for Nintendo Switch (.nro). Play your .swf games from the SD card. Powered by Ruffle."
+    },
+    {
+      "fullName": "stjanovitz/tilefinch",
+      "stars": 87,
+      "created": "2026-07-17",
+      "pushed": "2026-11-18",
+      "release": "v0.1.53 2026-11-18",
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "psp"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "PSP Go"
+        ],
+        "firmware": [],
+        "requires": [
+          "need - A PSP that runs homebrew (custom firmware) and has the 64 MB memory mode: - **PSP-3000**: the tested model"
+        ]
+      },
+      "description": "An experimental modern web browser for the Sony PSP: on device with no proxy with video decoded entirely on device"
+    },
+    {
+      "fullName": "devnoname120/vitacompanion",
+      "stars": 136,
+      "created": "2018-08-03",
+      "pushed": "2026-11-15",
+      "release": "1.10 2026-11-15",
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "vita"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "Plugin to ease the development of homebrews and plugins on the PS Vita"
+    },
+    {
+      "fullName": "hotdog-face/VitaOS",
+      "stars": 64,
+      "created": "2026-09-26",
+      "pushed": "2026-11-13",
+      "release": "v1.9.2 2026-11-13",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "vita"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "PS TV"
+        ],
+        "firmware": [],
+        "requires": [
+          "need:** a PS Vita (or PS TV) that can run homebrew: HENkaku, h-encore or Ensō, with VitaShell"
+        ]
+      },
+      "description": "A modern home screen for the PS Vita: games, films, music, apps and a homebrew store behind one fast menu."
+    },
+    {
+      "fullName": "ZenithUzu/AdvanXe360",
+      "stars": 3,
+      "created": "2026-10-14",
+      "pushed": "2026-11-05",
+      "release": "AdvanXe360v1.0.0 2026-10-28",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "gb",
+        "gba",
+        "x360"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "An enhanced fork of VBA360, a port of VisualBoyAdvance-M, a Game Boy and Game Boy Advance emulator. Built for Xbox 360 with performance and "
+    },
+    {
+      "fullName": "Gadega/ship-of-gadeguion",
+      "stars": 47,
+      "created": "2026-11-08",
+      "pushed": "2026-11-19",
+      "release": "v1.3.0 2026-11-19",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "n64",
+        "ps3"
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [],
+        "firmware": [],
+        "requires": [
+          "need - A PS3 running **HEN** (or CFW) that can install PKG files - Your own OoT ROM, **NTSC-U 1"
+        ]
+      },
+      "description": "Native PS3 port of Ship of Harkinian (OoT) for HEN/CFW consoles. Bring your own game data."
+    },
+    {
+      "fullName": "ricowp81/SalsaDS",
+      "stars": 23,
+      "created": "2026-10-19",
+      "pushed": "2026-11-11",
+      "release": "v0.0.5 2026-11-11",
+      "category": "Emuladores",
+      "platforms": [
+        "nds",
+        "ps3"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "DSi"
+        ],
+        "firmware": [],
+        "requires": []
+      },
+      "description": "Nintendo DS emulator for PlayStation 3 (homebrew), built around the Cell: ARM9 recompiler on the PPE, 2D, 3D, geometry and sound on SPEs. Ex"
+    },
+    {
+      "fullName": "redcode9/GBA-Rush-PSP",
+      "stars": 5,
+      "created": "2026-08-17",
+      "pushed": "2026-11-17",
+      "release": "1.4.3 2026-11-02",
+      "category": "Emuladores",
+      "platforms": [
+        "gba",
+        "psp"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "A performance-focused GBA emulator for PSP, forked from TempGBA4PSP-mod."
+    },
+    {
+      "fullName": "hamberluo/gba-gxa",
+      "stars": 2,
+      "created": "2026-11-11",
+      "pushed": "2026-11-16",
+      "release": "v1.0.0 2026-11-13",
+      "category": "Emuladores",
+      "platforms": [
+        "gba"
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "External audio for GBA ROMs: voiced dialogue, arranged music and SFX from a .gxa pack beside the ROM. The GBA's counterpart to MSU-1. Spec, "
+    },
+    {
+      "fullName": "ArtemioUrbina/240pTestSuite",
+      "stars": 373,
+      "created": "2016-01-29",
+      "pushed": "2026-10-26",
+      "release": null,
+      "category": "Juegos y ports",
+      "platforms": [
+        "wii",
+        "nes",
+        "gamecube",
+        "dreamcast",
+        "sega"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "A homebrew software suite for video game consoles developed to help in the evaluation of upscalers, upscan converters, line doublers and of "
+    },
+    {
+      "fullName": "SYOP200/Flipper-Zero-Downloads",
+      "stars": 78,
+      "created": "2025-09-27",
+      "pushed": "2026-11-18",
+      "release": "updt-v.1.5 2026-07-10",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Curated collection of plugins, files, and firmware for your Flipper Zero."
+    },
+    {
+      "fullName": "yefan911/automated-recompilers",
+      "stars": 20,
+      "created": "2026-10-30",
+      "pushed": "2026-11-13",
+      "release": null,
+      "category": "Desarrollo",
+      "platforms": [
+        "gba",
+        "nes",
+        "n64",
+        "ps1"
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Experimental ROM-to-C static recompilation for GBA, N64, PS1 and SNES. Includes a homebrew demo, native execution tests and an interactive C"
+    },
+    {
+      "fullName": "kernel64/Harissa64",
+      "stars": 32,
+      "created": "2026-10-09",
+      "pushed": "2026-11-11",
+      "release": "v2.2.0 2026-11-11",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "n64",
+        "x360"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [],
+        "firmware": [],
+        "requires": [
+          "need - An Xbox 360 with RGH or JTAG and a dashboard such as Aurora"
+        ]
+      },
+      "description": "A Nintendo 64 emulator for the Xbox 360, built from scratch with a focus on performance, compatibility, and graphical enhancements. Runs nat"
+    },
+    {
+      "fullName": "jmherren726/xiso-cartographer",
+      "stars": 3,
+      "created": "2026-10-13",
+      "pushed": "2026-11-17",
+      "release": "v0.9.0 2026-10-28",
+      "category": "Desarrollo",
+      "platforms": [
+        "xbox"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Xiso catalog and installer for the modded original Xbox. Browse the full library, then download and install your own game backups directly o"
+    },
+    {
+      "fullName": "pspdev/pspsdk",
+      "stars": 1212,
+      "created": "2011-01-14",
+      "pushed": "2026-11-16",
+      "release": null,
+      "category": "Desarrollo",
+      "platforms": [
+        "psp"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "An open-source SDK for PSP homebrew development."
+    },
+    {
+      "fullName": "gbadev-org/games",
+      "stars": 67,
+      "created": "2022-05-03",
+      "pushed": "2026-11-13",
+      "release": null,
+      "category": "Juegos y ports",
+      "platforms": [
+        "gb",
+        "gba"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Game Boy Advance homebrew games collected as a community maintained JSON database"
+    },
+    {
+      "fullName": "pocket-nexus/pocket-voxel",
+      "stars": 73,
+      "created": "2026-08-06",
+      "pushed": "2026-10-06",
+      "release": null,
+      "category": "Juegos y ports",
+      "platforms": [
+        "gb",
+        "psp",
+        "vita"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "A Game Boy creature-RPG reimagined as a voxelized 3D diorama for Web, PSP, and PS Vita. Bring your own ROM; baking stays local. Powered by P"
+    },
+    {
+      "fullName": "ButterscotchRunner/Butterscotch",
+      "stars": 423,
+      "created": "2026-03-06",
+      "pushed": "2026-11-19",
+      "release": null,
+      "category": "Desarrollo",
+      "platforms": [
+        "ps2",
+        "ps3"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "🥧 An open source re-implementation of GameMaker: Studio's runner (YoYo Runner)"
+    },
+    {
+      "fullName": "0x1a4-dev/DSiDrop",
+      "stars": 7,
+      "created": "2026-10-22",
+      "pushed": "2026-11-15",
+      "release": null,
+      "category": "Partidas guardadas",
+      "platforms": [
+        "nds",
+        "dsi"
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "DSi"
+        ],
+        "firmware": [],
+        "requires": [
+          "need a DSi or DSi XL with TWiLight Menu++, a writable FAT32 SD card and a running server on the same home network"
+        ]
+      },
+      "description": "Self-hosted Nintendo DSi game library and download manager with Wi-Fi transfers, save backups, homebrew support and a native DSi app."
+    },
+    {
+      "fullName": "Yannis100/vita-port-skill",
+      "stars": 24,
+      "created": "2026-10-14",
+      "pushed": "2026-11-18",
+      "release": null,
+      "category": "Emuladores",
+      "platforms": [
+        "vita"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "PS TV"
+        ],
+        "firmware": [],
+        "requires": []
+      },
+      "description": "Agent skill for porting games and engines to the PS Vita (VPK homebrew): VitaSDK, vitaGL, Android .so loader, static recomp, API emulation"
+    },
+    {
+      "fullName": "PS4-OpenGNM/opengnm-psbc",
+      "stars": 2,
+      "created": "2026-07-21",
+      "pushed": "2026-10-23",
+      "release": null,
+      "category": "Desarrollo",
+      "platforms": [
+        "gamecube",
+        "ps4",
+        "ps5"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "PS4 Pro"
+        ],
+        "firmware": [
+          "FW 9.00"
+        ],
+        "requires": []
+      },
+      "description": "SPIR-V to PS4/PS5 Shader Binary compiler (Mesa 26.2.0 NIR+ACO)"
+    },
+    {
+      "fullName": "ChupathingyCE/warthog-360",
+      "stars": 5,
+      "created": "2026-10-21",
+      "pushed": "2026-11-19",
+      "release": null,
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "x360"
+      ],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Chupathingy on the Xbox 360, for RGH and JTAG consoles. Plays online with PCs and other consoles. Test builds. Bring your own copy of the ga"
+    },
+    {
+      "fullName": "XboxDev/nxdk",
+      "stars": 606,
+      "created": "2015-12-22",
+      "pushed": "2026-11-12",
+      "release": null,
+      "category": "Desarrollo",
+      "platforms": [
+        "xbox"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "The cross-platform, open-source SDK to develop for original Xbox: *new* xdk"
+    },
+    {
+      "fullName": "REG-Linux/REG-Linux",
+      "stars": 37,
+      "created": "2024-04-15",
+      "pushed": "2026-11-02",
+      "release": null,
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "handheld-pc"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Retro Emulation Gaming Linux immutable OS"
+    },
+    {
+      "fullName": "OpenShopChannel/Apps",
+      "stars": 80,
+      "created": "2023-05-25",
+      "pushed": "2026-11-18",
+      "release": null,
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "wii",
+        "wiiu"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Open Shop Channel Applications Repository"
+    },
+    {
+      "fullName": "GoobyCorp/Xbox-360-Crypto",
+      "stars": 89,
+      "created": "2021-02-14",
+      "pushed": "2026-09-13",
+      "release": null,
+      "category": "Desarrollo",
+      "platforms": [
+        "x360"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "A collection of tools I've written for the Xbox 360"
+    },
+    {
+      "fullName": "Lorenzooone/TADWAD-Builder",
+      "stars": 3,
+      "created": "2025-10-02",
+      "pushed": "2026-03-12",
+      "release": null,
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "dsi",
+        "wii",
+        "wiiu"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [
+          "DSi"
+        ],
+        "firmware": [],
+        "requires": []
+      },
+      "description": "TADWAD Builder is a Python script to: build TADs, installable DSiWare channels; build WADs, installable WiiWare channels; do other TAD/WAD r"
+    },
+    {
+      "fullName": "CarlosPix/CarlOS",
+      "stars": 67,
+      "created": "2025-05-15",
+      "pushed": "2026-02-02",
+      "release": "CarlOS_v1.8.1 2025-07-11",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "handheld-pc"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "Miyoo Flip OS StockMod"
+    },
+    {
+      "fullName": "PS4-OpenGNM/opengnm",
+      "stars": 32,
+      "created": "2026-07-21",
+      "pushed": "2026-07-24",
+      "release": null,
+      "category": "Desarrollo",
+      "platforms": [
+        "gamecube",
+        "ps4"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [],
+        "firmware": [
+          "FW 9.00"
+        ],
+        "requires": []
+      },
+      "description": "Clean-rewrite PS4 GNM library — sceGnm*/sceGpa* drop-in API compatibility with the Sony official PS4 SDK"
+    }
+  ]
+}

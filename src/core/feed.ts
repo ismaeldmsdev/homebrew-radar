@@ -5,6 +5,8 @@ import { matchProject, type Interpretation } from './query.ts'
 import { gemAnalysis, type Gem, type RepoSignals } from './scoring.ts'
 import { looksLikeList } from './text.ts'
 import { fallbackSummary, normalizeSummary, type Summary } from './summary.ts'
+import { classifyWithEvidence } from './categories.ts'
+import { CATEGORY_VERSION, CHANNEL_CATEGORY, supportsCategory } from './classify.ts'
 
 const NINTENDO: Topic = { id: 'nintendo', label: 'Nintendo homebrew', description: 'Homebrew para Nintendo 3DS, DSi y DS.', featured: true, status: 'ok', count: 0, collectedAt: null }
 
@@ -29,6 +31,17 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
   const readmeQuality = typeof value.readmeQuality === 'boolean' || value.readmeQuality === null
     ? value.readmeQuality as boolean | null
     : legacy ? reasons.some((reason) => reason.includes('secciones')) : null
+  const summary = normalizeSummary(value.summary)
+  const storedChannels = strings(value.channels).length ? strings(value.channels) : legacy ? ['nintendo'] : []
+  // Categoría por evidencia: la guardada si se calculó con el método actual (incluye el
+  // README en la recopilación); si no, se recalcula con los metadatos y el resumen.
+  const evidenceInput = { name: value.name, description, topics, summary: summary?.text ?? null }
+  const current = value.categoryVersion === CATEGORY_VERSION && typeof value.category === 'string'
+    ? { category: value.category, confidence: (['alta', 'media', 'baja'] as const).find((item) => item === value.categoryConfidence) ?? 'media', evidence: strings(value.categoryEvidence) }
+    : classifyWithEvidence({ name: value.name, description, topics }, { summary: summary?.text ?? null }, storedChannels[0] === 'nintendo')
+  // Una temática ligada a una categoría (p. ej. «Emuladores») solo conserva proyectos
+  // cuya evidencia la respalda, aunque GitHub los devolviera por una etiqueta.
+  const channels = storedChannels.filter((channel) => !CHANNEL_CATEGORY[channel] || supportsCategory(evidenceInput, CHANNEL_CATEGORY[channel]))
   return {
     id: value.id,
     name: value.name,
@@ -43,9 +56,11 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
     updatedAt: str(value.updatedAt, pushedAt),
     createdAt: str(value.createdAt),
     pushedAt,
-    category: str(value.category, 'Otros proyectos interesantes'),
+    category: current.category,
+    categoryConfidence: current.confidence,
+    categoryEvidence: current.evidence.slice(0, 3),
     consoles,
-    channels: strings(value.channels).length ? strings(value.channels) : legacy ? ['nintendo'] : [],
+    channels,
     version: strOrNull(value.version),
     releasePublishedAt: strOrNull(value.releasePublishedAt),
     releaseUrl: strOrNull(value.releaseUrl),
@@ -63,7 +78,7 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
     starsDelta: typeof value.starsDelta === 'number' ? value.starsDelta : null,
     starsDeltaDays: typeof value.starsDeltaDays === 'number' ? value.starsDeltaDays : null,
     source: value.source === 'live' ? 'live' : 'catalog',
-    summary: normalizeSummary(value.summary),
+    summary,
   }
 }
 

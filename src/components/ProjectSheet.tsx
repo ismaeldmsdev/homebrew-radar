@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { gemOf } from '../core/feed.ts'
+import { gemOf, summaryOf } from '../core/feed.ts'
+import { KIND_HELP, KIND_LABELS } from '../core/summary.ts'
 import { projectStatus } from '../core/scoring.ts'
 import { relativeDays } from '../core/text.ts'
 import { formatDate, whyInteresting } from '../explain.ts'
@@ -64,6 +65,12 @@ export function ProjectSheet({ project, topics, isFavorite, isHidden, onClose, o
   const status = projectStatus(project)
   const gem = gemOf(project)
   const why = whyInteresting(project, topics)
+  const summary = summaryOf(project)
+  const provenance = summary.origin === 'curated'
+    ? `Resumen redactado con IA a partir del README y la descripción del repositorio${summary.updatedAt ? ` (${formatDate(summary.updatedAt)})` : ''} y validado automáticamente. Puede contener errores: compruébalo en GitHub antes de instalar nada.`
+    : summary.origin === 'llm'
+      ? `Resumen generado automáticamente por un modelo de lenguaje a partir del README${summary.updatedAt ? ` (${formatDate(summary.updatedAt)})` : ''}, sin revisión humana.`
+      : 'Descripción básica construida solo con los metadatos de GitHub (categoría, lenguaje y etiquetas). No se ha redactado todavía un resumen a partir del README.'
   const channelLabels = project.channels.map((id) => topics.find((topic) => topic.id === id)?.label).filter(Boolean) as string[]
   const docs = project.hasReadme === null ? (verifying === 'loading' ? 'Comprobando…' : 'No comprobado') : project.readmeQuality ? 'README completo' : project.hasReadme ? 'README básico' : 'Sin README'
   const version = project.version ? `${project.version}${project.releasePublishedAt ? ` · ${formatDate(project.releasePublishedAt)}` : ''}` : project.releaseChecked ? 'Sin versiones publicadas' : verifying === 'loading' ? 'Comprobando…' : 'No comprobado'
@@ -87,6 +94,19 @@ export function ProjectSheet({ project, topics, isFavorite, isHidden, onClose, o
           {project.labels.map((label) => <span className="tag" key={label}>{label}</span>)}
           {channelLabels.map((label) => <span className="tag channel-tag" key={label}>{label}</span>)}
         </div>
+
+        <section className={`summary-box${summary.origin === 'rules' ? ' is-basic' : ''}`} aria-labelledby="summary-title">
+          <h3 id="summary-title">¿Qué es y para qué sirve?</h3>
+          <p className="summary-full">{summary.text}</p>
+          {summary.detail && <p className="summary-detail">{summary.detail}</p>}
+          {summary.kinds.length > 0 && (
+            <ul className="kind-list">
+              {summary.kinds.map((kind) => <li key={kind}><span className={`kind-chip kind-${kind}`}>{KIND_LABELS[kind]}</span><span>{KIND_HELP[kind]}</span></li>)}
+            </ul>
+          )}
+          {summary.outdated && <p className="inline-error">La descripción del repositorio cambió después de redactar este resumen; puede estar desactualizado.</p>}
+          <p className="fine-print">{provenance}</p>
+        </section>
 
         {project.description
           ? <blockquote className="source-description"><span>Descripción original en GitHub</span>{project.description}</blockquote>

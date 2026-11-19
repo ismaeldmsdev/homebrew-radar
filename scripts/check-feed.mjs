@@ -21,9 +21,11 @@ for (const project of feed.projects ?? []) {
   }
   if (ids.has(project.id)) problems.push(`proyecto duplicado: ${project.fullName}`)
   ids.add(project.id)
+  if (project.summary !== undefined && project.summary !== null && (typeof project.summary.text !== 'string' || !project.summary.text.trim())) problems.push(`resumen mal formado: ${project.fullName}`)
 }
 if (problems.length) {
   console.error(`Catálogo no válido: ${problems.join('; ')}`)
   process.exit(1)
 }
-console.log(`Catálogo válido: ${feed.projects.length} proyectos, recopilado ${feed.generatedAt}.`)
+const summarized = feed.projects.filter((project) => project.summary?.text).length
+console.log(`Catálogo válido: ${feed.projects.length} proyectos (${summarized} con resumen en español), recopilado ${feed.generatedAt}.`)

@@ -6,6 +6,7 @@ import { normalizeProject, toSignals } from './core/feed.ts'
 import { buildGithubQueries, matchProject, type Interpretation } from './core/query.ts'
 import { interestScore } from './core/scoring.ts'
 import { looksLikeList } from './core/text.ts'
+import { fromCompact, type CompactSummary } from './core/summary.ts'
 import type { Project } from './types.ts'
 
 const API = 'https://api.github.com'
@@ -87,6 +88,25 @@ export function projectFromSearch(repo: SearchRepo, interp: Interpretation, posi
   return { ...base, score, reasons }
 }
 
+let summaryIndex: Promise<Record<string, CompactSummary>> | null = null
+
+/** Caché pública de resúmenes en español; se descarga una sola vez y solo al buscar en vivo. */
+function loadSummaryIndex() {
+  summaryIndex ??= fetch(`${import.meta.env.BASE_URL}data/summaries.json`)
+    .then((response) => (response.ok ? response.json() : {}))
+    .catch(() => ({}))
+  return summaryIndex
+}
+
+export async function withSummaries(projects: Project[]) {
+  const index = await loadSummaryIndex()
+  return projects.map((project) => {
+    const entry = project.summary ? null : index[String(project.id)]
+    const summary = entry ? fromCompact(entry, project.description) : null
+    return summary ? { ...project, summary } : project
+  })
+}
+
 export type LiveSearch = {
   projects: Project[]
   total: number
@@ -131,7 +151,7 @@ export async function searchGithub(interp: Interpretation, { includeArchived = f
   const sort = interp.sort === 'stars' ? '&sort=stars' : interp.sort === 'recent' ? '&sort=updated' : ''
   const cacheKey = `radar-live:${primary}|${sort}|${interp.ownerType ?? ''}`
   const cached = cacheGet<LiveSearch>(cacheKey, SEARCH_TTL)
-  if (cached) return { ...cached, fromCache: true, projects: cached.projects.map((item) => normalizeProject(item)!).filter(Boolean) }
+  if (cached) return { ...cached, fromCache: true, projects: await withSummaries(cached.projects.map((item) => normalizeProject(item)!).filter(Boolean)) }
 
   const tried: string[] = []
   let items: SearchRepo[] = []
@@ -146,7 +166,7 @@ export async function searchGithub(interp: Interpretation, { includeArchived = f
     if (items.length > 0) break
   }
   const now = Date.now()
-  let projects = items.filter((repo) => !repo.fork).map((repo, index) => projectFromSearch(repo, interp, index, now))
+  let projects = await withSummaries(items.filter((repo) => !repo.fork).map((repo, index) => projectFromSearch(repo, interp, index, now)))
   const before = projects.length
   if (interp.ownerType) projects = projects.filter((project) => project.ownerType === interp.ownerType)
   const result: LiveSearch = { projects, total, queriesTried: tried, queryUsed: used, fetchedAt: new Date(now).toISOString(), fromCache: false, filteredOut: before - projects.length }

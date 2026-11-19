@@ -201,7 +201,7 @@ export function buildGithubQueries(interp: Interpretation, { now = Date.now(), i
 }
 
 /** Texto en el que buscar coincidencias dentro del catálogo local. */
-export type Matchable = { name: string; fullName: string; description: string; topics: string[]; category: string; channels: string[]; ownerType: string | null; language: string | null; pushedAt: string; createdAt: string; stars: number }
+export type Matchable = { name: string; fullName: string; description: string; topics: string[]; category: string; channels: string[]; ownerType: string | null; language: string | null; pushedAt: string; createdAt: string; stars: number; summary?: { text: string } | null }
 
 function containsWord(haystack: string, needle: string) {
   const term = normalize(needle)
@@ -221,7 +221,7 @@ export function matchProject(project: Matchable, interp: Interpretation, now = D
   if (interp.createdWithinDays !== null && now - Date.parse(project.createdAt) > interp.createdWithinDays * 86_400_000) return 0
   if (isEmptyInterpretation(interp)) return 0.5
 
-  const haystack = normalize(`${project.name.replace(/[-_]/g, ' ')} ${project.fullName} ${project.description} ${project.topics.join(' ').replace(/-/g, ' ')} ${project.topics.join(' ')} ${project.category}`)
+  const haystack = normalize(`${project.name.replace(/[-_]/g, ' ')} ${project.fullName} ${project.description} ${project.topics.join(' ').replace(/-/g, ' ')} ${project.topics.join(' ')} ${project.category} ${project.summary?.text ?? ''}`)
   let hits = 0
   for (const concept of interp.concepts) {
     const byChannel = concept.channel ? project.channels.includes(concept.channel) : false

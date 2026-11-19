@@ -78,6 +78,22 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
+      # Resúmenes en español: se reutiliza la caché versionada (data/summaries.json).
+      # La generación automática con un modelo de lenguaje es OPCIONAL y está apagada
+      # mientras no existan la variable SUMMARY_API_URL, SUMMARY_MODEL y el secreto
+      # SUMMARY_API_KEY (cualquier API compatible con OpenAI). Sin ellos no hay coste.
+      - name: Resúmenes en español
+        if: steps.collect.outcome == 'success'
+        continue-on-error: true
+        run: |
+          npm run --silent summaries -- auto
+          npm run --silent summaries -- sync
+        env:
+          SUMMARY_API_URL: ${{ vars.SUMMARY_API_URL }}
+          SUMMARY_MODEL: ${{ vars.SUMMARY_MODEL }}
+          SUMMARY_API_KEY: ${{ secrets.SUMMARY_API_KEY }}
+          SUMMARY_MAX: ${{ vars.SUMMARY_MAX }}
+
       - name: Validar el catálogo (o restaurar el último válido)
         run: |
           if ! npm run --silent check:feed; then
@@ -91,7 +107,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/data/projects.json
+          git add public/data/projects.json public/data/summaries.json data/summaries.json
           if git diff --cached --quiet; then echo "Sin cambios en el catálogo."; exit 0; fi
           git commit -m "Actualizar datos del radar"
           for attempt in 1 2 3; do

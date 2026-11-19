@@ -18,6 +18,8 @@ export function compactNumber(value: number) {
   return new Intl.NumberFormat('es', { notation: value >= 10_000 ? 'compact' : 'standard', maximumFractionDigits: 1 }).format(value)
 }
 
+export const licenseLabel = (license: string | null) => (license ? `Licencia ${license}` : 'Sin licencia declarada')
+
 export function whyInteresting(project: Project, topics: Topic[]) {
   if (project.description.trim().length < 20) {
     return { verified: false, lines: ['GitHub no ofrece una descripción suficiente para explicar su utilidad: no verificado. Revisa el repositorio para saber qué hace.'] }

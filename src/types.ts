@@ -1,3 +1,5 @@
+import type { Summary } from './core/summary.ts'
+
 export type Project = {
   id: number
   name: string
@@ -32,6 +34,8 @@ export type Project = {
   starsDelta: number | null
   starsDeltaDays: number | null
   source: 'catalog' | 'live'
+  /** Resumen en español guardado en caché (null: la web genera la descripción básica). */
+  summary: Summary | null
 }
 
 export type Topic = {

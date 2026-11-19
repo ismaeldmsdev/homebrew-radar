@@ -7,6 +7,8 @@ import { fileURLToPath } from 'node:url'
 import { classifyCategory, classifyConsoles, classifyGeneralCategory, isNintendoRelevant } from '../src/core/categories.ts'
 import { interestScore } from '../src/core/scoring.ts'
 import { looksLikeList } from '../src/core/text.ts'
+import { cleanReadme } from '../src/core/summary.ts'
+import { readStore, summaryFor } from './summaries.mjs'
 
 export { classifyCategory, classifyConsoles } from '../src/core/categories.ts'
 
@@ -206,6 +208,7 @@ async function enrich(repo, ctx) {
   const readmeText = readme?.content ? Buffer.from(readme.content, readme.encoding || 'base64').toString('utf8') : ''
   return {
     has_readme: Boolean(readmeText),
+    readme_length: readmeText ? cleanReadme(readmeText, 1e9).length : null,
     readme_quality: readmeText.length >= 500 && (/^#{1,3}\s/m.test(readmeText) || /^[=-]{3,}\s*$/m.test(readmeText)),
     release: release && !release.draft && !release.prerelease ? release : null,
   }
@@ -215,6 +218,7 @@ function fromPrevious(old) {
   return {
     has_readme: typeof old.hasReadme === 'boolean' ? old.hasReadme : undefined,
     readme_quality: typeof old.readmeQuality === 'boolean' ? old.readmeQuality : undefined,
+    readme_length: typeof old.readmeLength === 'number' ? old.readmeLength : null,
     release: old.releaseChecked === false ? undefined : old.version ? { tag_name: old.version, published_at: old.releasePublishedAt, html_url: old.releaseUrl } : null,
   }
 }
@@ -247,6 +251,7 @@ function toProject(repo, extra, channels, topic, previous, generatedAt, previous
     releaseChecked: extra.release !== undefined,
     hasReadme: typeof extra.has_readme === 'boolean' ? extra.has_readme : null,
     readmeQuality: typeof extra.readme_quality === 'boolean' ? extra.readme_quality : null,
+    readmeLength: typeof extra.readme_length === 'number' ? extra.readme_length : null,
     license: licenseName(repo.license),
     archived: Boolean(repo.archived),
     isList: looksLikeList(repo.name, repo.description ?? '', repo.topics ?? []),
@@ -275,6 +280,7 @@ export async function collect({
   token = process.env.GITHUB_TOKEN,
   output = outputPath,
   config = null,
+  summariesPath = undefined,
   fetch: fetchImpl = globalThis.fetch,
   sleep: sleepImpl = sleep,
   searchDelay = token ? 2200 : 6500,
@@ -348,6 +354,14 @@ export async function collect({
     status.count = kept.length
   }
   projects.sort((a, b) => b.score - a.score || b.pushedAt.localeCompare(a.pushedAt))
+  // Resúmenes en español desde la caché versionada (data/summaries.json). Los proyectos
+  // nuevos quedan sin resumen y la web muestra una descripción básica honesta.
+  const store = await readStore(summariesPath)
+  for (const project of projects) {
+    const summary = summaryFor(store, project)
+    if (summary) project.summary = summary
+    else delete project.summary
+  }
 
   if (topicStatus.every((item) => item.status !== 'ok')) throw new Error('Ninguna temática se pudo actualizar; se conserva el catálogo anterior sin cambios.')
   if (projects.length === 0) throw new Error('La recopilación no produjo proyectos; se conserva el catálogo anterior.')

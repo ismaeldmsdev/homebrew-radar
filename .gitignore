@@ -29,3 +29,6 @@ secrets.json
 *.njsproj
 *.sln
 *.sw?
+
+# Archivo de trabajo temporal de los resúmenes (scripts/summaries.mjs prepare)
+summaries-work.json

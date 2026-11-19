@@ -4,6 +4,7 @@ import type { Feed, Project, Topic } from '../types.ts'
 import { matchProject, type Interpretation } from './query.ts'
 import { gemAnalysis, type Gem, type RepoSignals } from './scoring.ts'
 import { looksLikeList } from './text.ts'
+import { fallbackSummary, normalizeSummary, type Summary } from './summary.ts'
 
 const NINTENDO: Topic = { id: 'nintendo', label: 'Nintendo homebrew', description: 'Homebrew para Nintendo 3DS, DSi y DS.', featured: true, status: 'ok', count: 0, collectedAt: null }
 
@@ -62,6 +63,7 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
     starsDelta: typeof value.starsDelta === 'number' ? value.starsDelta : null,
     starsDeltaDays: typeof value.starsDeltaDays === 'number' ? value.starsDeltaDays : null,
     source: value.source === 'live' ? 'live' : 'catalog',
+    summary: normalizeSummary(value.summary),
   }
 }
 
@@ -88,6 +90,15 @@ export function toSignals(project: Project): RepoSignals {
     releaseChecked: project.releaseChecked, license: project.license, homepage: project.homepage, archived: project.archived,
     isList: project.isList, starsDelta: project.starsDelta, starsDeltaDays: project.starsDeltaDays,
   }
+}
+
+const summaryCache = new WeakMap<Project, Summary>()
+/** Resumen guardado o, si no lo hay, la descripción básica construida con metadatos. */
+export function summaryOf(project: Project): Summary {
+  if (project.summary) return project.summary
+  let summary = summaryCache.get(project)
+  if (!summary) { summary = fallbackSummary(project); summaryCache.set(project, summary) }
+  return summary
 }
 
 const gemCache = new WeakMap<Project, Gem | null>()

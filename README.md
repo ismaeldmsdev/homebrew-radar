@@ -48,6 +48,40 @@ Una **joya oculta** necesita: 3-400 estrellas, actividad en el último año, des
 
 «Ganando atención» compara las estrellas con las recopilaciones anteriores (historial de hasta 30 días en el propio catálogo).
 
+## Resúmenes en español
+
+Cada tarjeta explica en 2-3 frases **qué es el proyecto, qué permite hacer y para qué sirve**, e indica su tipo: aplicación lista para usar, autoalojado, requiere configuración, línea de comandos, biblioteca para programadores, complemento, experimental o lista de recursos. La ficha añade detalles concretos del README y explica cada tipo.
+
+Hay tres orígenes, y la ficha siempre dice cuál es:
+
+| Origen | Cuándo | Cómo se marca |
+| --- | --- | --- |
+| Caché revisada (`data/summaries.json`) | Proyectos del catálogo ya resumidos | «Resumen redactado con IA a partir del README…» |
+| Proveedor automático (opcional) | Proyectos nuevos, si configuras un proveedor | «Generado automáticamente… sin revisión humana» |
+| Descripción básica | Todo lo demás, incluidas búsquedas en vivo nuevas | «Descripción básica: aún no hay un resumen verificado» + descripción original |
+
+- **No se inventa nada.** La descripción básica solo usa categoría, lenguaje y etiquetas; si faltan datos lo dice. Los resúmenes con documentación escasa llevan `limited` y lo indican en el texto.
+- **Caché y rendimiento.** Los resúmenes se guardan con una huella de la documentación (hash de la descripción y longitud del README). Si cambian de forma significativa, la tarjeta avisa de que puede estar desactualizado y el proyecto vuelve a la cola. La web no genera nada: lee el catálogo, y la caché pública `public/data/summaries.json` (≈90 KB) solo se descarga al buscar en vivo.
+- **Validación.** `scripts/summaries.mjs apply` rechaza textos que no tengan 2-3 frases, no parezcan español o usen frases genéricas o sin pruebas («potente», «fácil de usar»…). Las pruebas comprueban 24 proyectos reales de distintas categorías y los casos con documentación escasa.
+
+### Añadir o actualizar resúmenes
+
+```bash
+npm run summaries -- prepare            # descarga el README de los proyectos sin resumen → summaries-work.json
+# redacta un JSON [{ "fullName", "text", "detail", "kinds", "limited" }] a partir de ese archivo
+npm run summaries -- apply resumenes.json --work summaries-work.json
+npm run summaries -- sync               # copia la caché al catálogo y a la caché pública
+```
+
+### Generación automática (opcional, apagada por defecto)
+
+GitHub Models, la opción gratuita integrada en Actions, se retiró el 30 de julio de 2026, así que no hay un modelo gratuito sin clave. El workflow admite cualquier API compatible con OpenAI y **no hace nada** hasta que configures en *Settings → Secrets and variables → Actions*:
+
+- Variables: `SUMMARY_API_URL` (por ejemplo, el endpoint compatible con OpenAI de tu proveedor), `SUMMARY_MODEL` y, opcionalmente, `SUMMARY_MAX` (resúmenes por ejecución, 20 por defecto).
+- Secreto: `SUMMARY_API_KEY`.
+
+Antes de activarlo, revisa en tu proveedor límites, coste y uso de datos (los niveles gratuitos suelen cambiar sin aviso y algunos usan las peticiones para entrenar). Las respuestas pasan la misma validación y se marcan como «sin revisión humana».
+
 ## Seguimiento automático de temáticas
 
 Las temáticas que guardas en la app viven en `localStorage` y **GitHub Actions no puede leerlas**. Por eso hay dos niveles:

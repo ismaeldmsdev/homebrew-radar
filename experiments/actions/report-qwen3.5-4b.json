@@ -1,0 +1,966 @@
+{
+  "machine": {
+    "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "cores": 4,
+    "memGB": 16.8,
+    "platform": "linux",
+    "threads": 4
+  },
+  "models": [
+    {
+      "model": "model.gguf",
+      "loadMs": 3020,
+      "totalMs": 658008,
+      "peakMemoryMB": 8127,
+      "accepted": 15,
+      "total": 18,
+      "avgRequestMs": 28608,
+      "avgGenTokensPerSec": 6.6,
+      "avgPromptTokensPerSec": 35.7,
+      "results": [
+        {
+          "fullName": "wickenico/WailBrew",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "WailBrew es una aplicación gráfica para macOS que gestiona paquetes de Homebrew. Permite instalar, actualizar y eliminar paquetes, así como administrar repositorios y servicios sin necesidad de usar la terminal. Es útil para usuarios que quieren una interfaz visual moderna para administrar sus herramientas de software en Mac.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 45045,
+              "usage": {
+                "completion_tokens": 76,
+                "prompt_tokens": 1284,
+                "total_tokens": 1360,
+                "prompt_tokens_details": {
+                  "cached_tokens": 0
+                }
+              },
+              "timings": {
+                "cache_n": 0,
+                "prompt_n": 1284,
+                "prompt_ms": 33473.276,
+                "prompt_per_token_ms": 26.069529595015574,
+                "prompt_per_second": 38.35895835232859,
+                "predicted_n": 76,
+                "predicted_ms": 11561.522,
+                "predicted_per_token_ms": 154.15362666666667,
+                "predicted_per_second": 6.487035184467927
+              },
+              "text": "WailBrew es una aplicación gráfica para macOS que gestiona paquetes de Homebrew. Permite instalar, actualizar y eliminar paquetes, así como administrar repositorios y servicios sin necesidad de usar la terminal. Es útil para usuarios que quieren una interfaz visual moderna para administrar sus herramientas de software en Mac.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "crossterm-rs/crossterm",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una biblioteca escrita en Rust diseñada para que los desarrolladores manipulen terminales en sistemas operativos distintos. Permite controlar el cursor, manejar colores y estilos de texto, y gestionar eventos como pulsaciones de teclas o movimiento del ratón. Está pensada para integrarse en programas que necesitan interfaces de texto funcionales en Windows, macOS y Linux.",
+          "kinds": [
+            "library"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 33546,
+              "usage": {
+                "completion_tokens": 88,
+                "prompt_tokens": 1327,
+                "total_tokens": 1415,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 739,
+                "prompt_ms": 19857.384,
+                "prompt_per_token_ms": 26.87061434370771,
+                "prompt_per_second": 37.21537539889444,
+                "predicted_n": 88,
+                "predicted_ms": 13631.147,
+                "predicted_per_token_ms": 156.67985057471265,
+                "predicted_per_second": 6.382441624318188
+              },
+              "text": "Es una biblioteca escrita en Rust diseñada para que los desarrolladores manipulen terminales en sistemas operativos distintos. Permite controlar el cursor, manejar colores y estilos de texto, y gestionar eventos como pulsaciones de teclas o movimiento del ratón. Está pensada para integrarse en programas que necesitan interfaces de texto funcionales en Windows, macOS y Linux.",
+              "kinds": [
+                "library"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "autobrr/qui",
+          "readmeChars": 3442,
+          "ok": true,
+          "text": "Qui es una interfaz web rápida y moderna para gestionar qBittorrent. Permite administrar múltiples instancias de qBittorrent desde una sola aplicación, automatizar flujos de trabajo de torrents y cruzar semillas entre rastreadores. También incluye soporte para copias de seguridad programadas y un proxy transparente para aplicaciones externas.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 34259,
+              "usage": {
+                "completion_tokens": 85,
+                "prompt_tokens": 1384,
+                "total_tokens": 1469,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 796,
+                "prompt_ms": 21218.696,
+                "prompt_per_token_ms": 26.65665326633166,
+                "prompt_per_second": 37.514086633787485,
+                "predicted_n": 85,
+                "predicted_ms": 12981.885,
+                "predicted_per_token_ms": 154.54625000000001,
+                "predicted_per_second": 6.470554930967267
+              },
+              "text": "Qui es una interfaz web rápida y moderna para gestionar qBittorrent. Permite administrar múltiples instancias de qBittorrent desde una sola aplicación, automatizar flujos de trabajo de torrents y cruzar semillas entre rastreadores. También incluye soporte para copias de seguridad programadas y un proxy transparente para aplicaciones externas.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "bahdotsh/wrkflw",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "WRKFLW es una herramienta de línea de comandos escrita en Rust para validar y ejecutar flujos de trabajo de GitHub Actions localmente. Permite probar la sintaxis, ejecutar tareas en contenedores Docker o en tu propio clúster Kubernetes, y evaluar expresiones complejas antes de subir cambios al repositorio. Es útil para desarrolladores que necesitan simular entornos de CI/CD en su máquina sin depender de servidores externos.",
+          "kinds": [
+            "cli"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 33061,
+              "usage": {
+                "completion_tokens": 106,
+                "prompt_tokens": 1219,
+                "total_tokens": 1325,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 631,
+                "prompt_ms": 17015.565,
+                "prompt_per_token_ms": 26.966030110935023,
+                "prompt_per_second": 37.083693665182444,
+                "predicted_n": 106,
+                "predicted_ms": 15984.887,
+                "predicted_per_token_ms": 152.23701904761904,
+                "predicted_per_second": 6.568704551993392
+              },
+              "text": "WRKFLW es una herramienta de línea de comandos escrita en Rust para validar y ejecutar flujos de trabajo de GitHub Actions localmente. Permite probar la sintaxis, ejecutar tareas en contenedores Docker o en tu propio clúster Kubernetes, y evaluar expresiones complejas antes de subir cambios al repositorio. Es útil para desarrolladores que necesitan simular entornos de CI/CD en su máquina sin depender de servidores externos.",
+              "kinds": [
+                "cli"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "julyx10/lap",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una aplicación de escritorio para Windows, macOS y Linux que gestiona colecciones de fotos locales. Permite buscar imágenes usando descripciones de texto, encontrar similitudes visuales y agrupar por rostro, además de guardar calificaciones y etiquetas en archivos XMP. Útil para organizar grandes librerías de medios sin necesidad de conexión a internet ni suscripciones.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 35319,
+              "usage": {
+                "completion_tokens": 116,
+                "prompt_tokens": 1256,
+                "total_tokens": 1372,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 668,
+                "prompt_ms": 17914.661,
+                "prompt_per_token_ms": 26.81835479041916,
+                "prompt_per_second": 37.28789509329817,
+                "predicted_n": 116,
+                "predicted_ms": 17346.865,
+                "predicted_per_token_ms": 150.84230434782611,
+                "predicted_per_second": 6.629439959324062
+              },
+              "text": "Lap es una aplicación de escritorio de código abierto para macOS, Windows y Linux que gestiona colecciones masivas de fotos y vídeos localmente. Permite buscar imágenes mediante descripciones de texto o reconocimiento facial sin enviar datos a la nube, además de organizar archivos por fecha, ubicación o cámara y exportar etiquetas a archivos XMP compatibles. Está diseñada para usuarios que necesitan gestionar bibliotecas personales con más de 100.000 medios de forma privada y sin suscripciones.",
+              "kinds": [
+                "app"
+              ],
+              "problems": [
+                "Longitud fuera de rango (499 caracteres).",
+                "La cifra «100.000» no aparece en la documentación."
+              ]
+            },
+            {
+              "ms": 29991,
+              "usage": {
+                "completion_tokens": 90,
+                "prompt_tokens": 1312,
+                "total_tokens": 1402,
+                "prompt_tokens_details": {
+                  "cached_tokens": 740
+                }
+              },
+              "timings": {
+                "cache_n": 740,
+                "prompt_n": 572,
+                "prompt_ms": 16421.728,
+                "prompt_per_token_ms": 28.709314685314684,
+                "prompt_per_second": 34.83190075977388,
+                "predicted_n": 90,
+                "predicted_ms": 13560.131,
+                "predicted_per_token_ms": 152.3610224719101,
+                "predicted_per_second": 6.563358421832356
+              },
+              "text": "Es una aplicación de escritorio para Windows, macOS y Linux que gestiona colecciones de fotos locales. Permite buscar imágenes usando descripciones de texto, encontrar similitudes visuales y agrupar por rostro, además de guardar calificaciones y etiquetas en archivos XMP. Útil para organizar grandes librerías de medios sin necesidad de conexión a internet ni suscripciones.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "langroid/langroid",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Langroid es un framework en Python diseñado para construir aplicaciones impulsadas por modelos de lenguaje grandes (LLM). Permite configurar agentes, equiparlos con componentes como almacenes de vectores o herramientas, y asignarles tareas para que resuelvan problemas colaborativamente mediante el intercambio de mensajes. Útil para desarrolladores que buscan crear sistemas multiagente sin depender de otros frameworks específicos de LLM.",
+          "kinds": [
+            "library"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 32155,
+              "usage": {
+                "completion_tokens": 96,
+                "prompt_tokens": 1256,
+                "total_tokens": 1352,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 668,
+                "prompt_ms": 17890.198,
+                "prompt_per_token_ms": 26.781733532934133,
+                "prompt_per_second": 37.338882442776764,
+                "predicted_n": 96,
+                "predicted_ms": 14205.374,
+                "predicted_per_token_ms": 149.53025263157895,
+                "predicted_per_second": 6.687609914388737
+              },
+              "text": "Langroid es un framework en Python diseñado para construir aplicaciones impulsadas por modelos de lenguaje grandes (LLM). Permite configurar agentes, equiparlos con componentes como almacenes de vectores o herramientas, y asignarles tareas para que resuelvan problemas colaborativamente mediante el intercambio de mensajes. Útil para desarrolladores que buscan crear sistemas multiagente sin depender de otros frameworks específicos de LLM.",
+              "kinds": [
+                "library"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "zelon88/HRConvert2",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un servidor de conversión de archivos que se instala en tu propio ordenador o Raspberry Pi. Permite convertir más de 560 formatos en 26 idiomas y ejecutar tareas como escanear virus, realizar OCR, extraer contenido o fusionar PDFs. Funciona sin que los archivos salgan de tu servidor y ofrece plantillas predefinidas para automatizar secuencias de conversión.",
+          "kinds": [
+            "selfhosted"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 33462,
+              "usage": {
+                "completion_tokens": 99,
+                "prompt_tokens": 1283,
+                "total_tokens": 1382,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 695,
+                "prompt_ms": 18678.96,
+                "prompt_per_token_ms": 26.87620143884892,
+                "prompt_per_second": 37.20763896919315,
+                "predicted_n": 99,
+                "predicted_ms": 14724.758,
+                "predicted_per_token_ms": 150.25263265306123,
+                "predicted_per_second": 6.65545742755161
+              },
+              "text": "Es un servidor de conversión de archivos que se instala en tu propio ordenador o Raspberry Pi. Permite convertir más de 560 formatos en 26 idiomas y ejecutar tareas como escanear virus, realizar OCR, extraer contenido o fusionar PDFs. Funciona sin que los archivos salgan de tu servidor y ofrece plantillas predefinidas para automatizar secuencias de conversión.",
+              "kinds": [
+                "selfhosted"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "gopher64/gopher64",
+          "readmeChars": 2577,
+          "ok": true,
+          "text": "Es un emulador de consola Nintendo 64 compatible con múltiples plataformas. Permite jugar juegos con soporte para rollback netplay, incluye funciones como upscaling, shaders CRT, overclocking del procesador y gestión de cheats y guardados. También soporta homebrew y retroachievements.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 30752,
+              "usage": {
+                "completion_tokens": 75,
+                "prompt_tokens": 1307,
+                "total_tokens": 1382,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 719,
+                "prompt_ms": 19449.782,
+                "prompt_per_token_ms": 27.051157162726007,
+                "prompt_per_second": 36.966995311309915,
+                "predicted_n": 75,
+                "predicted_ms": 11224.172,
+                "predicted_per_token_ms": 151.678,
+                "predicted_per_second": 6.592913936101478
+              },
+              "text": "Es un emulador de consola Nintendo 64 compatible con múltiples plataformas. Permite jugar juegos con soporte para rollback netplay, incluye funciones como upscaling, shaders CRT, overclocking del procesador y gestión de cheats y guardados. También soporta homebrew y retroachievements.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "IvanMurzak/Unity-MCP",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un conjunto de herramientas y comandos de línea para desarrollar y probar juegos con Unity. Permite convertir cualquier método C# en una herramienta, ejecutar pruebas y gestionar activos desde agentes de IA como Claude Code o Copilot. Útil para programadores que quieren automatizar tareas en el editor o en juegos compilados.",
+          "kinds": [
+            "cli",
+            "library"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 33854,
+              "usage": {
+                "completion_tokens": 82,
+                "prompt_tokens": 1375,
+                "total_tokens": 1457,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 787,
+                "prompt_ms": 21464.302,
+                "prompt_per_token_ms": 27.273573062261754,
+                "prompt_per_second": 36.66552958488936,
+                "predicted_n": 82,
+                "predicted_ms": 12330.475,
+                "predicted_per_token_ms": 152.22808641975308,
+                "predicted_per_second": 6.569089998560477
+              },
+              "text": "Es un conjunto de herramientas y comandos de línea para desarrollar y probar juegos con Unity. Permite convertir cualquier método C# en una herramienta, ejecutar pruebas y gestionar activos desde agentes de IA como Claude Code o Copilot. Útil para programadores que quieren automatizar tareas en el editor o en juegos compilados.",
+              "kinds": [
+                "cli",
+                "library"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "neo-engine/neo",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un proyecto experimental que recrea un motor de videojuego tipo Pokémon para la consola Nintendo DS. Permite jugar con sprites de varias generaciones, realizar batallas contra entrenadores y explorar mapas con elementos interactivos. Está diseñado como una demostración técnica y no como un juego comercial completo.",
+          "kinds": [
+            "experimental"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 31307,
+              "usage": {
+                "completion_tokens": 76,
+                "prompt_tokens": 1315,
+                "total_tokens": 1391,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 727,
+                "prompt_ms": 19698.614,
+                "prompt_per_token_ms": 27.09575515818432,
+                "prompt_per_second": 36.9061498438418,
+                "predicted_n": 76,
+                "predicted_ms": 11550.535,
+                "predicted_per_token_ms": 154.00713333333334,
+                "predicted_per_second": 6.493205725968538
+              },
+              "text": "Es un proyecto experimental que recrea un motor de videojuego tipo Pokémon para la consola Nintendo DS. Permite jugar con sprites de varias generaciones, realizar batallas contra entrenadores y explorar mapas con elementos interactivos. Está diseñado como una demostración técnica y no como un juego comercial completo.",
+              "kinds": [
+                "experimental"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "TASEmulators/desmume",
+          "readmeChars": 72,
+          "ok": true,
+          "text": "Es un emulador de consolas para programas que desarrollan software. Faltan datos sobre sus funciones concretas y para quién está destinado.",
+          "kinds": [
+            "app"
+          ],
+          "limited": true,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 11822,
+              "usage": {
+                "completion_tokens": 62,
+                "prompt_tokens": 680,
+                "total_tokens": 742,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 92,
+                "prompt_ms": 2837.491,
+                "prompt_per_token_ms": 30.84229347826087,
+                "prompt_per_second": 32.42301032849091,
+                "predicted_n": 62,
+                "predicted_ms": 8923.927,
+                "predicted_per_token_ms": 146.29388524590163,
+                "predicted_per_second": 6.8355556920176515
+              },
+              "text": "DeSmuME es un programa que simula el consola Nintendo DS en tu ordenador. Permite ejecutar juegos diseñados para esa consola antigua. Está escrito en C++ y requiere conocimientos técnicos para instalarlo y configurarlo.",
+              "kinds": [
+                "app"
+              ],
+              "problems": [
+                "Con documentación escasa el texto debe decir que faltan datos."
+              ]
+            },
+            {
+              "ms": 10773,
+              "usage": {
+                "completion_tokens": 45,
+                "prompt_tokens": 721,
+                "total_tokens": 766,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 133,
+                "prompt_ms": 4235.908,
+                "prompt_per_token_ms": 31.848932330827072,
+                "prompt_per_second": 31.398226779240716,
+                "predicted_n": 45,
+                "predicted_ms": 6530.281,
+                "predicted_per_token_ms": 148.41547727272726,
+                "predicted_per_second": 6.737841755967316
+              },
+              "text": "Es un emulador de consolas para programas que desarrollan software. Faltan datos sobre sus funciones concretas y para quién está destinado.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "fabianquilpue/Laura_WordProcessor_3DS",
+          "readmeChars": 84,
+          "ok": false,
+          "ms": 12658,
+          "usage": {
+            "completion_tokens": 57,
+            "prompt_tokens": 729,
+            "total_tokens": 786,
+            "prompt_tokens_details": {
+              "cached_tokens": 588
+            }
+          },
+          "timings": {
+            "cache_n": 588,
+            "prompt_n": 141,
+            "prompt_ms": 4428.851,
+            "prompt_per_token_ms": 31.410290780141843,
+            "prompt_per_second": 31.836699857367073,
+            "predicted_n": 57,
+            "predicted_ms": 8223.217,
+            "predicted_per_token_ms": 146.84316071428572,
+            "predicted_per_second": 6.809986894423435
+          },
+          "text": "Laura es un procesador de texto minimalista diseñado para la consola New Nintendo 3DS. La documentación actual no describe sus funciones concretas ni para quién está destinado, por lo que faltan datos.",
+          "kinds": [
+            "experimental"
+          ],
+          "problems": [
+            "El tipo «experimental» no tiene respaldo en la documentación."
+          ],
+          "attempts": [
+            {
+              "ms": 13238,
+              "usage": {
+                "completion_tokens": 73,
+                "prompt_tokens": 676,
+                "total_tokens": 749,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 88,
+                "prompt_ms": 2755.718,
+                "prompt_per_token_ms": 31.314977272727273,
+                "prompt_per_second": 31.933601333663315,
+                "predicted_n": 73,
+                "predicted_ms": 10476.331,
+                "predicted_per_token_ms": 145.50459722222223,
+                "predicted_per_second": 6.872635085699373
+              },
+              "text": "Laura es un procesador de texto minimalista diseñado específicamente para la consola New Nintendo 3DS. Permite escribir y editar documentos directamente en el dispositivo, utilizando C++ como su tecnología base. Está pensado para usuarios que necesitan un editor ligero y funcional en esa plataforma de juegos.",
+              "kinds": [
+                "app"
+              ],
+              "problems": [
+                "El tipo «app» no tiene respaldo en la documentación.",
+                "Con documentación escasa el texto debe decir que faltan datos."
+              ]
+            },
+            {
+              "ms": 12658,
+              "usage": {
+                "completion_tokens": 57,
+                "prompt_tokens": 729,
+                "total_tokens": 786,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 141,
+                "prompt_ms": 4428.851,
+                "prompt_per_token_ms": 31.410290780141843,
+                "prompt_per_second": 31.836699857367073,
+                "predicted_n": 57,
+                "predicted_ms": 8223.217,
+                "predicted_per_token_ms": 146.84316071428572,
+                "predicted_per_second": 6.809986894423435
+              },
+              "text": "Laura es un procesador de texto minimalista diseñado para la consola New Nintendo 3DS. La documentación actual no describe sus funciones concretas ni para quién está destinado, por lo que faltan datos.",
+              "kinds": [
+                "experimental"
+              ],
+              "problems": [
+                "El tipo «experimental» no tiene respaldo en la documentación."
+              ]
+            }
+          ]
+        },
+        {
+          "fullName": "cwuom/NeriPlayer",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "NeriPlayer es una aplicación de audio nativa para Android que integra la reproducción de múltiples fuentes y el control local. Permite gestionar música desde plataformas como YouTube Music o servidores propios como Navidrome, además de ofrecer sincronización de listas de reproducción y estadísticas a través de GitHub o WebDAV. Está diseñada para usuarios que desean una experiencia de audio unificada sin depender de servidores externos para sus datos.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 54912,
+              "usage": {
+                "completion_tokens": 100,
+                "prompt_tokens": 2041,
+                "total_tokens": 2141,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 1453,
+                "prompt_ms": 39255.635,
+                "prompt_per_token_ms": 27.016954576737785,
+                "prompt_per_second": 37.01379432532425,
+                "predicted_n": 100,
+                "predicted_ms": 15644.76,
+                "predicted_per_token_ms": 158.0278787878788,
+                "predicted_per_second": 6.327997361416857
+              },
+              "text": "NeriPlayer es una aplicación de audio nativa para Android que integra la reproducción de múltiples fuentes y el control local. Permite gestionar música desde plataformas como YouTube Music o servidores propios como Navidrome, además de ofrecer sincronización de listas de reproducción y estadísticas a través de GitHub o WebDAV. Está diseñada para usuarios que desean una experiencia de audio unificada sin depender de servidores externos para sus datos.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "hledgerorg/hledger",
+          "readmeChars": 3104,
+          "ok": false,
+          "ms": 29970,
+          "usage": {
+            "completion_tokens": 93,
+            "prompt_tokens": 1293,
+            "total_tokens": 1386,
+            "prompt_tokens_details": {
+              "cached_tokens": 733
+            }
+          },
+          "timings": {
+            "cache_n": 733,
+            "prompt_n": 560,
+            "prompt_ms": 16032.315,
+            "prompt_per_token_ms": 28.62913392857143,
+            "prompt_per_second": 34.92945341954671,
+            "predicted_n": 93,
+            "predicted_ms": 13929.733,
+            "predicted_per_token_ms": 151.41014130434783,
+            "predicted_per_second": 6.604577417241235
+          },
+          "text": "Es una herramienta de contabilidad en texto plano que funciona con interfaz de línea de comandos, terminal o web. Permite rastrear dinero, inversiones y facturas, además de generar informes precisos y exportar datos a formatos como CSV, JSON o SQL. Útil tanto para expertos como para principiantes que desean aprender contabilidad en doble entrada.",
+          "kinds": [
+            "app",
+            "config",
+            "cli"
+          ],
+          "problems": [
+            "El tipo «config» no tiene respaldo en la documentación."
+          ],
+          "attempts": [
+            {
+              "ms": 32677,
+              "usage": {
+                "completion_tokens": 98,
+                "prompt_tokens": 1249,
+                "total_tokens": 1347,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 661,
+                "prompt_ms": 17859.407,
+                "prompt_per_token_ms": 27.01877004538578,
+                "prompt_per_second": 37.011307262329595,
+                "predicted_n": 98,
+                "predicted_ms": 14748.516,
+                "predicted_per_token_ms": 152.04655670103094,
+                "predicted_per_second": 6.576932892773754
+              },
+              "text": "Es una herramienta de contabilidad en texto plano que permite gestionar dinero, inversiones y facturas. Su documentación detalla funciones como la importación y exportación de archivos CSV, la generación de informes detallados y la capacidad de analizar 25.000 transacciones por segundo. Está diseñada para ayudar tanto a expertos como a personas normales a obtener claridad en sus finanzas y gestión del tiempo.",
+              "kinds": [
+                "app"
+              ],
+              "problems": [
+                "La cifra «25.000» no aparece en la documentación."
+              ]
+            },
+            {
+              "ms": 29970,
+              "usage": {
+                "completion_tokens": 93,
+                "prompt_tokens": 1293,
+                "total_tokens": 1386,
+                "prompt_tokens_details": {
+                  "cached_tokens": 733
+                }
+              },
+              "timings": {
+                "cache_n": 733,
+                "prompt_n": 560,
+                "prompt_ms": 16032.315,
+                "prompt_per_token_ms": 28.62913392857143,
+                "prompt_per_second": 34.92945341954671,
+                "predicted_n": 93,
+                "predicted_ms": 13929.733,
+                "predicted_per_token_ms": 151.41014130434783,
+                "predicted_per_second": 6.604577417241235
+              },
+              "text": "Es una herramienta de contabilidad en texto plano que funciona con interfaz de línea de comandos, terminal o web. Permite rastrear dinero, inversiones y facturas, además de generar informes precisos y exportar datos a formatos como CSV, JSON o SQL. Útil tanto para expertos como para principiantes que desean aprender contabilidad en doble entrada.",
+              "kinds": [
+                "app",
+                "config",
+                "cli"
+              ],
+              "problems": [
+                "El tipo «config» no tiene respaldo en la documentación."
+              ]
+            }
+          ]
+        },
+        {
+          "fullName": "pgaskin/kepubify",
+          "readmeChars": 999,
+          "ok": true,
+          "text": "Es una herramienta de línea de comandos para convertir archivos EPUB estándar a EPUB optimizado para lectores Kobo. Permite realizar la conversión de libros en segundos, procesa HTML malformado sin errores y ofrece opciones adicionales como mejorar la puntuación o aplicar CSS personalizado. Útil para usuarios que necesitan transformar archivos de e-book rápidamente sin instalar software complejo.",
+          "kinds": [
+            "cli"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 22364,
+              "usage": {
+                "completion_tokens": 89,
+                "prompt_tokens": 921,
+                "total_tokens": 1010,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 333,
+                "prompt_ms": 9155.71,
+                "prompt_per_token_ms": 27.49462462462462,
+                "prompt_per_second": 36.370745687663764,
+                "predicted_n": 89,
+                "predicted_ms": 13140.32,
+                "predicted_per_token_ms": 149.32181818181817,
+                "predicted_per_second": 6.696944975464829
+              },
+              "text": "Es una herramienta de línea de comandos para convertir archivos EPUB estándar a EPUB optimizado para lectores Kobo. Permite realizar la conversión de libros en segundos, procesa HTML malformado sin errores y ofrece opciones adicionales como mejorar la puntuación o aplicar CSS personalizado. Útil para usuarios que necesitan transformar archivos de e-book rápidamente sin instalar software complejo.",
+              "kinds": [
+                "cli"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "awaseem/foqos",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es una aplicación para iPhone que bloquea apps y sitios web para ayudarte a concentrarte. Permite iniciar sesiones de bloqueo manualmente, con etiquetas NFC, códigos QR o mediante temporizadores, y crea perfiles personalizados para rutinas como trabajo o estudio. Útil para personas que buscan alternativas gratuitas y sin suscripciones a aplicaciones de bloqueo de pantalla.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 29332,
+              "usage": {
+                "completion_tokens": 85,
+                "prompt_tokens": 1209,
+                "total_tokens": 1294,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 621,
+                "prompt_ms": 16759.506,
+                "prompt_per_token_ms": 26.98793236714976,
+                "prompt_per_second": 37.05359811918083,
+                "predicted_n": 85,
+                "predicted_ms": 12564.542,
+                "predicted_per_token_ms": 149.57788095238095,
+                "predicted_per_second": 6.685480457624322
+              },
+              "text": "Es una aplicación para iPhone que bloquea apps y sitios web para ayudarte a concentrarte. Permite iniciar sesiones de bloqueo manualmente, con etiquetas NFC, códigos QR o mediante temporizadores, y crea perfiles personalizados para rutinas como trabajo o estudio. Útil para personas que buscan alternativas gratuitas y sin suscripciones a aplicaciones de bloqueo de pantalla.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "BolgarMaxym97/3ds-recorder",
+          "readmeChars": 3500,
+          "ok": true,
+          "text": "Es un programa para grabar la pantalla completa de la consola Nintendo 3DS, incluyendo juegos y menús con sonido. Permite iniciar y detener la grabación con un botón, guardar los últimos 30 segundos automáticamente y recibir el archivo MP4 en el móvil escaneando un código QR sin necesidad de ordenador. Útil para usuarios de consolas antiguas que quieren registrar sus partidas directamente desde el dispositivo.",
+          "kinds": [
+            "app"
+          ],
+          "limited": false,
+          "problems": [],
+          "attempts": [
+            {
+              "ms": 38998,
+              "usage": {
+                "completion_tokens": 101,
+                "prompt_tokens": 1468,
+                "total_tokens": 1569,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 880,
+                "prompt_ms": 23783.494,
+                "prompt_per_token_ms": 27.026697727272726,
+                "prompt_per_second": 37.000450816856436,
+                "predicted_n": 101,
+                "predicted_ms": 15158.731,
+                "predicted_per_token_ms": 151.58731,
+                "predicted_per_second": 6.596858272635091
+              },
+              "text": "Es un programa para grabar la pantalla completa de la consola Nintendo 3DS, incluyendo juegos y menús con sonido. Permite iniciar y detener la grabación con un botón, guardar los últimos 30 segundos automáticamente y recibir el archivo MP4 en el móvil escaneando un código QR sin necesidad de ordenador. Útil para usuarios de consolas antiguas que quieren registrar sus partidas directamente desde el dispositivo.",
+              "kinds": [
+                "app"
+              ],
+              "problems": []
+            }
+          ]
+        },
+        {
+          "fullName": "blocksds/libnds",
+          "readmeChars": 274,
+          "ok": false,
+          "ms": 14311,
+          "usage": {
+            "completion_tokens": 59,
+            "prompt_tokens": 776,
+            "total_tokens": 835,
+            "prompt_tokens_details": {
+              "cached_tokens": 588
+            }
+          },
+          "timings": {
+            "cache_n": 588,
+            "prompt_n": 188,
+            "prompt_ms": 5757.521,
+            "prompt_per_token_ms": 30.625111702127658,
+            "prompt_per_second": 32.652942125612746,
+            "predicted_n": 59,
+            "predicted_ms": 8545.528,
+            "predicted_per_token_ms": 147.33668965517242,
+            "predicted_per_second": 6.787175701723755
+          },
+          "text": "Es una biblioteca en C para desarrollar aplicaciones en consolas Nintendo DS y DSi. La documentación disponible menciona que incluye ejemplos y un sistema de archivos FAT, pero no detalla sus funciones específicas ni cómo se utiliza.",
+          "kinds": [
+            "library"
+          ],
+          "problems": [
+            "Con documentación escasa el texto debe decir que faltan datos."
+          ],
+          "attempts": [
+            {
+              "ms": 14184,
+              "usage": {
+                "completion_tokens": 67,
+                "prompt_tokens": 735,
+                "total_tokens": 802,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 147,
+                "prompt_ms": 4416.35,
+                "prompt_per_token_ms": 30.043197278911567,
+                "prompt_per_second": 33.28540536868681,
+                "predicted_n": 67,
+                "predicted_ms": 9706.209,
+                "predicted_per_token_ms": 147.06377272727275,
+                "predicted_per_second": 6.799771156792522
+              },
+              "text": "Es una biblioteca de código abierto en C diseñada para programar aplicaciones en consolas Nintendo DS y DSi. Proporciona herramientas y documentación para desarrollar juegos o software propio en estos dispositivos. Está disponible para que los desarrolladores la integren en sus proyectos.",
+              "kinds": [
+                "library"
+              ],
+              "problems": [
+                "Con documentación escasa el texto debe decir que faltan datos."
+              ]
+            },
+            {
+              "ms": 14311,
+              "usage": {
+                "completion_tokens": 59,
+                "prompt_tokens": 776,
+                "total_tokens": 835,
+                "prompt_tokens_details": {
+                  "cached_tokens": 588
+                }
+              },
+              "timings": {
+                "cache_n": 588,
+                "prompt_n": 188,
+                "prompt_ms": 5757.521,
+                "prompt_per_token_ms": 30.625111702127658,
+                "prompt_per_second": 32.652942125612746,
+                "predicted_n": 59,
+                "predicted_ms": 8545.528,
+                "predicted_per_token_ms": 147.33668965517242,
+                "predicted_per_second": 6.787175701723755
+              },
+              "text": "Es una biblioteca en C para desarrollar aplicaciones en consolas Nintendo DS y DSi. La documentación disponible menciona que incluye ejemplos y un sistema de archivos FAT, pero no detalla sus funciones específicas ni cómo se utiliza.",
+              "kinds": [
+                "library"
+              ],
+              "problems": [
+                "Con documentación escasa el texto debe decir que faltan datos."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

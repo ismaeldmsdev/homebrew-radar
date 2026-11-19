@@ -5,6 +5,7 @@ import { matchProject, type Interpretation } from './query.ts'
 import { gemAnalysis, type Gem, type RepoSignals } from './scoring.ts'
 import { looksLikeList } from './text.ts'
 import { fallbackSummary, normalizeSummary, type Summary } from './summary.ts'
+import { normalizeSecurity } from './security.ts'
 
 const NINTENDO: Topic = { id: 'nintendo', label: 'Nintendo homebrew', description: 'Homebrew para Nintendo 3DS, DSi y DS.', featured: true, status: 'ok', count: 0, collectedAt: null }
 
@@ -64,6 +65,7 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
     starsDeltaDays: typeof value.starsDeltaDays === 'number' ? value.starsDeltaDays : null,
     source: value.source === 'live' ? 'live' : 'catalog',
     summary: normalizeSummary(value.summary),
+    security: normalizeSecurity(value.security),
   }
 }
 

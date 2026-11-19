@@ -7,6 +7,7 @@ import { formatDate, whyInteresting } from '../explain.ts'
 import { enrichProject, GithubError } from '../github.ts'
 import type { Project, Topic } from '../types.ts'
 import { Icon } from './Icon.tsx'
+import { SecurityPanel } from './SecurityPanel.tsx'
 
 type Props = {
   project: Project
@@ -126,6 +127,8 @@ export function ProjectSheet({ project, topics, isFavorite, isHidden, onClose, o
 
         <h3>¿Por qué podría interesarte?</h3>
         <ul className={`why-list${why.verified ? '' : ' unverified'}`}>{why.lines.map((line) => <li key={line}>{line}</li>)}</ul>
+
+        <SecurityPanel project={project} onUpdate={onUpdate} />
 
         <dl className="detail-grid">
           <div><dt>Creado</dt><dd>{formatDate(project.createdAt)}</dd></div>

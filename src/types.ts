@@ -1,4 +1,5 @@
 import type { Summary } from './core/summary.ts'
+import type { SecurityFacts } from './core/security.ts'
 
 export type Project = {
   id: number
@@ -36,6 +37,8 @@ export type Project = {
   source: 'catalog' | 'live'
   /** Resumen en español guardado en caché (null: la web genera la descripción básica). */
   summary: Summary | null
+  /** Hechos de seguridad obtenidos de APIs oficiales (null = no comprobado todavía). */
+  security: SecurityFacts | null
 }
 
 export type Topic = {

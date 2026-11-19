@@ -8,6 +8,8 @@ import { interestScore } from './core/scoring.ts'
 import { looksLikeList } from './core/text.ts'
 import { fromCompact, type CompactSummary } from './core/summary.ts'
 import type { Project } from './types.ts'
+import { normalizeSecurity, type SecurityFacts } from './core/security.ts'
+import { fetchSecurityFacts } from './core/securityFetch.ts'
 
 const API = 'https://api.github.com'
 const SEARCH_TTL = 20 * 60_000
@@ -139,7 +141,7 @@ function cacheSet(key: string, data: unknown, persistent = false) {
 export function clearSearchCache() {
   for (const storage of [sessionStorage, localStorage]) {
     try {
-      for (const key of Object.keys(storage)) if (key.startsWith('radar-live:') || key.startsWith('radar-enrich:')) storage.removeItem(key)
+      for (const key of Object.keys(storage)) if (key.startsWith('radar-live:') || key.startsWith('radar-enrich:') || key.startsWith('radar-security:')) storage.removeItem(key)
     } catch {
       // Sin acceso al almacenamiento.
     }
@@ -203,4 +205,27 @@ export async function enrichProject(project: Project, signal?: AbortSignal): Pro
   const relevanceReason = project.reasons.find((reason) => reason.startsWith('Coincide') || reason.startsWith('Menciona') || reason.startsWith('Encontrado') || reason.startsWith('Etiquetado')) ?? null
   const { score, reasons } = interestScore(toSignals(updated), relevanceReason ? 0.8 : 0.5, relevanceReason)
   return { ...updated, score, reasons }
+}
+
+const SECURITY_TTL = 24 * 3_600_000
+
+/**
+ * Comprueba bajo demanda las señales de seguridad de un proyecto (≈5 consultas del límite
+ * de 60/hora sin cuenta + 1 a OpenSSF Scorecard). Solo metadatos: no descarga archivos.
+ */
+export async function checkSecurity(project: Project, signal?: AbortSignal): Promise<SecurityFacts> {
+  const cacheKey = `radar-security:${project.id}`
+  const cached = normalizeSecurity(cacheGet<SecurityFacts>(cacheKey, SECURITY_TTL))
+  if (cached) return cached
+  const facts = await fetchSecurityFacts(project.fullName, {
+    github: (path) => get(path, signal, true),
+    external: async (url) => {
+      const response = await fetch(url, { headers: { Accept: 'application/json' }, signal })
+      if (response.status === 404) return null
+      if (!response.ok) throw new Error(`HTTP ${response.status}`)
+      return response.json()
+    },
+  })
+  cacheSet(cacheKey, facts, true)
+  return facts
 }

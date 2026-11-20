@@ -11,6 +11,8 @@ import { looksLikeList } from '../src/core/text.ts'
 import { cleanReadme } from '../src/core/summary.ts'
 import { detectPlatforms, detectToolType, extractCompat, isConsoleRelated, looksLikePiracy, platformLabel, toolTypeLabel } from '../src/core/consoles.ts'
 import { readStore, summaryFor } from './summaries.mjs'
+import { executableAssets } from '../src/core/security.ts'
+import { fetchSecurityFacts, isStale, releaseFromRaw } from '../src/core/securityFetch.ts'
 
 export { classifyCategory, classifyConsoles } from '../src/core/categories.ts'
 
@@ -330,6 +332,7 @@ export async function collect({
   output = outputPath,
   config = null,
   summariesPath = undefined,
+  securityMax = Number(process.env.SECURITY_MAX ?? 30),
   fetch: fetchImpl = globalThis.fetch,
   sleep: sleepImpl = sleep,
   searchDelay = token ? 2200 : 6500,
@@ -431,6 +434,45 @@ export async function collect({
       log(`  · ${project.fullName} descartado: su documentación no respalda la temática.`)
     }
   }
+
+  // «Seguridad y confianza»: solo metadatos de APIs oficiales, con caché y límite por ejecución.
+  const securityTodo = []
+  for (const project of projects) {
+    const old = previous.get(project.id)?.security
+    if (old && !isStale(old, project.version, now)) project.security = old
+    else securityTodo.push(project)
+  }
+  const raw = new Map(entries.map(({ repo }) => [repo.id, repo]))
+  const executables = (project) => executableAssets(releaseFromRaw(enrichment.get(project.id)?.release ?? null)?.assets ?? []).length
+  securityTodo.sort((a, b) => executables(b) - executables(a) || b.score - a.score)
+  const owners = new Map()
+  const github = (path) => request(path, ctx, { allowNotFound: true })
+  const external = async (url) => {
+    const response = await ctx.fetch(url, { headers: { Accept: 'application/json' } })
+    if (response.status === 404) return null
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    return response.json()
+  }
+  let securityChecked = 0
+  for (const project of securityTodo.slice(0, securityMax)) {
+    const repo = raw.get(project.id)
+    if (!repo || rateLimited) { if (previous.get(project.id)?.security) project.security = previous.get(project.id).security; continue }
+    try {
+      const login = repo.owner.login
+      if (!owners.has(login)) owners.set(login, (await github(`/users/${login}`))?.created_at ?? null)
+      const extra = enrichment.get(project.id) ?? {}
+      // Una release recuperada de la caché anterior no trae la lista de archivos: se vuelve a pedir.
+      const release = extra.release === undefined || (extra.release && !Array.isArray(extra.release.assets)) ? undefined : extra.release
+      project.security = await fetchSecurityFacts(repo.full_name, { github, external, repo, release, ownerCreatedAt: owners.get(login), now })
+      securityChecked++
+    } catch (error) {
+      if (error instanceof RateLimitError) rateLimited = true
+      if (previous.get(project.id)?.security) project.security = previous.get(project.id).security
+      log(`  · Seguridad de ${repo.full_name} no comprobada: ${error.message}`)
+    }
+  }
+  for (const project of securityTodo.slice(securityMax)) if (previous.get(project.id)?.security) project.security = previous.get(project.id).security
+  log(`Seguridad: ${securityChecked} comprobados, ${projects.filter((project) => project.security).length} con datos.`)
 
   if (topicStatus.every((item) => item.status !== 'ok')) throw new Error('Ninguna temática se pudo actualizar; se conserva el catálogo anterior sin cambios.')
   if (projects.length === 0) throw new Error('La recopilación no produjo proyectos; se conserva el catálogo anterior.')

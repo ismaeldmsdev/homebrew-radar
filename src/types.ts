@@ -1,5 +1,6 @@
 import type { Summary } from './core/summary.ts'
 import type { Compat } from './core/consoles.ts'
+import type { SecurityFacts } from './core/security.ts'
 
 export type Project = {
   id: number
@@ -43,6 +44,8 @@ export type Project = {
   summary: Summary | null
   /** Modelos, firmware y requisitos mencionados literalmente en el README (sin verificar). */
   compat: Compat | null
+  /** Hechos de seguridad obtenidos de APIs oficiales (null = no comprobado todavía). */
+  security: SecurityFacts | null
 }
 
 export type Topic = {

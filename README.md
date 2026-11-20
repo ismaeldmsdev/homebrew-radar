@@ -113,6 +113,27 @@ npm run summaries -- apply resumenes.json --work summaries-work.json
 npm run summaries -- sync               # copia la caché al catálogo y a la caché pública
 ```
 
+## Seguridad y confianza
+
+Cada ficha incluye un apartado con señales públicas para decidir antes de descargar software, sobre todo ejecutables de Windows. **Radar no es un antivirus:** nunca descarga ni ejecuta archivos, no calcula una nota de seguridad y no usa la popularidad.
+
+| Estado | Significado |
+| --- | --- |
+| Señal verificada | Dato comprobado en una fuente oficial (API de GitHub u OpenSSF Scorecard) |
+| Advertencia documentada | Problema publicado: aviso de seguridad, proyecto archivado, flujo peligroso… |
+| Información no disponible | No se pudo consultar o no existe ese dato. Nunca se presenta como advertencia ni como garantía |
+| Requiere revisión manual | Algo que solo puedes comprobar tú, como la firma de Windows o una cuenta recién creada |
+
+Fuentes, todas gratuitas y sin claves:
+- **API de GitHub:** trayectoria del repositorio y de la cuenta, mantenimiento, release oficial, release inmutable, huella SHA-256 calculada por GitHub para cada archivo, atestaciones de procedencia por huella (solo su existencia; Radar no las verifica criptográficamente) y avisos publicados con las versiones afectadas y corregidas.
+- **[OpenSSF Scorecard](https://scorecard.dev/):** comprobaciones concretas como flujos peligrosos, binarios en el código, política de seguridad, revisión de código y vulnerabilidades. No se muestra su nota global.
+
+Integridad (la huella coincide), procedencia (se compiló en este repositorio) y seguridad (no hace nada malicioso) son cosas distintas, y Radar solo informa de las dos primeras. Para cada ejecutable ofrece enlaces que **solo buscan su huella** en VirusTotal y MalwareBazaar, sin subir nada. Sus APIs no se integran: VirusTotal exige clave y prohíbe el uso comercial de su API pública, y MalwareBazaar exige una clave personal.
+
+**Consultas y caché:**
+- GitHub Actions comprueba hasta 30 proyectos por recopilación (`SECURITY_MAX`), con prioridad para los que publican ejecutables para Windows. Reutiliza la caché hasta que cambia la release o pasan 14 días.
+- Para los resultados en vivo, la ficha ofrece «Comprobar señales de seguridad». Usa unas 5 de las 60 consultas por hora sin cuenta y guarda el resultado 24 horas en el dispositivo.
+
 ## Seguimiento automático de temáticas
 
 Las temáticas que guardas en la app viven en `localStorage` y **GitHub Actions no puede leerlas**. Por eso hay dos niveles:

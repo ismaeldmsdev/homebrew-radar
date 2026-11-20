@@ -8,6 +8,7 @@ import { fallbackSummary, normalizeSummary, type Summary } from './summary.ts'
 import type { Compat } from './consoles.ts'
 import { classifyWithEvidence } from './categories.ts'
 import { CATEGORY_VERSION, CHANNEL_CATEGORY, supportsCategory } from './classify.ts'
+import { normalizeSecurity } from './security.ts'
 
 const NINTENDO: Topic = { id: 'nintendo', label: 'Nintendo homebrew', description: 'Homebrew para Nintendo 3DS, DSi y DS.', featured: true, status: 'ok', count: 0, collectedAt: null }
 
@@ -88,6 +89,7 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
     source: value.source === 'live' ? 'live' : 'catalog',
     summary,
     compat: normalizeCompat(value.compat),
+    security: normalizeSecurity(value.security),
   }
 }
 

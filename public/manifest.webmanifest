@@ -9,8 +9,8 @@
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#0d120e",
-  "theme_color": "#0d120e",
+  "background_color": "#0b0e14",
+  "theme_color": "#0b0e14",
   "categories": ["utilities", "productivity"],
   "icons": [
     { "src": "./pwa-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },

@@ -6,6 +6,7 @@ import { gemAnalysis, type Gem, type RepoSignals } from './scoring.ts'
 import { looksLikeList } from './text.ts'
 import { fallbackSummary, normalizeSummary, type Summary } from './summary.ts'
 import type { Compat } from './consoles.ts'
+import { detectDocLanguage, normalizeDocLanguage } from './docLanguage.ts'
 import { classifyWithEvidence } from './categories.ts'
 import { CATEGORY_VERSION, CHANNEL_CATEGORY, supportsCategory } from './classify.ts'
 import { normalizeSecurity } from './security.ts'
@@ -89,6 +90,7 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
     source: value.source === 'live' ? 'live' : 'catalog',
     summary,
     compat: normalizeCompat(value.compat),
+    docLanguage: normalizeDocLanguage(value.docLanguage) ?? detectDocLanguage({ description }),
     security: normalizeSecurity(value.security),
   }
 }

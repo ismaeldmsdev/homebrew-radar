@@ -4,10 +4,11 @@
 import type { SortMode } from './core/query.ts'
 import { normalizeProject } from './core/feed.ts'
 import type { Project } from './types.ts'
+import { DOC_LANGUAGE_FILTERS, type DocLanguageFilter } from './core/docLanguage.ts'
 
 export type Interest = { id: string; label: string; query: string; createdAt: string; lastCheckedAt: string | null }
 export type HistoryEntry = { id: number; at: string | null }
-export type Prefs = { sort: SortMode; includeArchived: boolean }
+export type Prefs = { sort: SortMode; includeArchived: boolean; docLanguage: DocLanguageFilter }
 
 export type Library = {
   version: 2
@@ -26,7 +27,7 @@ export const HISTORY_LIMIT = 100
 const sorts: SortMode[] = ['interest', 'gems', 'recent', 'stars', 'new']
 
 export function emptyLibrary(): Library {
-  return { version: 2, favorites: [], seen: [], hidden: [], history: [], snapshots: {}, interests: [], prefs: { sort: 'interest', includeArchived: false } }
+  return { version: 2, favorites: [], seen: [], hidden: [], history: [], snapshots: {}, interests: [], prefs: { sort: 'interest', includeArchived: false, docLanguage: 'all' } }
 }
 
 function ids(value: unknown) {
@@ -72,6 +73,7 @@ export function parseLibrary(raw: unknown): Library {
     const prefs = value.prefs as Partial<Prefs>
     if (prefs.sort && sorts.includes(prefs.sort)) library.prefs.sort = prefs.sort
     if (typeof prefs.includeArchived === 'boolean') library.prefs.includeArchived = prefs.includeArchived
+    if (prefs.docLanguage && DOC_LANGUAGE_FILTERS.includes(prefs.docLanguage)) library.prefs.docLanguage = prefs.docLanguage
   }
   return library
 }

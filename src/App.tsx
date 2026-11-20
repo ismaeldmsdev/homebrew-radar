@@ -188,10 +188,12 @@ function App() {
           <Discover feed={feed} visible={visible} library={library} favorites={favorites} actions={actions}
             onSearch={(query) => navigate({ view: 'search', query, channel: 'todas' })}
             onChannel={(channel) => navigate({ view: 'search', query: '', channel })}
-            onGoLibrary={() => navigate({ view: 'library' })} />
+            onGoLibrary={() => navigate({ view: 'library' })}
+            onGoConsoles={() => navigate({ view: 'consoles' })} />
         )}
         {route.view === 'consoles' && (
-          <Consoles feed={feed} visible={visible} actions={actions} onSearch={(query) => navigate({ view: 'search', query, channel: 'todas' })} />
+          <Consoles feed={feed} visible={visible} actions={actions} prefs={library.prefs}
+            onPrefs={(prefs) => setLibrary((current) => ({ ...current, prefs }))} onSearch={(query) => navigate({ view: 'search', query, channel: 'todas' })} />
         )}
         {route.view === 'search' && (
           <Search key={route.query} feed={feed} visible={visible} query={route.query} channel={route.channel} prefs={library.prefs}

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
-import { pickFeatured, pickGems, pickNews, pickTrending, recommend } from '../core/feed.ts'
+import { consoleSections } from '../core/consoleRadar.ts'
+import { pickFeatured, pickGems, pickNews, recommend } from '../core/feed.ts'
 import { interpretQuery } from '../core/query.ts'
 import { Icon } from '../components/Icon.tsx'
 import { ProjectCard, type CardActions } from '../components/ProjectCard.tsx'
@@ -19,9 +20,10 @@ type Props = {
   onSearch: (query: string) => void
   onChannel: (channel: string) => void
   onGoLibrary: () => void
+  onGoConsoles: () => void
 }
 
-export function Discover({ feed, visible, library, favorites, actions, onSearch, onChannel, onGoLibrary }: Props) {
+export function Discover({ feed, visible, library, favorites, actions, onSearch, onChannel, onGoLibrary, onGoConsoles }: Props) {
   const [draft, setDraft] = useState('')
   const gems = useMemo(() => pickGems(visible), [visible])
   // Las joyas tienen su propia sección: no se repiten en destacados.
@@ -29,9 +31,10 @@ export function Discover({ feed, visible, library, favorites, actions, onSearch,
     const gemIds = new Set(gems.map((project) => project.id))
     return pickFeatured(visible.filter((project) => !gemIds.has(project.id)))
   }, [visible, gems])
-  const news = useMemo(() => pickNews(visible), [visible])
-  const trending = useMemo(() => pickTrending(visible), [visible])
-  const nintendo = useMemo(() => visible.filter((project) => project.channels.includes('nintendo')).sort((a, b) => b.score - a.score).slice(0, 8), [visible])
+  // Lo ya mostrado en destacados y joyas no se repite en las secciones siguientes.
+  const shown = useMemo(() => new Set([...gems, ...featured].map((project) => project.id)), [gems, featured])
+  const consolePicks = useMemo(() => consoleSections(visible.filter((project) => !shown.has(project.id)), undefined, 6).featured, [visible, shown])
+  const news = useMemo(() => pickNews(visible.filter((project) => !shown.has(project.id))), [visible, shown])
   const forYou = useMemo(() => recommend(
     visible,
     library.interests.map((interest) => ({ label: interest.label, interp: interpretQuery(interest.query) })),
@@ -77,20 +80,21 @@ export function Discover({ feed, visible, library, favorites, actions, onSearch,
           : <p className="empty-inline">Ningún proyecto del catálogo cumple ahora mismo los criterios de joya oculta.</p>}
       </Section>
 
-      <Section id="news" icon="news" title="Novedades" subtitle="Proyectos nuevos, versiones recién publicadas y actividad detectada desde la recopilación anterior.">
+      {consolePicks.length > 0 && (
+        <Section id="consoles-preview" icon="gamepad" title="Radar de Consolas" subtitle="Homebrew, CFW, emuladores y utilidades para consolas: lo más interesante del radar dedicado."
+          action={<button className="text-button" onClick={onGoConsoles}>Abrir el radar <Icon name="arrow" size={15} /></button>}>
+          {consolePicks.map((project) => <ProjectCard key={project.id} project={project} actions={actions} />)}
+        </Section>
+      )}
+
+      <Section id="news" icon="news" title="Proyectos recientes" subtitle="Proyectos nuevos, versiones recién publicadas y actividad detectada desde la recopilación anterior.">
         {news.length
           ? news.map((project) => <ProjectCard key={project.id} project={project} actions={actions} highlight="news" note={newsNote(project)} />)
           : <p className="empty-inline">No se detectaron novedades en la última recopilación.</p>}
       </Section>
 
-      <Section id="trending" icon="trend" title="Ganando atención" subtitle="Proyectos que han sumado estrellas entre recopilaciones, en proporción a su tamaño.">
-        {trending.length
-          ? trending.map((project) => <ProjectCard key={project.id} project={project} actions={actions} highlight="trend" note={`+${project.starsDelta} estrellas en ${Math.round(project.starsDeltaDays ?? 0) || 1} días.`} />)
-          : <p className="empty-inline">Hacen falta al menos dos recopilaciones con los mismos proyectos para medir el crecimiento. Vuelve más tarde.</p>}
-      </Section>
-
       <Section
-        id="for-you" icon="heart" title="Para ti"
+        id="for-you" icon="heart" title="Recomendado para ti"
         subtitle={library.interests.length ? `Según tus temáticas guardadas (${library.interests.map((item) => item.label).join(', ')}) y tus favoritos.` : 'Guarda temáticas o favoritos y aquí aparecerán recomendaciones relacionadas.'}
         action={<button className="text-button" onClick={onGoLibrary}>Mis temáticas <Icon name="arrow" size={15} /></button>}
       >
@@ -101,12 +105,6 @@ export function Discover({ feed, visible, library, favorites, actions, onSearch,
               {!library.interests.length && <div className="example-chips">{['Nintendo 3DS', 'Inteligencia artificial', 'Emuladores', 'Automatización'].map((query) => <button key={query} className="chip" onClick={() => onSearch(query)}>{query}</button>)}</div>}
             </div>}
       </Section>
-
-      {nintendo.length > 0 && (
-        <Section id="nintendo" icon="star" title="Nintendo homebrew" subtitle="Categoría destacada: homebrew para 3DS, DSi y DS." action={<button className="text-button" onClick={() => onChannel('nintendo')}>Ver todo <Icon name="arrow" size={15} /></button>}>
-          {nintendo.map((project) => <ProjectCard key={project.id} project={project} actions={actions} />)}
-        </Section>
-      )}
 
       {favorites.length > 0 && (
         <Section id="mine" icon="library" title="Tu biblioteca" subtitle="Lo último que has guardado en este dispositivo." action={<button className="text-button" onClick={onGoLibrary}>Abrir biblioteca <Icon name="arrow" size={15} /></button>}>

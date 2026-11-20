@@ -1,0 +1,49 @@
+name: Capturas de pantalla
+
+# Compila la web con la ruta de GitHub Pages, la sirve en el propio runner y hace
+# capturas en móvil (WebKit, perfil iPhone 13) y escritorio (Chromium). Guarda las
+# imágenes y un informe de desbordamiento en experiments/screenshots. No publica la web.
+on:
+  workflow_dispatch:
+  push:
+    branches: ['radar-2.3-**']
+    paths: ['src/**', 'index.html', 'public/pwa-icon.svg', 'scripts/experiments/screenshots.mjs', '.github/workflows/screenshots.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Instalar Playwright (solo en el runner)
+        run: |
+          npm install --no-save playwright@1.49.1
+          npx playwright install --with-deps webkit chromium
+      - name: Capturas
+        run: |
+          npx vite preview --port 4173 --strictPort &
+          for i in $(seq 1 30); do curl -sf http://localhost:4173/homebrew-radar/ >/dev/null && break; sleep 1; done
+          rm -rf experiments/screenshots
+          node scripts/experiments/screenshots.mjs --url http://localhost:4173/homebrew-radar/ --out experiments/screenshots --icon
+      - name: Guardar capturas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/screenshots public/apple-touch-icon.png
+          git diff --cached --quiet && exit 0
+          git commit -m "Capturas de pantalla (${GITHUB_SHA::7})"
+          for attempt in 1 2 3; do git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }} && exit 0; sleep 5; done
+          exit 1

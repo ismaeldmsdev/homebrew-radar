@@ -1,5 +1,6 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react'
 import { PLATFORMS } from '../core/consoles.ts'
+import { DOC_LANGUAGE_FILTER_LABEL, DOC_LANGUAGE_FILTERS, matchesDocLanguage, type DocLanguageFilter } from '../core/docLanguage.ts'
 import { buildGithubQueries, describeInterpretation, interpretQuery, isEmptyInterpretation, platformsOf, type SortMode } from '../core/query.ts'
 import { projectStatus } from '../core/scoring.ts'
 import { rankSearch } from '../core/search.ts'
@@ -74,8 +75,12 @@ export function Search({ feed, visible, query, channel, prefs, savedQueries, act
     if (consoleFilter !== 'Todas' && !platformsOf(project).includes(consoleFilter)) return false
     if (categoryFilter !== 'Todas' && project.category !== categoryFilter) return false
     if (hideInactive && projectStatus(project).id === 'stale') return false
+    if (!matchesDocLanguage(project.docLanguage, prefs.docLanguage)) return false
     return true
-  }), [ranked, channel, consoleFilter, categoryFilter, hideInactive])
+  }), [ranked, channel, consoleFilter, categoryFilter, hideInactive, prefs.docLanguage])
+  // Resultados en vivo cuyo idioma no se puede saber sin el README (solo hay descripción).
+  const liveUndetermined = prefs.docLanguage === 'all' || prefs.docLanguage === 'unknown' ? 0
+    : ranked.filter(({ project }) => project.source === 'live' && project.docLanguage.lang === 'unknown').length
 
   const results = filtered.map((item) => item.project)
   const notes = useMemo(() => new Map(filtered.map((item) => [item.project.id, item.why[0]])), [filtered])
@@ -135,6 +140,11 @@ export function Search({ feed, visible, query, channel, prefs, savedQueries, act
             <option>Todas</option>{categories.map((category) => <option key={category}>{category}</option>)}
           </select>
         </label>
+        <label><span>Idioma</span>
+          <select value={prefs.docLanguage} onChange={(event) => onPrefs({ ...prefs, docLanguage: event.target.value as DocLanguageFilter })} aria-label="Idioma de la documentación">
+            {DOC_LANGUAGE_FILTERS.map((value) => <option key={value} value={value}>{DOC_LANGUAGE_FILTER_LABEL[value]}</option>)}
+          </select>
+        </label>
         <label><span>Ordenar</span>
           <select value={sort} onChange={(event) => { const value = event.target.value as SortMode; setPickedSort(value); onPrefs({ ...prefs, sort: value }) }}>
             {(Object.keys(sortLabels) as SortMode[]).map((mode) => <option key={mode} value={mode}>{sortLabels[mode]}</option>)}
@@ -153,6 +163,11 @@ export function Search({ feed, visible, query, channel, prefs, savedQueries, act
         }</span>}
         {hiddenByStatus > 0 && <span>{hiddenByStatus} ocultos por los filtros</span>}
       </div>
+      {prefs.docLanguage !== 'all' && <p className="hint">El idioma es el de la documentación original (README y descripción), no el del resumen en español.</p>}
+      {liveUndetermined > 0 && (
+        <p className="hint"><Icon name="info" size={14} /> {liveUndetermined} {liveUndetermined === 1 ? 'resultado en vivo queda fuera' : 'resultados en vivo quedan fuera'} del filtro de idioma: GitHub solo da su descripción y es demasiado corta para saber el idioma.
+          Elige «Idioma no determinado» para verlos; al abrir su ficha se lee el README y se comprueba.</p>
+      )}
 
       {live.status === 'error' && <div className="notice"><Icon name="info" size={18} /><div><strong>La búsqueda en vivo no está disponible</strong><p>{live.error} Se muestran solo coincidencias del catálogo.</p></div></div>}
       {query && isEmptyInterpretation(interp) && <p className="hint">No se reconocieron temas concretos: se muestran herramientas y utilidades activas en general.</p>}

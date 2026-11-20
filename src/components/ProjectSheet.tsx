@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { describeDocLanguage } from '../core/docLanguage.ts'
 import { gemOf, summaryOf } from '../core/feed.ts'
 import { KIND_HELP, KIND_LABELS } from '../core/summary.ts'
 import { platformLabel, toolTypeLabel } from '../core/consoles.ts'
@@ -162,7 +163,8 @@ export function ProjectSheet({ project, topics, isFavorite, isHidden, onClose, o
           <div><dt>Estado</dt><dd>{status.detail}</dd></div>
           <div><dt>Documentación</dt><dd>{docs}</dd></div>
           <div><dt>Licencia</dt><dd>{project.license ?? 'No declarada o no verificada'}</dd></div>
-          <div><dt>Lenguaje</dt><dd>{project.language ?? 'No verificado'}</dd></div>
+          <div><dt>Lenguaje de programación</dt><dd>{project.language ?? 'No verificado'}</dd></div>
+          <div><dt>Idioma de la documentación</dt><dd>{describeDocLanguage(project.docLanguage)}</dd></div>
         </dl>
         {verifying === 'error' && <p className="inline-error">{verifyError}</p>}
 

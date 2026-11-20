@@ -9,6 +9,7 @@ import { CATEGORY_VERSION, CHANNEL_CATEGORY, supportsCategory } from '../src/cor
 import { interestScore } from '../src/core/scoring.ts'
 import { looksLikeList } from '../src/core/text.ts'
 import { cleanReadme } from '../src/core/summary.ts'
+import { detectDocLanguage } from '../src/core/docLanguage.ts'
 import { detectPlatforms, detectToolType, extractCompat, isConsoleRelated, looksLikePiracy, platformLabel, toolTypeLabel } from '../src/core/consoles.ts'
 import { readStore, summaryFor } from './summaries.mjs'
 import { executableAssets } from '../src/core/security.ts'
@@ -254,6 +255,8 @@ async function enrich(repo, ctx) {
     readme_length: readmeText ? cleanReadme(readmeText, 1e9).length : null,
     // Primeras líneas del README: evidencia para la categoría (no se guarda en el catálogo).
     readme_lead: readmeText ? cleanReadme(readmeText, 900) : null,
+    // Idioma natural de la documentación (README completo + descripción del autor).
+    doc_language: detectDocLanguage({ readme: readmeText ? cleanReadme(readmeText, 12_000) : null, description: repo.description ?? '' }),
     readme_quality: readmeText.length >= 500 && (/^#{1,3}\s/m.test(readmeText) || /^[=-]{3,}\s*$/m.test(readmeText)),
     release: release && !release.draft && !release.prerelease ? release : null,
     // Modelos, firmware y requisitos mencionados literalmente en el README (sin verificar).
@@ -267,6 +270,7 @@ function fromPrevious(old) {
     readme_quality: typeof old.readmeQuality === 'boolean' ? old.readmeQuality : undefined,
     readme_length: typeof old.readmeLength === 'number' ? old.readmeLength : null,
     compat: old.compat ?? null,
+    doc_language: old.docLanguage ?? undefined,
     release: old.releaseChecked === false ? undefined : old.version ? { tag_name: old.version, published_at: old.releasePublishedAt, html_url: old.releaseUrl } : null,
   }
 }
@@ -303,6 +307,7 @@ function toProject(repo, extra, channels, topic, previous, generatedAt, previous
     hasReadme: typeof extra.has_readme === 'boolean' ? extra.has_readme : null,
     readmeQuality: typeof extra.readme_quality === 'boolean' ? extra.readme_quality : null,
     readmeLength: typeof extra.readme_length === 'number' ? extra.readme_length : null,
+    docLanguage: extra.doc_language ?? detectDocLanguage({ description: repo.description ?? '' }),
     license: licenseName(repo.license),
     archived: Boolean(repo.archived),
     isList: looksLikeList(repo.name, repo.description ?? '', repo.topics ?? []),

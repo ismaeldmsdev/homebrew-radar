@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { assessSecurity, compareVersions, executableAssets, hashLookupLinks, latestIsPatched, type SecurityFacts } from './security.ts'
+import { assessSecurity, cardSecurityWarning, compareVersions, executableAssets, hashLookupLinks, latestIsPatched, type SecurityFacts } from './security.ts'
 import { fetchSecurityFacts, isStale } from './securityFetch.ts'
 
 const NOW = Date.parse('2026-11-19T12:00:00Z')
@@ -139,4 +139,14 @@ test('los comprimidos de Linux o macOS no cuentan como ejecutables de Windows (c
   const names = ['YoutubeDownloader.linux-x64.zip', 'YoutubeDownloader.osx-x64.zip', 'YoutubeDownloader.win-arm64.zip', 'YoutubeDownloader.win-x64.zip', 'YoutubeDownloader.win-x86.zip', 'Setup.exe']
   const found = executableAssets(names.map((name) => ({ name, size: 1, digest: null, url: '' }))).map((asset) => asset.name)
   assert.deepEqual(found, ['Setup.exe', 'YoutubeDownloader.win-arm64.zip', 'YoutubeDownloader.win-x64.zip', 'YoutubeDownloader.win-x86.zip'], 'el instalador directo se consulta primero')
+})
+
+test('la tarjeta solo avisa de avisos graves sin versión corregida confirmada', () => {
+  const advisory = (severity: string, patched: string | null) => ({ id: 'GHSA-x', severity, summary: 's', url: 'u', publishedAt: null, ranges: [{ package: null, vulnerable: '< 9', patched }] })
+  assert.equal(cardSecurityWarning(null), null)
+  assert.equal(cardSecurityWarning({ ...lenovo, advisories: [] }), null)
+  assert.equal(cardSecurityWarning({ ...lenovo, advisories: [advisory('low', null)] }), null)
+  assert.equal(cardSecurityWarning({ ...lenovo, advisories: [advisory('high', '2.0.0')] }), null)
+  assert.equal(cardSecurityWarning({ ...lenovo, advisories: [advisory('critical', '9.0.0')] }), 'Aviso de seguridad grave')
+  assert.equal(cardSecurityWarning({ ...lenovo, advisories: [advisory('high', null), advisory('critical', null)] }), '2 avisos de seguridad graves')
 })

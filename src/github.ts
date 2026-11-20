@@ -6,7 +6,8 @@ import { projectFromSearch, type SearchRepo } from './core/live.ts'
 import { buildGithubQueries, type Interpretation } from './core/query.ts'
 import { ENOUGH_LIVE_RESULTS } from './core/search.ts'
 import { interestScore } from './core/scoring.ts'
-import { fromCompact, type CompactSummary } from './core/summary.ts'
+import { cleanReadme, fromCompact, type CompactSummary } from './core/summary.ts'
+import { detectDocLanguage, type DocLanguageInfo } from './core/docLanguage.ts'
 import type { Project } from './types.ts'
 import { normalizeSecurity, type SecurityFacts } from './core/security.ts'
 import { fetchSecurityFacts } from './core/securityFetch.ts'
@@ -149,7 +150,7 @@ export async function searchGithub(interp: Interpretation, { includeArchived = f
   return result
 }
 
-export type Enrichment = { hasReadme: boolean; readmeQuality: boolean; version: string | null; releasePublishedAt: string | null; releaseUrl: string | null }
+export type Enrichment = { hasReadme: boolean; readmeQuality: boolean; version: string | null; releasePublishedAt: string | null; releaseUrl: string | null; docLanguage?: DocLanguageInfo }
 
 /** Comprueba README y última versión estable de un proyecto (2 consultas del límite de 60/hora). */
 export async function enrichProject(project: Project, signal?: AbortSignal): Promise<Project> {
@@ -171,6 +172,8 @@ export async function enrichProject(project: Project, signal?: AbortSignal): Pro
       hasReadme: Boolean(readme),
       readmeQuality: text.length >= 500 && (/^#{1,3}\s/m.test(text) || /^[=-]{3,}\s*$/m.test(text)),
       version: stable?.tag_name ?? null, releasePublishedAt: stable?.published_at ?? null, releaseUrl: stable?.html_url ?? null,
+      // Idioma de la documentación con el README ya descargado (sin consultas adicionales).
+      docLanguage: detectDocLanguage({ readme: text ? cleanReadme(text, 12_000) : null, description: project.description }),
     }
     cacheSet(cacheKey, data, true)
   }

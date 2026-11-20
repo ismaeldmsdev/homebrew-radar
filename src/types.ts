@@ -1,5 +1,6 @@
 import type { Summary } from './core/summary.ts'
 import type { Compat } from './core/consoles.ts'
+import type { DocLanguageInfo } from './core/docLanguage.ts'
 import type { SecurityFacts } from './core/security.ts'
 
 export type Project = {
@@ -44,6 +45,8 @@ export type Project = {
   summary: Summary | null
   /** Modelos, firmware y requisitos mencionados literalmente en el README (sin verificar). */
   compat: Compat | null
+  /** Idioma natural de la documentación original (README/descripción), no del resumen. */
+  docLanguage: DocLanguageInfo
   /** Hechos de seguridad obtenidos de APIs oficiales (null = no comprobado todavía). */
   security: SecurityFacts | null
 }

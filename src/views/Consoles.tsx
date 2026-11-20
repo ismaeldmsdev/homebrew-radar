@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
 import { consoleFacets, consoleSections, filterConsoleProjects, NEW_PROJECT_DAYS, NEW_RELEASE_DAYS } from '../core/consoleRadar.ts'
 import { platformLabel, type ToolTypeId } from '../core/consoles.ts'
+import { DOC_LANGUAGE_FILTER_LABEL, DOC_LANGUAGE_FILTERS, matchesDocLanguage, type DocLanguageFilter } from '../core/docLanguage.ts'
+import type { Prefs } from '../library.ts'
 import { relativeDays } from '../core/text.ts'
 import { formatDate } from '../explain.ts'
 import { Icon } from '../components/Icon.tsx'
@@ -8,16 +10,16 @@ import { ProjectCard, type CardActions } from '../components/ProjectCard.tsx'
 import { Section } from '../components/Section.tsx'
 import type { Feed, Project } from '../types.ts'
 
-type Props = { feed: Feed | null; visible: Project[]; actions: CardActions; onSearch: (query: string) => void }
+type Props = { feed: Feed | null; visible: Project[]; actions: CardActions; prefs: Prefs; onPrefs: (prefs: Prefs) => void; onSearch: (query: string) => void }
 
-export function Consoles({ feed, visible, actions, onSearch }: Props) {
+export function Consoles({ feed, visible, actions, prefs, onPrefs, onSearch }: Props) {
   const [platform, setPlatform] = useState<string | null>(null)
   const [tool, setTool] = useState<ToolTypeId | null>(null)
   const facets = useMemo(() => consoleFacets(visible), [visible])
-  const filtered = useMemo(() => filterConsoleProjects(visible, { platform, tool }), [visible, platform, tool])
+  const filtered = useMemo(() => filterConsoleProjects(visible, { platform, tool }).filter((project) => matchesDocLanguage(project.docLanguage, prefs.docLanguage)), [visible, platform, tool, prefs.docLanguage])
   const sections = useMemo(() => consoleSections(filtered), [filtered])
   const topic = feed?.topics.find((item) => item.id === 'consolas')
-  const filterLabel = [platform && platformLabel(platform), tool && facets.tools.find((item) => item.id === tool)?.label].filter(Boolean).join(' · ')
+  const filterLabel = [platform && platformLabel(platform), tool && facets.tools.find((item) => item.id === tool)?.label, prefs.docLanguage !== 'all' && `documentados en ${DOC_LANGUAGE_FILTER_LABEL[prefs.docLanguage].toLowerCase()}`].filter(Boolean).join(' · ')
   const empty = sections.featured.length + sections.newProjects.length + sections.releases.length + sections.revived.length + sections.gems.length === 0
 
   const card = (project: Project, note?: string) => <ProjectCard key={project.id} project={project} actions={actions} note={note} />
@@ -47,6 +49,13 @@ export function Consoles({ feed, visible, actions, onSearch }: Props) {
             {item.label} <small>{item.count}</small>
           </button>
         ))}
+      </div>
+      <div className="filter-toolbar compact">
+        <label><span>Idioma de la documentación</span>
+          <select value={prefs.docLanguage} onChange={(event) => onPrefs({ ...prefs, docLanguage: event.target.value as DocLanguageFilter })}>
+            {DOC_LANGUAGE_FILTERS.map((value) => <option key={value} value={value}>{DOC_LANGUAGE_FILTER_LABEL[value]}</option>)}
+          </select>
+        </label>
       </div>
       <p className="hint">{sections.total} proyectos{filterLabel ? ` de ${filterLabel}` : ''} en el catálogo. Para buscar en todo GitHub:{' '}
         <button className="link-button" onClick={() => onSearch(`${platform ? platformLabel(platform) : 'consolas'} ${tool ? facets.tools.find((item) => item.id === tool)?.label ?? '' : 'homebrew'}`.trim())}>buscar en vivo</button>.

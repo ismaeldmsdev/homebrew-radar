@@ -213,3 +213,15 @@ export function normalizeSecurity(value: unknown): SecurityFacts | null {
     scorecard: raw.scorecard === 'none' || (raw.scorecard && typeof raw.scorecard === 'object') ? raw.scorecard : null,
   }
 }
+
+/**
+ * Única advertencia de seguridad que se muestra en la tarjeta: avisos publicados de gravedad
+ * alta o crítica que la última versión no corrige con seguridad. Es un dato comprobado en
+ * GitHub, no una valoración. Todo lo demás queda en la ficha.
+ */
+export function cardSecurityWarning(facts: SecurityFacts | null): string | null {
+  if (!facts?.advisories?.length) return null
+  const serious = facts.advisories.filter((advisory) => /^(critical|high)$/i.test(advisory.severity ?? '') && latestIsPatched(advisory, facts.release?.tag ?? null) !== true)
+  if (!serious.length) return null
+  return serious.length === 1 ? 'Aviso de seguridad grave' : `${serious.length} avisos de seguridad graves`
+}

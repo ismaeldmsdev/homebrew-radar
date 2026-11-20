@@ -1,24 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@500;600;700&display=swap');
+/* Paleta 2.3: base grafito azulado, acento turquesa, secundario violeta. Ámbar y rojo solo para estados. */
 :root {
   font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  color: #e3e9dc;
-  background: #0d120e;
+  color: #e4e8f1;
+  background: #0b0e14;
   color-scheme: dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
-  --lime: #c9ef68;
-  --lime-soft: #c9ef6822;
-  --violet: #d5b8ff;
+  --font-display: 'Space Grotesk', 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --accent: #5edecd;
+  --accent-soft: #5edecd22;
+  --blue: #7aa7ff;
+  --violet: #b9a3ff;
   --amber: #f2c46d;
-  --text: #e8ede2;
-  --muted: #a3ad9c;
-  --faint: #7f8a7a;
-  --line: #283129;
-  --card: #141a15;
-  --card-2: #182019;
-  --radius: 12px;
+  --danger: #ff9c8a;
+  --text: #e8ecf4;
+  --muted: #a3abbd;
+  --faint: #7f889c;
+  --line: #262d3d;
+  --card: #121621;
+  --card-2: #161b28;
+  --radius: 14px;
   --safe-top: env(safe-area-inset-top, 0px);
   --safe-bottom: env(safe-area-inset-bottom, 0px);
   --safe-left: env(safe-area-inset-left, 0px);
@@ -31,15 +35,21 @@ body {
   min-width: 320px;
   min-height: 100vh;
   min-height: 100dvh;
-  background: radial-gradient(ellipse at 68% 0%, #26301d33, transparent 45%), #0d120e;
+  background:
+    radial-gradient(ellipse at 80% -10%, #5edecd14, transparent 42%),
+    radial-gradient(ellipse at 0% 0%, #7a6bff12, transparent 40%),
+    #0b0e14;
+  background-attachment: fixed;
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden;
 }
 body.no-scroll { overflow: hidden; }
 button, input, select { font: inherit; color: inherit; }
 button { touch-action: manipulation; }
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.01em; }
 button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
-  outline: 2px solid var(--lime);
+  outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
-::selection { background: #c9ef6855; color: #fff; }
-a { color: var(--lime); }
+::selection { background: #5edecd55; color: #fff; }
+a { color: var(--accent); }

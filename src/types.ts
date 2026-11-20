@@ -16,6 +16,10 @@ export type Project = {
   createdAt: string
   pushedAt: string
   category: string
+  /** Confianza de la categoría según la evidencia («baja» = no verificada). */
+  categoryConfidence: 'alta' | 'media' | 'baja'
+  /** Pruebas que justifican la categoría (o por qué no se pudo verificar). */
+  categoryEvidence: string[]
   consoles: string[]
   channels: string[]
   version: string | null

@@ -102,6 +102,11 @@ export function ProjectSheet({ project, topics, isFavorite, isHidden, onClose, o
           {project.labels.map((label) => <span className="tag" key={label}>{label}</span>)}
           {channelLabels.map((label) => <span className="tag channel-tag" key={label}>{label}</span>)}
         </div>
+        <p className="fine-print category-why">
+          {project.categoryConfidence === 'baja'
+            ? `Categoría no verificada: ${project.categoryEvidence[0] ?? 'no hay pistas suficientes en su documentación'}.`
+            : `Clasificado como «${project.category}» (confianza ${project.categoryConfidence}) por ${project.categoryEvidence.join('; ') || 'sus metadatos'}.`}
+        </p>
 
         <section className={`summary-box${summary.origin === 'rules' ? ' is-basic' : ''}`} aria-labelledby="summary-title">
           <h3 id="summary-title">¿Qué es y para qué sirve?</h3>

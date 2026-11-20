@@ -4,7 +4,8 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { classifyCategory, classifyConsoles, classifyGeneralCategory, isNintendoRelevant } from '../src/core/categories.ts'
+import { classifyCategory, classifyConsoles, classifyGeneralCategory, classifyWithEvidence, isNintendoRelevant } from '../src/core/categories.ts'
+import { CATEGORY_VERSION, CHANNEL_CATEGORY, supportsCategory } from '../src/core/classify.ts'
 import { interestScore } from '../src/core/scoring.ts'
 import { looksLikeList } from '../src/core/text.ts'
 import { cleanReadme } from '../src/core/summary.ts'
@@ -249,6 +250,8 @@ async function enrich(repo, ctx) {
   return {
     has_readme: Boolean(readmeText),
     readme_length: readmeText ? cleanReadme(readmeText, 1e9).length : null,
+    // Primeras líneas del README: evidencia para la categoría (no se guarda en el catálogo).
+    readme_lead: readmeText ? cleanReadme(readmeText, 900) : null,
     readme_quality: readmeText.length >= 500 && (/^#{1,3}\s/m.test(readmeText) || /^[=-]{3,}\s*$/m.test(readmeText)),
     release: release && !release.draft && !release.prerelease ? release : null,
     // Modelos, firmware y requisitos mencionados literalmente en el README (sin verificar).
@@ -407,6 +410,26 @@ export async function collect({
     const summary = summaryFor(store, project)
     if (summary) project.summary = summary
     else delete project.summary
+  }
+
+  // Categoría por evidencia: metadatos + primeras líneas del README + resumen en español.
+  // Las temáticas ligadas a una categoría (p. ej. «Emuladores») solo conservan proyectos
+  // cuya evidencia la respalda; GitHub puede devolverlos por una etiqueta poco fiable.
+  const modes = new Map(entries.map(({ repo, topic }) => [repo.id, topic.mode]))
+  for (const project of [...projects]) {
+    const context = { summary: project.summary?.text ?? null, readme: enrichment.get(project.id)?.readme_lead ?? null }
+    const input = { name: project.name, description: project.description, topics: project.topics, ...context }
+    // Radar de Consolas: la categoría es el tipo de herramienta (CFW, partidas guardadas…).
+    const tool = modes.get(project.id) === 'consoles' ? detectToolType({ ...project, summary: project.summary ?? null }) : undefined
+    const result = tool !== undefined
+      ? { category: toolTypeLabel(tool ?? 'homebrew'), confidence: tool ? 'media' : 'baja', evidence: [tool ? 'tipo de herramienta de consola detectado en su nombre, descripción o temas' : 'sin un tipo de herramienta claro: se muestra como aplicación homebrew'] }
+      : classifyWithEvidence(project, context, project.channels[0] === 'nintendo' && (modes.get(project.id) ?? 'nintendo') === 'nintendo')
+    Object.assign(project, { category: result.category, categoryConfidence: result.confidence, categoryEvidence: result.evidence.slice(0, 3), categoryVersion: CATEGORY_VERSION })
+    project.channels = project.channels.filter((channel) => !CHANNEL_CATEGORY[channel] || supportsCategory(input, CHANNEL_CATEGORY[channel]))
+    if (!project.channels.length) {
+      projects.splice(projects.indexOf(project), 1)
+      log(`  · ${project.fullName} descartado: su documentación no respalda la temática.`)
+    }
   }
 
   if (topicStatus.every((item) => item.status !== 'ok')) throw new Error('Ninguna temática se pudo actualizar; se conserva el catálogo anterior sin cambios.')

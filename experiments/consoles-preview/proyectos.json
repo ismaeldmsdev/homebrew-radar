@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-20T07:20:50.909Z",
+  "at": "2026-11-20T07:38:01.860Z",
   "topics": [
     {
       "id": "consolas",
@@ -8,7 +8,7 @@
       "featured": true,
       "status": "ok",
       "count": 60,
-      "collectedAt": "2026-11-20T07:20:50.909Z"
+      "collectedAt": "2026-11-20T07:38:01.860Z"
     }
   ],
   "count": 60,
@@ -143,7 +143,7 @@
     },
     {
       "fullName": "LNPANDY/NX2Apple",
-      "stars": 7917,
+      "stars": 7918,
       "created": "2026-10-20",
       "pushed": "2026-11-20",
       "release": "v1.4.0 2026-11-12",
@@ -167,7 +167,7 @@
       "created": "2026-10-15",
       "pushed": "2026-11-19",
       "release": "v00.24 2026-11-12",
-      "category": "CFW, jailbreak y exploits",
+      "category": "Emuladores",
       "platforms": [
         "nds",
         "gb",
@@ -188,7 +188,7 @@
       "created": "2026-11-09",
       "pushed": "2026-11-20",
       "release": "1.0.12 2026-11-19",
-      "category": "CFW, jailbreak y exploits",
+      "category": "Emuladores",
       "platforms": [
         "ps4",
         "ps5"
@@ -317,7 +317,7 @@
     },
     {
       "fullName": "phantomptr/ps5upload",
-      "stars": 1304,
+      "stars": 1306,
       "created": "2026-01-10",
       "pushed": "2026-11-20",
       "release": "v12.6.13 2026-11-19",
@@ -478,18 +478,6 @@
       ],
       "compat": null,
       "description": "Unity game running on Xbox 360 and PS3"
-    },
-    {
-      "fullName": "DarkFlippers/unleashed-firmware",
-      "stars": 22800,
-      "created": "2022-03-16",
-      "pushed": "2026-11-20",
-      "release": "unlshd-095 2026-11-11",
-      "category": "CFW, jailbreak y exploits",
-      "platforms": [],
-      "labels": [],
-      "compat": null,
-      "description": "Flipper Zero Unleashed Firmware"
     },
     {
       "fullName": "DC-SWAT/DreamShell",
@@ -705,7 +693,7 @@
       "created": "2026-10-14",
       "pushed": "2026-11-05",
       "release": "AdvanXe360v1.0.0 2026-10-28",
-      "category": "CFW, jailbreak y exploits",
+      "category": "Emuladores",
       "platforms": [
         "gb",
         "gba",
@@ -723,7 +711,7 @@
       "created": "2026-11-08",
       "pushed": "2026-11-19",
       "release": "v1.3.0 2026-11-19",
-      "category": "CFW, jailbreak y exploits",
+      "category": "Juegos y ports",
       "platforms": [
         "n64",
         "ps3"
@@ -817,20 +805,6 @@
       "description": "A homebrew software suite for video game consoles developed to help in the evaluation of upscalers, upscan converters, line doublers and of "
     },
     {
-      "fullName": "SYOP200/Flipper-Zero-Downloads",
-      "stars": 79,
-      "created": "2025-09-27",
-      "pushed": "2026-11-18",
-      "release": "updt-v.1.5 2026-07-10",
-      "category": "CFW, jailbreak y exploits",
-      "platforms": [],
-      "labels": [
-        "Poco conocido"
-      ],
-      "compat": null,
-      "description": "Curated collection of plugins, files, and firmware for your Flipper Zero."
-    },
-    {
       "fullName": "yefan911/automated-recompilers",
       "stars": 20,
       "created": "2026-10-30",
@@ -856,7 +830,7 @@
       "created": "2026-10-09",
       "pushed": "2026-11-11",
       "release": "v2.2.0 2026-11-11",
-      "category": "CFW, jailbreak y exploits",
+      "category": "Emuladores",
       "platforms": [
         "n64",
         "x360"
@@ -888,6 +862,35 @@
       ],
       "compat": null,
       "description": "Xiso catalog and installer for the modded original Xbox. Browse the full library, then download and install your own game backups directly o"
+    },
+    {
+      "fullName": "tarikbc/ZyperOS",
+      "stars": 19,
+      "created": "2026-11-07",
+      "pushed": "2026-11-20",
+      "release": "v1.0.6 2026-11-19",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [],
+      "labels": [
+        "Nuevo",
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "A fast, light firmware for the GKD Pixel 2 that plays your whole retro library: forty systems, PortMaster ports, and your music, audiobooks "
+    },
+    {
+      "fullName": "ericreinsmidt/TortOS",
+      "stars": 55,
+      "created": "2026-08-22",
+      "pushed": "2026-11-14",
+      "release": "v2.2.1 2026-11-14",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": null,
+      "description": "A fast, focused custom firmware for games, music and audiobooks on the TrimUI Brick, Brick Hammer and GKD Pixel 2."
     },
     {
       "fullName": "pspdev/pspsdk",
@@ -1033,7 +1036,7 @@
       "created": "2026-10-21",
       "pushed": "2026-11-20",
       "release": null,
-      "category": "CFW, jailbreak y exploits",
+      "category": "Juegos y ports",
       "platforms": [
         "x360"
       ],
@@ -1064,7 +1067,7 @@
       "created": "2024-04-15",
       "pushed": "2026-11-02",
       "release": null,
-      "category": "CFW, jailbreak y exploits",
+      "category": "Emuladores",
       "platforms": [
         "handheld-pc"
       ],

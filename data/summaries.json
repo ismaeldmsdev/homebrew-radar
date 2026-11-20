@@ -234,6 +234,27 @@
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
     },
+    "13268848": {
+      "id": 13268848,
+      "fullName": "DC-SWAT/DreamShell",
+      "text": "Es un sistema operativo para consolas Sega Dreamcast, NAOMI y NAOMI 2. Permite crear aplicaciones con interfaz XML y usar scripts en C/C++ o Lua, además de incluir un cargador de ISO que emula llamadas del BIOS y reproducción de CD. Está diseñado para desarrolladores que necesitan un entorno completo para crear software de bajo nivel o aplicaciones completas en estas plataformas.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1s9p056",
+        "readmeLength": 2161
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:40:32.752Z"
+    },
     "16851127": {
       "id": 16851127,
       "fullName": "pydoit/doit",
@@ -663,6 +684,27 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "123695736": {
+      "id": 123695736,
+      "fullName": "fortheusers/hb-appstore",
+      "text": "Es una aplicación de escritorio para Windows, macOS y Linux, además de versiones para Wii U y Nintendo Switch. Permite descargar y gestionar aplicaciones de código abierto para consolas, y soporta la instalación de música personalizada. Útil para usuarios que quieren ejecutar software no oficial en sus dispositivos Nintendo.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1uhx3a5",
+        "readmeLength": 3199
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:34:49.919Z"
+    },
     "126290485": {
       "id": 126290485,
       "fullName": "EKA2L1/EKA2L1",
@@ -767,6 +809,27 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "164172074": {
+      "id": 164172074,
+      "fullName": "ohhsodead/arisen-studio",
+      "text": "Es una aplicación de escritorio para Windows que gestiona mods y juegos para PlayStation 3 y Xbox 360. Permite navegar por una base de datos de modificaciones, descargar archivos y instalar o desinstalar contenido directamente en la consola. También incluye un gestor de archivos para la consola y acceso a trucos de juego.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "6glkzi",
+        "readmeLength": 5369
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:38:22.026Z"
+    },
     "177301105": {
       "id": 177301105,
       "fullName": "vinhnx/Clendar",
@@ -834,6 +897,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T08:28:19.867Z"
+    },
+    "186865095": {
+      "id": 186865095,
+      "fullName": "Bubka/2FAuth",
+      "text": "Es una aplicación web que se instala en tu propio servidor para gestionar cuentas de autenticación de dos factores. Permite organizar tus cuentas en grupos, escanear códigos QR para añadir cuentas rápidamente y generar códigos de seguridad como TOTP, HOTP o Steam Guard. Útil para usuarios que prefieren tener sus datos de seguridad almacenados en una base de datos local y respaldable en lugar de depender de aplicaciones móviles externas.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "umhpyw",
+        "readmeLength": 3413
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:33:04.875Z"
     },
     "187916430": {
       "id": 187916430,
@@ -1121,6 +1205,27 @@
       },
       "updatedAt": "2026-11-19T20:46:33.396Z"
     },
+    "307125218": {
+      "id": 307125218,
+      "fullName": "afska/gba-link-connection",
+      "text": "Es un conjunto de bibliotecas en C++ para conectar consolas Game Boy Advance mediante puertos serie y otros dispositivos. Permite a los desarrolladores crear juegos multijugador, enviar software a otras consolas sin cartuchos o controlar periféricos externos como ratones PS/2 y teclados. Está diseñada para programadores que quieran añadir funcionalidades de conexión a sus propios proyectos de software para GBA.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1ojrft",
+        "readmeLength": 24902
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:34:27.196Z"
+    },
     "307191665": {
       "id": 307191665,
       "fullName": "obsei/obsei",
@@ -1274,6 +1379,27 @@
         "readmeLength": 3400
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
+    },
+    "369374514": {
+      "id": 369374514,
+      "fullName": "skylersaleh/SkyEmu",
+      "text": "SkyEmu es un emulador de bajo nivel para consolas como Game Boy Advance, Game Boy, Game Boy Color y Nintendo DS. Permite reproducir juegos con alta precisión, incluye trucos de acción y permite guardar partidas en cuatro slots persistentes con vista previa de capturas. Funciona en Windows, macOS, Linux, iOS, Android y en el navegador web.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "ubtqd5",
+        "readmeLength": 7164
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:33:28.511Z"
     },
     "378270008": {
       "id": 378270008,
@@ -2434,6 +2560,25 @@
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
     },
+    "948765323": {
+      "id": 948765323,
+      "fullName": "louvenarde/xvy",
+      "text": "XvY es un juego de disparos aéreos en pantalla dividida creado con Unity. Está diseñado para funcionar en Xbox 360 y PlayStation 3, aunque también se puede ejecutar en Windows o en el navegador. Se ejecuta a 60 cuadros por segundo y permite a dos jugadores jugar simultáneamente en la misma pantalla.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "ymktwl",
+        "readmeLength": 1901
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:40:07.406Z"
+    },
     "952463457": {
       "id": 952463457,
       "fullName": "pathintegral-institute/mcpm.sh",
@@ -2829,6 +2974,27 @@
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
     },
+    "1131512003": {
+      "id": 1131512003,
+      "fullName": "phantomptr/ps5upload",
+      "text": "ps5upload es una herramienta que permite enviar juegos, aplicaciones y contenido a una consola PS5 con jailbreak desde tu ordenador, móvil o navegador. Permite realizar subidas rápidas y con posibilidad de reanudarlas si se corta la conexión, instalar paquetes de juegos y gestionar la consola directamente desde la web. Útil para usuarios que quieren administrar su biblioteca de juegos en una PS5 modificada sin usar el mando.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1t1scjc",
+        "readmeLength": 34964
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:35:47.099Z"
+    },
     "1138917484": {
       "id": 1138917484,
       "fullName": "BenoitAdam/nullDC4Wii",
@@ -2849,6 +3015,28 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T08:29:41.992Z"
+    },
+    "1166182351": {
+      "id": 1166182351,
+      "fullName": "raullenchai/Rapid-MLX",
+      "text": "Rapid-MLX es un servidor de inferencia para modelos de lenguaje local compatible con Apple Silicon. Permite ejecutar agentes de codificación como Claude Code o OpenCode directamente en tu Mac, ofreciendo hasta cuatro veces más velocidad que otras soluciones. Funciona mediante una terminal con comandos específicos para iniciar servidores y gestionar perfiles privados de cada agente.",
+      "detail": null,
+      "kinds": [
+        "app",
+        "cli"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1dol9dr",
+        "readmeLength": 41589
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:33:57.297Z"
     },
     "1192378543": {
       "id": 1192378543,
@@ -2923,6 +3111,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T07:30:58.571Z"
+    },
+    "1241195026": {
+      "id": 1241195026,
+      "fullName": "sp00nznet/linksawakening-portable",
+      "text": "Es un proyecto que permite ejecutar versiones portátiles del juego Legend of Zelda: Link's Awakening DX en múltiples consolas y plataformas. Permite construir versiones para sistemas como PS4, PS3, PS2, PSP, Vita, 3DS, Wii, GameCube, Dreamcast, Xbox, Xbox 360, Android y WebAssembly usando Docker. Requiere que el usuario proporcione su propia ROM y tenga instalado Docker antes de proceder con la construcción.",
+      "detail": null,
+      "kinds": [
+        "config"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1avlkqx",
+        "readmeLength": 4982
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:39:43.841Z"
     },
     "1274723381": {
       "id": 1274723381,
@@ -3072,6 +3281,27 @@
       },
       "updatedAt": "2026-11-20T07:28:13.489Z"
     },
+    "1330517212": {
+      "id": 1330517212,
+      "fullName": "ShoshinFauteux/GBAdhoc",
+      "text": "Es un emulador para la consola PSP que permite jugar juegos de Game Boy Advance. Permite conectar dos PSPs para jugar en local sin cables y ofrece mejoras de rendimiento como filtros de pantalla y mayor velocidad en juegos específicos. Útil para jugadores que quieren emular juegos antiguos en su consola portátil actual.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "r2257v",
+        "readmeLength": 40935
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:37:32.067Z"
+    },
     "1368794432": {
       "id": 1368794432,
       "fullName": "Loopayeh/pkg-viewer",
@@ -3130,6 +3360,27 @@
       },
       "updatedAt": "2026-11-20T07:30:06.948Z"
     },
+    "1400723317": {
+      "id": 1400723317,
+      "fullName": "cobanov/PS5LM",
+      "text": "Es una aplicación para consolas PlayStation 5 con sistema modificado que ejecuta modelos de lenguaje directamente en su tarjeta gráfica. Permite conectar dispositivos de la red para usar APIs de OpenAI y Anthropic, además de ejecutar modelos de decisión y mostrar el historial de chat en la pantalla del televisor. Útil para usuarios con consolas jailbreak que buscan un servidor de modelos privado sin necesidad de ordenador ni nube.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "shaz1a",
+        "readmeLength": 8320
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:37:06.321Z"
+    },
     "1403848767": {
       "id": 1403848767,
       "fullName": "elripalda/Porpoise-Dolphin-Emulator-for-PS5",
@@ -3150,6 +3401,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T08:29:23.796Z"
+    },
+    "1404614225": {
+      "id": 1404614225,
+      "fullName": "centollOS/SwitchWaker",
+      "text": "SwitchWaker es un proyecto de código abierto que ejecuta The Legend of Zelda: The Wind Waker en consolas Nintendo Switch, Mac y Linux sin usar emulación de CPU. Permite cargar tus propios archivos del juego original y se basa en herramientas como Aurora para dibujar la gráfica y Dolphin para el audio. Es útil para jugadores que quieren probar esta aventura clásica en hardware moderno o en sus propios ordenadores.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "m15mgr",
+        "readmeLength": 16528
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:38:49.881Z"
     },
     "1405585119": {
       "id": 1405585119,
@@ -3187,6 +3459,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-19T20:51:55.588Z"
+    },
+    "1409353352": {
+      "id": 1409353352,
+      "fullName": "darkxex/SwanStationPS5",
+      "text": "Es un emulador de PlayStation 1 que se instala como aplicación en la consola PS5. Permite jugar juegos con una resolución de hasta 16 veces la original, dibujada directamente por la tarjeta gráfica mediante Vulkan. También incluye trucos, guardadas y un menú de selección de portadas.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "111xafp",
+        "readmeLength": 36557
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:36:39.348Z"
     },
     "1420958706": {
       "id": 1420958706,
@@ -3250,6 +3543,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T07:30:38.538Z"
+    },
+    "1430129207": {
+      "id": 1430129207,
+      "fullName": "teclilla18/sonic-riders-recomp",
+      "text": "Es un proyecto de recompilación nativa del juego Sonic Riders para múltiples plataformas, incluyendo Windows, Linux, Nintendo Switch 2 (en versión alfa experimental), Android y dispositivos iOS. Permite ejecutar el juego directamente sin emuladores, permitiendo a los usuarios cargar sus propias imágenes de disco para jugar en consolas como la Switch 2 o en ordenadores. Útil para jugadores que desean probar versiones modificadas o versiones nativas en hardware específico.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1bucgsc",
+        "readmeLength": 7465
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T20:35:20.696Z"
     },
     "1431538743": {
       "id": 1431538743,

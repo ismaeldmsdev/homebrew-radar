@@ -1,0 +1,19 @@
+
+added 2 packages in 1s
+movil · portada: 30 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+movil · consolas: 29 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.screenshot: Cannot take screenshot larger than 32767 pixels on any dimension
+Call log:
+  - taking page screenshot
+  - waiting for fonts to load...
+  - fonts loaded
+
+    at /__w/homebrew-radar/homebrew-radar/scripts/experiments/screenshots.mjs:73:16 {
+  name: 'Error'
+}
+
+Node.js v22.23.4

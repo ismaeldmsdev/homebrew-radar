@@ -177,7 +177,7 @@ export function Search({ feed, visible, query, channel, prefs, savedQueries, act
         <div className="empty-state">
           <Icon name="search" size={28} />
           <h3>No hay resultados con estos criterios</h3>
-          <p>Prueba con menos palabras, en inglés o con un nombre concreto. También puedes quitar filtros{hideInactive ? ' o mostrar los abandonados' : ''}.</p>
+          <p>Prueba con menos palabras, en inglés o con un nombre concreto. También puedes quitar filtros{prefs.docLanguage !== 'all' ? ', elegir «Todos los idiomas»' : ''}{hideInactive ? ' o mostrar los abandonados' : ''}.</p>
           {query && <a className="secondary-button" href={`https://github.com/search?type=repositories&q=${encodeURIComponent(query)}`} target="_blank" rel="noreferrer">Buscar «{query}» directamente en GitHub <Icon name="external" size={15} /></a>}
         </div>
       )}

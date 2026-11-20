@@ -124,6 +124,15 @@ npm run summaries -- apply resumenes.json --work summaries-work.json
 npm run summaries -- sync               # copia la caché al catálogo y a la caché pública
 ```
 
+## Idioma de la documentación
+
+Filtro *Idioma* en Buscar y en el Radar de Consolas: Todos, Español, Inglés, Multilingüe, Otro idioma e Idioma no determinado. Es el idioma **natural del README y la descripción originales**, no el lenguaje de programación ni el resumen en español que añade Radar.
+
+- **Método** (`src/core/docLanguage.ts`, sin IA): el texto se divide en frases; cada una se asigna por su sistema de escritura (chino, ruso, árabe…) o por la proporción de palabras funcionales («the», «and», «que», «para»…), nunca por una palabra suelta. Multilingüe: dos idiomas con al menos el 20 % del texto y 20 palabras cada uno. Con menos de 25 palabras clasificables en el README (10 en la descripción): no determinado.
+- **Catálogo**: se calcula en la recopilación con el README que ya se descarga, sin consultas extra.
+- **Búsqueda en vivo**: GitHub solo da la descripción, así que muchas quedan como no determinadas. La web lo indica y, al abrir la ficha, lee el README y lo comprueba.
+- Un proyecto multilingüe con español aparece al filtrar por Español (igual con Inglés). La preferencia se guarda en el dispositivo.
+
 ## Seguridad y confianza
 
 Cada ficha incluye un apartado con señales públicas para decidir antes de descargar software, sobre todo ejecutables de Windows. **Radar no es un antivirus:** nunca descarga ni ejecuta archivos, no calcula una nota de seguridad y no usa la popularidad.

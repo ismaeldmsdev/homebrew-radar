@@ -37,7 +37,7 @@ async function audit(page) {
     const wide = [...document.querySelectorAll('body *')]
       .filter((el) => { const r = el.getBoundingClientRect(); return r.width > 0 && (r.right > doc.clientWidth + 1) && getComputedStyle(el).position !== 'fixed' && !el.closest('.card-rail, .topic-strip, .facet-group, .example-chips') })
       .slice(0, 5).map((el) => `${el.tagName.toLowerCase()}.${[...el.classList].join('.')}`)
-    const smallInputs = [...document.querySelectorAll('input, select, textarea')]
+    const smallInputs = [...document.querySelectorAll('input:not([type=checkbox]):not([type=radio]), select, textarea')]
       .filter((el) => el.offsetParent !== null && parseFloat(getComputedStyle(el).fontSize) < 16)
       .map((el) => `${el.tagName.toLowerCase()} ${getComputedStyle(el).fontSize}`)
     const smallTargets = [...document.querySelectorAll('.icon-button, .tab, .primary-button, .secondary-button, .chip')]

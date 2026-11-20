@@ -1,5 +1,5 @@
 
-added 2 packages in 571ms
+added 2 packages in 669ms
 movil · portada: 30 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
 movil · consolas: 29 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
 movil · buscar: 31 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0

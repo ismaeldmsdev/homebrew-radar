@@ -66,6 +66,17 @@ Una **joya oculta** necesita: 3-400 estrellas, actividad en el último año, des
 
 La calidad se mide con 24 búsquedas reales (`scripts/experiments/search-eval.mjs`). GitHub Actions las ejecuta con el motor de `main` y el de la rama en la misma ejecución, y los resultados se evalúan a mano. Ver `experiments/search-eval/`.
 
+### Categorías por evidencia
+
+Antes, la categoría era la primera expresión de una lista que aparecía en cualquier parte del texto. Por eso «PHP terminal emulator» acababa en «Emuladores». Ahora `src/core/classify.ts` funciona así:
+
+- **Suma de pruebas por campo:** temas de GitHub y nombre > primera frase de la descripción o del resumen en español > resto > primeras líneas del README.
+- **Contextos que anulan:** frases como «terminal emulator», «emulation layer», «revisado por IA» o «gaming laptops» no cuentan.
+- **Requisitos de propósito:** «Emuladores» exige un sistema emulado (consola, ordenador clásico, CPU). La IA exige una expresión de propósito, no la sigla suelta.
+- **Sin pruebas suficientes:** el proyecto va a «Otros proyectos interesantes» marcado como **no verificado**. La ficha explica siempre el porqué de la categoría.
+- **Temáticas ligadas a una categoría** (Emuladores, IA, Automatización, Terminal, Productividad, Archivos): solo conservan proyectos con pruebas propias, no por una sola etiqueta.
+- **Catálogo antiguo:** se reclasifica al cargarlo en la web.
+
 ## Radar de Consolas
 
 Pestaña dedicada al homebrew y la modificación de consolas: DS/DSi/3DS, Wii/Wii U, Switch, PSP/Vita, PS1-PS5, Xbox/360, Sega, retro y portátiles. GitHub Actions la actualiza cada 12 h con la temática `consolas` de `config/topics.json`.

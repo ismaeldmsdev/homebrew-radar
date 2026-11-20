@@ -7,6 +7,16 @@ import { Icon, type IconName } from './Icon.tsx'
 
 const ORDER: SecurityStatus[] = ['warning', 'manual', 'verified', 'unknown']
 const ICON: Record<SecurityStatus, IconName> = { verified: 'check', warning: 'info', unknown: 'info', manual: 'search' }
+const COUNT_LABEL: Record<SecurityStatus, string> = { warning: 'advertencias', manual: 'por revisar', verified: 'verificadas', unknown: 'sin datos' }
+
+/** «1 crítica, 3 altas» a partir de las gravedades de los avisos. */
+function severitySummary(advisories: { severity: string | null }[]) {
+  const order = ['critical', 'high', 'medium', 'moderate', 'low']
+  const counts = new Map<string, number>()
+  for (const advisory of advisories) { const key = advisory.severity?.toLowerCase() ?? 'sin indicar'; counts.set(key, (counts.get(key) ?? 0) + 1) }
+  const rank = (key: string) => (order.includes(key) ? order.indexOf(key) : order.length)
+  return [...counts.entries()].sort((a, b) => rank(a[0]) - rank(b[0])).map(([key, count]) => `${count} de gravedad ${severityLabel(key)}`).join(', ')
+}
 
 const size = (bytes: number) => (bytes >= 1_048_576 ? `${(bytes / 1_048_576).toFixed(1)} MB` : `${Math.max(1, Math.round(bytes / 1024))} KB`)
 
@@ -22,14 +32,25 @@ export function SecurityPanel({ project, onUpdate }: { project: Project; onUpdat
   }
 
   const signals = facts ? assessSecurity(facts, project.fullName).sort((a, b) => ORDER.indexOf(a.status) - ORDER.indexOf(b.status)) : []
+  const counts = signals.reduce<Partial<Record<SecurityStatus, number>>>((acc, signal) => ({ ...acc, [signal.status]: (acc[signal.status] ?? 0) + 1 }), {})
+  const attention = signals.filter((signal) => signal.status === 'warning' || signal.status === 'manual')
+  const verified = signals.filter((signal) => signal.status === 'verified')
+  const unknown = signals.filter((signal) => signal.status === 'unknown')
+  const renderSignal = (signal: (typeof signals)[number]) => (
+    <li key={signal.id} className={`signal signal-${signal.status}`}>
+      <span className={`signal-status status-${signal.status}`}><Icon name={ICON[signal.status]} size={13} />{STATUS_LABEL[signal.status]}</span>
+      <strong>{signal.title}</strong>
+      <span>{signal.detail}</span>
+      {signal.source && <a href={signal.source} target="_blank" rel="noreferrer">Fuente <Icon name="external" size={12} /></a>}
+    </li>
+  )
   const executables = facts?.release ? executableAssets(facts.release.assets) : []
 
   return (
     <section className="security-box" aria-labelledby="security-title">
       <h3 id="security-title"><Icon name="info" size={16} /> Seguridad y confianza</h3>
       <p className="security-disclaimer">
-        Radar no es un antivirus: muestra señales públicas de GitHub y OpenSSF Scorecard para ayudarte a decidir. Ninguna garantiza que un programa sea seguro,
-        y Radar nunca descarga ni ejecuta los archivos. La popularidad no se tiene en cuenta.
+        Señales públicas para ayudarte a decidir antes de descargar. Radar no es un antivirus: ninguna señal garantiza que un programa sea seguro.
       </p>
 
       {!facts && (
@@ -44,20 +65,31 @@ export function SecurityPanel({ project, onUpdate }: { project: Project; onUpdat
 
       {facts && (
         <>
-          <ul className="signal-list">
-            {signals.map((signal) => (
-              <li key={signal.id} className={`signal signal-${signal.status}`}>
-                <span className={`signal-status status-${signal.status}`}><Icon name={ICON[signal.status]} size={13} />{STATUS_LABEL[signal.status]}</span>
-                <strong>{signal.title}</strong>
-                <span>{signal.detail}</span>
-                {signal.source && <a href={signal.source} target="_blank" rel="noreferrer">Fuente <Icon name="external" size={12} /></a>}
-              </li>
+          {/* Resumen en una línea; a la vista solo lo que pide atención, el resto plegado. */}
+          <p className="security-counts" aria-label="Resumen de señales">
+            {ORDER.filter((status) => counts[status]).map((status) => (
+              <span key={status} className={`signal-status status-${status}`}><Icon name={ICON[status]} size={13} />{counts[status]} {COUNT_LABEL[status]}</span>
             ))}
-          </ul>
+          </p>
+          {attention.length > 0
+            ? <ul className="signal-list">{attention.map(renderSignal)}</ul>
+            : <p className="fine-print">No hay advertencias documentadas ni puntos que requieran revisión manual. Eso no garantiza que sea seguro.</p>}
+          {verified.length > 0 && (
+            <details className="security-more">
+              <summary>Señales verificadas ({verified.length})</summary>
+              <ul className="signal-list">{verified.map(renderSignal)}</ul>
+            </details>
+          )}
+          {unknown.length > 0 && (
+            <details className="security-more">
+              <summary>Información no disponible ({unknown.length})</summary>
+              <ul className="signal-list">{unknown.map(renderSignal)}</ul>
+            </details>
+          )}
 
           {facts.advisories && facts.advisories.length > 0 && (
-            <div className="advisories">
-              <h4>Avisos de seguridad publicados</h4>
+            <details className="security-more advisories">
+              <summary>Avisos de seguridad publicados ({facts.advisories.length}: {severitySummary(facts.advisories)})</summary>
               <ul>
                 {facts.advisories.map((advisory) => {
                   const patched = latestIsPatched(advisory, facts.release?.tag ?? null)
@@ -79,12 +111,12 @@ export function SecurityPanel({ project, onUpdate }: { project: Project; onUpdat
                   )
                 })}
               </ul>
-            </div>
+            </details>
           )}
 
           {executables.length > 0 && (
-            <div className="executables">
-              <h4>Ejecutables de la release {facts.release?.tag}</h4>
+            <details className="security-more executables">
+              <summary>Archivos ejecutables y huellas SHA-256 ({executables.length})</summary>
               <ul>
                 {executables.map((asset) => (
                   <li key={asset.name}>
@@ -109,7 +141,7 @@ export function SecurityPanel({ project, onUpdate }: { project: Project; onUpdat
                 Los enlaces solo buscan la huella; no se sube ningún archivo. Que un servicio no encuentre detecciones no certifica que el archivo sea seguro,
                 y una huella o firma correctas solo prueban integridad o procedencia, no ausencia de malware.
               </p>
-            </div>
+            </details>
           )}
 
           <p className="fine-print">

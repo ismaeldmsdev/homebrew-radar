@@ -725,3 +725,4 @@ h1 em {
 .tag.seen-tag { color: var(--faint); }
 .filter-toolbar.compact { margin: 4px 0 10px; }
 .hint svg { vertical-align: -2px; }
+@media (max-width: 680px) { .filter-toolbar.compact { grid-template-columns: minmax(0, 1fr); } }

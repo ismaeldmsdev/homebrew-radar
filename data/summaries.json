@@ -31,6 +31,25 @@
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
     },
+    "1255326": {
+      "id": 1255326,
+      "fullName": "pspdev/psplinkusb",
+      "text": "Es una herramienta de desarrollo y depuración para la consola PlayStation Portable (PSP). Permite iniciar y probar programas propios mediante conexión por USB, facilitando la detección de errores o crashes durante la creación de contenido. Está diseñada específicamente para desarrolladores que trabajan en este sistema antiguo.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "6225qp",
+        "readmeLength": 668
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:31:36.105Z"
+    },
     "1406596": {
       "id": 1406596,
       "fullName": "jcubic/jquery.terminal",
@@ -503,6 +522,25 @@
       },
       "updatedAt": "2026-11-19T08:28:38.807Z"
     },
+    "78496486": {
+      "id": 78496486,
+      "fullName": "cemu-project/cemu_graphic_packs",
+      "text": "Es un repositorio de archivos gráficos para mejorar la visualización de juegos en la consola Wii U. Permite descargar paquetes que escalan, modifican o mejoran la imagen de los títulos compatibles con el emulador Cemu. Útil para usuarios que quieren disfrutar de juegos retro con mayor calidad visual en sus ordenadores.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "1aha4h3",
+        "readmeLength": 413
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:28:48.003Z"
+    },
     "80240424": {
       "id": 80240424,
       "fullName": "judge0/judge0",
@@ -776,6 +814,27 @@
       },
       "updatedAt": "2026-11-19T08:28:38.807Z"
     },
+    "183980799": {
+      "id": 183980799,
+      "fullName": "Genivia/ugrep",
+      "text": "Es una herramienta de línea de comandos para buscar patrones en archivos de forma rápida y precisa. Permite realizar búsquedas interactivas con opciones avanzadas como búsqueda borrosa, búsqueda en archivos comprimidos y visualización de contenido hexadecimal. Útil para programadores o administradores de sistemas que necesitan revisar grandes volúmenes de datos en sus ordenadores.",
+      "detail": null,
+      "kinds": [
+        "cli"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "5a30od",
+        "readmeLength": 245156
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:28:19.867Z"
+    },
     "187916430": {
       "id": 187916430,
       "fullName": "muety/wakapi",
@@ -843,6 +902,27 @@
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
     },
+    "213067642": {
+      "id": 213067642,
+      "fullName": "XorTroll/uLaunch",
+      "text": "Es un tema personalizable para el menú principal de la consola Nintendo Switch. Permite crear menús con rejilla, lanzar aplicaciones directamente desde el menú, editar Mii y acceder a un navegador web. Útil para usuarios que quieren personalizar su interfaz en la consola.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "y6afr4",
+        "readmeLength": 14186
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:29:57.384Z"
+    },
     "229187949": {
       "id": 229187949,
       "fullName": "shivammathur/homebrew-php",
@@ -872,6 +952,27 @@
         "readmeLength": 5576
       },
       "updatedAt": "2026-11-19T08:28:38.807Z"
+    },
+    "242247485": {
+      "id": 242247485,
+      "fullName": "afska/piugba",
+      "text": "Es una biblioteca en C que simula el juego Pump It Up para la consola Game Boy Advance. Permite cargar archivos de notas .ssc, gestionar múltiples modos de juego y soportar accesorios como cables de enlace o adaptadores inalámbricos. Útil para desarrolladores que quieran crear experiencias de ritmo en esa plataforma antigua.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "f9zgo9",
+        "readmeLength": 6299
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:30:30.638Z"
     },
     "243213207": {
       "id": 243213207,
@@ -2728,6 +2829,27 @@
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
     },
+    "1138917484": {
+      "id": 1138917484,
+      "fullName": "BenoitAdam/nullDC4Wii",
+      "text": "Es un emulador de Dreamcast diseñado para funcionar en consolas Wii y Wii U. Permite ejecutar juegos antiguos cargando archivos específicos en tarjetas de memoria o unidades USB, configurando controles personalizados y gestionando diferentes formatos de disco como GDI o CDI. Está pensado para usuarios que quieren probar juegos de Dreamcast en sus sistemas Wii sin necesidad de hardware original.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1exvlve",
+        "readmeLength": 14842
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:29:41.992Z"
+    },
     "1192378543": {
       "id": 1192378543,
       "fullName": "nicedreamzapp/claude-code-local",
@@ -2801,6 +2923,69 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T07:30:58.571Z"
+    },
+    "1274723381": {
+      "id": 1274723381,
+      "fullName": "ashhart/TensorFold",
+      "text": "TensorFold es una biblioteca escrita en Zig que actúa como motor de inferencia para modelos de lenguaje en hardware como Apple Silicon y tarjetas NVIDIA. Permite ejecutar modelos directamente desde un binario sin necesidad de instalar Python ni librerías específicas de aprendizaje automático. Útil para desarrolladores que necesitan servir modelos de forma eficiente en sus propios sistemas.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "5e77py",
+        "readmeLength": 4911
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:29:04.911Z"
+    },
+    "1277702124": {
+      "id": 1277702124,
+      "fullName": "knutwurst/ps5-patchdl",
+      "text": "Es una herramienta para consolas PlayStation 4 y 5 que descarga e instala actualizaciones de juegos desde cualquier navegador. Permite gestionar múltiples descargas simultáneas, reanudar procesos interrumpidos y elegir versiones específicas de parches si la consola no tiene el firmware necesario. Útil para usuarios que quieren mantener sus juegos al día sin depender de la tienda oficial.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "hkylr3",
+        "readmeLength": 6094
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:32:15.337Z"
+    },
+    "1288001931": {
+      "id": 1288001931,
+      "fullName": "pocket-nexus/pocketjs",
+      "text": "PocketJS es una biblioteca que permite crear interfaces gráficas para dispositivos como PSP, PS Vita o escritorio. Permite escribir aplicaciones usando componentes de JavaScript, TypeScript y frameworks como SolidJS o Vue, que se renderizan en píxeles nativos sin usar un navegador web. Útil para desarrolladores que quieren portar sus juegos o apps a múltiples pantallas desde un solo código.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1n9oj07",
+        "readmeLength": 10143
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:28:37.695Z"
     },
     "1290225732": {
       "id": 1290225732,
@@ -2887,6 +3072,27 @@
       },
       "updatedAt": "2026-11-20T07:28:13.489Z"
     },
+    "1368794432": {
+      "id": 1368794432,
+      "fullName": "Loopayeh/pkg-viewer",
+      "text": "Es una aplicación de escritorio para Windows y macOS que muestra la información interna de archivos de juegos de consolas sin necesidad de extraerlos. Permite ver la portada, el título, la región, la versión y la lista de trofeos, además de comparar parches de PS4 y PS5. Útil para usuarios de PlayStation, Nintendo Switch o Xbox 360 que quieren inspeccionar archivos como .pkg, .nsp o .iso.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1qq9udg",
+        "readmeLength": 6337
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:31:56.289Z"
+    },
     "1392150242": {
       "id": 1392150242,
       "fullName": "ToolAssisted-run/chimera-core-azahar",
@@ -2924,6 +3130,27 @@
       },
       "updatedAt": "2026-11-20T07:30:06.948Z"
     },
+    "1403848767": {
+      "id": 1403848767,
+      "fullName": "elripalda/Porpoise-Dolphin-Emulator-for-PS5",
+      "text": "Es una aplicación para consola PS5 que emula juegos de GameCube y Wii. Permite ejecutar tus propias copias de discos en formatos como .iso o .gcm, gestionar tarjetas de memoria y añadir juegos a la pantalla principal de la consola. Útil para usuarios con PS5 modificada que quieran jugar sus propias partidas.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1i3aped",
+        "readmeLength": 35255
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:29:23.796Z"
+    },
     "1405585119": {
       "id": 1405585119,
       "fullName": "CrowbarDS/Half-Life-NDS-Port",
@@ -2960,6 +3187,48 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-19T20:51:55.588Z"
+    },
+    "1420958706": {
+      "id": 1420958706,
+      "fullName": "arturofuentes1988/EmuSuNi",
+      "text": "Es una aplicación diseñada para funcionar en una consola PS4 modificada (jailbroken). Permite lanzar juegos de veinte consolas clásicas y tableros de arcade, incluyendo funciones como trucos, logros RetroAchievements y guardado de partidas. No incluye juegos ni archivos BIOS, por lo que requiere que el usuario los añada manualmente al sistema.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "cqkvbg",
+        "readmeLength": 40370
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:31:07.785Z"
+    },
+    "1427401105": {
+      "id": 1427401105,
+      "fullName": "LNPANDY/NX2Apple",
+      "text": "NX2Apple es una aplicación de escritorio para Mac que permite ejecutar juegos de Nintendo Switch en iPhone e iPad. Permite construir archivos de instalación con un solo clic, gestionar controles personalizados y acceder a la biblioteca de juegos en modo consola. Requiere un Mac con chip Apple Silicon y Xcode para funcionar.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "105ysub",
+        "readmeLength": 16820
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:30:47.493Z"
     },
     "1427533622": {
       "id": 1427533622,
@@ -3146,6 +3415,27 @@
         "readmeLength": 2829
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1451157498": {
+      "id": 1451157498,
+      "fullName": "blue0x1/EmuFive",
+      "text": "Es un proyecto experimental que permite ejecutar juegos de PS5 en una consola PS4 modificada. Funciona instalando un sistema Linux en la PS4 y traduciendo instrucciones de procesador para que los juegos funcionen. Está diseñado para usuarios con consolas jailbreak y conocimientos técnicos avanzados.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "svr20b",
+        "readmeLength": 9029
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T08:31:25.643Z"
     },
     "1453471566": {
       "id": 1453471566,

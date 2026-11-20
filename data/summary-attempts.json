@@ -1,6 +1,18 @@
 {
   "version": 1,
   "attempts": {
+    "395383178": {
+      "fullName": "premohq/PlayTendoh",
+      "basis": {
+        "description": "1ps5q3d",
+        "readmeLength": 18067
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-20T08:28:01.988Z",
+      "problems": [
+        "El nombre «PlayStation» no aparece en la documentación."
+      ]
+    },
     "1278652388": {
       "fullName": "Riyoway/HomePad",
       "basis": {

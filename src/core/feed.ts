@@ -5,6 +5,11 @@ import { matchProject, type Interpretation } from './query.ts'
 import { gemAnalysis, type Gem, type RepoSignals } from './scoring.ts'
 import { looksLikeList } from './text.ts'
 import { fallbackSummary, normalizeSummary, type Summary } from './summary.ts'
+import type { Compat } from './consoles.ts'
+import { detectDocLanguage, normalizeDocLanguage } from './docLanguage.ts'
+import { classifyWithEvidence } from './categories.ts'
+import { CATEGORY_VERSION, CHANNEL_CATEGORY, supportsCategory } from './classify.ts'
+import { normalizeSecurity } from './security.ts'
 
 const NINTENDO: Topic = { id: 'nintendo', label: 'Nintendo homebrew', description: 'Homebrew para Nintendo 3DS, DSi y DS.', featured: true, status: 'ok', count: 0, collectedAt: null }
 
@@ -12,6 +17,13 @@ function str(value: unknown, fallback = '') { return typeof value === 'string' ?
 function strOrNull(value: unknown) { return typeof value === 'string' && value ? value : null }
 function num(value: unknown, fallback = 0) { return typeof value === 'number' && Number.isFinite(value) ? value : fallback }
 function strings(value: unknown) { return Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : [] }
+
+function normalizeCompat(value: unknown): Compat | null {
+  if (!value || typeof value !== 'object') return null
+  const raw = value as Record<string, unknown>
+  const compat = { models: strings(raw.models).slice(0, 6), firmware: strings(raw.firmware).slice(0, 3), requires: strings(raw.requires).slice(0, 2) }
+  return compat.models.length || compat.firmware.length || compat.requires.length ? compat : null
+}
 
 export function normalizeProject(raw: unknown, legacy = false): Project | null {
   if (!raw || typeof raw !== 'object') return null
@@ -29,6 +41,17 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
   const readmeQuality = typeof value.readmeQuality === 'boolean' || value.readmeQuality === null
     ? value.readmeQuality as boolean | null
     : legacy ? reasons.some((reason) => reason.includes('secciones')) : null
+  const summary = normalizeSummary(value.summary)
+  const storedChannels = strings(value.channels).length ? strings(value.channels) : legacy ? ['nintendo'] : []
+  // Categoría por evidencia: la guardada si se calculó con el método actual (incluye el
+  // README en la recopilación); si no, se recalcula con los metadatos y el resumen.
+  const evidenceInput = { name: value.name, description, topics, summary: summary?.text ?? null }
+  const current = value.categoryVersion === CATEGORY_VERSION && typeof value.category === 'string'
+    ? { category: value.category, confidence: (['alta', 'media', 'baja'] as const).find((item) => item === value.categoryConfidence) ?? 'media', evidence: strings(value.categoryEvidence) }
+    : classifyWithEvidence({ name: value.name, description, topics }, { summary: summary?.text ?? null }, storedChannels[0] === 'nintendo')
+  // Una temática ligada a una categoría (p. ej. «Emuladores») solo conserva proyectos
+  // cuya evidencia la respalda, aunque GitHub los devolviera por una etiqueta.
+  const channels = storedChannels.filter((channel) => !CHANNEL_CATEGORY[channel] || supportsCategory(evidenceInput, CHANNEL_CATEGORY[channel]))
   return {
     id: value.id,
     name: value.name,
@@ -43,9 +66,11 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
     updatedAt: str(value.updatedAt, pushedAt),
     createdAt: str(value.createdAt),
     pushedAt,
-    category: str(value.category, 'Otros proyectos interesantes'),
+    category: current.category,
+    categoryConfidence: current.confidence,
+    categoryEvidence: current.evidence.slice(0, 3),
     consoles,
-    channels: strings(value.channels).length ? strings(value.channels) : legacy ? ['nintendo'] : [],
+    channels,
     version: strOrNull(value.version),
     releasePublishedAt: strOrNull(value.releasePublishedAt),
     releaseUrl: strOrNull(value.releaseUrl),
@@ -63,7 +88,10 @@ export function normalizeProject(raw: unknown, legacy = false): Project | null {
     starsDelta: typeof value.starsDelta === 'number' ? value.starsDelta : null,
     starsDeltaDays: typeof value.starsDeltaDays === 'number' ? value.starsDeltaDays : null,
     source: value.source === 'live' ? 'live' : 'catalog',
-    summary: normalizeSummary(value.summary),
+    summary,
+    compat: normalizeCompat(value.compat),
+    docLanguage: normalizeDocLanguage(value.docLanguage) ?? detectDocLanguage({ description }),
+    security: normalizeSecurity(value.security),
   }
 }
 

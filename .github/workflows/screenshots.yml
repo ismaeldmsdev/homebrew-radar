@@ -1,0 +1,55 @@
+name: Capturas de pantalla
+
+# Compila la web con la ruta de GitHub Pages, la sirve en el propio runner y hace
+# capturas en móvil (WebKit, perfil iPhone 13) y escritorio (Chromium). Guarda las
+# imágenes y un informe de desbordamiento en experiments/screenshots. No publica la web.
+on:
+  workflow_dispatch:
+  push:
+    branches: ['radar-2.3-**']
+    paths: ['src/**', 'index.html', 'public/pwa-icon.svg', 'scripts/experiments/screenshots.mjs', '.github/workflows/screenshots.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    # Imagen oficial de Playwright: navegadores y dependencias ya instalados.
+    container: mcr.microsoft.com/playwright:v1.49.1-noble
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Capturas
+        shell: bash
+        run: |
+          rm -rf experiments/screenshots && mkdir -p experiments/screenshots
+          set -o pipefail
+          {
+            npm install --no-save --no-audit --no-fund playwright@1.49.1
+            (npx vite preview --port 4173 --strictPort > /tmp/preview.log 2>&1 &)
+            for i in $(seq 1 30); do node -e "fetch('http://localhost:4173/homebrew-radar/').then(r=>process.exit(r.ok?0:1),()=>process.exit(1))" && break; sleep 1; done
+            node scripts/experiments/screenshots.mjs --url http://localhost:4173/homebrew-radar/ --out experiments/screenshots --icon
+          } 2>&1 | tee experiments/screenshots/registro.txt
+      - name: Guardar capturas
+        if: always()
+        shell: bash
+        run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/screenshots public/apple-touch-icon.png
+          git diff --cached --quiet && exit 0
+          git commit -m "Capturas de pantalla (${GITHUB_SHA::7})"
+          for attempt in 1 2 3; do git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }} && exit 0; sleep 5; done
+          exit 1

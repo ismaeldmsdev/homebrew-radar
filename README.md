@@ -34,6 +34,8 @@ npm run collect    # recopilación real; usa GITHUB_TOKEN si existe
   - `scoring.ts`: puntuación de interés (0-100), estado del proyecto (activo, poco activo, posiblemente abandonado, archivado) y detección de **joyas ocultas**.
   - `feed.ts`: normalización del catálogo (lee también el formato v1) y secciones de la portada: destacados, joyas, novedades, ganando atención y «Para ti».
   - `categories.ts`: categorías y consolas a partir de los metadatos.
+  - `search.ts`: motor del buscador. Combina catálogo y resultados en vivo y los ordena por relevancia real (ver «Cómo ordena el buscador»).
+  - `consoles.ts` y `consoleRadar.ts`: plataformas, tipos de herramienta, exclusión de piratería, compatibilidad citada del README y secciones del Radar de Consolas.
 - `src/github.ts` — búsqueda en vivo y verificación bajo demanda (README y última versión) al abrir la ficha de un resultado en vivo.
 - `src/library.ts` — biblioteca local con migración desde v1.
 - `src/update.ts` — detección de versiones nuevas.
@@ -47,6 +49,44 @@ Interés (0-100): relevancia 25 · actividad 20 · README 15 · versión publica
 Una **joya oculta** necesita: 3-400 estrellas, actividad en el último año, descripción, no estar archivada ni ser una lista, y README documentado **o** versión publicada. Si README y versiones aún no se han comprobado (resultados en vivo), se exigen varias señales indirectas y se marca como «posible joya». Cada joya muestra una explicación con sus señales. Las puntuaciones son orientativas, no garantías de calidad o seguridad.
 
 «Ganando atención» compara las estrellas con las recopilaciones anteriores (historial de hasta 30 días en el propio catálogo).
+
+### Cómo ordena el buscador
+
+- **Interpretación:** reconoce más de 60 conceptos en español con su traducción al inglés: plataformas, 25 consolas, escena de CFW/jailbreak, partidas guardadas, tarjetas SD, contraseñas, notas, reproductores…
+  - Detecta si pides una **aplicación**, una **biblioteca** o una herramienta de **terminal**.
+  - Las palabras españolas sin traducción no se envían a GitHub, porque vaciarían la búsqueda.
+- **Relevancia (68 %):** los conceptos deben aparecer como palabra completa, con este peso: nombre > temas > descripción > resumen en español.
+  - Las consolas se comprueban con detección de plataforma, no por texto suelto. Una consola que solo es el origen de un port para otra no cuenta.
+  - Las siglas cortas («AI», «SD») mencionadas de pasada en la descripción no bastan.
+  - Se descarta por debajo de 0,40.
+- **Calidad (32 %):** actividad, documentación, versiones y licencia. Las estrellas solo cuentan en escala logarítmica dentro de la calidad.
+- **Orden pedido:** «poco conocidos», «populares» y «nuevos» cambian el orden, salvo que elijas otro en el selector.
+- **Variedad:** máximo dos proyectos del mismo autor entre los primeros.
+- **Sin personalización:** tus intereses (por ejemplo, consolas) no alteran las búsquedas explícitas.
+
+La calidad se mide con 24 búsquedas reales (`scripts/experiments/search-eval.mjs`). GitHub Actions las ejecuta con el motor de `main` y el de la rama en la misma ejecución, y los resultados se evalúan a mano. Ver `experiments/search-eval/`.
+
+### Categorías por evidencia
+
+Antes, la categoría era la primera expresión de una lista que aparecía en cualquier parte del texto. Por eso «PHP terminal emulator» acababa en «Emuladores». Ahora `src/core/classify.ts` funciona así:
+
+- **Suma de pruebas por campo:** temas de GitHub y nombre > primera frase de la descripción o del resumen en español > resto > primeras líneas del README.
+- **Contextos que anulan:** frases como «terminal emulator», «emulation layer», «revisado por IA» o «gaming laptops» no cuentan.
+- **Requisitos de propósito:** «Emuladores» exige un sistema emulado (consola, ordenador clásico, CPU). La IA exige una expresión de propósito, no la sigla suelta.
+- **Sin pruebas suficientes:** el proyecto va a «Otros proyectos interesantes» marcado como **no verificado**. La ficha explica siempre el porqué de la categoría.
+- **Temáticas ligadas a una categoría** (Emuladores, IA, Automatización, Terminal, Productividad, Archivos): solo conservan proyectos con pruebas propias, no por una sola etiqueta.
+- **Catálogo antiguo:** se reclasifica al cargarlo en la web.
+
+## Radar de Consolas
+
+Pestaña dedicada al homebrew y la modificación de consolas: DS/DSi/3DS, Wii/Wii U, Switch, PSP/Vita, PS1-PS5, Xbox/360, Sega, retro y portátiles. GitHub Actions la actualiza cada 12 h con la temática `consolas` de `config/topics.json`.
+
+- **Proyectos nuevos:** repositorios creados en los últimos 90 días. Un commit reciente en un proyecto antiguo **no** cuenta como nuevo.
+- **Nuevas versiones:** publicaciones oficiales (releases) de los últimos 45 días.
+- **Joyas poco conocidas, recuperados** (actividad tras más de 6 meses parados) y **destacados**, variando de consola y autor. Un tercio de los puestos se reserva a proyectos con menos de 150 estrellas.
+- **Filtros** por consola y por tipo: CFW y jailbreak, partidas guardadas, emuladores, desarrollo, SD y almacenamiento, personalización, mantenimiento, juegos y ports, homebrew.
+- **Compatibilidad:** la ficha muestra los modelos, versiones de firmware y requisitos **citados literalmente del README**, marcados como no verificados. Nunca se afirma una compatibilidad que no esté escrita.
+- **Exclusiones:** proyectos que enlazan copias no autorizadas de juegos (ROM, ISO, PKG, NSP…) y el «Homebrew» de macOS (gestor de paquetes).
 
 ## Resúmenes en español
 
@@ -83,6 +123,36 @@ npm run summaries -- prepare            # descarga el README de los proyectos si
 npm run summaries -- apply resumenes.json --work summaries-work.json
 npm run summaries -- sync               # copia la caché al catálogo y a la caché pública
 ```
+
+## Idioma de la documentación
+
+Filtro *Idioma* en Buscar y en el Radar de Consolas: Todos, Español, Inglés, Multilingüe, Otro idioma e Idioma no determinado. Es el idioma **natural del README y la descripción originales**, no el lenguaje de programación ni el resumen en español que añade Radar.
+
+- **Método** (`src/core/docLanguage.ts`, sin IA): el texto se divide en frases; cada una se asigna por su sistema de escritura (chino, ruso, árabe…) o por la proporción de palabras funcionales («the», «and», «que», «para»…), nunca por una palabra suelta. Multilingüe: dos idiomas con al menos el 20 % del texto y 20 palabras cada uno. Con menos de 25 palabras clasificables en el README (10 en la descripción): no determinado.
+- **Catálogo**: se calcula en la recopilación con el README que ya se descarga, sin consultas extra.
+- **Búsqueda en vivo**: GitHub solo da la descripción, así que muchas quedan como no determinadas. La web lo indica y, al abrir la ficha, lee el README y lo comprueba.
+- Un proyecto multilingüe con español aparece al filtrar por Español (igual con Inglés). La preferencia se guarda en el dispositivo.
+
+## Seguridad y confianza
+
+Cada ficha incluye un apartado con señales públicas para decidir antes de descargar software, sobre todo ejecutables de Windows. **Radar no es un antivirus:** nunca descarga ni ejecuta archivos, no calcula una nota de seguridad y no usa la popularidad.
+
+| Estado | Significado |
+| --- | --- |
+| Señal verificada | Dato comprobado en una fuente oficial (API de GitHub u OpenSSF Scorecard) |
+| Advertencia documentada | Problema publicado: aviso de seguridad, proyecto archivado, flujo peligroso… |
+| Información no disponible | No se pudo consultar o no existe ese dato. Nunca se presenta como advertencia ni como garantía |
+| Requiere revisión manual | Algo que solo puedes comprobar tú, como la firma de Windows o una cuenta recién creada |
+
+Fuentes, todas gratuitas y sin claves:
+- **API de GitHub:** trayectoria del repositorio y de la cuenta, mantenimiento, release oficial, release inmutable, huella SHA-256 calculada por GitHub para cada archivo, atestaciones de procedencia por huella (solo consta que GitHub las tiene registradas: Radar no verifica su firma, por eso aparecen como «requiere revisión manual» y nunca como señal verificada) y avisos publicados con las versiones afectadas y corregidas.
+- **[OpenSSF Scorecard](https://scorecard.dev/):** comprobaciones concretas como flujos peligrosos, binarios en el código, política de seguridad, revisión de código y vulnerabilidades. No se muestra su nota global.
+
+Integridad (la huella coincide), procedencia (se compiló en este repositorio) y seguridad (no hace nada malicioso) son cosas distintas, y Radar solo informa de las dos primeras. Para cada ejecutable ofrece enlaces que **solo buscan su huella** en VirusTotal y MalwareBazaar, sin subir nada. Sus APIs no se integran: VirusTotal exige clave y prohíbe el uso comercial de su API pública, y MalwareBazaar exige una clave personal.
+
+**Consultas y caché:**
+- GitHub Actions comprueba hasta 30 proyectos por recopilación (`SECURITY_MAX`), con prioridad para los que publican ejecutables para Windows. Reutiliza la caché hasta que cambia la release o pasan 14 días.
+- Para los resultados en vivo, la ficha ofrece «Comprobar señales de seguridad». Usa unas 5 de las 60 consultas por hora sin cuenta y guarda el resultado 24 horas en el dispositivo.
 
 ## Seguimiento automático de temáticas
 

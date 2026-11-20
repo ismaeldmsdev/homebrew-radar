@@ -1,0 +1,39 @@
+name: Vista previa — Seguridad y confianza
+
+# Consulta SOLO metadatos (API de GitHub y OpenSSF Scorecard) de repositorios reales y
+# guarda las señales resultantes. No descarga ni ejecuta binarios. No publica la web.
+on:
+  push:
+    branches: ['radar-seguridad', 'radar-2.3-**']
+    paths: ['src/core/security.ts', 'src/core/securityFetch.ts', 'scripts/experiments/security-preview.mjs', '.github/workflows/security-preview.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: security-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Consultar señales de seguridad
+        run: node --experimental-strip-types scripts/experiments/security-preview.mjs
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Guardar informe
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/security-preview
+          git diff --cached --quiet && exit 0
+          git commit -m "Vista previa de Seguridad y confianza"
+          for attempt in 1 2 3; do git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }} && exit 0; sleep 5; done
+          exit 1

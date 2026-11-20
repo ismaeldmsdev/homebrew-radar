@@ -26,7 +26,7 @@ export function whyInteresting(project: Project, topics: Topic[]) {
   }
   const lines: string[] = []
   const platforms = project.consoles.length ? ` y sus metadatos mencionan ${project.consoles.map((name) => `Nintendo ${name}`).join(', ')}` : ''
-  lines.push(`Está clasificado como «${project.category}»${platforms}.`)
+  lines.push(project.categoryConfidence === 'baja' ? `Su documentación no permite verificar una categoría concreta${platforms}.` : `Está clasificado como «${project.category}»${platforms}.`)
   lines.push(`Su autor lo resume así (puede estar en otro idioma): «${project.description.trim()}»`)
   if (gemOf(project)) lines.push('Combina poca visibilidad con señales de calidad verificables, por eso aparece entre las joyas ocultas.')
   if (project.version) lines.push(`Hay una versión publicada (${project.version}) que normalmente se descarga desde la página de versiones de GitHub.`)

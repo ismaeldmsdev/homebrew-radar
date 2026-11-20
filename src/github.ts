@@ -1,13 +1,16 @@
 // Cliente de la API pública de GitHub usado desde el navegador, SIN credenciales.
 // Límites sin autenticar: 10 búsquedas/minuto y 60 consultas/hora por IP.
 // Los resultados se guardan en caché local para no repetir peticiones.
-import { classifyConsoles, classifyGeneralCategory, isNintendoRelevant } from './core/categories.ts'
 import { normalizeProject, toSignals } from './core/feed.ts'
-import { buildGithubQueries, matchProject, type Interpretation } from './core/query.ts'
+import { projectFromSearch, type SearchRepo } from './core/live.ts'
+import { buildGithubQueries, type Interpretation } from './core/query.ts'
+import { ENOUGH_LIVE_RESULTS } from './core/search.ts'
 import { interestScore } from './core/scoring.ts'
-import { looksLikeList } from './core/text.ts'
-import { fromCompact, type CompactSummary } from './core/summary.ts'
+import { cleanReadme, fromCompact, type CompactSummary } from './core/summary.ts'
+import { detectDocLanguage, type DocLanguageInfo } from './core/docLanguage.ts'
 import type { Project } from './types.ts'
+import { normalizeSecurity, type SecurityFacts } from './core/security.ts'
+import { fetchSecurityFacts } from './core/securityFetch.ts'
 
 const API = 'https://api.github.com'
 const SEARCH_TTL = 20 * 60_000
@@ -56,37 +59,7 @@ async function get<T>(path: string, signal?: AbortSignal, allowNotFound = false)
   throw new GithubError('http', `GitHub respondió con un error ${response.status}.`)
 }
 
-type SearchRepo = {
-  id: number; name: string; full_name: string; owner: { login: string; type: string }; description: string | null
-  html_url: string; homepage: string | null; stargazers_count: number; forks_count: number; updated_at: string
-  created_at: string; pushed_at: string; archived: boolean; fork: boolean; language: string | null; topics?: string[]
-  license: { spdx_id: string | null; name: string | null } | null
-}
-
-function licenseName(license: SearchRepo['license']) {
-  if (!license) return null
-  if (license.spdx_id && license.spdx_id !== 'NOASSERTION') return license.spdx_id
-  return license.name && license.name !== 'Other' ? license.name : null
-}
-
-export function projectFromSearch(repo: SearchRepo, interp: Interpretation, position: number, now = Date.now()): Project {
-  const topics = repo.topics ?? []
-  const consoles = classifyConsoles(repo)
-  const base = normalizeProject({
-    id: repo.id, name: repo.name, fullName: repo.full_name, owner: repo.owner.login, ownerType: repo.owner.type,
-    description: repo.description ?? '', url: repo.html_url, homepage: repo.homepage || null, stars: repo.stargazers_count,
-    forks: repo.forks_count, updatedAt: repo.updated_at, createdAt: repo.created_at, pushedAt: repo.pushed_at,
-    category: classifyGeneralCategory(repo), consoles, channels: isNintendoRelevant(repo) && consoles.length ? ['nintendo'] : [],
-    version: null, releaseChecked: false, hasReadme: null, readmeQuality: null, license: licenseName(repo.license),
-    archived: repo.archived, isList: looksLikeList(repo.name, repo.description ?? '', topics), language: repo.language, topics,
-    labels: repo.stargazers_count < 100 ? ['Poco conocido'] : [], source: 'live',
-  })!
-  // Relevancia: coincidencia real de los términos + posición en el orden de GitHub.
-  const matched = matchProject(base, interp, now)
-  const relevance = Math.max(matched, 0.3) * 0.75 + Math.max(0, 1 - position / 40) * 0.25
-  const { score, reasons } = interestScore(toSignals(base), relevance, matched > 0 ? 'Coincide con los términos de tu búsqueda.' : null, now)
-  return { ...base, score, reasons }
-}
+export { projectFromSearch } from './core/live.ts'
 
 let summaryIndex: Promise<Record<string, CompactSummary>> | null = null
 
@@ -139,7 +112,7 @@ function cacheSet(key: string, data: unknown, persistent = false) {
 export function clearSearchCache() {
   for (const storage of [sessionStorage, localStorage]) {
     try {
-      for (const key of Object.keys(storage)) if (key.startsWith('radar-live:') || key.startsWith('radar-enrich:')) storage.removeItem(key)
+      for (const key of Object.keys(storage)) if (key.startsWith('radar-live:') || key.startsWith('radar-enrich:') || key.startsWith('radar-security:')) storage.removeItem(key)
     } catch {
       // Sin acceso al almacenamiento.
     }
@@ -154,19 +127,22 @@ export async function searchGithub(interp: Interpretation, { includeArchived = f
   if (cached) return { ...cached, fromCache: true, projects: await withSummaries(cached.projects.map((item) => normalizeProject(item)!).filter(Boolean)) }
 
   const tried: string[] = []
-  let items: SearchRepo[] = []
+  const found = new Map<number, SearchRepo>()
   let total = 0
   let used = primary
   for (const q of [primary, ...fallbacks]) {
     tried.push(q)
     const data = await get<{ total_count: number; items: SearchRepo[] }>(`/search/repositories?q=${encodeURIComponent(q)}${sort}&per_page=50`, signal)
-    items = data?.items ?? []
-    total = data?.total_count ?? 0
+    for (const repo of data?.items ?? []) if (!found.has(repo.id)) found.set(repo.id, repo)
+    total = Math.max(total, data?.total_count ?? 0)
     used = q
-    if (items.length > 0) break
+    // Con pocos resultados se amplía la búsqueda (cada consulta cuenta en el límite de 10/min).
+    if (found.size >= ENOUGH_LIVE_RESULTS) break
   }
+  const items = [...found.values()]
   const now = Date.now()
-  let projects = await withSummaries(items.filter((repo) => !repo.fork).map((repo, index) => projectFromSearch(repo, interp, index, now)))
+  const summaries = await loadSummaryIndex()
+  let projects = items.filter((repo) => !repo.fork).map((repo, index) => projectFromSearch(repo, interp, index, now, summaries))
   const before = projects.length
   if (interp.ownerType) projects = projects.filter((project) => project.ownerType === interp.ownerType)
   const result: LiveSearch = { projects, total, queriesTried: tried, queryUsed: used, fetchedAt: new Date(now).toISOString(), fromCache: false, filteredOut: before - projects.length }
@@ -174,7 +150,7 @@ export async function searchGithub(interp: Interpretation, { includeArchived = f
   return result
 }
 
-export type Enrichment = { hasReadme: boolean; readmeQuality: boolean; version: string | null; releasePublishedAt: string | null; releaseUrl: string | null }
+export type Enrichment = { hasReadme: boolean; readmeQuality: boolean; version: string | null; releasePublishedAt: string | null; releaseUrl: string | null; docLanguage?: DocLanguageInfo }
 
 /** Comprueba README y última versión estable de un proyecto (2 consultas del límite de 60/hora). */
 export async function enrichProject(project: Project, signal?: AbortSignal): Promise<Project> {
@@ -196,6 +172,8 @@ export async function enrichProject(project: Project, signal?: AbortSignal): Pro
       hasReadme: Boolean(readme),
       readmeQuality: text.length >= 500 && (/^#{1,3}\s/m.test(text) || /^[=-]{3,}\s*$/m.test(text)),
       version: stable?.tag_name ?? null, releasePublishedAt: stable?.published_at ?? null, releaseUrl: stable?.html_url ?? null,
+      // Idioma de la documentación con el README ya descargado (sin consultas adicionales).
+      docLanguage: detectDocLanguage({ readme: text ? cleanReadme(text, 12_000) : null, description: project.description }),
     }
     cacheSet(cacheKey, data, true)
   }
@@ -203,4 +181,27 @@ export async function enrichProject(project: Project, signal?: AbortSignal): Pro
   const relevanceReason = project.reasons.find((reason) => reason.startsWith('Coincide') || reason.startsWith('Menciona') || reason.startsWith('Encontrado') || reason.startsWith('Etiquetado')) ?? null
   const { score, reasons } = interestScore(toSignals(updated), relevanceReason ? 0.8 : 0.5, relevanceReason)
   return { ...updated, score, reasons }
+}
+
+const SECURITY_TTL = 24 * 3_600_000
+
+/**
+ * Comprueba bajo demanda las señales de seguridad de un proyecto (≈5 consultas del límite
+ * de 60/hora sin cuenta + 1 a OpenSSF Scorecard). Solo metadatos: no descarga archivos.
+ */
+export async function checkSecurity(project: Project, signal?: AbortSignal): Promise<SecurityFacts> {
+  const cacheKey = `radar-security:${project.id}`
+  const cached = normalizeSecurity(cacheGet<SecurityFacts>(cacheKey, SECURITY_TTL))
+  if (cached) return cached
+  const facts = await fetchSecurityFacts(project.fullName, {
+    github: (path) => get(path, signal, true),
+    external: async (url) => {
+      const response = await fetch(url, { headers: { Accept: 'application/json' }, signal })
+      if (response.status === 404) return null
+      if (!response.ok) throw new Error(`HTTP ${response.status}`)
+      return response.json()
+    },
+  })
+  cacheSet(cacheKey, facts, true)
+  return facts
 }

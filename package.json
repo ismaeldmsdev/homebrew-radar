@@ -1,7 +1,7 @@
 {
   "name": "buscador-homebrew",
   "private": true,
-  "version": "2.0.0",
+  "version": "2.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -13,7 +13,7 @@
     "summaries": "node --experimental-strip-types scripts/summaries.mjs",
     "check:feed": "node scripts/check-feed.mjs",
     "check:dist": "node scripts/check-dist.mjs",
-    "test": "node --experimental-strip-types --test src/library.test.ts src/core/core.test.ts scripts/collector.test.mjs scripts/summaries.test.mjs scripts/auto-summaries.test.mjs"
+    "test": "node --experimental-strip-types --test src/library.test.ts src/core/core.test.ts src/core/search.test.ts src/core/classify.test.ts src/core/security.test.ts src/core/docLanguage.test.ts scripts/collector.test.mjs scripts/summaries.test.mjs scripts/auto-summaries.test.mjs"
   },
   "dependencies": {
     "react": "^19.3.1",

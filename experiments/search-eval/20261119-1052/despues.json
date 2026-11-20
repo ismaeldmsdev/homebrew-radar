@@ -1,0 +1,2079 @@
+{
+  "label": "despues",
+  "engine": "nuevo",
+  "at": "2026-11-19T10:51:54.628Z",
+  "queries": [
+    {
+      "query": "Aplicación para organizar fotografías",
+      "tried": [
+        "photo OR photos OR image stars:>=2 archived:false"
+      ],
+      "total": 37,
+      "top": [
+        {
+          "fullName": "julyx10/lap",
+          "stars": 4404,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 1,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«fotos e imágenes» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es un gestor de fotos de escritorio para Mac, Windows y Linux pensado para colecciones grandes guardadas en tu ordenador. Permite navegar por tus carpetas, buscar fotos describiéndolas o por caras y valorarlas, todo sin "
+        },
+        {
+          "fullName": "zelon88/HRConvert2",
+          "stars": 1397,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": [
+            "selfhosted"
+          ],
+          "relevance": 0.98,
+          "score": 92,
+          "source": "catalog",
+          "why": [
+            "«fotos e imágenes» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es un conversor de archivos que instalas en tu propio servidor y que admite más de 500 formatos: documentos, imágenes, libros electrónicos, archivos comprimidos y más. Arrastras un archivo, eliges el formato y descargas "
+        },
+        {
+          "fullName": "genesistoxical/drop-icons",
+          "stars": 142,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 90,
+          "source": "catalog",
+          "why": [
+            "«fotos e imágenes» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es una pequeña aplicación para Windows que convierte imágenes en iconos (.ico) arrastrándolas a su ventana. Admite PNG, JPG, BMP, GIF y SVG y puede convertir varias a la vez. Útil para personalizar iconos de carpetas o a"
+        },
+        {
+          "fullName": "mierak/rmpc",
+          "stars": 3518,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": [
+            "config",
+            "cli"
+          ],
+          "relevance": 0.9,
+          "score": 93,
+          "source": "catalog",
+          "why": [],
+          "about": "Es un programa de terminal para controlar MPD, un servidor de música que reproduce tu colección. Permite navegar por tu biblioteca, gestionar listas, ver portadas y letras sincronizadas. Útil si ya usas MPD y quieres man"
+        },
+        {
+          "fullName": "photoview/photoview",
+          "stars": 6579,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 67,
+          "source": "live",
+          "why": [
+            "«fotos e imágenes» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Photo gallery for self-hosted personal servers"
+        }
+      ]
+    },
+    {
+      "query": "Herramientas poco conocidas de inteligencia artificial",
+      "tried": [
+        "ai OR llm OR machine-learning stars:3..400 pushed:>2025-11-19 archived:false"
+      ],
+      "total": 49,
+      "top": [
+        {
+          "fullName": "FirstEverTech/Universal-Intel-Chipset-Updater",
+          "stars": 240,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": [
+            "cli"
+          ],
+          "relevance": 0.85,
+          "score": 91,
+          "source": "catalog",
+          "why": [],
+          "about": "Es una herramienta para Windows que detecta el chipset Intel de tu placa base e instala los archivos de controlador oficiales más recientes. Comprueba la firma de Intel de cada archivo y crea un punto de restauración ant"
+        },
+        {
+          "fullName": "SciML/sciml.ai",
+          "stars": 76,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 63,
+          "source": "live",
+          "why": [
+            "«inteligencia artificial» aparece en el nombre o los temas."
+          ],
+          "about": "The SciML Scientific Machine Learning Software Organization Website"
+        },
+        {
+          "fullName": "llm-d/llm-d-kv-cache",
+          "stars": 197,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 65,
+          "source": "live",
+          "why": [
+            "«inteligencia artificial» aparece en el nombre o los temas."
+          ],
+          "about": "Distributed KV cache scheduling & offloading libraries"
+        },
+        {
+          "fullName": "alan-turing-institute/AIrsenal",
+          "stars": 355,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 66,
+          "source": "live",
+          "why": [
+            "«inteligencia artificial» aparece en el nombre o los temas."
+          ],
+          "about": "Machine learning Fantasy Premier League team"
+        },
+        {
+          "fullName": "PetroIvaniuk/llms-tools",
+          "stars": 331,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 62,
+          "source": "live",
+          "why": [
+            "«inteligencia artificial» aparece en el nombre o los temas."
+          ],
+          "about": "A list of LLMs Tools & Projects"
+        }
+      ]
+    },
+    {
+      "query": "Aplicaciones gratuitas para Windows",
+      "tried": [
+        "windows stars:>=2 archived:false"
+      ],
+      "total": 71,
+      "top": [
+        {
+          "fullName": "julyx10/lap",
+          "stars": 4404,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«Windows» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es un gestor de fotos de escritorio para Mac, Windows y Linux pensado para colecciones grandes guardadas en tu ordenador. Permite navegar por tus carpetas, buscar fotos describiéndolas o por caras y valorarlas, todo sin "
+        },
+        {
+          "fullName": "tiddly-gittly/TidGi-Desktop",
+          "stars": 2014,
+          "category": "Automatización",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«Windows» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es una aplicación de escritorio para tomar notas y organizar conocimiento personal, basada en TiddlyWiki. Permite crear notas enlazadas, hacer copias de seguridad automáticas con Git y publicar el contenido como un blog."
+        },
+        {
+          "fullName": "antares-sql/antares",
+          "stars": 2667,
+          "category": "Productividad y organización",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«Windows» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es un programa de escritorio para gestionar bases de datos SQL con una interfaz visual. Permite conectarse a MySQL, MariaDB, PostgreSQL, SQLite y Firebird para ver y editar tablas, vistas y consultas. Útil sobre todo par"
+        },
+        {
+          "fullName": "LinwoodDev/Butterfly",
+          "stars": 2112,
+          "category": "Productividad y organización",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«Windows» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es una aplicación de notas con un lienzo infinito donde puedes escribir, dibujar a mano y colocar imágenes, diagramas o PDF donde quieras. Permite organizar ideas de forma visual en lugar de en páginas fijas. Útil para a"
+        },
+        {
+          "fullName": "LenovoLegionToolkit-Team/LenovoLegionToolkit",
+          "stars": 2578,
+          "category": "Juegos",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«Windows» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es una utilidad para Windows que sustituye a los programas oficiales de Lenovo (Vantage, Legion Zone y Legion Space) en portátiles gaming Lenovo Legion. Permite controlar ajustes del equipo como el rendimiento, el teclad"
+        }
+      ]
+    },
+    {
+      "query": "Gestor de contraseñas autoalojado",
+      "tried": [
+        "self-hosted password-manager stars:>=2 archived:false"
+      ],
+      "total": 36,
+      "top": [
+        {
+          "fullName": "nilsteampassnet/TeamPass",
+          "stars": 1894,
+          "category": "Seguridad y privacidad",
+          "consoles": [],
+          "kinds": [
+            "selfhosted",
+            "config"
+          ],
+          "relevance": 0.95,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«autoalojado» aparece en el nombre o los temas.",
+            "«contraseñas» aparece en el nombre o los temas."
+          ],
+          "about": "Es un gestor de contraseñas para equipos que se instala en un servidor propio. Permite guardar y compartir credenciales controlando quién puede ver cada carpeta, con cifrado y un registro de quién accede a qué. Pensado p"
+        },
+        {
+          "fullName": "Volmarg/personal-management-system",
+          "stars": 4195,
+          "category": "Productividad y organización",
+          "consoles": [],
+          "kinds": [
+            "selfhosted",
+            "config"
+          ],
+          "relevance": 0.95,
+          "score": 88,
+          "source": "catalog",
+          "why": [
+            "«autoalojado» aparece en el nombre o los temas.",
+            "«contraseñas» aparece en el nombre o los temas."
+          ],
+          "about": "Es una aplicación web para gestionar tus datos personales en tu propio servidor: notas, tareas, finanzas, contraseñas y más. Funciona de forma parecida a un CRM o gestor de contenidos personal y se puede ampliar con exte"
+        },
+        {
+          "fullName": "passwordcockpit/passwordcockpit",
+          "stars": 138,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 66,
+          "source": "live",
+          "why": [
+            "«autoalojado» aparece en el nombre o los temas.",
+            "«contraseñas» aparece en el nombre o los temas."
+          ],
+          "about": "Passwordcockpit is a simple, free, open source, self hosted, web based password manager for teams. It is made in PHP, Javascript, MySQL and it run on a docker service. It allows users with any kind of device to safely st"
+        },
+        {
+          "fullName": "lesspass/lesspass",
+          "stars": 6084,
+          "category": "Seguridad y privacidad",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 72,
+          "source": "live",
+          "why": [
+            "«autoalojado» aparece en el nombre o los temas.",
+            "«contraseñas» aparece en el nombre o los temas."
+          ],
+          "about": ":key: stateless open source password manager"
+        },
+        {
+          "fullName": "sinhong2011/triwarden",
+          "stars": 98,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 63,
+          "source": "live",
+          "why": [
+            "«autoalojado» aparece en el nombre o los temas.",
+            "«contraseñas» aparece en el nombre o los temas."
+          ],
+          "about": "A native Mac password manager for Vaultwarden and Bitwarden — Swift/SwiftUI, AutoFill with passkeys and one-time codes, Touch ID, command palette, SSH agent."
+        }
+      ]
+    },
+    {
+      "query": "Biblioteca de Python para leer archivos PDF",
+      "tried": [
+        "file pdf stars:>=2 language:python archived:false"
+      ],
+      "total": 29,
+      "top": [
+        {
+          "fullName": "oomol-lab/pdf-craft",
+          "stars": 6776,
+          "category": "Archivos y datos",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.98,
+          "score": 72,
+          "source": "live",
+          "why": [
+            "«PDF» aparece en el nombre o los temas."
+          ],
+          "about": "PDF craft can convert PDF files into various other formats. This project will focus on processing PDF files of scanned books."
+        },
+        {
+          "fullName": "py-pdf/pypdf",
+          "stars": 10303,
+          "category": "Archivos y datos",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 68,
+          "source": "live",
+          "why": [
+            "«PDF» aparece en el nombre o los temas.",
+            "Es una biblioteca para programadores."
+          ],
+          "about": "A pure-python PDF library capable of splitting, merging, cropping, and transforming the pages of PDF files"
+        },
+        {
+          "fullName": "py-pdf/pdfly",
+          "stars": 579,
+          "category": "Herramientas de terminal",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.98,
+          "score": 67,
+          "source": "live",
+          "why": [
+            "«PDF» aparece en el nombre o los temas."
+          ],
+          "about": "CLI tool to extract (meta)data from PDF and manipulate PDF files"
+        },
+        {
+          "fullName": "borb-pdf/borb",
+          "stars": 3587,
+          "category": "Archivos y datos",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.98,
+          "score": 62,
+          "source": "live",
+          "why": [
+            "«PDF» aparece en el nombre o los temas.",
+            "Es una biblioteca para programadores."
+          ],
+          "about": "borb is a library for reading, creating and manipulating PDF files in python."
+        },
+        {
+          "fullName": "pymupdf/PyMuPDF",
+          "stars": 11171,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 70,
+          "source": "live",
+          "why": [
+            "«PDF» aparece en el nombre o los temas."
+          ],
+          "about": "Layout-aware document engine for AI and a feature-rich Python toolkit for extracting, rendering and editing PDFs and other documents. Since version 2.0, its ML-based layout analysis turns PDFs and Office files into high-"
+        }
+      ]
+    },
+    {
+      "query": "Herramientas de línea de comandos para buscar archivos",
+      "tried": [
+        "cli search file stars:>=2 archived:false"
+      ],
+      "total": 41,
+      "top": [
+        {
+          "fullName": "jhspetersson/fselect",
+          "stars": 4476,
+          "category": "Herramientas de terminal",
+          "consoles": [],
+          "kinds": [
+            "cli"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«terminal» aparece en el nombre o los temas.",
+            "«buscar» aparece en el nombre o los temas.",
+            "«archivos» aparece en el nombre o los temas."
+          ],
+          "about": "Es una herramienta de terminal para buscar archivos con consultas parecidas a SQL, como «buscar fotos de más de 5 MB en esta carpeta». Puede filtrar por tamaño, fecha, metadatos de imágenes y audio, tipo de archivo o con"
+        },
+        {
+          "fullName": "equationzhao/g",
+          "stars": 355,
+          "category": "Herramientas de terminal",
+          "consoles": [],
+          "kinds": [
+            "cli"
+          ],
+          "relevance": 0.85,
+          "score": 91,
+          "source": "catalog",
+          "why": [
+            "«terminal» aparece en el nombre o los temas."
+          ],
+          "about": "Es un sustituto de la orden «ls» para listar archivos en la terminal con iconos y colores según el tipo de archivo. Ofrece varios diseños, muestra el estado de Git y permite ordenar y buscar rutas de forma flexible. Func"
+        },
+        {
+          "fullName": "scarletkc/vexor",
+          "stars": 248,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.96,
+          "score": 69,
+          "source": "live",
+          "why": [
+            "«terminal» aparece en el nombre o los temas.",
+            "«buscar» aparece en el nombre o los temas."
+          ],
+          "about": "A semantic search engine for files and code."
+        },
+        {
+          "fullName": "vividvilla/csvtotable",
+          "stars": 1188,
+          "category": "Herramientas de terminal",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 70,
+          "source": "live",
+          "why": [
+            "«terminal» aparece en el nombre o los temas."
+          ],
+          "about": "Simple command-line utility to convert CSV, TSV and Excel files into a single self-contained HTML page with search, filters, and sorting"
+        },
+        {
+          "fullName": "mustafaahci/goz",
+          "stars": 48,
+          "category": "Herramientas de terminal",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.98,
+          "score": 60,
+          "source": "live",
+          "why": [
+            "«terminal» aparece en el nombre o los temas.",
+            "«buscar» aparece en el nombre o los temas.",
+            "«archivos» aparece en el nombre o los temas."
+          ],
+          "about": "Instant file-search engine for Windows NTFS. A fast, open-source alternative to voidtools Everything."
+        }
+      ]
+    },
+    {
+      "query": "Aplicaciones de código abierto para iPhone",
+      "tried": [
+        "ios OR iphone stars:>=2 archived:false"
+      ],
+      "total": 43,
+      "top": [
+        {
+          "fullName": "mastodon/mastodon-ios",
+          "stars": 2282,
+          "category": "Aplicaciones y utilidades",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 1,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«iPhone / iOS» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es la aplicación oficial de Mastodon para iPhone, la red social descentralizada. Permite usar tu cuenta de Mastodon para leer y publicar desde el móvil. Este repositorio contiene su código; la aplicación se instala desde"
+        },
+        {
+          "fullName": "bitwarden/ios",
+          "stars": 739,
+          "category": "Seguridad y privacidad",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 1,
+          "score": 92,
+          "source": "catalog",
+          "why": [
+            "«iPhone / iOS» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es el código de las aplicaciones oficiales de Bitwarden para iPhone y iPad: el gestor de contraseñas y el autenticador de códigos de verificación. Permiten guardar contraseñas de forma cifrada y generar códigos de acceso"
+        },
+        {
+          "fullName": "cogwheel0/conduit",
+          "stars": 2482,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": [
+            "app",
+            "config"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«iPhone / iOS» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es una aplicación para iPhone y Android que sirve para chatear con modelos de IA a través de Open WebUI, de tus propios servidores (como Ollama) o de servicios compatibles con OpenAI. Tus conversaciones se guardan en el "
+        },
+        {
+          "fullName": "chocoford/ExcalidrawZ",
+          "stars": 1961,
+          "category": "Productividad y organización",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«iPhone / iOS» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es una aplicación nativa para Mac, iPad y iPhone que permite usar Excalidraw, una pizarra para hacer bocetos y diagramas con estilo dibujado a mano. Añade gestión de archivos, sincronización con iCloud, historial y expor"
+        },
+        {
+          "fullName": "Aidoku/Aidoku",
+          "stars": 4770,
+          "category": "Aplicaciones y utilidades",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«iPhone / iOS» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es una aplicación gratuita para leer manga en iPhone, iPad y Mac, sin anuncios. Permite leer archivos propios (CBZ), conectarse a servidores como Komga o Kavita y descargar capítulos. Útil para lectores de manga que quie"
+        }
+      ]
+    },
+    {
+      "query": "Automatizar tareas en el navegador",
+      "tried": [
+        "automation productivity browser stars:>=2 archived:false"
+      ],
+      "total": 48,
+      "top": [
+        {
+          "fullName": "OpenAdaptAI/OpenAdapt",
+          "stars": 1889,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": [
+            "config"
+          ],
+          "relevance": 0.83,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«automatización» aparece en el nombre o los temas.",
+            "«navegador» aparece en el nombre o los temas."
+          ],
+          "about": "Es una herramienta para automatizar tareas repetitivas en aplicaciones web, de escritorio o de escritorio remoto: una persona o un agente de IA hace la tarea una vez y OpenAdapt la convierte en un programa que la repite."
+        },
+        {
+          "fullName": "EdgeTypE/better-deepseek",
+          "stars": 842,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.9,
+          "score": 66,
+          "source": "live",
+          "why": [
+            "«automatización» aparece en el nombre o los temas.",
+            "«productividad» aparece en el nombre o los temas.",
+            "«navegador» aparece en el nombre o los temas."
+          ],
+          "about": "A powerful browser extension that supercharges DeepSeek Chat with custom tooling, persistent memory, and seamless project scaffolding. Generate and download files, run Python in-browser, create PowerPoint and Excel docum"
+        },
+        {
+          "fullName": "RonkTsang/gemini-chat-extension",
+          "stars": 25,
+          "category": "Automatización",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.9,
+          "score": 65,
+          "source": "live",
+          "why": [
+            "«automatización» aparece en el nombre o los temas.",
+            "«productividad» aparece en el nombre o los temas.",
+            "«navegador» aparece en el nombre o los temas."
+          ],
+          "about": "Open-source browser extension for Google Gemini with themes, chat navigation, shortcuts, and prompt automation."
+        },
+        {
+          "fullName": "balta2ar/brotab",
+          "stars": 525,
+          "category": "Automatización",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.9,
+          "score": 65,
+          "source": "live",
+          "why": [
+            "«automatización» aparece en el nombre o los temas.",
+            "«productividad» aparece en el nombre o los temas.",
+            "«navegador» aparece en el nombre o los temas."
+          ],
+          "about": "Control your browser's tabs from the command line"
+        },
+        {
+          "fullName": "NotNahid/bookmarklet",
+          "stars": 65,
+          "category": "Automatización",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.9,
+          "score": 64,
+          "source": "live",
+          "why": [
+            "«automatización» aparece en el nombre o los temas.",
+            "«productividad» aparece en el nombre o los temas.",
+            "«navegador» aparece en el nombre o los temas."
+          ],
+          "about": "Professional browser automation bookmarklets with a sleek interactive gallery and automated deployment. "
+        }
+      ]
+    },
+    {
+      "query": "Reproductor de música para Android",
+      "tried": [
+        "android player music stars:>=2 archived:false"
+      ],
+      "total": 28,
+      "top": [
+        {
+          "fullName": "cwuom/NeriPlayer",
+          "stars": 4282,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.9,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«Android» aparece en el nombre o los temas.",
+            "«reproductor» aparece en el nombre o los temas.",
+            "«música y audio» aparece en el nombre o los temas."
+          ],
+          "about": "Es un reproductor de música para Android que reúne en una misma aplicación tu música local y la de servicios como NetEase Cloud Music, Bilibili o YouTube Music. Muestra letras sincronizadas y puede sincronizar listas y f"
+        },
+        {
+          "fullName": "FossifyOrg/Music-Player",
+          "stars": 980,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.97,
+          "score": 68,
+          "source": "live",
+          "why": [
+            "«Android» aparece en el nombre o los temas.",
+            "«reproductor» aparece en el nombre o los temas.",
+            "«música y audio» aparece en el nombre o los temas."
+          ],
+          "about": "A clean music player with a customizable widget, stylish interface and no ads."
+        },
+        {
+          "fullName": "MissingCore/Music",
+          "stars": 686,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 66,
+          "source": "live",
+          "why": [
+            "«Android» aparece en el nombre o los temas.",
+            "«reproductor» aparece en el nombre o los temas.",
+            "«música y audio» aparece en el nombre o los temas."
+          ],
+          "about": "A Nothing inspired local music player."
+        },
+        {
+          "fullName": "ubuntu-flutter-community/musicpod",
+          "stars": 673,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 60,
+          "source": "live",
+          "why": [
+            "«Android» aparece en el nombre o los temas.",
+            "«reproductor» aparece en el nombre o los temas.",
+            "«música y audio» aparece en el nombre o los temas."
+          ],
+          "about": "Music, radio, television and podcast player for Ubuntu, MacOs and maybe soon Android"
+        },
+        {
+          "fullName": "rukamori/ArchiveTune",
+          "stars": 8445,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.9,
+          "score": 68,
+          "source": "live",
+          "why": [
+            "«Android» aparece en el nombre o los temas.",
+            "«reproductor» aparece en el nombre o los temas.",
+            "«música y audio» aparece en el nombre o los temas."
+          ],
+          "about": "🌸 The Cutest Music Player With Support Local File and Youtube Music for Android!"
+        }
+      ]
+    },
+    {
+      "query": "Programa para tomar notas en Markdown",
+      "tried": [
+        "notes markdown stars:>=2 archived:false"
+      ],
+      "total": 42,
+      "top": [
+        {
+          "fullName": "gamosoft/NoteDiscovery",
+          "stars": 2883,
+          "category": "Productividad y organización",
+          "consoles": [],
+          "kinds": [
+            "selfhosted"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«notas» aparece en el nombre o los temas.",
+            "«Markdown» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es una aplicación de notas en Markdown que instalas en tu propio servidor para crear una base de conocimiento personal. Permite escribir, organizar y buscar tus notas desde el navegador sin que salgan de tu equipo. Es un"
+        },
+        {
+          "fullName": "drl990114/MarkFlowy",
+          "stars": 2438,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«notas» aparece en el nombre o los temas.",
+            "«Markdown» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es un editor de Markdown para Windows, macOS y Linux que permite escribir viendo el resultado con formato o el código Markdown. Organiza tus documentos en tus propias carpetas y puede usar IA de forma opcional. Útil para"
+        },
+        {
+          "fullName": "freeplane/freeplane",
+          "stars": 4493,
+          "category": "Productividad y organización",
+          "consoles": [],
+          "kinds": [
+            "app"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«notas» aparece en el nombre o los temas.",
+            "«Markdown» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es un programa de mapas mentales para organizar ideas, conocimientos y proyectos de forma visual. Permite crear esquemas en forma de árbol, enlazar información y presentarla. Útil para estudiar, planificar trabajos o pre"
+        },
+        {
+          "fullName": "Smaug6739/Alexandrie",
+          "stars": 3929,
+          "category": "Productividad y organización",
+          "consoles": [],
+          "kinds": [
+            "selfhosted"
+          ],
+          "relevance": 0.98,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«notas» aparece en el nombre o los temas.",
+            "«Markdown» aparece en el nombre o los temas.",
+            "Es una aplicación lista para usar."
+          ],
+          "about": "Es una base de conocimiento y wiki que instalas en tu propio servidor, con un editor de Markdown avanzado. Permite organizar, buscar, compartir y exportar notas en equipo o de forma personal, incluso sin conexión. Es una"
+        },
+        {
+          "fullName": "iwe-org/iwe",
+          "stars": 1829,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": [
+            "cli",
+            "plugin"
+          ],
+          "relevance": 0.9,
+          "score": 93,
+          "source": "catalog",
+          "why": [
+            "«notas» aparece en el nombre o los temas.",
+            "«Markdown» aparece en el nombre o los temas."
+          ],
+          "about": "Es una herramienta que convierte una carpeta de notas en Markdown en un grafo de conocimiento que puedes consultar. Funciona dentro de tu editor de código y también da acceso a esas notas a asistentes de IA. Útil si guar"
+        }
+      ]
+    },
+    {
+      "query": "Descargar vídeos de YouTube",
+      "tried": [
+        "youtube downloader video stars:>=2 archived:false"
+      ],
+      "total": 30,
+      "top": [
+        {
+          "fullName": "alexch33/super-video-downloader",
+          "stars": 1007,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.97,
+          "score": 64,
+          "source": "live",
+          "why": [
+            "«YouTube» aparece en el nombre o los temas.",
+            "«descargas» aparece en el nombre o los temas.",
+            "«vídeo» aparece en el nombre o los temas."
+          ],
+          "about": "Video & Audio downloader for Android with web browser and player. M3U8 and MPD supported, live stream supported, using youtube-dlp and custom mp4/mp3/m3u8/mpd downloader, cookies supported, HTTP & SOCKS proxy chains supp"
+        },
+        {
+          "fullName": "kalanakt/YouTube-Downloader",
+          "stars": 48,
+          "category": "Automatización",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.97,
+          "score": 61,
+          "source": "live",
+          "why": [
+            "«YouTube» aparece en el nombre o los temas.",
+            "«descargas» aparece en el nombre o los temas.",
+            "«vídeo» aparece en el nombre o los temas."
+          ],
+          "about": " Pyrogram Telegram bot that allows users to download YouTube videos and playlists directly from their Telegram chat. The bot supports various formats and resolutions for both videos and audios, and it also allows users t"
+        },
+        {
+          "fullName": "Tyrrrz/YoutubeDownloader",
+          "stars": 16760,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 72,
+          "source": "live",
+          "why": [
+            "«YouTube» aparece en el nombre o los temas.",
+            "«descargas» aparece en el nombre o los temas.",
+            "«vídeo» aparece en el nombre o los temas."
+          ],
+          "about": "Downloads videos and playlists from YouTube"
+        },
+        {
+          "fullName": "jely2002/youtube-dl-gui",
+          "stars": 9741,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.92,
+          "score": 71,
+          "source": "live",
+          "why": [
+            "«YouTube» aparece en el nombre o los temas.",
+            "«descargas» aparece en el nombre o los temas."
+          ],
+          "about": "Open Video Downloader - A cross-platform GUI for youtube-dl made in Rust with Tauri and Vue + Typescript."
+        },
+        {
+          "fullName": "hyperfield/yt-channel-downloader",
+          "stars": 524,
+          "category": "Multimedia",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 62,
+          "source": "live",
+          "why": [
+            "«YouTube» aparece en el nombre o los temas.",
+            "«descargas» aparece en el nombre o los temas.",
+            "«vídeo» aparece en el nombre o los temas."
+          ],
+          "about": "A Qt GUI app that makes it easy to selectively download multiple videos at once from Youtube and other platforms channels."
+        }
+      ]
+    },
+    {
+      "query": "Aplicaciones nuevas de domótica",
+      "tried": [
+        "home-automation OR home-assistant stars:>=2 created:>2026-05-23 archived:false"
+      ],
+      "total": 50,
+      "top": [
+        {
+          "fullName": "majorminorlabs/hermes-voice",
+          "stars": 725,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.85,
+          "score": 57,
+          "source": "live",
+          "why": [],
+          "about": "Talk to a Hermes Agent profile through Home Assistant Assist"
+        },
+        {
+          "fullName": "skrashevich/quasar-bridge",
+          "stars": 82,
+          "category": "Inteligencia artificial",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.85,
+          "score": 56,
+          "source": "live",
+          "why": [],
+          "about": "Selective Quasar proxy with Home Assistant and OpenAI-compatible LLM routing"
+        },
+        {
+          "fullName": "murre87/energywizard",
+          "stars": 56,
+          "category": "Automatización",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.85,
+          "score": 57,
+          "source": "live",
+          "why": [],
+          "about": "HEMS – Home Energy Management & Cost Optimization for Home Assistant | Energi- och kostnadsoptimering av ditt hem"
+        },
+        {
+          "fullName": "0xProbabillity/house-control-android",
+          "stars": 143,
+          "category": "Automatización",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.9,
+          "score": 57,
+          "source": "live",
+          "why": [
+            "«domótica» aparece en el nombre o los temas."
+          ],
+          "about": "House Control on Android phones and tablets: your home as a live 3D model — lights, ACs and scenes via Smart Life, Home Assistant and Philips Hue. No Mac needed."
+        },
+        {
+          "fullName": "Morvex885/pulsar",
+          "stars": 122,
+          "category": "Automatización",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.9,
+          "score": 57,
+          "source": "live",
+          "why": [
+            "«domótica» aparece en el nombre o los temas."
+          ],
+          "about": "Яндекс Станции как локальный голосовой спутник Home Assistant (ESPHome Native API) и Sendspin-плеер Music Assistant — без облака Яндекса"
+        }
+      ]
+    },
+    {
+      "query": "Homebrew para Nintendo Switch",
+      "tried": [
+        "nintendo-switch homebrew stars:>=2 archived:false"
+      ],
+      "total": 33,
+      "top": [
+        {
+          "fullName": "BolgarMaxym97/3ds-recorder",
+          "stars": 74,
+          "category": "Herramientas de desarrollo",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": [
+            "config",
+            "plugin"
+          ],
+          "relevance": 0.95,
+          "score": 81,
+          "source": "catalog",
+          "why": [
+            "«Nintendo Switch» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Es un módulo para Nintendo 3DS con Luma3DS que graba todo lo que aparece en la consola, juegos y menús, en ambas pantallas y con sonido. Convierte las grabaciones a MP4 en la propia consola y las envía al móvil por wifi "
+        },
+        {
+          "fullName": "Olmectron/toronja",
+          "stars": 0,
+          "category": "Emuladores",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": [
+            "app",
+            "config"
+          ],
+          "relevance": 0.95,
+          "score": 77,
+          "source": "catalog",
+          "why": [
+            "«Nintendo Switch» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Es un emulador de Nintendo 3DS para Nintendo Switch y Switch 2 con homebrew. Incluye Toronja Link, una app que permite usar una segunda consola para mostrar una de las dos pantallas de la 3DS. Continúa el trabajo de Deko"
+        },
+        {
+          "fullName": "XorTroll/uLaunch",
+          "stars": 816,
+          "category": "Herramientas de desarrollo",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 68,
+          "source": "live",
+          "why": [
+            "«Nintendo Switch» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": ":rocket: The themeable Nintendo Switch HOME Menu we deserve"
+        },
+        {
+          "fullName": "exelix11/SysDVR",
+          "stars": 2056,
+          "category": "Juegos",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 62,
+          "source": "live",
+          "why": [
+            "«Nintendo Switch» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Stream switch games to your PC via USB or network"
+        },
+        {
+          "fullName": "XITRIX/Moonlight-Switch",
+          "stars": 1704,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 66,
+          "source": "live",
+          "why": [
+            "«Nintendo Switch» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Moonlight port for Nintendo Switch"
+        }
+      ]
+    },
+    {
+      "query": "Custom firmware para PS Vita",
+      "tried": [
+        "psvita custom-firmware stars:>=2 archived:false",
+        "vita custom-firmware stars:>=2 archived:false",
+        "psvita custom-firmware OR jailbreak stars:>=2 archived:false"
+      ],
+      "total": 2,
+      "top": [
+        {
+          "fullName": "PSP-Arkfive/ARK-5",
+          "stars": 518,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 62,
+          "source": "live",
+          "why": [
+            "«PS Vita» aparece en el nombre o los temas."
+          ],
+          "about": "Next Generation Custom Firmware for PSP and Vita's ePSP"
+        },
+        {
+          "fullName": "hacks-guide/Guide_Vita",
+          "stars": 210,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 59,
+          "source": "live",
+          "why": [
+            "«PS Vita» aparece en el nombre o los temas."
+          ],
+          "about": "A complete guide to PS Vita (TV) custom firmware, from stock to HENkaku Ensō."
+        }
+      ]
+    },
+    {
+      "query": "Herramientas para gestionar partidas guardadas de 3DS",
+      "tried": [
+        "3ds save stars:>=2 archived:false"
+      ],
+      "total": 28,
+      "top": [
+        {
+          "fullName": "Domsanna/ShinyForge",
+          "stars": 0,
+          "category": "Herramientas para partidas guardadas",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": [
+            "app",
+            "config"
+          ],
+          "relevance": 0.93,
+          "score": 80,
+          "source": "catalog",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas."
+          ],
+          "about": "Es una aplicación para Windows, macOS y Linux que acompaña a los juegos de Pokémon de Nintendo Switch y 3DS. Automatiza la búsqueda de Pokémon variocolor (shiny), graba las partidas, lleva el registro de la Pokédex y ges"
+        },
+        {
+          "fullName": "BernardoGiordano/Checkpoint",
+          "stars": 3135,
+          "category": "Herramientas para partidas guardadas",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": null,
+          "relevance": 1,
+          "score": 65,
+          "source": "live",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas.",
+            "«partidas guardadas» aparece en el nombre o los temas."
+          ],
+          "about": "Fast and simple homebrew save management framework for 3DS and Switch."
+        },
+        {
+          "fullName": "owenlejeune/romm3ds",
+          "stars": 15,
+          "category": "Herramientas para partidas guardadas",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": null,
+          "relevance": 0.98,
+          "score": 53,
+          "source": "live",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas."
+          ],
+          "about": "RomM save-sync manager for 3DS"
+        },
+        {
+          "fullName": "wwylele/save3ds",
+          "stars": 81,
+          "category": "Herramientas para partidas guardadas",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": null,
+          "relevance": 1,
+          "score": 53,
+          "source": "live",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas.",
+            "«partidas guardadas» aparece en el nombre o los temas."
+          ],
+          "about": "Extract/Import/FUSE for 3DS save/extdata/database."
+        },
+        {
+          "fullName": "kiyoshithekidd/TomodachiLife_3DS_SaveEditior",
+          "stars": 8,
+          "category": "Otros proyectos interesantes",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": null,
+          "relevance": 1,
+          "score": 48,
+          "source": "live",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas.",
+            "«partidas guardadas» aparece en el nombre o los temas."
+          ],
+          "about": ""
+        }
+      ]
+    },
+    {
+      "query": "Emulador de PSP para Android",
+      "tried": [
+        "psp emulator android stars:>=2 archived:false"
+      ],
+      "total": 7,
+      "top": [
+        {
+          "fullName": "hrydgard/ppsspp",
+          "stars": 14947,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.92,
+          "score": 67,
+          "source": "live",
+          "why": [
+            "«PSP» aparece en el nombre o los temas.",
+            "«emuladores» aparece en el nombre o los temas."
+          ],
+          "about": "A PSP emulator for Android, Windows, Mac, Linux and iOS, written in C++. Want to contribute? Join us on Discord at https://discord.gg/5NJB6dD or just send pull requests / issues."
+        },
+        {
+          "fullName": "jojodogm-ctrl/emufii",
+          "stars": 899,
+          "category": "Emuladores",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": null,
+          "relevance": 0.92,
+          "score": 66,
+          "source": "live",
+          "why": [
+            "«PSP» aparece en el nombre o los temas.",
+            "«Android» aparece en el nombre o los temas."
+          ],
+          "about": "One code, and you're in the same room. Remote multiplayer between Android emulators: 3DS, Switch, PSP, PS2, DS and WII."
+        },
+        {
+          "fullName": "Swordfish90/Lemuroid",
+          "stars": 4525,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 64,
+          "source": "live",
+          "why": [
+            "«PSP» aparece en el nombre o los temas.",
+            "«emuladores» aparece en el nombre o los temas.",
+            "«Android» aparece en el nombre o los temas."
+          ],
+          "about": "All in one emulator on Android!"
+        },
+        {
+          "fullName": "Kolyadual/dualgamingcentre",
+          "stars": 2,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.92,
+          "score": 59,
+          "source": "live",
+          "why": [
+            "«PSP» aparece en el nombre o los temas.",
+            "«emuladores» aparece en el nombre o los temas."
+          ],
+          "about": "В Dual Gaming Centre каждый найдет свою любимую игру, у нас широкий спектр игр - от DOOM до Minecraft и Jetpack Joyride! Ну а если игра понравилась - то можно легко скачать на такие операционные системы как Runget, Windo"
+        },
+        {
+          "fullName": "haveniiii/PES6ANDROIDPORT",
+          "stars": 8,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.92,
+          "score": 59,
+          "source": "live",
+          "why": [
+            "«PSP» aparece en el nombre o los temas.",
+            "«Android» aparece en el nombre o los temas."
+          ],
+          "about": "PES6 (PSP) running natively on Android and desktop — no emulator. Chilean league 2026 built in."
+        }
+      ]
+    },
+    {
+      "query": "Jailbreak de PS4",
+      "tried": [
+        "ps4 custom-firmware stars:>=2 archived:false",
+        "ps4 custom-firmware OR jailbreak stars:>=2 archived:false"
+      ],
+      "total": 8,
+      "top": [
+        {
+          "fullName": "blue0x1/EmuFive",
+          "stars": 329,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 60,
+          "source": "live",
+          "why": [
+            "«PS4» aparece en el nombre o los temas.",
+            "«CFW y jailbreak» aparece en el nombre o los temas."
+          ],
+          "about": "A PS5 emulator for the PS4. Runs on a jailbroken PS4 with Linux, installed through PS4 Multiboot."
+        },
+        {
+          "fullName": "Jfkkfjzkz/ps4-akatsuki-jailbreak",
+          "stars": 35,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 58,
+          "source": "live",
+          "why": [
+            "«PS4» aparece en el nombre o los temas.",
+            "«CFW y jailbreak» aparece en el nombre o los temas."
+          ],
+          "about": "PS4 14.00/14.02 jailbreak host"
+        },
+        {
+          "fullName": "Loopayeh/pkg-viewer",
+          "stars": 227,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 58,
+          "source": "live",
+          "why": [
+            "«PS4» aparece en el nombre o los temas.",
+            "«CFW y jailbreak» aparece en el nombre o los temas."
+          ],
+          "about": "PKG Viewer by Loopayeh: view PS3/PS4/PS5 package info and cover art"
+        },
+        {
+          "fullName": "Loopayeh/pkg-sender",
+          "stars": 220,
+          "category": "Juegos",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 58,
+          "source": "live",
+          "why": [
+            "«PS4» aparece en el nombre o los temas.",
+            "«CFW y jailbreak» aparece en el nombre o los temas."
+          ],
+          "about": "PKG Sender — install PS4/PS5 packages over LAN. Pick games on PC, auto-find the console, queue and install. No USB, no manual IP."
+        },
+        {
+          "fullName": "GamerHack/GamerHack.github.io",
+          "stars": 295,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 58,
+          "source": "live",
+          "why": [
+            "«PS4» aparece en el nombre o los temas."
+          ],
+          "about": "PS4 Jailbreak for all exploitable firmwares"
+        }
+      ]
+    },
+    {
+      "query": "Aplicaciones homebrew poco conocidas para Wii",
+      "tried": [
+        "wii homebrew stars:3..400 pushed:>2025-11-19 archived:false"
+      ],
+      "total": 39,
+      "top": [
+        {
+          "fullName": "BenoitAdam/nullDC4Wii",
+          "stars": 67,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 63,
+          "source": "live",
+          "why": [
+            "«Wii» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Dreamcast Emulator for Wii"
+        },
+        {
+          "fullName": "odelot/wii-ra-adapter",
+          "stars": 45,
+          "category": "Juegos",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 60,
+          "source": "live",
+          "why": [
+            "«Wii» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "RetroAchievements adapter for original Nintendo Wii and GameCube hardware using an ESP32 memory card, custom WiiFlow, d2x and Nintendont."
+        },
+        {
+          "fullName": "2gifts/SlippWii",
+          "stars": 24,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 60,
+          "source": "live",
+          "why": [
+            "«Wii» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Unofficial Slippi Online for the Wii (Direct/Unranked from a real Wii vs Slippi Dolphin). Based on Slippi Nintendont. Not affiliated with Project Slippi or Nintendo."
+        },
+        {
+          "fullName": "spencernorton/indigo",
+          "stars": 33,
+          "category": "Juegos",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 58,
+          "source": "live",
+          "why": [
+            "«Wii» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Nintendo GameCube homebrew game launcher based on Swiss, with cover art and support for PicoBoot, FlippyDrive and GC Loader."
+        },
+        {
+          "fullName": "modmii/modmii.github.io",
+          "stars": 144,
+          "category": "Aplicaciones y utilidades",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 64,
+          "source": "live",
+          "why": [
+            "«Wii» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "ModMii is a tool to help you modify ANY Wii"
+        }
+      ]
+    },
+    {
+      "query": "Herramientas para la tarjeta SD de la Nintendo DSi",
+      "tried": [
+        "dsi sd-card stars:>=2 archived:false"
+      ],
+      "total": 6,
+      "top": [
+        {
+          "fullName": "CrowbarDS/Half-Life-NDS-Port",
+          "stars": 31,
+          "category": "Otros proyectos interesantes",
+          "consoles": [
+            "DSi",
+            "DS"
+          ],
+          "kinds": [
+            "config",
+            "experimental"
+          ],
+          "relevance": 0.85,
+          "score": 88,
+          "source": "catalog",
+          "why": [
+            "«Nintendo DSi» aparece en el nombre o los temas."
+          ],
+          "about": "Es una adaptación no oficial de Half-Life para Nintendo DS y DSi que ejecuta la campaña original en la consola. Incluye multijugador inalámbrico local y Descarga DS. Necesitas tu propia copia del juego: un conversor la t"
+        },
+        {
+          "fullName": "nuraghex/dsi-ftp-nand-sd",
+          "stars": 5,
+          "category": "Otros proyectos interesantes",
+          "consoles": [
+            "DSi",
+            "DS"
+          ],
+          "kinds": null,
+          "relevance": 1,
+          "score": 61,
+          "source": "live",
+          "why": [
+            "«Nintendo DSi» aparece en el nombre o los temas.",
+            "«tarjeta SD y almacenamiento» aparece en el nombre o los temas."
+          ],
+          "about": "FTP server for Nintendo DSi: internal NAND and SD card over Wi-Fi (WPA2)"
+        },
+        {
+          "fullName": "nextcode4u/gloam-shell-ndx",
+          "stars": 0,
+          "category": "Otros proyectos interesantes",
+          "consoles": [
+            "DSi",
+            "DS"
+          ],
+          "kinds": [
+            "app",
+            "config"
+          ],
+          "relevance": 0.85,
+          "score": 82,
+          "source": "catalog",
+          "why": [
+            "«Nintendo DSi» aparece en el nombre o los temas."
+          ],
+          "about": "Es un menú de inicio personalizable para la tarjeta SD de una Nintendo DSi. Permite ver tus juegos, homebrew y multimedia en listas o en una estantería de portadas, y abrir las aplicaciones del sistema desde un mismo sit"
+        },
+        {
+          "fullName": "tasken/dsi-wifi-manager",
+          "stars": 6,
+          "category": "Herramientas para partidas guardadas",
+          "consoles": [
+            "DSi",
+            "DS"
+          ],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 55,
+          "source": "live",
+          "why": [
+            "«Nintendo DSi» aparece en el nombre o los temas."
+          ],
+          "about": "DSi homebrew to back up and restore the console's Wi-Fi connections to the SD card"
+        },
+        {
+          "fullName": "fabiiw05/uconsole-archlinux",
+          "stars": 7,
+          "category": "Otros proyectos interesantes",
+          "consoles": [
+            "DSi"
+          ],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 49,
+          "source": "live",
+          "why": [
+            "«Nintendo DSi» aparece en el nombre o los temas.",
+            "«tarjeta SD y almacenamiento» aparece en el nombre o los temas."
+          ],
+          "about": "Build a bootable Arch Linux ARM (aarch64) SD-card image for the ClockworkPi uConsole (CM4), with a self-built ak-rex 6.12.y kernel that drives the 2026+ new-batch DSI panel."
+        }
+      ]
+    },
+    {
+      "query": "Personalizar el menú de la Nintendo 3DS",
+      "tried": [
+        "3ds customization stars:>=2 archived:false"
+      ],
+      "total": 11,
+      "top": [
+        {
+          "fullName": "HFYKratos/3ds2apple",
+          "stars": 1,
+          "category": "Herramientas de desarrollo",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": [
+            "config",
+            "experimental"
+          ],
+          "relevance": 0.95,
+          "score": 81,
+          "source": "catalog",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas.",
+            "«personalización» aparece en el nombre o los temas."
+          ],
+          "about": "Es un proyecto que convierte juegos de Nintendo 3DS que poseas en aplicaciones nativas para iPhone y iPad. En lugar de emular, traduce el código del juego por adelantado para que funcione directamente en el procesador de"
+        },
+        {
+          "fullName": "BolgarMaxym97/3ds-recorder",
+          "stars": 74,
+          "category": "Herramientas de desarrollo",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": [
+            "config",
+            "plugin"
+          ],
+          "relevance": 0.93,
+          "score": 81,
+          "source": "catalog",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas."
+          ],
+          "about": "Es un módulo para Nintendo 3DS con Luma3DS que graba todo lo que aparece en la consola, juegos y menús, en ambas pantallas y con sonido. Convierte las grabaciones a MP4 en la propia consola y las envía al móvil por wifi "
+        },
+        {
+          "fullName": "hacks-guide/Guide_3DS",
+          "stars": 1896,
+          "category": "Otros proyectos interesantes",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": [],
+          "relevance": 0.85,
+          "score": 83,
+          "source": "catalog",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas."
+          ],
+          "about": "Es el código de 3ds.hacks.guide, una guía paso a paso para instalar firmware personalizado (custom firmware) en consolas Nintendo 3DS y 2DS. La guía explica cómo pasar de una consola sin modificar a una con boot9strap pa"
+        },
+        {
+          "fullName": "ricozama121803/3ds-theme-studio",
+          "stars": 2,
+          "category": "Multimedia",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": null,
+          "relevance": 1,
+          "score": 47,
+          "source": "live",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas.",
+            "«personalización» aparece en el nombre o los temas."
+          ],
+          "about": "Web app for making custom Nintendo 3DS Home Menu themes: pixel-exact preview, colours, music (incl. tab recording), sound effects, SD card install"
+        },
+        {
+          "fullName": "imanshirani/3ds-Max-Themes-Manager",
+          "stars": 9,
+          "category": "Aplicaciones y utilidades",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": null,
+          "relevance": 1,
+          "score": 44,
+          "source": "live",
+          "why": [
+            "«Nintendo 3DS» aparece en el nombre o los temas.",
+            "«personalización» aparece en el nombre o los temas."
+          ],
+          "about": "A Python + PySide6 tool for 3ds Max 2025–2027 that lets you create and apply fully custom UI color themes — no manual XML editing required."
+        }
+      ]
+    },
+    {
+      "query": "Homebrew para Xbox 360",
+      "tried": [
+        "xbox360 homebrew stars:>=2 archived:false"
+      ],
+      "total": 26,
+      "top": [
+        {
+          "fullName": "fungalspores/prototype-switch",
+          "stars": 42,
+          "category": "Juegos",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 63,
+          "source": "live",
+          "why": [
+            "«Xbox 360» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Prototype and Prototype 2 (Xbox 360) for Nintendo Switch: static recompilation with ReXGlue, native Vulkan renderer. Free, not for sale. No game files."
+        },
+        {
+          "fullName": "BrinooTk/PS5X360",
+          "stars": 418,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 63,
+          "source": "live",
+          "why": [
+            "«Xbox 360» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Experimental Xbox 360 emulator for PlayStation 5, built on Xenia Canary with native audio, DualSense input and RADV Vulkan graphics."
+        },
+        {
+          "fullName": "louvenarde/xvy",
+          "stars": 13,
+          "category": "Juegos",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 59,
+          "source": "live",
+          "why": [
+            "«Xbox 360» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Unity game running on Xbox 360 and PS3"
+        },
+        {
+          "fullName": "ChaosTheory1075/mp3-ps5",
+          "stars": 17,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 60,
+          "source": "live",
+          "why": [
+            "«Xbox 360» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Max Payne 3 RePrescribed: Max Payne 3 (Xbox 360) recompiled to run natively on the PS5 at 60 FPS, with HD textures, DLC, saves and trophies"
+        },
+        {
+          "fullName": "zofo007/NFS-Carbon-NX",
+          "stars": 18,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 58,
+          "source": "live",
+          "why": [
+            "«Xbox 360» aparece en el nombre o los temas.",
+            "«homebrew» aparece en el nombre o los temas."
+          ],
+          "about": "Need for Speed Carbon static recompile from Xbox 360 for Nintendo Switch"
+        }
+      ]
+    },
+    {
+      "query": "Exploits para PS5",
+      "tried": [
+        "ps5 exploit stars:>=2 archived:false"
+      ],
+      "total": 43,
+      "top": [
+        {
+          "fullName": "m2k7m/Relapse-Exploit",
+          "stars": 9,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 61,
+          "source": "live",
+          "why": [
+            "«PS5» aparece en el nombre o los temas.",
+            "«exploits» aparece en el nombre o los temas."
+          ],
+          "about": "Exploit chain for PS5 7.00 - 13.60"
+        },
+        {
+          "fullName": "manos555555/Relapse-Exploit",
+          "stars": 11,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 55,
+          "source": "live",
+          "why": [
+            "«PS5» aparece en el nombre o los temas.",
+            "«exploits» aparece en el nombre o los temas."
+          ],
+          "about": "PS5 Relapse Jailbreak - Kernel exploit with offline support (FW 7.00-13.60)"
+        },
+        {
+          "fullName": "arg0WAK/WAK1360-Relapse",
+          "stars": 36,
+          "category": "Automatización",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 61,
+          "source": "live",
+          "why": [
+            "«PS5» aparece en el nombre o los temas.",
+            "«exploits» aparece en el nombre o los temas."
+          ],
+          "about": "W.A.K. (WebKit Automated Kernel) - A modular and fully automated exploit framework for PS5 7.00 - 13.60."
+        },
+        {
+          "fullName": "DeborahO18/ps5-payload-constellation",
+          "stars": 2,
+          "category": "Aplicaciones y utilidades",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 50,
+          "source": "live",
+          "why": [
+            "«PS5» aparece en el nombre o los temas.",
+            "«exploits» aparece en el nombre o los temas."
+          ],
+          "about": "Ultimate PS5 Payload Atlas 2026: Auto-Synced Exploit Manager"
+        },
+        {
+          "fullName": "jrson83/savescum",
+          "stars": 8,
+          "category": "Herramientas de terminal",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.93,
+          "score": 60,
+          "source": "live",
+          "why": [
+            "«PS5» aparece en el nombre o los temas."
+          ],
+          "about": "A command-line tool & webinterface, to efficiently save scum on an exploitable PS4/PS5."
+        }
+      ]
+    },
+    {
+      "query": "Herramientas para Wii U",
+      "tried": [
+        "wiiu OR wii-u stars:>=2 archived:false"
+      ],
+      "total": 25,
+      "top": [
+        {
+          "fullName": "cemu-project/Cemu",
+          "stars": 10215,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 68,
+          "source": "live",
+          "why": [
+            "«Wii U» aparece en el nombre o los temas."
+          ],
+          "about": "Cemu - Wii U emulator"
+        },
+        {
+          "fullName": "Wack0/entii-for-workcubes",
+          "stars": 814,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 63,
+          "source": "live",
+          "why": [
+            "«Wii U» aparece en el nombre o los temas."
+          ],
+          "about": "PowerPC Windows NT ported to Nintendo GameCube/Wii/Wii U"
+        },
+        {
+          "fullName": "GaryOderNichts/Bloopair",
+          "stars": 527,
+          "category": "Otros proyectos interesantes",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 66,
+          "source": "live",
+          "why": [
+            "«Wii U» aparece en el nombre o los temas."
+          ],
+          "about": "Allows connecting controllers from other consoles like native Wii U Pro Controllers on the Wii U"
+        },
+        {
+          "fullName": "kinnay/NintendoClients",
+          "stars": 782,
+          "category": "Otros proyectos interesantes",
+          "consoles": [
+            "3DS"
+          ],
+          "kinds": null,
+          "relevance": 1,
+          "score": 59,
+          "source": "live",
+          "why": [
+            "«Wii U» aparece en el nombre o los temas."
+          ],
+          "about": "Python package to communicate with Switch, Wii U and 3DS servers"
+        },
+        {
+          "fullName": "PretendoNetwork/Inkay",
+          "stars": 236,
+          "category": "Redes y servidores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 1,
+          "score": 60,
+          "source": "live",
+          "why": [
+            "«Wii U» aparece en el nombre o los temas."
+          ],
+          "about": "Wii U Pretendo Network patches (Aroma)"
+        }
+      ]
+    },
+    {
+      "query": "Emuladores de consolas retro poco conocidos",
+      "tried": [
+        "emulator retro stars:3..400 pushed:>2025-11-19 archived:false"
+      ],
+      "total": 42,
+      "top": [
+        {
+          "fullName": "Callum5042/RetroGBm",
+          "stars": 20,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 61,
+          "source": "live",
+          "why": [
+            "«emuladores» aparece en el nombre o los temas.",
+            "«retro» aparece en el nombre o los temas."
+          ],
+          "about": "A gameboy colour emulator"
+        },
+        {
+          "fullName": "reales/retromulator",
+          "stars": 92,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 64,
+          "source": "live",
+          "why": [
+            "«emuladores» aparece en el nombre o los temas.",
+            "«retro» aparece en el nombre o los temas."
+          ],
+          "about": "A standalone app and DAW plugin (AAX / VST3 / AU) that emulates classic hardware synthesizers, samplers, and keyboards by running their original firmware on cycle-accurate CPU and DSP emulators."
+        },
+        {
+          "fullName": "HemulGM/RetroMul",
+          "stars": 28,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.95,
+          "score": 62,
+          "source": "live",
+          "why": [
+            "«emuladores» aparece en el nombre o los temas.",
+            "«retro» aparece en el nombre o los temas."
+          ],
+          "about": "A cross-platform, extendable, multi-emulator written by Delphi FMX"
+        },
+        {
+          "fullName": "barotto/IBMulator",
+          "stars": 134,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.9,
+          "score": 60,
+          "source": "live",
+          "why": [
+            "«emuladores» aparece en el nombre o los temas.",
+            "«retro» aparece en el nombre o los temas."
+          ],
+          "about": "The IBM PS/1 emulator."
+        },
+        {
+          "fullName": "ilyas-hallak/romm-ios-app",
+          "stars": 197,
+          "category": "Emuladores",
+          "consoles": [],
+          "kinds": null,
+          "relevance": 0.9,
+          "score": 65,
+          "source": "live",
+          "why": [
+            "«emuladores» aparece en el nombre o los temas.",
+            "«retro» aparece en el nombre o los temas."
+          ],
+          "about": "Native iOS client for RomM: browse, play and sync your self-hosted retro library"
+        }
+      ]
+    }
+  ]
+}

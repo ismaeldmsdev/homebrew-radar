@@ -1,4 +1,7 @@
 import type { Summary } from './core/summary.ts'
+import type { Compat } from './core/consoles.ts'
+import type { DocLanguageInfo } from './core/docLanguage.ts'
+import type { SecurityFacts } from './core/security.ts'
 
 export type Project = {
   id: number
@@ -15,6 +18,10 @@ export type Project = {
   createdAt: string
   pushedAt: string
   category: string
+  /** Confianza de la categoría según la evidencia («baja» = no verificada). */
+  categoryConfidence: 'alta' | 'media' | 'baja'
+  /** Pruebas que justifican la categoría (o por qué no se pudo verificar). */
+  categoryEvidence: string[]
   consoles: string[]
   channels: string[]
   version: string | null
@@ -36,6 +43,12 @@ export type Project = {
   source: 'catalog' | 'live'
   /** Resumen en español guardado en caché (null: la web genera la descripción básica). */
   summary: Summary | null
+  /** Modelos, firmware y requisitos mencionados literalmente en el README (sin verificar). */
+  compat: Compat | null
+  /** Idioma natural de la documentación original (README/descripción), no del resumen. */
+  docLanguage: DocLanguageInfo
+  /** Hechos de seguridad obtenidos de APIs oficiales (null = no comprobado todavía). */
+  security: SecurityFacts | null
 }
 
 export type Topic = {

@@ -4,11 +4,16 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { classifyCategory, classifyConsoles, classifyGeneralCategory, isNintendoRelevant } from '../src/core/categories.ts'
+import { classifyCategory, classifyConsoles, classifyGeneralCategory, classifyWithEvidence, isNintendoRelevant } from '../src/core/categories.ts'
+import { CATEGORY_VERSION, CHANNEL_CATEGORY, supportsCategory } from '../src/core/classify.ts'
 import { interestScore } from '../src/core/scoring.ts'
 import { looksLikeList } from '../src/core/text.ts'
 import { cleanReadme } from '../src/core/summary.ts'
+import { detectDocLanguage } from '../src/core/docLanguage.ts'
+import { detectPlatforms, detectToolType, extractCompat, isConsoleRelated, looksLikePiracy, platformLabel, toolTypeLabel } from '../src/core/consoles.ts'
 import { readStore, summaryFor } from './summaries.mjs'
+import { executableAssets } from '../src/core/security.ts'
+import { fetchSecurityFacts, isStale, releaseFromRaw } from '../src/core/securityFetch.ts'
 
 export { classifyCategory, classifyConsoles } from '../src/core/categories.ts'
 
@@ -31,6 +36,11 @@ function relevanceFor(repo, topic) {
     const consoles = classifyConsoles(repo)
     if (consoles.length) return { value: Math.min(1, 0.5 + consoles.length * 0.2), reason: `Menciona compatibilidad con ${consoles.join(', ')} en sus metadatos.` }
     return { value: 0.15, reason: null }
+  }
+  if (topic?.mode === 'consoles') {
+    const platforms = detectPlatforms(repo)
+    if (platforms.length) return { value: Math.min(1, 0.6 + platforms.length * 0.1), reason: `Relacionado con ${platforms.map(platformLabel).join(', ')} según sus metadatos.` }
+    return { value: 0.45, reason: 'Relacionado con la modificación de consolas según sus metadatos.' }
   }
   if (!topic) return { value: 0.5, reason: null }
   const names = topicNames(topic)
@@ -98,6 +108,37 @@ export function selectGeneralCandidates(repositories, topic, limit = 16) {
     if (picked.length >= limit) break
   }
   return picked
+}
+
+/**
+ * Radar de Consolas: reparte los puestos entre plataformas (ronda por consola, de mayor a
+ * menor interés) para no recomendar siempre los mismos proyectos famosos, y reserva un
+ * tercio para proyectos con pocas estrellas (posibles joyas de la comunidad).
+ */
+export function selectConsoleCandidates(repositories, topic, limit = 60) {
+  const ranked = [...repositories]
+    .filter((repo) => !looksLikeList(repo.name ?? '', repo.description ?? '', repo.topics ?? []))
+    .map((repo) => ({ repo, score: scoreRepository(repo, topic).score, platform: detectPlatforms(repo)[0] ?? 'otras' }))
+    .sort((a, b) => b.score - a.score || b.repo.pushed_at.localeCompare(a.repo.pushed_at))
+  const perOwner = new Map()
+  const picked = new Map()
+  const take = (item) => {
+    const owner = item.repo.owner?.login ?? ''
+    if (picked.has(item.repo.id) || (perOwner.get(owner) ?? 0) >= 2) return false
+    perOwner.set(owner, (perOwner.get(owner) ?? 0) + 1)
+    picked.set(item.repo.id, item.repo)
+    return true
+  }
+  for (const item of ranked.filter((entry) => entry.repo.stargazers_count < 150).slice(0, Math.floor(limit / 3))) take(item)
+  const groups = new Map()
+  for (const item of ranked) groups.set(item.platform, [...(groups.get(item.platform) ?? []), item])
+  while (picked.size < limit && [...groups.values()].some((group) => group.length)) {
+    for (const group of groups.values()) {
+      while (group.length && !take(group.shift())) { /* siguiente candidato de la misma consola */ }
+      if (picked.size >= limit) break
+    }
+  }
+  return [...picked.values()]
 }
 
 function validDate(value) {
@@ -192,7 +233,10 @@ async function searchTopic(topic, defaults, ctx, now) {
     const result = await request(`/search/repositories?q=${encodeURIComponent(q)}${sort}&per_page=${topic.mode === 'nintendo' ? 25 : 40}`, ctx)
     for (const repo of result.items ?? []) {
       if (repo.fork || repo.archived || !(repo.size > 0) || !validDate(repo.pushed_at)) continue
+      // Nada de copias no autorizadas de juegos (enlaces a ROM, ISO, PKG, NSP…).
+      if (looksLikePiracy(repo)) continue
       if (topic.mode === 'nintendo' && !isNintendoRelevant(repo)) continue
+      if (topic.mode === 'consoles' && !isConsoleRelated(repo)) continue
       repositories.set(repo.id, repo)
     }
     await ctx.sleep(ctx.searchDelay)
@@ -209,8 +253,14 @@ async function enrich(repo, ctx) {
   return {
     has_readme: Boolean(readmeText),
     readme_length: readmeText ? cleanReadme(readmeText, 1e9).length : null,
+    // Primeras líneas del README: evidencia para la categoría (no se guarda en el catálogo).
+    readme_lead: readmeText ? cleanReadme(readmeText, 900) : null,
+    // Idioma natural de la documentación (README completo + descripción del autor).
+    doc_language: detectDocLanguage({ readme: readmeText ? cleanReadme(readmeText, 12_000) : null, description: repo.description ?? '' }),
     readme_quality: readmeText.length >= 500 && (/^#{1,3}\s/m.test(readmeText) || /^[=-]{3,}\s*$/m.test(readmeText)),
     release: release && !release.draft && !release.prerelease ? release : null,
+    // Modelos, firmware y requisitos mencionados literalmente en el README (sin verificar).
+    compat: readmeText && isConsoleRelated(repo) ? extractCompat(cleanReadme(readmeText, 20_000)) : null,
   }
 }
 
@@ -219,6 +269,8 @@ function fromPrevious(old) {
     has_readme: typeof old.hasReadme === 'boolean' ? old.hasReadme : undefined,
     readme_quality: typeof old.readmeQuality === 'boolean' ? old.readmeQuality : undefined,
     readme_length: typeof old.readmeLength === 'number' ? old.readmeLength : null,
+    compat: old.compat ?? null,
+    doc_language: old.docLanguage ?? undefined,
     release: old.releaseChecked === false ? undefined : old.version ? { tag_name: old.version, published_at: old.releasePublishedAt, html_url: old.releaseUrl } : null,
   }
 }
@@ -242,8 +294,11 @@ function toProject(repo, extra, channels, topic, previous, generatedAt, previous
     updatedAt: repo.updated_at,
     createdAt: repo.created_at,
     pushedAt: repo.pushed_at,
-    category: nintendo && topic.mode === 'nintendo' ? classifyCategory(repo) : classifyGeneralCategory(repo),
+    category: topic.mode === 'consoles' ? toolTypeLabel(detectToolType(repo) ?? 'homebrew')
+      : nintendo && topic.mode === 'nintendo' ? classifyCategory(repo) : classifyGeneralCategory(repo),
     consoles: classifyConsoles(repo),
+    platforms: detectPlatforms(repo),
+    ...(extra.compat ? { compat: extra.compat } : {}),
     channels,
     version: extra.release?.tag_name ?? null,
     releasePublishedAt: extra.release?.published_at ?? null,
@@ -252,6 +307,7 @@ function toProject(repo, extra, channels, topic, previous, generatedAt, previous
     hasReadme: typeof extra.has_readme === 'boolean' ? extra.has_readme : null,
     readmeQuality: typeof extra.readme_quality === 'boolean' ? extra.readme_quality : null,
     readmeLength: typeof extra.readme_length === 'number' ? extra.readme_length : null,
+    docLanguage: extra.doc_language ?? detectDocLanguage({ description: repo.description ?? '' }),
     license: licenseName(repo.license),
     archived: Boolean(repo.archived),
     isList: looksLikeList(repo.name, repo.description ?? '', repo.topics ?? []),
@@ -281,6 +337,7 @@ export async function collect({
   output = outputPath,
   config = null,
   summariesPath = undefined,
+  securityMax = Number(process.env.SECURITY_MAX ?? 30),
   fetch: fetchImpl = globalThis.fetch,
   sleep: sleepImpl = sleep,
   searchDelay = token ? 2200 : 6500,
@@ -304,7 +361,7 @@ export async function collect({
     try {
       if (rateLimited) throw new RateLimitError('Se omitió por el límite de la API.')
       const repos = await searchTopic(topic, defaults, ctx, now)
-      const candidates = topic.mode === 'nintendo' ? selectCandidates(repos, limit) : selectGeneralCandidates(repos, topic, limit)
+      const candidates = topic.mode === 'nintendo' ? selectCandidates(repos, limit) : topic.mode === 'consoles' ? selectConsoleCandidates(repos, topic, limit) : selectGeneralCandidates(repos, topic, limit)
       if (candidates.length === 0 && staleProjects(oldFeed, topic.id, legacy).length > 0) throw new Error('La búsqueda no devolvió resultados válidos.')
       for (const repo of candidates) {
         const entry = found.get(repo.id)
@@ -362,6 +419,65 @@ export async function collect({
     if (summary) project.summary = summary
     else delete project.summary
   }
+
+  // Categoría por evidencia: metadatos + primeras líneas del README + resumen en español.
+  // Las temáticas ligadas a una categoría (p. ej. «Emuladores») solo conservan proyectos
+  // cuya evidencia la respalda; GitHub puede devolverlos por una etiqueta poco fiable.
+  const modes = new Map(entries.map(({ repo, topic }) => [repo.id, topic.mode]))
+  for (const project of [...projects]) {
+    const context = { summary: project.summary?.text ?? null, readme: enrichment.get(project.id)?.readme_lead ?? null }
+    const input = { name: project.name, description: project.description, topics: project.topics, ...context }
+    // Radar de Consolas: la categoría es el tipo de herramienta (CFW, partidas guardadas…).
+    const tool = modes.get(project.id) === 'consoles' ? detectToolType({ ...project, summary: project.summary ?? null }) : undefined
+    const result = tool !== undefined
+      ? { category: toolTypeLabel(tool ?? 'homebrew'), confidence: tool ? 'media' : 'baja', evidence: [tool ? 'tipo de herramienta de consola detectado en su nombre, descripción o temas' : 'sin un tipo de herramienta claro: se muestra como aplicación homebrew'] }
+      : classifyWithEvidence(project, context, project.channels[0] === 'nintendo' && (modes.get(project.id) ?? 'nintendo') === 'nintendo')
+    Object.assign(project, { category: result.category, categoryConfidence: result.confidence, categoryEvidence: result.evidence.slice(0, 3), categoryVersion: CATEGORY_VERSION })
+    project.channels = project.channels.filter((channel) => !CHANNEL_CATEGORY[channel] || supportsCategory(input, CHANNEL_CATEGORY[channel]))
+    if (!project.channels.length) {
+      projects.splice(projects.indexOf(project), 1)
+      log(`  · ${project.fullName} descartado: su documentación no respalda la temática.`)
+    }
+  }
+
+  // «Seguridad y confianza»: solo metadatos de APIs oficiales, con caché y límite por ejecución.
+  const securityTodo = []
+  for (const project of projects) {
+    const old = previous.get(project.id)?.security
+    if (old && !isStale(old, project.version, now)) project.security = old
+    else securityTodo.push(project)
+  }
+  const raw = new Map(entries.map(({ repo }) => [repo.id, repo]))
+  const executables = (project) => executableAssets(releaseFromRaw(enrichment.get(project.id)?.release ?? null)?.assets ?? []).length
+  securityTodo.sort((a, b) => executables(b) - executables(a) || b.score - a.score)
+  const owners = new Map()
+  const github = (path) => request(path, ctx, { allowNotFound: true })
+  const external = async (url) => {
+    const response = await ctx.fetch(url, { headers: { Accept: 'application/json' } })
+    if (response.status === 404) return null
+    if (!response.ok) throw new Error(`HTTP ${response.status}`)
+    return response.json()
+  }
+  let securityChecked = 0
+  for (const project of securityTodo.slice(0, securityMax)) {
+    const repo = raw.get(project.id)
+    if (!repo || rateLimited) { if (previous.get(project.id)?.security) project.security = previous.get(project.id).security; continue }
+    try {
+      const login = repo.owner.login
+      if (!owners.has(login)) owners.set(login, (await github(`/users/${login}`))?.created_at ?? null)
+      const extra = enrichment.get(project.id) ?? {}
+      // Una release recuperada de la caché anterior no trae la lista de archivos: se vuelve a pedir.
+      const release = extra.release === undefined || (extra.release && !Array.isArray(extra.release.assets)) ? undefined : extra.release
+      project.security = await fetchSecurityFacts(repo.full_name, { github, external, repo, release, ownerCreatedAt: owners.get(login), now })
+      securityChecked++
+    } catch (error) {
+      if (error instanceof RateLimitError) rateLimited = true
+      if (previous.get(project.id)?.security) project.security = previous.get(project.id).security
+      log(`  · Seguridad de ${repo.full_name} no comprobada: ${error.message}`)
+    }
+  }
+  for (const project of securityTodo.slice(securityMax)) if (previous.get(project.id)?.security) project.security = previous.get(project.id).security
+  log(`Seguridad: ${securityChecked} comprobados, ${projects.filter((project) => project.security).length} con datos.`)
 
   if (topicStatus.every((item) => item.status !== 'ok')) throw new Error('Ninguna temática se pudo actualizar; se conserva el catálogo anterior sin cambios.')
   if (projects.length === 0) throw new Error('La recopilación no produjo proyectos; se conserva el catálogo anterior.')

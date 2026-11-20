@@ -1,0 +1,184 @@
+{
+  "at": "2026-11-20T08:19:22.886Z",
+  "base": "http://localhost:4173/homebrew-radar/",
+  "note": "Móvil emulado con WebKit (perfil iPhone 13); no es un iPhone físico.",
+  "results": [
+    {
+      "profile": "movil",
+      "screen": "portada",
+      "file": "movil-portada.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 30
+    },
+    {
+      "profile": "movil",
+      "screen": "consolas",
+      "file": "movil-consolas.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 29
+    },
+    {
+      "profile": "movil",
+      "screen": "buscar",
+      "file": "movil-buscar.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 31
+    },
+    {
+      "profile": "movil",
+      "screen": "buscar-idioma",
+      "file": "movil-buscar-idioma.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [
+        "button.tab",
+        "svg.",
+        "path.",
+        "span.",
+        "a.secondary-button"
+      ],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 0
+    },
+    {
+      "profile": "movil",
+      "screen": "ficha",
+      "file": "movil-ficha.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 30
+    },
+    {
+      "profile": "movil",
+      "screen": "biblioteca",
+      "file": "movil-biblioteca.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [
+        "button.",
+        "small."
+      ],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 0
+    },
+    {
+      "profile": "movil",
+      "screen": "ajustes",
+      "file": "movil-ajustes.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 0
+    },
+    {
+      "profile": "escritorio",
+      "screen": "portada",
+      "file": "escritorio-portada.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 30
+    },
+    {
+      "profile": "escritorio",
+      "screen": "consolas",
+      "file": "escritorio-consolas.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 29
+    },
+    {
+      "profile": "escritorio",
+      "screen": "buscar",
+      "file": "escritorio-buscar.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 31
+    },
+    {
+      "profile": "escritorio",
+      "screen": "buscar-idioma",
+      "file": "escritorio-buscar-idioma.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 0
+    },
+    {
+      "profile": "escritorio",
+      "screen": "ficha",
+      "file": "escritorio-ficha.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 30
+    },
+    {
+      "profile": "escritorio",
+      "screen": "biblioteca",
+      "file": "escritorio-biblioteca.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 0
+    },
+    {
+      "profile": "escritorio",
+      "screen": "ajustes",
+      "file": "escritorio-ajustes.png",
+      "errors": [],
+      "overflow": 0,
+      "wide": [],
+      "smallInputs": [],
+      "smallTargets": [],
+      "tinyText": [],
+      "cards": 0
+    }
+  ]
+}

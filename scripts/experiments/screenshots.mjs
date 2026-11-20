@@ -70,7 +70,10 @@ for (const profile of PROFILES) {
       await page.waitForTimeout(2500)
     }
     const file = `${profile.id}-${screen.id}.png`
-    await page.screenshot({ path: resolve(out, file), fullPage: !screen.openSheet })
+    // Las páginas muy largas (muchos resultados) se recortan: WebKit no admite más de 32767 px.
+    const height = await page.evaluate(() => document.documentElement.scrollHeight)
+    const width = page.viewportSize().width
+    await page.screenshot(screen.openSheet ? { path: resolve(out, file) } : { path: resolve(out, file), fullPage: true, clip: { x: 0, y: 0, width, height: Math.min(height, 6000) } })
     const result = { profile: profile.id, screen: screen.id, file, errors, ...(await audit(page)) }
     report.results.push(result)
     console.log(`${profile.id} · ${screen.id}: ${result.cards} tarjetas · desbordamiento ${result.overflow}px · campos <16px ${result.smallInputs.length} · objetivos pequeños ${result.smallTargets.length} · errores ${errors.length}`)

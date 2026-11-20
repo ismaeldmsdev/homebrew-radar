@@ -126,7 +126,7 @@ export function SecurityPanel({ project, onUpdate }: { project: Project; onUpdat
                       : <span className="fine-print"> · sin huella publicada por GitHub</span>}
                     <span className="fine-print">
                       {asset.digest && facts.attestations[asset.digest] !== undefined
-                        ? facts.attestations[asset.digest] > 0 ? 'Atestación de procedencia registrada en GitHub.' : 'Sin atestación de procedencia.'
+                        ? facts.attestations[asset.digest] > 0 ? 'Atestación registrada en GitHub, firma no verificada por Radar.' : 'Sin atestación de procedencia.'
                         : 'Procedencia no comprobada.'}
                     </span>
                     {asset.digest && (

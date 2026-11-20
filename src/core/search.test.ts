@@ -154,3 +154,13 @@ test('Radar de Consolas: separa proyectos nuevos, versiones nuevas y recuperados
   const facets = consoleFacets([fresh, released, touched, revived, unrelated])
   assert.deepEqual(facets.platforms.map(([id]) => id).sort(), ['n64', 'ps4', 'vita', 'wii'])
 })
+
+test('Radar de Consolas: un requisito («para consolas liberadas») no convierte un proyecto en CFW (casos reales)', async () => {
+  const { detectToolType, isConsoleRelated } = await import('./consoles.ts')
+  assert.equal(detectToolType({ name: 'EmuFive', description: 'A PS5 emulator for the PS4. Runs on a jailbroken PS4 with Linux, installed through PS4 Multiboot.' }), 'emulator')
+  assert.equal(detectToolType({ name: 'Harissa64', description: 'A Nintendo 64 emulator for the Xbox 360, built from scratch for RGH and JTAG consoles' }), 'emulator')
+  assert.equal(detectToolType({ name: 'ship-of-gadeguion', description: 'Native PS3 port of Ship of Harkinian (OoT) for HEN/CFW consoles' }), 'game')
+  assert.equal(detectToolType({ name: 'ps4-jb', description: 'PS4 13.52 / 14.00 / 14.02 jailbreak host (Afterglow + GoldHEN)' }), 'cfw', 'un jailbreak de verdad sigue siendo CFW')
+  assert.equal(isConsoleRelated({ name: 'unleashed-firmware', description: 'Flipper Zero Unleashed Firmware', topics: ['flipper-zero', 'custom-firmware'] }), false, 'Flipper Zero no es una consola')
+  assert.equal(isConsoleRelated({ name: 'PYXIS', description: 'Automated All-in-One custom firmware and homebrew pack for the Nintendo Switch' }), true)
+})

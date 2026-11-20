@@ -136,7 +136,7 @@ Cada ficha incluye un apartado con señales públicas para decidir antes de desc
 | Requiere revisión manual | Algo que solo puedes comprobar tú, como la firma de Windows o una cuenta recién creada |
 
 Fuentes, todas gratuitas y sin claves:
-- **API de GitHub:** trayectoria del repositorio y de la cuenta, mantenimiento, release oficial, release inmutable, huella SHA-256 calculada por GitHub para cada archivo, atestaciones de procedencia por huella (solo su existencia; Radar no las verifica criptográficamente) y avisos publicados con las versiones afectadas y corregidas.
+- **API de GitHub:** trayectoria del repositorio y de la cuenta, mantenimiento, release oficial, release inmutable, huella SHA-256 calculada por GitHub para cada archivo, atestaciones de procedencia por huella (solo consta que GitHub las tiene registradas: Radar no verifica su firma, por eso aparecen como «requiere revisión manual» y nunca como señal verificada) y avisos publicados con las versiones afectadas y corregidas.
 - **[OpenSSF Scorecard](https://scorecard.dev/):** comprobaciones concretas como flujos peligrosos, binarios en el código, política de seguridad, revisión de código y vulnerabilidades. No se muestra su nota global.
 
 Integridad (la huella coincide), procedencia (se compiló en este repositorio) y seguridad (no hace nada malicioso) son cosas distintas, y Radar solo informa de las dos primeras. Para cada ejecutable ofrece enlaces que **solo buscan su huella** en VirusTotal y MalwareBazaar, sin subir nada. Sus APIs no se integran: VirusTotal exige clave y prohíbe el uso comercial de su API pública, y MalwareBazaar exige una clave personal.

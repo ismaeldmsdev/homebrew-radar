@@ -4,7 +4,7 @@ name: Vista previa — Seguridad y confianza
 # guarda las señales resultantes. No descarga ni ejecuta binarios. No publica la web.
 on:
   push:
-    branches: ['radar-seguridad']
+    branches: ['radar-seguridad', 'radar-2.3-**']
     paths: ['src/core/security.ts', 'src/core/securityFetch.ts', 'scripts/experiments/security-preview.mjs', '.github/workflows/security-preview.yml']
   workflow_dispatch:
 

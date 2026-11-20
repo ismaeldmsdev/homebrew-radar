@@ -57,7 +57,19 @@ async function searchRepos(q, sortParam = '') {
   lastCall = Date.now()
   const headers = { Accept: 'application/vnd.github+json', 'User-Agent': 'Radar-Evaluacion' }
   if (token) headers.Authorization = `Bearer ${token}`
-  const response = await fetch(`https://api.github.com/search/repositories?q=${encodeURIComponent(q)}${sortParam}&per_page=50`, { headers })
+  let response
+  // Límite de búsquedas (403/429): esperar lo que indique GitHub y reintentar, en vez de
+  // registrar la consulta como vacía (eso invalidaría la comparación).
+  for (let attempt = 1; ; attempt++) {
+    response = await fetch(`https://api.github.com/search/repositories?q=${encodeURIComponent(q)}${sortParam}&per_page=50`, { headers })
+    if ((response.status !== 403 && response.status !== 429) || attempt > 4) break
+    const retryAfter = Number(response.headers.get('retry-after'))
+    const reset = Number(response.headers.get('x-ratelimit-reset'))
+    const waitMs = retryAfter > 0 ? retryAfter * 1000 : reset ? Math.max(5000, reset * 1000 - Date.now() + 2000) : 60_000
+    console.log(`  · límite de GitHub; espero ${Math.round(Math.min(waitMs, 90_000) / 1000)} s y reintento`)
+    await new Promise((done) => setTimeout(done, Math.min(waitMs, 90_000)))
+    lastCall = Date.now()
+  }
   if (!response.ok) throw new Error(`GitHub ${response.status} para «${q}»`)
   const data = await response.json()
   return { items: data.items ?? [], total: data.total_count ?? 0 }

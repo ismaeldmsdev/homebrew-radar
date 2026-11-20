@@ -110,8 +110,14 @@ export const platformLabel = (id: string) => PLATFORMS.find((platform) => platfo
 export const toolTypeLabel = (id: string) => TOOL_TYPES.find((type) => type.id === id)?.label ?? id
 
 /** Tipo de herramienta de consola (el primero que encaja, del más específico al más general). */
+// Frases que indican un REQUISITO («runs on a jailbroken PS4», «for HEN/CFW consoles»,
+// «for RGH and JTAG consoles»), no que el proyecto sea un CFW o un jailbreak.
+const REQUIREMENT = /\b(on|for|with|via|requires?|needs?) (an? |the )?(jailbroken|hacked|modded|exploited|hen|cfw|custom firmware|goldhen|rgh|jtag)\b[^.;]{0,30}|\bjailbroken\b|\b(hen|cfw)\/(cfw|hen)\b|\brgh (and|&|\/) jtag\b/g
+
 export function detectToolType(item: Evidence): ToolTypeId | null {
-  const text = evidenceOf(item)
+  const text = evidenceOf(item).replace(REQUIREMENT, ' ')
+  // Un emulador sigue siéndolo aunque se ejecute en una consola liberada.
+  if (/\b(emulator|emulador)\b/.test(text) && !/terminal emulator/.test(text)) return 'emulator'
   return TOOL_TYPES.find((type) => type.detect.test(text))?.id ?? null
 }
 
@@ -120,7 +126,9 @@ export function isConsoleRelated(item: Evidence) {
   if (isMacHomebrew(item)) return false
   const text = evidenceOf(item)
   if (detectPlatforms(item, { evidence: text }).length) return true
-  return /custom[ -]firmware|\bcfw\b|softmod|jailbreak (for|para) (the )?(console|consola)|console homebrew|homebrew (for|para) (the )?\w*\s?consol|retro ?gaming|retroarch|libretro/.test(text)
+  // Sin una consola reconocida, «custom firmware» o «CFW» a secas no bastan (Flipper Zero,
+  // routers, móviles…): se exige vocabulario propio de consolas.
+  return /softmod|jailbreak (for|para) (the )?(console|consola)|console homebrew|homebrew (for|para) (the )?\w*\s?consol|(cfw|custom firmware) (for|para) (the )?\w*\s?consol|retro ?gaming|retroarch|libretro/.test(text)
 }
 
 /**

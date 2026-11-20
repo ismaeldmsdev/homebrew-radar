@@ -154,7 +154,9 @@ export function assessSecurity(facts: SecurityFacts, fullName: string, now = Dat
     const checked = executables.filter((asset) => asset.digest && facts.attestations[asset.digest] !== undefined)
     const attested = checked.filter((asset) => (facts.attestations[asset.digest!] ?? 0) > 0)
     if (attested.length) {
-      signals.push({ id: 'provenance', status: 'verified', title: 'Atestación de procedencia registrada en GitHub', detail: `GitHub tiene registrada una atestación para ${attested.map((asset) => asset.name).join(', ')}: vincula el archivo con un flujo de compilación de este repositorio. Radar no la verifica criptográficamente; puedes hacerlo con «gh attestation verify archivo -R ${fullName}». Procedencia no es lo mismo que seguridad.`, source: `${repoUrl}/attestations` })
+      // Solo consta que GitHub guarda un registro para esa huella: su firma NO se ha
+      // comprobado, así que no se presenta como señal verificada.
+      signals.push({ id: 'provenance', status: 'manual', title: 'Atestación de procedencia registrada, firma NO verificada', detail: `GitHub tiene registrada una atestación para ${attested.map((asset) => asset.name).join(', ')} que afirma que el archivo se compiló en un flujo de este repositorio. Radar no ha comprobado su firma criptográfica, así que no la des por buena hasta verificarla tú con «gh attestation verify archivo -R ${fullName}». Incluso válida, solo indica de dónde viene el archivo, no que sea seguro.`, source: `${repoUrl}/attestations` })
     } else if (checked.length) {
       signals.push({ id: 'provenance', status: 'unknown', title: 'Sin atestación de procedencia', detail: 'No hay una atestación de GitHub para estos ejecutables, así que no se puede comprobar que se compilaran a partir de este código fuente.' })
     } else {

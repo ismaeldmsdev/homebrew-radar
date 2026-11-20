@@ -36,11 +36,13 @@ const lenovo: SecurityFacts = {
 const byId = (signals: ReturnType<typeof assessSecurity>, id: string) => signals.find((signal) => signal.id === id)
 const FORBIDDEN = /100 ?%|libre de virus|sin virus|garantizad[ao]|es seguro|totalmente segur|certificad[ao] como segur/i
 
-test('GitHub CLI: procedencia, inmutabilidad y huellas verificadas; el aviso documentado no se oculta', () => {
+test('GitHub CLI: inmutabilidad y huellas verificadas, atestación con firma sin verificar; el aviso documentado no se oculta', () => {
   const signals = assessSecurity(cli, 'cli/cli', NOW)
   assert.equal(byId(signals, 'immutable')?.status, 'verified')
   assert.equal(byId(signals, 'digests')?.status, 'verified')
-  assert.equal(byId(signals, 'provenance')?.status, 'verified')
+  const provenance = byId(signals, 'provenance')!
+  assert.equal(provenance.status, 'manual', 'una atestación cuya firma no se ha comprobado nunca es «señal verificada»')
+  assert.match(provenance.title, /firma NO verificada/)
   assert.equal(byId(signals, 'advisories')?.status, 'warning')
   assert.equal(byId(signals, 'authenticode')?.status, 'manual', 'la firma de Windows siempre requiere revisión manual')
   assert.equal(byId(signals, 'author-files')?.status, 'manual', 'los archivos de sumas se citan pero no se dan por buenos')

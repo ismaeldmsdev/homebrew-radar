@@ -2,18 +2,17 @@
 added 2 packages in 1s
 movil · portada: 30 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
 movil · consolas: 29 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
-node:internal/modules/run_main:123
-    triggerUncaughtException(
-    ^
-
-page.screenshot: Cannot take screenshot larger than 32767 pixels on any dimension
-Call log:
-  - taking page screenshot
-  - waiting for fonts to load...
-  - fonts loaded
-
-    at /__w/homebrew-radar/homebrew-radar/scripts/experiments/screenshots.mjs:73:16 {
-  name: 'Error'
-}
-
-Node.js v22.23.4
+movil · buscar: 31 tarjetas · desbordamiento 0px · campos <16px 2 · objetivos pequeños 0 · errores 0
+movil · buscar-idioma: 0 tarjetas · desbordamiento 0px · campos <16px 2 · objetivos pequeños 0 · errores 0
+movil · ficha: 30 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+movil · biblioteca: 0 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+movil · ajustes: 0 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+escritorio · portada: 30 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+escritorio · consolas: 29 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+escritorio · buscar: 31 tarjetas · desbordamiento 0px · campos <16px 2 · objetivos pequeños 0 · errores 0
+escritorio · buscar-idioma: 0 tarjetas · desbordamiento 0px · campos <16px 2 · objetivos pequeños 0 · errores 0
+escritorio · ficha: 30 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+escritorio · biblioteca: 0 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+escritorio · ajustes: 0 tarjetas · desbordamiento 0px · campos <16px 0 · objetivos pequeños 0 · errores 0
+apple-touch-icon.png regenerado
+⚠ 4 pantallas con problemas

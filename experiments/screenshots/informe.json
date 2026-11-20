@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-20T08:14:42.810Z",
+  "at": "2026-11-20T08:19:22.886Z",
   "base": "http://localhost:4173/homebrew-radar/",
   "note": "Móvil emulado con WebKit (perfil iPhone 13); no es un iPhone físico.",
   "results": [
@@ -34,10 +34,7 @@
       "errors": [],
       "overflow": 0,
       "wide": [],
-      "smallInputs": [
-        "input 14px",
-        "input 14px"
-      ],
+      "smallInputs": [],
       "smallTargets": [],
       "tinyText": [],
       "cards": 31
@@ -55,10 +52,7 @@
         "span.",
         "a.secondary-button"
       ],
-      "smallInputs": [
-        "input 14px",
-        "input 14px"
-      ],
+      "smallInputs": [],
       "smallTargets": [],
       "tinyText": [],
       "cards": 0
@@ -72,9 +66,7 @@
       "wide": [],
       "smallInputs": [],
       "smallTargets": [],
-      "tinyText": [
-        "small. 11.666666px"
-      ],
+      "tinyText": [],
       "cards": 30
     },
     {
@@ -101,13 +93,7 @@
       "wide": [],
       "smallInputs": [],
       "smallTargets": [],
-      "tinyText": [
-        "small. 11.666666px",
-        "small. 11.666666px",
-        "small. 11.666666px",
-        "small. 11.666666px",
-        "small. 11.666666px"
-      ],
+      "tinyText": [],
       "cards": 0
     },
     {
@@ -141,10 +127,7 @@
       "errors": [],
       "overflow": 0,
       "wide": [],
-      "smallInputs": [
-        "input 14px",
-        "input 14px"
-      ],
+      "smallInputs": [],
       "smallTargets": [],
       "tinyText": [],
       "cards": 31
@@ -156,10 +139,7 @@
       "errors": [],
       "overflow": 0,
       "wide": [],
-      "smallInputs": [
-        "input 14px",
-        "input 14px"
-      ],
+      "smallInputs": [],
       "smallTargets": [],
       "tinyText": [],
       "cards": 0
@@ -173,9 +153,7 @@
       "wide": [],
       "smallInputs": [],
       "smallTargets": [],
-      "tinyText": [
-        "small. 11.6667px"
-      ],
+      "tinyText": [],
       "cards": 30
     },
     {
@@ -199,13 +177,7 @@
       "wide": [],
       "smallInputs": [],
       "smallTargets": [],
-      "tinyText": [
-        "small. 11.6667px",
-        "small. 11.6667px",
-        "small. 11.6667px",
-        "small. 11.6667px",
-        "small. 11.6667px"
-      ],
+      "tinyText": [],
       "cards": 0
     }
   ]

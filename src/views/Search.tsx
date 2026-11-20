@@ -1,13 +1,14 @@
 import { useDeferredValue, useEffect, useMemo, useState } from 'react'
-import { mergeUnique } from '../core/feed.ts'
-import { buildGithubQueries, describeInterpretation, interpretQuery, isEmptyInterpretation, matchProject, type SortMode } from '../core/query.ts'
+import { PLATFORMS } from '../core/consoles.ts'
+import { buildGithubQueries, describeInterpretation, interpretQuery, isEmptyInterpretation, platformsOf, type SortMode } from '../core/query.ts'
 import { projectStatus } from '../core/scoring.ts'
+import { rankSearch } from '../core/search.ts'
 import { relativeDays } from '../core/text.ts'
 import { Icon } from '../components/Icon.tsx'
 import { ProjectCard, type CardActions } from '../components/ProjectCard.tsx'
 import { SearchForm } from '../components/Section.tsx'
 import { exampleQueries } from '../examples.ts'
-import { formatDateTime, sortLabels, sortProjects } from '../explain.ts'
+import { formatDateTime, sortLabels } from '../explain.ts'
 import { GithubError, searchGithub, type LiveSearch } from '../github.ts'
 import type { Prefs } from '../library.ts'
 import type { Feed, Project } from '../types.ts'
@@ -35,6 +36,7 @@ export function Search({ feed, visible, query, channel, prefs, savedQueries, act
   const [categoryFilter, setCategoryFilter] = useState('Todas')
   const [hideInactive, setHideInactive] = useState(true)
   const [result, setResult] = useState<LiveResult | null>(null)
+  const [pickedSort, setPickedSort] = useState<SortMode | null>(null)
   const deferredDraft = useDeferredValue(draft)
 
   const term = query || deferredDraft
@@ -57,37 +59,29 @@ export function Search({ feed, visible, query, channel, prefs, savedQueries, act
     return () => controller.abort()
   }, [query, prefs.includeArchived, liveKey])
 
-  const relevance = useMemo(() => {
-    const map = new Map<number, number>()
-    for (const project of visible) {
-      const value = term.trim() ? matchProject(project, interp) : 0.5
-      if (value > 0) map.set(project.id, value)
-    }
-    return map
-  }, [visible, interp, term])
-
   const liveData = live.data
   const liveProjects = useMemo(() => (liveData?.projects ?? []).filter((project) => !actions.isHidden(project.id)), [liveData, actions])
-  const localMatches = useMemo(() => visible.filter((project) => relevance.has(project.id)), [visible, relevance])
+  // Orden: el que elija el usuario en esta búsqueda; si no, el que pide la consulta
+  // («poco conocidos», «populares», «nuevos»…); si no, su preferencia guardada.
+  const sort: SortMode = pickedSort ?? interp.sort ?? prefs.sort
 
-  const combined = useMemo(() => {
-    const all = mergeUnique(localMatches, liveProjects)
-    return all.filter((project) => {
-      if (channel !== 'todas' && !project.channels.includes(channel)) return false
-      if (consoleFilter !== 'Todas' && !project.consoles.includes(consoleFilter)) return false
-      if (categoryFilter !== 'Todas' && project.category !== categoryFilter) return false
-      if (hideInactive) {
-        const status = projectStatus(project).id
-        if (status === 'stale' || (status === 'archived' && !prefs.includeArchived)) return false
-      }
-      return true
-    })
-  }, [localMatches, liveProjects, channel, consoleFilter, categoryFilter, hideInactive, prefs.includeArchived])
+  // Relevancia y orden con el motor común (src/core/search.ts), sin filtros de estado.
+  const ranked = useMemo(() => rankSearch(visible, liveProjects, interp, { sort, includeArchived: prefs.includeArchived, hideInactive: false }), [visible, liveProjects, interp, sort, prefs.includeArchived])
+  const localMatches = useMemo(() => ranked.filter((item) => item.project.source === 'catalog'), [ranked])
 
-  const sort: SortMode = prefs.sort
-  const results = useMemo(() => sortProjects(combined, sort, relevance), [combined, sort, relevance])
-  const categories = useMemo(() => [...new Set(mergeUnique(localMatches, liveProjects).map((project) => project.category))].sort((a, b) => a.localeCompare(b, 'es')), [localMatches, liveProjects])
-  const hiddenByStatus = mergeUnique(localMatches, liveProjects).length - combined.length
+  const filtered = useMemo(() => ranked.filter(({ project }) => {
+    if (channel !== 'todas' && !project.channels.includes(channel)) return false
+    if (consoleFilter !== 'Todas' && !platformsOf(project).includes(consoleFilter)) return false
+    if (categoryFilter !== 'Todas' && project.category !== categoryFilter) return false
+    if (hideInactive && projectStatus(project).id === 'stale') return false
+    return true
+  }), [ranked, channel, consoleFilter, categoryFilter, hideInactive])
+
+  const results = filtered.map((item) => item.project)
+  const notes = useMemo(() => new Map(filtered.map((item) => [item.project.id, item.why[0]])), [filtered])
+  const categories = useMemo(() => [...new Set(ranked.map(({ project }) => project.category))].sort((a, b) => a.localeCompare(b, 'es')), [ranked])
+  const platforms = useMemo(() => PLATFORMS.filter((platform) => ranked.some(({ project }) => platformsOf(project).includes(platform.id))), [ranked])
+  const hiddenByStatus = ranked.length - filtered.length
   const queries = query ? buildGithubQueries(interpretQuery(query), { includeArchived: prefs.includeArchived }) : null
   const usedQuery = live.data?.queryUsed ?? queries?.primary ?? ''
   const alreadySaved = savedQueries.some((item) => item.toLowerCase() === query.trim().toLowerCase())
@@ -132,7 +126,8 @@ export function Search({ feed, visible, query, channel, prefs, savedQueries, act
         </label>
         <label><span>Consola</span>
           <select value={consoleFilter} onChange={(event) => setConsoleFilter(event.target.value)}>
-            <option>Todas</option><option>3DS</option><option>DSi</option><option>DS</option>
+            <option value="Todas">Todas</option>
+            {platforms.map((platform) => <option key={platform.id} value={platform.id}>{platform.label}</option>)}
           </select>
         </label>
         <label><span>Categoría</span>
@@ -141,7 +136,7 @@ export function Search({ feed, visible, query, channel, prefs, savedQueries, act
           </select>
         </label>
         <label><span>Ordenar</span>
-          <select value={sort} onChange={(event) => onPrefs({ ...prefs, sort: event.target.value as SortMode })}>
+          <select value={sort} onChange={(event) => { const value = event.target.value as SortMode; setPickedSort(value); onPrefs({ ...prefs, sort: value }) }}>
             {(Object.keys(sortLabels) as SortMode[]).map((mode) => <option key={mode} value={mode}>{sortLabels[mode]}</option>)}
           </select>
         </label>
@@ -173,7 +168,7 @@ export function Search({ feed, visible, query, channel, prefs, savedQueries, act
       )}
 
       <div className="project-grid">
-        {results.map((project) => <ProjectCard key={project.id} project={project} actions={actions} highlight={sort === 'gems' ? 'gem' : undefined} />)}
+        {results.map((project) => <ProjectCard key={project.id} project={project} actions={actions} note={term.trim() ? notes.get(project.id) : undefined} highlight={sort === 'gems' ? 'gem' : undefined} />)}
       </div>
     </section>
   )

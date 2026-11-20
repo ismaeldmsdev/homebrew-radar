@@ -1,0 +1,51 @@
+name: Vista previa — Radar de Consolas
+
+# Ejecuta SOLO la temática «consolas» del recopilador con datos reales de GitHub y
+# guarda un informe (no toca public/data ni publica la web).
+on:
+  push:
+    branches: ['radar-2.3-**']
+    paths: ['src/core/consoles.ts', 'scripts/collect.mjs', 'config/topics.json', '.github/workflows/consoles-preview.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: consoles-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Recopilar la temática de consolas
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          node --experimental-strip-types -e "
+            import('./scripts/collect.mjs').then(async ({ collect }) => {
+              const fs = await import('node:fs')
+              const all = JSON.parse(fs.readFileSync('config/topics.json', 'utf8'))
+              const config = { defaults: all.defaults, topics: all.topics.filter((t) => t.id === 'consolas') }
+              const feed = await collect({ config, output: 'preview.json' })
+              const rows = feed.projects.map((p) => ({ fullName: p.fullName, stars: p.stars, created: p.createdAt.slice(0, 10), pushed: p.pushedAt.slice(0, 10), release: p.version ? p.version + ' ' + (p.releasePublishedAt ?? '').slice(0, 10) : null, category: p.category, platforms: p.platforms, labels: p.labels, compat: p.compat ?? null, description: p.description.slice(0, 140) }))
+              fs.mkdirSync('experiments/consoles-preview', { recursive: true })
+              fs.writeFileSync('experiments/consoles-preview/proyectos.json', JSON.stringify({ at: feed.generatedAt, topics: feed.topics, count: rows.length, projects: rows }, null, 2))
+              console.log(rows.length + ' proyectos')
+            })"
+      - name: Guardar informe
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/consoles-preview
+          git diff --cached --quiet && exit 0
+          git commit -m "Vista previa del Radar de Consolas"
+          for attempt in 1 2 3; do git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }} && exit 0; sleep 5; done

@@ -15,6 +15,20 @@
       "queries": ["3ds homebrew", "nintendo 3ds", "dsi homebrew", "nds homebrew", "libnds", "3ds emulator", "nintendo ds game homebrew"]
     },
     {
+      "id": "consolas",
+      "label": "Radar de Consolas",
+      "description": "Homebrew, CFW, jailbreak, emuladores y utilidades para todo tipo de consolas.",
+      "featured": true,
+      "mode": "consoles",
+      "limit": 60,
+      "qualifiers": "stars:2..30000 pushed:>{days:365} archived:false",
+      "queries": [
+        "topic:homebrew", "topic:custom-firmware", "topic:cfw", "switch homebrew", "topic:nintendo-switch homebrew",
+        "wii homebrew", "wiiu homebrew", "psp homebrew", "psvita homebrew", "vitasdk", "ps3 homebrew", "ps4 homebrew",
+        "goldhen", "ps5 homebrew", "ps5 payload", "xbox 360 homebrew", "nxdk xbox", "save manager homebrew", "dreamcast homebrew", "gba homebrew"
+      ]
+    },
+    {
       "id": "ia",
       "label": "Inteligencia artificial",
       "description": "Herramientas y aplicaciones que usan modelos de IA.",

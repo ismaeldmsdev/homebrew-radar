@@ -12,12 +12,13 @@ import { Discover } from './views/Discover.tsx'
 import { LibraryView } from './views/LibraryView.tsx'
 import { Search } from './views/Search.tsx'
 import { Settings } from './views/Settings.tsx'
+import { Consoles } from './views/Consoles.tsx'
 
-type View = 'discover' | 'search' | 'library' | 'settings'
+type View = 'discover' | 'consoles' | 'search' | 'library' | 'settings'
 type Route = { view: View; query: string; channel: string }
 
 const FEED_CACHE = 'radar-feed-cache'
-const slugs: Record<View, string> = { discover: 'descubrir', search: 'buscar', library: 'biblioteca', settings: 'ajustes' }
+const slugs: Record<View, string> = { discover: 'descubrir', consoles: 'consolas', search: 'buscar', library: 'biblioteca', settings: 'ajustes' }
 
 function parseRoute(hash = window.location.hash): Route {
   const [path, search = ''] = hash.replace(/^#\/?/, '').split('?')
@@ -146,6 +147,7 @@ function App() {
   const feedNote = feedError && feed ? `No se pudo descargar el catálogo actualizado (${feedError}). Se muestra la copia guardada del ${formatDateTime(feed.generatedAt)}.` : ''
   const nav: { id: View; label: string; icon: IconName }[] = [
     { id: 'discover', label: 'Descubrir', icon: 'compass' },
+    { id: 'consoles', label: 'Consolas', icon: 'gamepad' },
     { id: 'search', label: 'Buscar', icon: 'search' },
     { id: 'library', label: 'Biblioteca', icon: 'library' },
     { id: 'settings', label: 'Ajustes', icon: 'settings' },
@@ -187,6 +189,9 @@ function App() {
             onSearch={(query) => navigate({ view: 'search', query, channel: 'todas' })}
             onChannel={(channel) => navigate({ view: 'search', query: '', channel })}
             onGoLibrary={() => navigate({ view: 'library' })} />
+        )}
+        {route.view === 'consoles' && (
+          <Consoles feed={feed} visible={visible} actions={actions} onSearch={(query) => navigate({ view: 'search', query, channel: 'todas' })} />
         )}
         {route.view === 'search' && (
           <Search key={route.query} feed={feed} visible={visible} query={route.query} channel={route.channel} prefs={library.prefs}

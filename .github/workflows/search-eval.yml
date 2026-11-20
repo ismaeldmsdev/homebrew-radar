@@ -1,0 +1,53 @@
+name: Evaluación — buscador (antes y después)
+
+# Ejecuta las mismas búsquedas reales con el motor de main («antes») y el de la rama
+# («después») en la misma ejecución, para comparar sobre los mismos datos de GitHub.
+# No publica nada: guarda los informes en experiments/search-eval/.
+on:
+  push:
+    branches: ['radar-2.3-**']
+    paths: ['src/core/**', 'src/github.ts', 'src/explain.ts', 'scripts/experiments/search-eval.mjs', '.github/workflows/search-eval.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: search-eval-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  evaluar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          path: baseline
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Usar el mismo catálogo en los dos motores
+        run: cp public/data/projects.json public/data/summaries.json baseline/public/data/
+      - name: Motor anterior (main)
+        run: node --experimental-strip-types scripts/experiments/search-eval.mjs --root baseline --label antes --out antes.json
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Motor nuevo (rama)
+        run: node --experimental-strip-types scripts/experiments/search-eval.mjs --root . --label despues --out despues.json
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Guardar informes
+        run: |
+          dir="experiments/search-eval/$(date -u +%Y%m%d-%H%M)"
+          mkdir -p "$dir" && mv antes.json despues.json "$dir/"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add experiments/search-eval
+          git commit -m "Evaluación del buscador ($dir)"
+          for attempt in 1 2 3; do git pull --rebase origin ${{ github.ref_name }} && git push origin HEAD:${{ github.ref_name }} && exit 0; sleep 5; done
+          exit 1

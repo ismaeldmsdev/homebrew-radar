@@ -35,7 +35,9 @@ test('interpreta consultas en español a términos y filtros de GitHub', () => {
 
   const consoles = interpretQuery('Software útil para modificar y personalizar consolas')
   assert.deepEqual(consoles.freeTerms, [], '«útil» no es un término de búsqueda')
-  assert.equal(buildGithubQueries(consoles, { now: NOW }).fallbacks.length, 2)
+  const consoleQueries = buildGithubQueries(consoles, { now: NOW })
+  assert.doesNotMatch(consoleQueries.primary, /\bconsole\b/, '«consolas» es un concepto blando: no se exige a GitHub')
+  assert.ok(consoleQueries.fallbacks.length >= 1)
 })
 
 test('reconoce lenguaje de programación y conserva nombres propios como texto libre', () => {
@@ -43,9 +45,10 @@ test('reconoce lenguaje de programación y conserva nombres propios como texto l
   assert.equal(interp.language, 'rust')
   const free = interpretQuery('pkhex alternativas')
   assert.ok(free.freeTerms.includes('pkhex'))
-  const { primary, fallbacks } = buildGithubQueries(interpretQuery('emulador gameboy'), { now: NOW })
-  assert.match(primary, /^emulator gameboy/)
-  assert.match(fallbacks[0] ?? '', /^emulator stars/)
+  const gameboy = interpretQuery('emulador gameboy')
+  assert.deepEqual(gameboy.concepts.map((concept) => concept.id).sort(), ['emulators', 'gb'], 'Game Boy es una plataforma reconocida')
+  const { primary } = buildGithubQueries(gameboy, { now: NOW })
+  assert.match(primary, /^gameboy emulator stars/)
 })
 
 test('copias de seguridad no se confunde con seguridad', () => {

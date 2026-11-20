@@ -1,4 +1,17 @@
 {
   "version": 1,
-  "attempts": {}
+  "attempts": {
+    "1278652388": {
+      "fullName": "Riyoway/HomePad",
+      "basis": {
+        "description": "1opl56o",
+        "readmeLength": 3824
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-20T07:29:17.421Z",
+      "problems": [
+        "Con documentación escasa el texto debe decir que faltan datos."
+      ]
+    }
+  }
 }

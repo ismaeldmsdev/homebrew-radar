@@ -948,6 +948,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "278633738": {
+      "id": 278633738,
+      "fullName": "ihaveamac/pyctr",
+      "text": "Es una biblioteca de código abierto en Python diseñada para trabajar con archivos del Nintendo 3DS. Permite acceder a metadatos de aplicaciones, imágenes de cartuchos, sistemas de archivos internos y archivos de guardado. Está pensada para desarrolladores que quieran crear herramientas o programas que manipulen estos datos específicos.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "x8fubr",
+        "readmeLength": 1037
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:31:29.838Z"
+    },
     "300252678": {
       "id": 300252678,
       "fullName": "lowdefy/lowdefy",
@@ -1417,6 +1438,27 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "524272985": {
+      "id": 524272985,
+      "fullName": "pulsejet/memories",
+      "text": "Memories es una aplicación para gestionar fotos y vídeos dentro de Nextcloud. Permite organizar el contenido por fechas extraídas de los metadatos, crear álbumes compartibles y editar la información de las imágenes en masa. Está diseñada para funcionar como una extensión en tu propio servidor Nextcloud.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "nj9rwg",
+        "readmeLength": 4429
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:27:42.203Z"
+    },
     "527121729": {
       "id": 527121729,
       "fullName": "Smaug6739/Alexandrie",
@@ -1431,6 +1473,27 @@
         "readmeLength": 3593
       },
       "updatedAt": "2026-11-19T08:25:51.666Z"
+    },
+    "530567234": {
+      "id": 530567234,
+      "fullName": "rafsoh/dimeApp",
+      "text": "Dime es una aplicación gratuita para gestionar finanzas personales diseñada siguiendo las pautas de diseño de iOS. Permite crear presupuestos por categorías, establecer gastos recurrentes con marcos de tiempo personalizados y sincronizar tus datos entre dispositivos mediante iCloud. Además, incluye autenticación biométrica para proteger la información y ofrece un tema nocturno para usarla en modo oscuro.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "viynql",
+        "readmeLength": 1938
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:28:44.668Z"
     },
     "535751429": {
       "id": 535751429,
@@ -1819,6 +1882,27 @@
         "readmeLength": 1781
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
+    },
+    "779449791": {
+      "id": 779449791,
+      "fullName": "seanmorley15/AdventureLog",
+      "text": "AdventureLog es una aplicación para gestionar viajes que se instala en un servidor propio. Permite registrar experiencias, planificar itinerarios y visualizar estadísticas en un mapa interactivo del mundo. Útil para viajeros que quieren controlar sus datos y colaborar con otros en la planificación de sus rutas.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1qvta2i",
+        "readmeLength": 3722
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:27:57.273Z"
     },
     "790713784": {
       "id": 790713784,
@@ -2697,6 +2781,112 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "1227366635": {
+      "id": 1227366635,
+      "fullName": "romanrdecaro-arch/pokebot-3ds",
+      "text": "Es una herramienta de automatización en Python diseñada para jugar a Pokémon en la consola virtual Azahar 3DS. Permite buscar Pokémon brillantes (shiny) mediante simulaciones de reinicio, lectura de memoria del juego y análisis de datos como IVs o movimientos. Funciona como un cliente ligero que envía comandos al emulador y guarda los resultados en archivos compatibles con PKHeX.",
+      "detail": null,
+      "kinds": [
+        "config"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "xz0q3t",
+        "readmeLength": 11984
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:30:58.571Z"
+    },
+    "1290225732": {
+      "id": 1290225732,
+      "fullName": "pocket-nexus/openstrike",
+      "text": "OpenStrike es un videojuego de disparos en primera persona de código abierto que utiliza trazado de rayos en tiempo real. Permite importar mapas clásicos de Counter-Strike 1.6 o Half-Life que tengas en tu dispositivo para jugarlos con iluminación física real. Funciona en Windows, macOS, Steam Deck, Android y en consolas portátiles como PSP, PS Vita y Nintendo 3DS.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "yimxg9",
+        "readmeLength": 4132
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:31:17.773Z"
+    },
+    "1298231915": {
+      "id": 1298231915,
+      "fullName": "pocket-nexus/pocket-shell",
+      "text": "Es un entorno de escritorio experimental para consolas como Nintendo 3DS y dispositivos como M5Stack Tab5. Permite ejecutar aplicaciones pequeñas llamadas Pocket Applets y gestionar interfaces de usuario específicas para cada dispositivo. Faltan datos sobre cómo se instalan o usan estos entornos en la práctica.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "wp8z3f",
+        "readmeLength": 10117
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:29:49.890Z"
+    },
+    "1298591675": {
+      "id": 1298591675,
+      "fullName": "Yokimitsuro/khdays-port",
+      "text": "Es un proyecto experimental que convierte Kingdom Hearts 358/2 Days para PC. Permite jugar la versión original de Nintendo DS en Windows con controles modernos, gráficos en mayor resolución y sonido mejorado. Útil para fans que quieren probar el juego en un ordenador sin necesitar consola.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "xwxb5j",
+        "readmeLength": 50899
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:28:29.593Z"
+    },
+    "1310758816": {
+      "id": 1310758816,
+      "fullName": "Pinvou/pinvou-agent",
+      "text": "Pinvou Agent es una aplicación de escritorio de código abierto que actúa como un agente de inteligencia artificial para tareas de trabajo, diseño y programación. Permite ejecutar agentes de codificación reales en proyectos, generar visualizaciones editables desde texto y gestionar archivos con herramientas locales. Está diseñada para entregar resultados concretos como documentos o diseños, no solo respuestas de chat.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "5uum9e",
+        "readmeLength": 8097
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:28:13.489Z"
+    },
     "1392150242": {
       "id": 1392150242,
       "fullName": "ToolAssisted-run/chimera-core-azahar",
@@ -2712,6 +2902,27 @@
         "readmeLength": 4464
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1398967597": {
+      "id": 1398967597,
+      "fullName": "better-devils/netpass",
+      "text": "NetPass es un programa para consolas Nintendo 2DS y 3DS que permite jugar StreetPass a través de internet. Permite elegir un lugar virtual, como una estación de tren, para intercambiar pasaportes con otros jugadores que estén en el mismo sitio. Requiere instalar herramientas de desarrollo específicas en la consola antes de usarlo.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1yno6kp",
+        "readmeLength": 4674
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:30:06.948Z"
     },
     "1405585119": {
       "id": 1405585119,
@@ -2750,6 +2961,27 @@
       },
       "updatedAt": "2026-11-19T20:51:55.588Z"
     },
+    "1427533622": {
+      "id": 1427533622,
+      "fullName": "LiamTrader43/3ds-Achievements",
+      "text": "Es un módulo para consolas Nintendo 3DS que gestiona logros en juegos reales. Permite detectar logros al ejecutarlos, mostrar avisos en la pantalla inferior y convertir los puntos en monedas de Play. Útil para usuarios con hardware 3DS y Luma3DS que quieren ver su progreso sin modificar los juegos.",
+      "detail": null,
+      "kinds": [
+        "plugin"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "e3bava",
+        "readmeLength": 13310
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:30:38.538Z"
+    },
     "1431538743": {
       "id": 1431538743,
       "fullName": "Shield-77/Shield-Updater",
@@ -2779,6 +3011,27 @@
         "readmeLength": 12990
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1433356643": {
+      "id": 1433356643,
+      "fullName": "infosecanalyst-creator/uqm-3ds",
+      "text": "Es una versión portada del juego The Ur-Quan Masters para la consola New Nintendo 3DS. Permite ejecutar el juego a resolución nativa de 320×240 píxeles sin escalado, con controles táctiles en la pantalla superior y gestión de archivos propios en la tarjeta SD. Útil para jugadores que desean probar este título antiguo en hardware moderno sin emulación.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "12kor16",
+        "readmeLength": 5185
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:32:24.752Z"
     },
     "1435557891": {
       "id": 1435557891,
@@ -3052,6 +3305,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "1462706965": {
+      "id": 1462706965,
+      "fullName": "michvllni/rmxp3ds",
+      "text": "Es un entorno de ejecución y herramienta de conversión para jugar videojuegos creados con RPG Maker XP en la consola New Nintendo 3DS. Permite ejecutar scripts de juegos como Pokémon Essentials y renderizar capas en 3D estereoscópico. Actualmente está en desarrollo temprano y convierte juegos propios para que funcionen en el hardware de la consola.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1e2lqi5",
+        "readmeLength": 2184
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:31:47.823Z"
+    },
     "1463393513": {
       "id": 1463393513,
       "fullName": "NintendoDS-Homebrew-Community/.github",
@@ -3083,6 +3357,28 @@
         "readmeLength": 7126
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1464480996": {
+      "id": 1464480996,
+      "fullName": "levkeveli/Min3DStry",
+      "text": "Min3DStry es un proyecto experimental que intenta llevar el juego Mindustry a las consolas Nintendo 3DS y 2DS como software nativo. Actualmente solo contiene la infraestructura del proyecto, ya que la jugabilidad, el soporte de hardware y la compatibilidad con mapas y guardados permanecen por verificar. Faltan datos sobre el estado final del desarrollo.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "nlnez6",
+        "readmeLength": 992
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-20T07:32:36.892Z"
     }
   }
 }

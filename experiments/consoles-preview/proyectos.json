@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-19T10:57:48.506Z",
+  "at": "2026-11-20T07:20:50.909Z",
   "topics": [
     {
       "id": "consolas",
@@ -8,7 +8,7 @@
       "featured": true,
       "status": "ok",
       "count": 60,
-      "collectedAt": "2026-11-19T10:57:48.506Z"
+      "collectedAt": "2026-11-20T07:20:50.909Z"
     }
   ],
   "count": 60,
@@ -41,10 +41,10 @@
     },
     {
       "fullName": "pocket-nexus/pocketjs",
-      "stars": 1892,
+      "stars": 1893,
       "created": "2026-07-03",
-      "pushed": "2026-11-19",
-      "release": "v0.16.0 2026-11-02",
+      "pushed": "2026-11-20",
+      "release": "v0.17.0 2026-11-20",
       "category": "Personalización",
       "platforms": [
         "3ds",
@@ -57,7 +57,7 @@
     },
     {
       "fullName": "elripalda/Porpoise-Dolphin-Emulator-for-PS5",
-      "stars": 245,
+      "stars": 247,
       "created": "2026-10-04",
       "pushed": "2026-11-03",
       "release": "v4.5 2026-11-03",
@@ -143,17 +143,15 @@
     },
     {
       "fullName": "LNPANDY/NX2Apple",
-      "stars": 7832,
+      "stars": 7917,
       "created": "2026-10-20",
-      "pushed": "2026-11-19",
+      "pushed": "2026-11-20",
       "release": "v1.4.0 2026-11-12",
       "category": "Juegos y ports",
       "platforms": [
         "switch"
       ],
-      "labels": [
-        "Nuevo"
-      ],
+      "labels": [],
       "compat": {
         "models": [
           "Switch 2"
@@ -165,9 +163,9 @@
     },
     {
       "fullName": "arturofuentes1988/EmuSuNi",
-      "stars": 122,
+      "stars": 124,
       "created": "2026-10-15",
-      "pushed": "2026-11-12",
+      "pushed": "2026-11-19",
       "release": "v00.24 2026-11-12",
       "category": "CFW, jailbreak y exploits",
       "platforms": [
@@ -186,10 +184,10 @@
     },
     {
       "fullName": "blue0x1/EmuFive",
-      "stars": 329,
+      "stars": 338,
       "created": "2026-11-09",
-      "pushed": "2026-11-19",
-      "release": "1.0.11 2026-11-19",
+      "pushed": "2026-11-20",
+      "release": "1.0.12 2026-11-19",
       "category": "CFW, jailbreak y exploits",
       "platforms": [
         "ps4",
@@ -200,8 +198,7 @@
       ],
       "compat": {
         "models": [
-          "PS4 Pro",
-          "PS4 Slim"
+          "PS4 Pro"
         ],
         "firmware": [],
         "requires": [
@@ -228,7 +225,7 @@
     },
     {
       "fullName": "Loopayeh/pkg-viewer",
-      "stars": 227,
+      "stars": 228,
       "created": "2026-09-13",
       "pushed": "2026-11-17",
       "release": "v1.20.1 2026-11-17",
@@ -244,7 +241,7 @@
     },
     {
       "fullName": "knutwurst/ps5-patchdl",
-      "stars": 285,
+      "stars": 286,
       "created": "2026-06-23",
       "pushed": "2026-11-14",
       "release": "v0.3.13 2026-11-14",
@@ -280,7 +277,7 @@
     },
     {
       "fullName": "fortheusers/hb-appstore",
-      "stars": 1484,
+      "stars": 1485,
       "created": "2018-03-03",
       "pushed": "2026-10-18",
       "release": "v2.3.2 2023-03-23",
@@ -294,24 +291,10 @@
       "description": "Homebrew App Store - GUI for downloading/managing homebrew apps"
     },
     {
-      "fullName": "phantomptr/ps5upload",
-      "stars": 1298,
-      "created": "2026-01-10",
-      "pushed": "2026-11-19",
-      "release": "v12.6.11 2026-11-19",
-      "category": "Aplicaciones homebrew",
-      "platforms": [
-        "ps5"
-      ],
-      "labels": [],
-      "compat": null,
-      "description": "Send games, apps and homebrew to a jailbroken PS5, and manage the console from your computer, phone or browser."
-    },
-    {
       "fullName": "teclilla18/sonic-riders-recomp",
-      "stars": 73,
+      "stars": 75,
       "created": "2026-10-22",
-      "pushed": "2026-11-19",
+      "pushed": "2026-11-20",
       "release": "v0.8.7 2026-11-19",
       "category": "Juegos y ports",
       "platforms": [
@@ -333,8 +316,22 @@
       "description": "Native port of Sonic Riders (GameCube) for Windows, Linux / Steam Deck, Nintendo Switch, Switch 2 (experimental alpha), Android and iPhone /"
     },
     {
+      "fullName": "phantomptr/ps5upload",
+      "stars": 1304,
+      "created": "2026-01-10",
+      "pushed": "2026-11-20",
+      "release": "v12.6.13 2026-11-19",
+      "category": "Aplicaciones homebrew",
+      "platforms": [
+        "ps5"
+      ],
+      "labels": [],
+      "compat": null,
+      "description": "Send games, apps and homebrew to a jailbroken PS5, and manage the console from your computer, phone or browser."
+    },
+    {
       "fullName": "cobanov/PS5LM",
-      "stars": 857,
+      "stars": 861,
       "created": "2026-10-01",
       "pushed": "2026-11-19",
       "release": "v0.11.0 2026-11-02",
@@ -452,7 +449,7 @@
     },
     {
       "fullName": "Xpl0itU/WiiUDownloader",
-      "stars": 2375,
+      "stars": 2377,
       "created": "2022-11-03",
       "pushed": "2026-10-20",
       "release": "v3.2 2026-09-15",
@@ -483,8 +480,20 @@
       "description": "Unity game running on Xbox 360 and PS3"
     },
     {
+      "fullName": "DarkFlippers/unleashed-firmware",
+      "stars": 22800,
+      "created": "2022-03-16",
+      "pushed": "2026-11-20",
+      "release": "unlshd-095 2026-11-11",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [],
+      "labels": [],
+      "compat": null,
+      "description": "Flipper Zero Unleashed Firmware"
+    },
+    {
       "fullName": "DC-SWAT/DreamShell",
-      "stars": 569,
+      "stars": 568,
       "created": "2013-10-02",
       "pushed": "2026-11-19",
       "release": "v4.0.4.Release 2026-07-14",
@@ -497,20 +506,8 @@
       "description": "Operating system for the Sega Dreamcast, NAOMI and NAOMI 2"
     },
     {
-      "fullName": "DarkFlippers/unleashed-firmware",
-      "stars": 22797,
-      "created": "2022-03-16",
-      "pushed": "2026-11-19",
-      "release": "unlshd-095 2026-11-11",
-      "category": "CFW, jailbreak y exploits",
-      "platforms": [],
-      "labels": [],
-      "compat": null,
-      "description": "Flipper Zero Unleashed Firmware"
-    },
-    {
       "fullName": "KallistiOS/KallistiOS",
-      "stars": 652,
+      "stars": 653,
       "created": "2016-03-04",
       "pushed": "2026-11-16",
       "release": "v2.2.2 2026-04-18",
@@ -524,7 +521,7 @@
     },
     {
       "fullName": "odelot/wii-ra-adapter",
-      "stars": 45,
+      "stars": 47,
       "created": "2026-06-01",
       "pushed": "2026-11-16",
       "release": "v0.0.6 2026-11-16",
@@ -547,29 +544,6 @@
         ]
       },
       "description": "RetroAchievements adapter for original Nintendo Wii and GameCube hardware using an ESP32 memory card, custom WiiFlow, d2x and Nintendont."
-    },
-    {
-      "fullName": "XavyProd-Git/pkg-mutant-shop",
-      "stars": 21,
-      "created": "2026-10-06",
-      "pushed": "2026-10-26",
-      "release": "v3.99.5 2026-10-26",
-      "category": "CFW, jailbreak y exploits",
-      "platforms": [
-        "ps4",
-        "ps5"
-      ],
-      "labels": [
-        "Poco conocido"
-      ],
-      "compat": {
-        "models": [],
-        "firmware": [],
-        "requires": [
-          "needs kernel access to already exist and Payload Manager (PS5) or GoldHEN (PS4) to be running, because those are what load a"
-        ]
-      },
-      "description": "A homebrew package manager and store front-end for a jailbroken PlayStation 5 and PlayStation 4 - from the console, a PC, or your phone."
     },
     {
       "fullName": "fungalspores/prototype-switch",
@@ -600,7 +574,7 @@
     },
     {
       "fullName": "SvenGDK/PS-Multi-Tools",
-      "stars": 425,
+      "stars": 426,
       "created": "2023-05-08",
       "pushed": "2026-05-30",
       "release": "v16.2 2026-01-27",
@@ -620,10 +594,10 @@
     },
     {
       "fullName": "Jonathan8520/FlashNX",
-      "stars": 57,
+      "stars": 58,
       "created": "2026-05-19",
       "pushed": "2026-11-19",
-      "release": "v2.1.0 2026-11-10",
+      "release": "v2.1.1 2026-11-19",
       "category": "Emuladores",
       "platforms": [
         "switch"
@@ -679,6 +653,29 @@
       "description": "Plugin to ease the development of homebrews and plugins on the PS Vita"
     },
     {
+      "fullName": "mentalblank/PYXIS",
+      "stars": 58,
+      "created": "2024-09-28",
+      "pushed": "2026-11-15",
+      "release": "47 2026-11-15",
+      "category": "CFW, jailbreak y exploits",
+      "platforms": [
+        "switch"
+      ],
+      "labels": [
+        "Poco conocido"
+      ],
+      "compat": {
+        "models": [],
+        "firmware": [
+          "firmware version 20.0.0",
+          "FW 18.1.0"
+        ],
+        "requires": []
+      },
+      "description": "Automated All-in-One (AIO) custom firmware and homebrew packages for modded Nintendo Switch devices. "
+    },
+    {
       "fullName": "hotdog-face/VitaOS",
       "stars": 64,
       "created": "2026-09-26",
@@ -722,7 +719,7 @@
     },
     {
       "fullName": "Gadega/ship-of-gadeguion",
-      "stars": 47,
+      "stars": 48,
       "created": "2026-11-08",
       "pushed": "2026-11-19",
       "release": "v1.3.0 2026-11-19",
@@ -746,7 +743,7 @@
     },
     {
       "fullName": "ricowp81/SalsaDS",
-      "stars": 23,
+      "stars": 24,
       "created": "2026-10-19",
       "pushed": "2026-11-11",
       "release": "v0.0.5 2026-11-11",
@@ -821,7 +818,7 @@
     },
     {
       "fullName": "SYOP200/Flipper-Zero-Downloads",
-      "stars": 78,
+      "stars": 79,
       "created": "2025-09-27",
       "pushed": "2026-11-18",
       "release": "updt-v.1.5 2026-07-10",
@@ -855,7 +852,7 @@
     },
     {
       "fullName": "kernel64/Harissa64",
-      "stars": 32,
+      "stars": 33,
       "created": "2026-10-09",
       "pushed": "2026-11-11",
       "release": "v2.2.0 2026-11-11",
@@ -894,7 +891,7 @@
     },
     {
       "fullName": "pspdev/pspsdk",
-      "stars": 1212,
+      "stars": 1211,
       "created": "2011-01-14",
       "pushed": "2026-11-16",
       "release": null,
@@ -943,7 +940,7 @@
     },
     {
       "fullName": "ButterscotchRunner/Butterscotch",
-      "stars": 423,
+      "stars": 424,
       "created": "2026-03-06",
       "pushed": "2026-11-19",
       "release": null,
@@ -1034,7 +1031,7 @@
       "fullName": "ChupathingyCE/warthog-360",
       "stars": 5,
       "created": "2026-10-21",
-      "pushed": "2026-11-19",
+      "pushed": "2026-11-20",
       "release": null,
       "category": "CFW, jailbreak y exploits",
       "platforms": [
@@ -1049,7 +1046,7 @@
     },
     {
       "fullName": "XboxDev/nxdk",
-      "stars": 606,
+      "stars": 605,
       "created": "2015-12-22",
       "pushed": "2026-11-12",
       "release": null,
@@ -1081,7 +1078,7 @@
       "fullName": "OpenShopChannel/Apps",
       "stars": 80,
       "created": "2023-05-25",
-      "pushed": "2026-11-18",
+      "pushed": "2026-11-20",
       "release": null,
       "category": "Aplicaciones homebrew",
       "platforms": [

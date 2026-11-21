@@ -422,6 +422,27 @@
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
     },
+    "50682372": {
+      "id": 50682372,
+      "fullName": "ArtemioUrbina/240pTestSuite",
+      "text": "Es un conjunto de software para consolas de videojuegos que ayuda a evaluar procesadores de imagen. Permite probar convertidores de resolución y herramientas de calibración de colores en consolas como Sega Genesis o PC Engine. Útil para técnicos que trabajan con hardware antiguo y monitores CRT.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "8993jl",
+        "readmeLength": 5569
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:35:47.647Z"
+    },
     "52849620": {
       "id": 52849620,
       "fullName": "aldostools/webMAN-MOD",
@@ -857,6 +878,27 @@
       },
       "updatedAt": "2026-11-19T08:28:38.807Z"
     },
+    "145748938": {
+      "id": 145748938,
+      "fullName": "Kovah/LinkAce",
+      "text": "LinkAce es una aplicación que se instala en tu propio servidor para gestionar un archivo personal de enlaces. Permite organizar tus favoritos con listas y etiquetas, monitorizar automáticamente si un enlace deja de funcionar y guardar sitios en el Internet Archive. También ofrece una API REST completa para acceder a sus funciones desde otras aplicaciones y soporta múltiples usuarios con funciones de compartir interno.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1end7l9",
+        "readmeLength": 3425
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:27:42.004Z"
+    },
     "152491432": {
       "id": 152491432,
       "fullName": "partout-io/passepartout",
@@ -1174,6 +1216,27 @@
         "readmeLength": 3464
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
+    },
+    "258649062": {
+      "id": 258649062,
+      "fullName": "2fast-team/2fast",
+      "text": "2fast es una aplicación de autenticación de dos factores que soporta TOTP para Windows, Android, iOS, Linux y macOS. Permite guardar todos los datos en un único archivo encriptado con contraseña, sincronizarlo mediante un servidor WebDAV y restaurar copias de seguridad fácilmente. Útil para gestionar accesos seguros sin depender de la nube ni de cuentas externas.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "105ot32",
+        "readmeLength": 3898
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:28:55.409Z"
     },
     "260150521": {
       "id": 260150521,
@@ -2136,6 +2199,28 @@
         "readmeLength": 4745
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
+    },
+    "708618207": {
+      "id": 708618207,
+      "fullName": "5rahim/seanime",
+      "text": "Seanime es un servidor multimedia de código abierto que funciona en tu propio ordenador. Permite gestionar tu biblioteca local, reproducir anime y leer mangas a través de una interfaz web o una aplicación de escritorio para Windows, Linux y macOS. También incluye funciones para descargar automáticamente episodios, soportar torrents y conectar con servicios externos como Real-Debrid o AniList para descubrir contenido.",
+      "detail": null,
+      "kinds": [
+        "app",
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "17so220",
+        "readmeLength": 3952
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:28:16.910Z"
     },
     "709594097": {
       "id": 709594097,
@@ -3551,6 +3636,27 @@
       },
       "updatedAt": "2026-11-20T20:37:32.067Z"
     },
+    "1337425850": {
+      "id": 1337425850,
+      "fullName": "redcode9/GBA-Rush-PSP",
+      "text": "Es un emulador de consola para PlayStation Portable. Permite jugar a juegos de Game Boy Advance con renderizado de alta calidad y soporte para trucos como los de CodeBreaker. Útil para entusiastas del gaming retro que quieren jugar en su PSP.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "zcehk6",
+        "readmeLength": 7239
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:34:34.628Z"
+    },
     "1368794432": {
       "id": 1368794432,
       "fullName": "Loopayeh/pkg-viewer",
@@ -3751,6 +3857,27 @@
       },
       "updatedAt": "2026-11-20T20:36:39.348Z"
     },
+    "1412414782": {
+      "id": 1412414782,
+      "fullName": "kernel64/Harissa64",
+      "text": "Harissa64 es un emulador de consolas para Xbox 360 modificado que permite jugar juegos de Nintendo 64. Funciona como una aplicación nativa en consolas con sistemas RGH o JTAG, permitiendo seleccionar juegos desde dashboards como Aurora. Permite configurar controles para hasta cuatro jugadores, guardar partidas y gestionar la lista de juegos instalados.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1s7tjt4",
+        "readmeLength": 11553
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:38:18.335Z"
+    },
     "1418205122": {
       "id": 1418205122,
       "fullName": "ZenithUzu/AdvanXe360",
@@ -3769,6 +3896,28 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-21T07:28:47.531Z"
+    },
+    "1419484961": {
+      "id": 1419484961,
+      "fullName": "penettrator/prototype2-nx",
+      "text": "Es un proyecto de código abierto que permite jugar Prototype 2 en Nintendo Switch mediante un port nativo. Requiere una copia oficial de la versión original para Xbox 360 y un sistema con Atmosphère para funcionar. La documentación indica que faltan datos sobre el estado actual del proyecto y sus requisitos completos.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "siul0",
+        "readmeLength": 2450
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:30:18.934Z"
     },
     "1420958706": {
       "id": 1420958706,
@@ -3811,6 +3960,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-21T07:24:52.488Z"
+    },
+    "1425852533": {
+      "id": 1425852533,
+      "fullName": "ricowp81/SalsaDS",
+      "text": "SalsaDS es un emulador experimental para la Nintendo DS que se ejecuta en consolas PlayStation 3. Permite cargar juegos `.nds` descifrados en el disco duro y gestionar sus partidas guardadas, aunque aún no alcanza la velocidad completa en la mayoría de los títulos. Está diseñado para usuarios con sistemas HEN en PS3 y requiere copias de seguridad propias de juegos que posean.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "17t2gcx",
+        "readmeLength": 5079
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:31:39.251Z"
     },
     "1427401105": {
       "id": 1427401105,
@@ -3971,6 +4141,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "1443388506": {
+      "id": 1443388506,
+      "fullName": "coaxel2/coop-link-releases",
+      "text": "Es un lanzador para Windows, macOS y Linux que permite jugar clásicos de Pokémon en línea con amigos. Permite ver a los jugadores en el mapa, realizar intercambios de Pokémon, luchar en batallas 1 contra 1 reales y unirse a la partida de un amigo. Útil para jugar en cooperativo en 28 títulos desde Game Boy hasta 3DS sin necesidad de servidores externos.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1u94v3k",
+        "readmeLength": 6089
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:33:30.935Z"
+    },
     "1445217332": {
       "id": 1445217332,
       "fullName": "sammwyy/gtasands",
@@ -4024,6 +4215,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "1450513785": {
+      "id": 1450513785,
+      "fullName": "Gadega/ship-of-gadeguion",
+      "text": "Es un proyecto de software para la consola PlayStation 3 que permite jugar Ship of Harkinian de forma nativa en hardware. Permite cargar tus propios archivos de juego convertidos, acceder a menús de depuración y gestionar estados guardados en la consola. Es útil para jugadores que quieren ejecutar esta versión específica en su PS3 con HEN o CFW.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1hnf3hj",
+        "readmeLength": 5792
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:30:58.638Z"
+    },
     "1450713950": {
       "id": 1450713950,
       "fullName": "nextcode4u/gloam-shell-ndx",
@@ -4076,6 +4288,46 @@
         "readmeLength": 15763
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1453857537": {
+      "id": 1453857537,
+      "fullName": "hamberluo/gba-gxa",
+      "text": "Es una biblioteca de código abierto en Python que permite añadir audio externo a juegos de Game Boy Advance. Permite cargar archivos de diálogo hablado, música arreglada y efectos sonoros desde un paquete .gxa junto al juego. Útil para desarrolladores de emuladores que quieran implementar soporte para audio externo siguiendo la especificación GXA.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "1756sa8",
+        "readmeLength": 2076
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:35:11.507Z"
+    },
+    "1456815425": {
+      "id": 1456815425,
+      "fullName": "Soap-n-Cartridge/flipper_amiibo",
+      "text": "Es una aplicación para el dispositivo Flipper Zero que simula las etiquetas NFC de los Amiibo de Nintendo. Permite generar identificaciones aleatorias para escanear el mismo Amiibo repetidamente y obtener recompensas ilimitadas en juegos compatibles, además de guardar tus propios escaneos para usarlos en consolas como Switch, 3DS o Wii U. Útil para jugadores que quieren probar múltiples versiones de un mismo Amiibo sin necesidad de tener el archivo original de Nintendo.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "q1hr21",
+        "readmeLength": 8024
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:37:40.380Z"
     },
     "1457143626": {
       "id": 1457143626,
@@ -4293,6 +4545,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T07:32:36.892Z"
+    },
+    "1466632978": {
+      "id": 1466632978,
+      "fullName": "HenriVSL/Missile-Defender-DS",
+      "text": "Es un juego de defensa contra misiles para la consola Nintendo DS. Permite ver proyectiles en la pantalla superior e interceptarlos con el lápiz en la inferior para proteger seis ciudades. Está diseñado para funcionar en dispositivos con homebrew como el DSi o 3DS.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "sckoy9",
+        "readmeLength": 2635
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T19:38:52.083Z"
     }
   }
 }

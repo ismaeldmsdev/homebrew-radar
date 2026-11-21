@@ -24,6 +24,31 @@
       "problems": [
         "Con documentación escasa el texto debe decir que faltan datos."
       ]
+    },
+    "1403658157": {
+      "fullName": "MisterTemaki/snes9xPS5",
+      "basis": {
+        "description": "1r48h9o",
+        "readmeLength": 63860
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-21T19:32:52.611Z",
+      "problems": [
+        "El nombre «PlayStation» no aparece en la documentación."
+      ]
+    },
+    "1439262012": {
+      "fullName": "yefan911/automated-recompilers",
+      "basis": {
+        "description": "1ei2s3v",
+        "readmeLength": 4262
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-21T19:36:59.503Z",
+      "problems": [
+        "Menciona «libre» pero la documentación no lo respalda.",
+        "Con documentación escasa el texto debe decir que faltan datos."
+      ]
     }
   }
 }

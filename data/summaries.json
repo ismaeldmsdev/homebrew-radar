@@ -451,6 +451,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "53171508": {
+      "id": 53171508,
+      "fullName": "KallistiOS/KallistiOS",
+      "text": "Es un entorno de desarrollo y sistema operativo independiente para la consola Sega Dreamcast. Permite a los programadores crear aplicaciones y juegos utilizando herramientas modernas como compiladores C17, C++20 y un gestor de paquetes llamado kos-ports que incluye soporte para formatos multimedia y controladores de hardware. Está diseñado para desarrolladores que quieran crear software para esta plataforma antigua sin depender de Sega.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "n4fwbo",
+        "readmeLength": 4381
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:23:56.091Z"
+    },
     "56429359": {
       "id": 56429359,
       "fullName": "go-nv/goenv",
@@ -495,6 +516,28 @@
         "readmeLength": 818
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
+    },
+    "70271182": {
+      "id": 70271182,
+      "fullName": "eracle/OpenOutreach",
+      "text": "Es una herramienta de generación de leads para empresas que funciona instalándose en tu servidor y ejecutándose desde la terminal. Permite describir tu producto y que el sistema identifique personas adecuadas, explique por qué encajan y envíe correos electrónicos desde tu propia bandeja de entrada. Útil para equipos de ventas que buscan prospectos sin necesidad de subir listas de contactos.",
+      "detail": null,
+      "kinds": [
+        "selfhosted",
+        "cli"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "w7yyho",
+        "readmeLength": 11003
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:28:15.499Z"
     },
     "70557651": {
       "id": 70557651,
@@ -777,6 +820,27 @@
         "readmeLength": 2935
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "143415255": {
+      "id": 143415255,
+      "fullName": "devnoname120/vitacompanion",
+      "text": "Vitacompanion es un complemento en Python diseñado para facilitar el desarrollo de software propio en la consola PS Vita. Permite abrir un servidor FTP en el puerto 1337 y simular entradas de control y táctil mediante un módulo del núcleo. Está pensado para programadores que crean aplicaciones para esta plataforma específica.",
+      "detail": null,
+      "kinds": [
+        "plugin"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1nw0uj2",
+        "readmeLength": 5571
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:26:55.916Z"
     },
     "143638684": {
       "id": 143638684,
@@ -1072,6 +1136,27 @@
         "readmeLength": 19944
       },
       "updatedAt": "2026-11-19T08:25:51.666Z"
+    },
+    "249825341": {
+      "id": 249825341,
+      "fullName": "microsoft/fluentui-apple",
+      "text": "Es una biblioteca de código abierto que proporciona controles nativos para construir experiencias de Microsoft en iOS y macOS. Permite integrar componentes de diseño alineados con el sistema Fluent UI directamente en proyectos de Swift o Objective-C. Está diseñada para desarrolladores que quieren crear aplicaciones nativas en dispositivos Apple.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "bqp5is",
+        "readmeLength": 1099
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:22:39.401Z"
     },
     "253615688": {
       "id": 253615688,
@@ -1758,6 +1843,27 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "581086426": {
+      "id": 581086426,
+      "fullName": "azooKey/azooKey",
+      "text": "Es una aplicación de teclado para iPhone y iPad que permite escribir en japonés. Ofrece conversión en tiempo real, diseños de teclado personalizados y una interfaz limpia para mejorar la experiencia de escritura. Útil para usuarios que necesitan escribir en japonés en dispositivos iOS.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "cql7mp",
+        "readmeLength": 1261
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:22:24.003Z"
+    },
     "582248876": {
       "id": 582248876,
       "fullName": "chocoford/ExcalidrawZ",
@@ -1870,6 +1976,27 @@
       },
       "updatedAt": "2026-11-19T08:28:38.807Z"
     },
+    "637874485": {
+      "id": 637874485,
+      "fullName": "SvenGDK/PS-Multi-Tools",
+      "text": "Es una herramienta de escritorio para Windows, Linux, macOS y FreeBSD diseñada para entusiastas de PlayStation. Permite gestionar copias de seguridad, convertir archivos, descargar firmwares y homebrew, y administrar particiones de discos duros internos. Requiere la instalación de la runtime de .NET 9.0 y algunos drivers opcionales para funciones avanzadas como la gestión de tarjetas de memoria.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1oy9tjw",
+        "readmeLength": 13214
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:25:20.289Z"
+    },
     "641756237": {
       "id": 641756237,
       "fullName": "ravachol/kew",
@@ -1960,6 +2087,25 @@
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
     },
+    "683109534": {
+      "id": 683109534,
+      "fullName": "GoogleCloudPlatform/cymbal-air-toolbox-demo",
+      "text": "Es una demostración de cómo crear agentes inteligentes que interactúan con bases de datos de Google Cloud usando herramientas como RAG y LangGraph. Permite construir aplicaciones que responden preguntas específicas sobre vuelos o información de aeropuertos basándose en datos reales consultados mediante MCP Toolbox. Está diseñada para desarrolladores que quieren probar la arquitectura de agentes en entornos de nube.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "17qzowj",
+        "readmeLength": 6572
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:23:04.223Z"
+    },
     "697523442": {
       "id": 697523442,
       "fullName": "gopher64/gopher64",
@@ -1990,6 +2136,27 @@
         "readmeLength": 4745
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
+    },
+    "709594097": {
+      "id": 709594097,
+      "fullName": "vncsmnl/GNX",
+      "text": "GNX es un paquete completo para modificar una Nintendo Switch, diseñado para simplificar la configuración para usuarios que ya tienen el consolo modificado. Permite instalar la custom firmware Atmosphère, gestionar archivos con DBI y ejecutar aplicaciones como cheats con EdiZon o actualizar el sistema con CNX-updater. Es útil para jugadores que desean personalizar su consola sin tener que configurar cada herramienta por separado.",
+      "detail": null,
+      "kinds": [
+        "config"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1ho9p9e",
+        "readmeLength": 7346
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:23:30.710Z"
     },
     "712673423": {
       "id": 712673423,
@@ -3133,6 +3300,46 @@
       },
       "updatedAt": "2026-11-20T20:39:43.841Z"
     },
+    "1244008024": {
+      "id": 1244008024,
+      "fullName": "Jonathan8520/FlashNX",
+      "text": "FlashNX es un reproductor de juegos Flash para consola Nintendo Switch. Permite ejecutar archivos .swf descargados desde la Flashpoint Archive o copiados manualmente, con controles personalizables y hasta cuatro jugadores. Útil para jugar títulos antiguos en la consola.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "o2o4z8",
+        "readmeLength": 5935
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:25:45.000Z"
+    },
+    "1255724307": {
+      "id": 1255724307,
+      "fullName": "odelot/wii-ra-adapter",
+      "text": "Es un firmware para consolas Nintendo Wii y GameCube que permite jugar sin ordenador ni parches. Permite que las consolas conectadas por USB envíen datos a RetroAchievements y muestren logros en tiempo real. Útil para jugadores que quieren conseguir logros en hardware original sin modificar sus juegos.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "jtm7y7",
+        "readmeLength": 20166
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:24:21.022Z"
+    },
     "1274723381": {
       "id": 1274723381,
       "fullName": "ashhart/TensorFold",
@@ -3174,6 +3381,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T08:32:15.337Z"
+    },
+    "1287234459": {
+      "id": 1287234459,
+      "fullName": "brainphreak/clownsec-moflex-player",
+      "text": "Es un reproductor de video nativo para la consola Nintendo 3DS que permite ver archivos moflex y mp4. Permite reproducir películas en 3D estereoscópico o en 2D, gestionar subtítulos y continuar donde se dejó la partida. Útil para ver contenido multimedia en la consola sin necesidad de instalar programas externos.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "4yl3wy",
+        "readmeLength": 35117
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:27:47.836Z"
     },
     "1288001931": {
       "id": 1288001931,
@@ -3260,6 +3488,27 @@
       },
       "updatedAt": "2026-11-20T07:28:29.593Z"
     },
+    "1303476280": {
+      "id": 1303476280,
+      "fullName": "stjanovitz/tilefinch",
+      "text": "Es un navegador web experimental diseñado para funcionar en la consola Sony PSP. Permite navegar en la web directamente en el dispositivo, decodificando videos y ejecutando JavaScript sin necesidad de un servidor externo. Está pensado para usuarios que tengan una PSP compatible con firmware personalizado y suficiente memoria en el Memory Stick.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "pxy4gh",
+        "readmeLength": 15543
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:26:31.694Z"
+    },
     "1310758816": {
       "id": 1310758816,
       "fullName": "Pinvou/pinvou-agent",
@@ -3322,6 +3571,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T08:31:56.289Z"
+    },
+    "1388370711": {
+      "id": 1388370711,
+      "fullName": "hotdog-face/VitaOS",
+      "text": "Es una aplicación de escritorio para la consola PS Vita que organiza juegos, películas, música y apps en un solo menú. Permite acceder a una tienda de homebrew, ver resúmenes de partidas y controlar el volumen con gestos. Útil para usuarios de PS Vita que quieren una interfaz moderna y rápida.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1ncs15b",
+        "readmeLength": 6542
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:27:20.519Z"
     },
     "1392150242": {
       "id": 1392150242,
@@ -3481,6 +3751,25 @@
       },
       "updatedAt": "2026-11-20T20:36:39.348Z"
     },
+    "1418205122": {
+      "id": 1418205122,
+      "fullName": "ZenithUzu/AdvanXe360",
+      "text": "AdvanXe360 es un emulador para consola Xbox 360 que permite jugar juegos de Game Boy Advance, Game Boy y Game Boy Color. Permite reproducir títulos con parches automáticos, usar sensores de consola como el stick derecho, guardar partidas en 9 ranuras y aplicar filtros de imagen como Scale2x o corrección de color CRT. Está diseñado específicamente para funcionar en la consola Xbox 360.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "1g4vvfu",
+        "readmeLength": 16844
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:28:47.531Z"
+    },
     "1420958706": {
       "id": 1420958706,
       "fullName": "arturofuentes1988/EmuSuNi",
@@ -3501,6 +3790,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T08:31:07.785Z"
+    },
+    "1421263093": {
+      "id": 1421263093,
+      "fullName": "fungalspores/prototype-switch",
+      "text": "Es un proyecto de software para convertir versiones de Xbox 360 de Prototype y Prototype 2 en ejecutables para Nintendo Switch mediante recompilación estática. Permite usar Vulkan como renderizador nativo y traduce el código PowerPC original a C++ para correr en Horizon OS sin necesidad de emulación de GPU. Requiere tener tus propios archivos del juego original en la consola para instalar los archivos NRO y ejecutarlos desde el menú HOME.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "sdfz0d",
+        "readmeLength": 9029
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-21T07:24:52.488Z"
     },
     "1427401105": {
       "id": 1427401105,

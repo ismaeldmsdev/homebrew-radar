@@ -13,6 +13,31 @@
         "El nombre «PlayStation» no aparece en la documentación."
       ]
     },
+    "645556905": {
+      "fullName": "OpenShopChannel/Apps",
+      "basis": {
+        "description": "tm9xll",
+        "readmeLength": 205
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-22T20:00:10.321Z",
+      "problems": [
+        "No parece estar redactado en español."
+      ]
+    },
+    "1038196040": {
+      "fullName": "yashabcyber7/nexadroid",
+      "basis": {
+        "description": "10x3mg2",
+        "readmeLength": 5914
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-22T19:52:47.497Z",
+      "problems": [
+        "Debe tener 2 o 3 frases (tiene 4).",
+        "Longitud fuera de rango (489 caracteres)."
+      ]
+    },
     "1278652388": {
       "fullName": "Riyoway/HomePad",
       "basis": {

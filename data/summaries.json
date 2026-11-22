@@ -978,6 +978,27 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "163857886": {
+      "id": 163857886,
+      "fullName": "TheSpaghettiDetective/obico-server",
+      "text": "Es un servidor de código abierto que detecta fallos en impresoras 3D mediante inteligencia artificial. Permite monitorizar impresoras OctoPrint o Klipper desde tu ordenador, pausar la impresión si detecta errores como trozos sueltos y enviar alertas por correo, Telegram o Discord. Funciona instalándose en tu propio equipo con Docker y se controla desde el navegador o la aplicación móvil.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "117on4q",
+        "readmeLength": 6429
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:51:09.795Z"
+    },
     "164172074": {
       "id": 164172074,
       "fullName": "ohhsodead/arisen-studio",
@@ -1549,6 +1570,27 @@
         "readmeLength": 1586
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
+    },
+    "338701749": {
+      "id": 338701749,
+      "fullName": "GoobyCorp/Xbox-360-Crypto",
+      "text": "Es una colección de herramientas en Python diseñadas para el Xbox 360. Permite comprimir y descomprimir archivos con formato LZX, gestionar claves de cifrado y modificar imágenes de memoria NAND. Está pensado para desarrolladores que trabajan en consolas antiguas o proyectos de software propio para esa plataforma.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "100ehj6",
+        "readmeLength": 3893
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T20:00:44.493Z"
     },
     "342030057": {
       "id": 342030057,
@@ -2418,6 +2460,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "749092533": {
+      "id": 749092533,
+      "fullName": "open-wanderer/wanderer",
+      "text": "Wanderer es una base de datos de senderos alojada en tu propio servidor para gestionar aventuras al aire libre. Permite subir rutas grabadas con GPS, crear nuevas, visualizarlas en mapas y organizarlas en listas personalizadas. Útil para ciclistas y excursionistas que quieren planificar rutas y compartir sus experiencias con otros usuarios.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1sez9m9",
+        "readmeLength": 1783
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:51:37.221Z"
+    },
     "761046569": {
       "id": 761046569,
       "fullName": "Xed-Editor/Xed-Editor",
@@ -3243,6 +3306,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "1060778441": {
+      "id": 1060778441,
+      "fullName": "RetroValou/Yokoi_Game_-_Watch_emulator_3ds",
+      "text": "Es un emulador para juegos tipo Game & Watch en consolas 3DS, Android y Linux. Permite jugar títulos originales con soporte para pantallas dobles, sincronización de tiempo y guardado de partidas. Requiere que el usuario prepare su propio archivo con los juegos antes de ejecutarlo.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "tbyngc",
+        "readmeLength": 6146
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:55:49.180Z"
+    },
     "1075954648": {
       "id": 1075954648,
       "fullName": "codeaholicguy/ai-devkit",
@@ -3841,6 +3925,27 @@
       },
       "updatedAt": "2026-11-21T19:34:34.628Z"
     },
+    "1342442489": {
+      "id": 1342442489,
+      "fullName": "ericreinsmidt/TortOS",
+      "text": "Es un sistema operativo personalizado para consolas retro como el GKD Pixel 2 y el TrimUI Brick. Permite jugar a consolas clásicas, acceder a RetroAchievements directamente en el dispositivo y guardar partidas automáticamente. También incluye trucos como acelerar el juego o mover archivos desde el navegador sin necesidad de un ordenador.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1faq3lu",
+        "readmeLength": 13579
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:56:23.071Z"
+    },
     "1368794432": {
       "id": 1368794432,
       "fullName": "Loopayeh/pkg-viewer",
@@ -4061,6 +4166,26 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-21T19:38:18.335Z"
+    },
+    "1415749885": {
+      "id": 1415749885,
+      "fullName": "griches/PS5_SwitchWaker",
+      "text": "Es un proyecto experimental que ejecuta la versión de GameCube de The Wind Waker en consolas PlayStation 5. Permite jugar la partida copiando una imagen del disco original en una carpeta específica y utiliza el stack Vulkan de la consola para renderizar los gráficos. Faltan datos sobre los requisitos exactos de instalación y el estado final del desarrollo.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "q49qr1",
+        "readmeLength": 9454
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:54:00.934Z"
     },
     "1418205122": {
       "id": 1418205122,
@@ -4352,6 +4477,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "1438188384": {
+      "id": 1438188384,
+      "fullName": "devgyurak/ninge",
+      "text": "Es un emulador de consola portátil para Nintendo DS que funciona dentro de la terminal. Permite ejecutar juegos sin necesidad de BIOS ni archivos de firmware, dibujando ambas pantallas mediante el protocolo de gráficos de kitty en entornos como Ghostty. Está escrito desde cero en Rust y no incluye código de otros emuladores.",
+      "detail": null,
+      "kinds": [
+        "cli"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1hwdyae",
+        "readmeLength": 2764
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:55:14.324Z"
+    },
     "1439875697": {
       "id": 1439875697,
       "fullName": "infosecanalyst-creator/fs2-3ds",
@@ -4555,6 +4701,25 @@
       },
       "updatedAt": "2026-11-21T19:35:11.507Z"
     },
+    "1454573315": {
+      "id": 1454573315,
+      "fullName": "RealAnxiousGit/Uncanny-Cat-Golf-3DS",
+      "text": "Es una versión portada del juego Uncanny Cat Golf diseñada específicamente para la consola Nintendo 3DS. Incluye 113 niveles con múltiples modos de juego, modificadores como 'God Mode' y minijuegos como 'Summer Villa'. Está escrita en C y compatible tanto con el modelo antiguo como con el nuevo de la consola.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "1isfd3q",
+        "readmeLength": 2896
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:59:41.924Z"
+    },
     "1456815425": {
       "id": 1456815425,
       "fullName": "Soap-n-Cartridge/flipper_amiibo",
@@ -4591,6 +4756,27 @@
         "readmeLength": 6285
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1457310478": {
+      "id": 1457310478,
+      "fullName": "wyldts/pkai",
+      "text": "PKAI es una aplicación para PC, Android, Nintendo Switch y Nintendo 3DS que edita partidas de Pokémon. Permite abrir juegos de todas las generaciones, enseñar cajas y equipos, editar Pokémon y comprobar su legalidad antes de guardar, además de compartirlos mediante QR o código. También incluye un asistente de voz para pedir cambios con palabras y ofrece temas en español, inglés e italiano.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1gwu3vo",
+        "readmeLength": 2841
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:57:53.182Z"
     },
     "1457535004": {
       "id": 1457535004,
@@ -4835,6 +5021,25 @@
       },
       "updatedAt": "2026-11-20T07:32:36.892Z"
     },
+    "1465596771": {
+      "id": 1465596771,
+      "fullName": "QMrNobodix/N3DS",
+      "text": "N3DS es una aplicación para móvil que emula las consolas Nintendo DS, DSi y 3DS. Permite cargar juegos propios y jugar con estados guardados, controles personalizados y ajustes de rendimiento. Útil para disfrutar de juegos antiguos en tu teléfono móvil.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "1fg3i30",
+        "readmeLength": 265
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:56:39.228Z"
+    },
     "1466632978": {
       "id": 1466632978,
       "fullName": "HenriVSL/Missile-Defender-DS",
@@ -4856,6 +5061,48 @@
       },
       "updatedAt": "2026-11-21T19:38:52.083Z"
     },
+    "1466840764": {
+      "id": 1466840764,
+      "fullName": "meerok/MeerThemeManager3ds",
+      "text": "Meer Theme Manager 3ds es una aplicación para Windows, Mac y Linux que permite crear temas personalizados para el menú HOME de la consola Nintendo 3DS. Permite editar fondos, ajustar colores de la interfaz, convertir música MP3 en formato compatible y añadir efectos de sonido. Es útil para usuarios que quieren personalizar la apariencia de su consola sin necesidad de usar múltiples herramientas externas.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1ewdm1m",
+        "readmeLength": 14282
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:54:38.649Z"
+    },
+    "1466843305": {
+      "id": 1466843305,
+      "fullName": "syrup-synth/syrup",
+      "text": "Syrup es una aplicación para sintetizar sonido en consolas Nintendo 2DS y 3DS. Permite crear música con osciladores, filtros, efectos y un secuenciador, todo ejecutándose directamente en el hardware de la consola. Requiere instalar un firmware personalizado (Luma3DS) y copiar archivos específicos en la tarjeta SD para funcionar.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "45lnqh",
+        "readmeLength": 3636
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:59:03.409Z"
+    },
     "1467036072": {
       "id": 1467036072,
       "fullName": "leonzordhue/PokemonStadium2-3DS",
@@ -4876,6 +5123,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-22T07:02:58.948Z"
+    },
+    "1467690980": {
+      "id": 1467690980,
+      "fullName": "underplayer100/CyberSensation-3DS",
+      "text": "Es un motor de videojuegos escrito en C que ejecuta la modificación Cyber Sensation directamente en la consola Nintendo 3DS. Permite cargar archivos de la modificación Codename Engine y convertirlos para que funcionen en el hardware de la consola, ofreciendo gráficos y audio nativos sin necesidad de un ordenador. Útil para jugadores que quieren probar esta modificación específica en su dispositivo portátil.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1o59oxz",
+        "readmeLength": 7225
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T19:57:16.255Z"
     }
   }
 }

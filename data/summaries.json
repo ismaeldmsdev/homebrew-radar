@@ -50,6 +50,27 @@
       },
       "updatedAt": "2026-11-20T08:31:36.105Z"
     },
+    "1255327": {
+      "id": 1255327,
+      "fullName": "pspdev/pspsdk",
+      "text": "Es un conjunto de herramientas y librerías para programadores que desarrollan software para la consola PlayStation Portable (PSP). Permite crear aplicaciones de videojuegos o utilidades para esa consola mediante bibliotecas específicas para el sistema operativo de la PSP. Está pensado exclusivamente para personas que programan en C y necesitan desarrollar software para esa plataforma específica.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "2trcko",
+        "readmeLength": 5788
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:05:35.891Z"
+    },
     "1406596": {
       "id": 1406596,
       "fullName": "jcubic/jquery.terminal",
@@ -421,6 +442,27 @@
         "readmeLength": 15813
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
+    },
+    "48426404": {
+      "id": 48426404,
+      "fullName": "XboxDev/nxdk",
+      "text": "Es un kit de desarrollo de software (SDK) de código abierto para crear juegos en la consola original Xbox. Permite desarrollar aplicaciones utilizando estándares modernos de C y C++, junto con soporte para gráficos en 3D mediante lenguajes de shaders de NVIDIA y una pila de red basada en lwIP. Está diseñado para funcionar en sistemas operativos modernos como Windows, macOS y Linux.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "bjc7me",
+        "readmeLength": 3745
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:10:40.649Z"
     },
     "50682372": {
       "id": 50682372,
@@ -827,6 +869,27 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "139285966": {
+      "id": 139285966,
+      "fullName": "cfw-guide/dsi.cfw.guide",
+      "text": "Es una guía completa en formato web sobre cómo modificar el Nintendo DSi. Permite aprender a instalar sistemas como HiyaCFW y entender los pasos para modificar el dispositivo. Útil para usuarios que quieren personalizar su consola Nintendo DSi.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1v4fr63",
+        "readmeLength": 665
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:02:11.268Z"
+    },
     "140782188": {
       "id": 140782188,
       "fullName": "kamiyaa/joshuto",
@@ -935,6 +998,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T20:38:22.026Z"
+    },
+    "174032870": {
+      "id": 174032870,
+      "fullName": "KunoichiZ/acnl-modding-info",
+      "text": "Es un sitio web creado con Nuxt.js que centraliza información sobre modificaciones para Animal Crossing: New Leaf. Permite consultar datos técnicos y herramientas para desarrolladores de juegos en consola Nintendo. Útil para la comunidad que busca recursos sobre hacking y desarrollo de mods en la consola 3DS.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "8t85hz",
+        "readmeLength": 2030
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:04:58.661Z"
     },
     "177301105": {
       "id": 177301105,
@@ -1753,6 +1837,25 @@
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
     },
+    "488390224": {
+      "id": 488390224,
+      "fullName": "gbadev-org/games",
+      "text": "Es una base de datos en formato JSON que recopila juegos creados por la comunidad para Game Boy Advance. Permite añadir nuevas entradas, mejorar metadatos y corregir errores en la información de los títulos. Útil para preservar el catálogo de juegos independientes de esta consola.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "mkz9z3",
+        "readmeLength": 1100
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:05:57.274Z"
+    },
     "496192011": {
       "id": 496192011,
       "fullName": "huggingface/optimum-intel",
@@ -2382,6 +2485,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T07:27:57.273Z"
+    },
+    "787028121": {
+      "id": 787028121,
+      "fullName": "REG-Linux/REG-Linux",
+      "text": "REG Linux es un sistema operativo diseñado para emular consolas retro en dispositivos como Raspberry Pi o mini-PCs. Permite instalarlo en una memoria USB o tarjeta SD para convertir cualquier hardware compatible en una consola, con soporte nativo para múltiples arquitecturas como ARM o x86-64. Es ideal para usuarios que quieren jugar en hardware embebido sin necesidad de instalar programas adicionales.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1lq4bms",
+        "readmeLength": 4328
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:11:22.296Z"
     },
     "790713784": {
       "id": 790713784,
@@ -3226,6 +3350,27 @@
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
     },
+    "1101649719": {
+      "id": 1101649719,
+      "fullName": "ZimengXiong/ExcaliDash",
+      "text": "ExcaliDash es un sistema que se instala en tu propio servidor para usar Excalidraw. Permite trabajar en tiempo real con varios usuarios, gestionar colecciones de dibujos y acceder desde cualquier navegador. Se puede desplegar utilizando Docker Compose y requiere configuración previa de autenticación.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1be3j0v",
+        "readmeLength": 342
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:01:54.147Z"
+    },
     "1131512003": {
       "id": 1131512003,
       "fullName": "phantomptr/ps5upload",
@@ -3289,6 +3434,25 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T20:33:57.297Z"
+    },
+    "1174120985": {
+      "id": 1174120985,
+      "fullName": "ButterscotchRunner/Butterscotch",
+      "text": "Butterscotch es una implementación en código abierto del ejecutador de juegos de GameMaker: Studio, escrita en C. Permite ejecutar juegos compilados en bytecode en plataformas como Android, PlayStation 2 o PlayStation 3, donde el original no funcionaba. Es útil para portar juegos creados con GameMaker a consolas o móviles antiguos.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "n2kkl6",
+        "readmeLength": 8539
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:07:58.698Z"
     },
     "1192378543": {
       "id": 1192378543,
@@ -3614,6 +3778,26 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T07:28:13.489Z"
+    },
+    "1325376122": {
+      "id": 1325376122,
+      "fullName": "pocket-nexus/pocket-voxel",
+      "text": "Es un proyecto experimental que recrea un RPG de criaturas estilo Game Boy en un entorno 3D de cubos. Permite ejecutar la versión web en el navegador y correrla en consolas portátiles como PSP y PS Vita, utilizando un motor basado en TypeScript y Rust. Faltan_datos: true, ya que la documentación describe su funcionamiento interno y requisitos técnicos, pero no detalla claramente cómo se descarga ni se instala para el usuario final.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "kn4mcm",
+        "readmeLength": 12162
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:07:14.894Z"
     },
     "1330517212": {
       "id": 1330517212,
@@ -4024,6 +4208,48 @@
       },
       "updatedAt": "2026-11-20T07:30:38.538Z"
     },
+    "1428964270": {
+      "id": 1428964270,
+      "fullName": "ChupathingyCE/warthog-360",
+      "text": "Es un proyecto experimental que permite jugar Chupathingy en consolas Xbox 360 con hardware modificado. Permite jugar en línea con PCs y otras consolas, soporta hasta 32 jugadores y requiere que el usuario tenga su propia copia del juego original. Está diseñado para funcionar en sistemas que ejecutan homebrew mediante RGH o JTAG.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "xjbd0s",
+        "readmeLength": 10413
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:10:01.558Z"
+    },
+    "1430116208": {
+      "id": 1430116208,
+      "fullName": "0x1a4-dev/DSiDrop",
+      "text": "Es un sistema que se instala en tu propio servidor para gestionar una biblioteca de juegos de Nintendo DSi. Permite descargar juegos directamente al dispositivo, hacer copias de seguridad de partidas guardadas y actualizar la aplicación nativa desde tu ordenador. Útil para entusiastas del gaming retro que quieren controlar su catálogo y datos en casa.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "14kjwbn",
+        "readmeLength": 2569
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:09:18.650Z"
+    },
     "1430129207": {
       "id": 1430129207,
       "fullName": "teclilla18/sonic-riders-recomp",
@@ -4199,6 +4425,27 @@
       },
       "updatedAt": "2026-11-19T20:50:11.356Z"
     },
+    "1449628373": {
+      "id": 1449628373,
+      "fullName": "tarikbc/ZyperOS",
+      "text": "ZyperOS es un sistema operativo ligero diseñado para funcionar en la consola portátil GKD Pixel 2 y en el dispositivo TrimUI Brick. Permite ejecutar más de cuarenta sistemas retro, acceder a tu biblioteca personal de música y videos, y gestionar partidas guardadas sin necesidad de sacar la tarjeta de memoria. Está disponible para instalar en Windows, macOS y Linux.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1437nkv",
+        "readmeLength": 17405
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:04:23.443Z"
+    },
     "1450078301": {
       "id": 1450078301,
       "fullName": "BolgarMaxym97/3ds-recorder",
@@ -4345,6 +4592,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "1457535004": {
+      "id": 1457535004,
+      "fullName": "gl91306/ctr64",
+      "text": "ctr64 es un emulador de consolas para la Nintendo 3DS que permite ejecutar juegos de Nintendo 64. Permite jugar títulos como Super Mario 64 o Mario Kart 64 a velocidad completa o con anti-aliasing en dispositivos con firmware personalizado. Requiere instalar un archivo .cia en la tarjeta SD y usar ROMs en formatos específicos como .z64 o .n64.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "etv9fv",
+        "readmeLength": 9927
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:03:42.835Z"
+    },
     "1457913893": {
       "id": 1457913893,
       "fullName": "nextcode4u/gloam-shell-theme-directory",
@@ -4396,6 +4664,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-19T20:51:29.055Z"
+    },
+    "1461374590": {
+      "id": 1461374590,
+      "fullName": "ThoraldM/chiaki-ng-ps3",
+      "text": "Es una aplicación para jugar en consola propia (homebrew) en PlayStation 3. Permite jugar a videojuegos de PS4 y PS5 en la TV con un mando DualShock 3, ofreciendo audio estéreo con corrección de desfase y opciones de sincronización de cuadros. Funciona en redes locales y requiere una consola PS3 con firmware personalizado.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "4wn72n",
+        "readmeLength": 3832
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:08:40.497Z"
     },
     "1461731812": {
       "id": 1461731812,
@@ -4566,6 +4855,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-21T19:38:52.083Z"
+    },
+    "1467036072": {
+      "id": 1467036072,
+      "fullName": "leonzordhue/PokemonStadium2-3DS",
+      "text": "Es un proyecto experimental que permite jugar Pokémon Stadium 2 de la consola N64 en una New Nintendo 3DS mediante recompilación estática. El código del juego se traduce directamente para el procesador del 3DS, sin usar un emulador, y funciona en versiones beta. Requiere una New Nintendo 3DS con firmware personalizado, una copia física del cartucho americano y herramientas externas para generar el archivo .z64.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "9r7joa",
+        "readmeLength": 5414
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-22T07:02:58.948Z"
     }
   }
 }

@@ -1753,6 +1753,25 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "427468903": {
+      "id": 427468903,
+      "fullName": "abaire/nxdk_pgraph_tests_golden_results",
+      "text": "Es un repositorio que contiene los resultados de pruebas gráficas para hardware de Xbox 1.0. Permite consultar estos datos en GitHub Pages o en la wiki asociada. Útil para verificar el comportamiento de los gráficos en esa consola específica.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "1e36sow",
+        "readmeLength": 463
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:55:14.094Z"
+    },
     "436513172": {
       "id": 436513172,
       "fullName": "retronas/retronas",
@@ -3124,6 +3143,27 @@
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
     },
+    "983928923": {
+      "id": 983928923,
+      "fullName": "CarlosPix/CarlOS",
+      "text": "CarlOS es un sistema operativo modificado para la consola Miyoo Flip. Permite ejecutar hasta 67 sistemas de emulación, incluyendo consolas de hogar, arcades y portátiles antiguos. Requiere instalar un firmware previo y copiar archivos en una tarjeta SD para funcionar.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "uicl2r",
+        "readmeLength": 7157
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:55:56.062Z"
+    },
     "985622082": {
       "id": 985622082,
       "fullName": "LenovoLegionToolkit-Team/LenovoLegionToolkit",
@@ -3169,6 +3209,26 @@
         "readmeLength": 5478
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
+    },
+    "999647099": {
+      "id": 999647099,
+      "fullName": "Tiger21820/Tiger-is-cool",
+      "text": "Este repositorio es un prototipo experimental creado para probar las funciones de GitHub y no tiene otro propósito real. Solo contiene enlaces a foros y páginas web relacionadas con Nintendo 3DS y juegos como Wario Land 3 Master Quest. Faltan datos sobre si es una aplicación descargable o un recurso informativo.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "hv4lvu",
+        "readmeLength": 396
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:52:12.197Z"
     },
     "1006312036": {
       "id": 1006312036,
@@ -3326,6 +3386,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-22T19:55:49.180Z"
+    },
+    "1068797232": {
+      "id": 1068797232,
+      "fullName": "Lorenzooone/TADWAD-Builder",
+      "text": "Es un script en Python para crear archivos TAD y WAD compatibles con consolas como Nintendo DSi y Wii. Permite construir canales instalables, firmar archivos con claves específicas y generar metadatos de títulos. Está diseñado para desarrolladores que trabajan en proyectos de software para estas plataformas.",
+      "detail": null,
+      "kinds": [
+        "cli"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1k4sy8t",
+        "readmeLength": 5408
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:55:35.804Z"
     },
     "1075954648": {
       "id": 1075954648,
@@ -3518,6 +3599,25 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T20:33:57.297Z"
+    },
+    "1171242438": {
+      "id": 1171242438,
+      "fullName": "8-bitStudio/3d-jelly",
+      "text": "Es un cliente no oficial para jugar en consolas Nintendo 3DS. Permite conectarse a un servidor Jellyfin, iniciar sesión con usuario y contraseña, y navegar por la biblioteca de medios. Funciona mejor en la versión New Nintendo 3DS, aunque también soporta la original y ofrece descodificación de video experimental.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "8dh7km",
+        "readmeLength": 5357
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:51:32.986Z"
     },
     "1174120985": {
       "id": 1174120985,
@@ -4025,6 +4125,27 @@
       },
       "updatedAt": "2026-11-20T07:30:06.948Z"
     },
+    "1399393133": {
+      "id": 1399393133,
+      "fullName": "ndssigner/nds-signer",
+      "text": "Es una aplicación de software para la consola Nintendo DSi que permite firmar transacciones de Bitcoin sin conexión a internet. Funciona ejecutando código de SeedSigner en el dispositivo, permitiendo escanear códigos QR para ver transacciones, introducir claves de seguridad y generar códigos de respaldo. Está diseñada para usuarios que buscan almacenar sus criptomonedas de forma segura y aislada de redes externas.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "135bfvb",
+        "readmeLength": 9229
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:51:57.654Z"
+    },
     "1400723317": {
       "id": 1400723317,
       "fullName": "cobanov/PS5LM",
@@ -4512,6 +4633,27 @@
         "readmeLength": 2915
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1440549278": {
+      "id": 1440549278,
+      "fullName": "llamington/verity",
+      "text": "Es una herramienta para editar los archivos de guardado de videojuegos Pokémon de las generaciones 4 y 5. Permite verificar la legalidad de los Pokémon según las reglas de PKHeX y modificar datos como niveles, movimientos o nombres sin romper la validez del juego. Funciona directamente en la consola Nintendo DS o desde el navegador web sin necesidad de instalar nada extra.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "mw0315",
+        "readmeLength": 3285
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:51:11.585Z"
     },
     "1443388506": {
       "id": 1443388506,
@@ -5040,6 +5182,48 @@
       },
       "updatedAt": "2026-11-22T19:56:39.228Z"
     },
+    "1466001081": {
+      "id": 1466001081,
+      "fullName": "Grimoire-du-Coeur/PQ2-FR-3DS",
+      "text": "Es un proyecto de traducción al francés de Persona Q2 para la consola Nintendo 3DS. Permite extraer, verificar y reinyectar el texto del juego sin necesidad de datos del juego original. Útil para la comunidad que quiere una versión completa y jugable en francés.",
+      "detail": null,
+      "kinds": [
+        "config"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "wifibr",
+        "readmeLength": 4492
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:57:03.270Z"
+    },
+    "1466359471": {
+      "id": 1466359471,
+      "fullName": "YurizonoMika/Shattered-Pixel-Dungeon-3DS",
+      "text": "Es una versión experimental del juego Shattered Pixel Dungeon adaptada para la consola Nintendo 3DS. Permite jugar en la consola con mecánicas como selección de héroes, combate por turnos y sistema de puntuaciones local, además de soportar la importación de partidas guardadas antiguas. Está diseñada para funcionar en dispositivos Old 3DS y New 3DS mediante el menú HOME.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1bqe1km",
+        "readmeLength": 21521
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:53:36.391Z"
+    },
     "1466632978": {
       "id": 1466632978,
       "fullName": "HenriVSL/Missile-Defender-DS",
@@ -5144,6 +5328,67 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-22T19:57:16.255Z"
+    },
+    "1468106840": {
+      "id": 1468106840,
+      "fullName": "goodboimax/dsi-agent",
+      "text": "Es un agente de IA remoto para controlar una Nintendo DSi desde Linux. Permite usar la pantalla táctil para interactuar con agentes como Herdr Core o Claude Code, grabar voz offline y tomar fotos directamente desde la consola. Faltan datos sobre cómo instalarlo o qué agentes específicos se pueden usar más allá de los mencionados en el README.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "mxejkf",
+        "readmeLength": 1800
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:54:47.222Z"
+    },
+    "1468110615": {
+      "id": 1468110615,
+      "fullName": "goodboimax/dsi-pad",
+      "text": "Es un proyecto en Python que convierte una Nintendo DSi en una tableta gráfica y trackpad para usar con Linux y Hyprland. Permite conectar el dispositivo por Wi-Fi para enviar entradas táctiles y de ratón al ordenador mediante el protocolo UDP y el dispositivo /dev/uinput. Requiere conocimientos técnicos para configurar el entorno y compilar el archivo .nds.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "1row1bt",
+        "readmeLength": 1887
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:54:00.922Z"
+    },
+    "1468385707": {
+      "id": 1468385707,
+      "fullName": "zeranemesis/ctrnative",
+      "text": "Es un proyecto experimental que permite ejecutar juegos de Nintendo 3DS directamente en PC y Android sin usar un emulador. Faltan datos sobre su estado actual, ya que la documentación indica que solo un juego inicia sin pruebas completas de niveles, sonido o velocidad.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "1usnm7t",
+        "readmeLength": 2043
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-23T07:56:39.597Z"
     }
   }
 }

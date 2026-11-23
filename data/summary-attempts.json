@@ -50,6 +50,30 @@
         "Con documentación escasa el texto debe decir que faltan datos."
       ]
     },
+    "1307151511": {
+      "fullName": "PS4-OpenGNM/opengnm",
+      "basis": {
+        "description": "1v59psv",
+        "readmeLength": 4268
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-23T07:58:00.706Z",
+      "problems": [
+        "Menciona «código abierto» pero la documentación no lo respalda."
+      ]
+    },
+    "1307151540": {
+      "fullName": "PS4-OpenGNM/opengnm-psbc",
+      "basis": {
+        "description": "23pqao",
+        "readmeLength": 2692
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-23T07:53:09.425Z",
+      "problems": [
+        "Longitud fuera de rango (483 caracteres)."
+      ]
+    },
     "1403658157": {
       "fullName": "MisterTemaki/snes9xPS5",
       "basis": {
@@ -73,6 +97,18 @@
       "problems": [
         "Menciona «libre» pero la documentación no lo respalda.",
         "Con documentación escasa el texto debe decir que faltan datos."
+      ]
+    },
+    "1450441861": {
+      "fullName": "Tim-campy/pocket-league-story-3ds",
+      "basis": {
+        "description": "1t0ub3n",
+        "readmeLength": 4568
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-23T07:58:50.704Z",
+      "problems": [
+        "Menciona «código abierto» pero la documentación no lo respalda."
       ]
     }
   }

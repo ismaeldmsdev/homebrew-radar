@@ -118,6 +118,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "3774468": {
+      "id": 3774468,
+      "fullName": "ObjFW/ObjFW",
+      "text": "ObjFW es un framework ligero y portátil para el lenguaje Objective-C. Permite escribir aplicaciones que ejecutan en múltiples plataformas sin preocuparse por las diferencias entre sistemas operativos. Utiliza un runtime propio optimizado para mayor velocidad y soporte de excepciones.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "47au6t",
+        "readmeLength": 4461
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:05:26.673Z"
+    },
     "4585500": {
       "id": 4585500,
       "fullName": "coderaiser/cloudcmd",
@@ -292,6 +313,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "17659600": {
+      "id": 17659600,
+      "fullName": "projectsend/projectsend",
+      "text": "Es una aplicación que se instala en tu propio servidor para gestionar el envío de archivos a clientes. Permite crear áreas privadas para cada usuario, gestionar sus descargas y organizar todo con carpetas y grupos. También ofrece una versión alojada en la nube si no quieres gestionar el servidor tú mismo.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "8sr1vs",
+        "readmeLength": 5674
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:03:25.512Z"
+    },
     "19854246": {
       "id": 19854246,
       "fullName": "YunoHost/yunohost",
@@ -397,6 +439,27 @@
         "readmeLength": 25568
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
+    },
+    "34813275": {
+      "id": 34813275,
+      "fullName": "juzzlin/DustRacing2D",
+      "text": "Dust Racing 2D es un juego de carreras de coches en perspectiva superior que funciona en Windows y Linux. Permite jugar con uno o dos jugadores contra computadoras, elegir entre tres niveles de dificultad y crear pistas personalizadas con su editor de niveles. También incluye modos como carreras, pruebas de tiempo y duelos, además de mecánicas de paradas en el box para reparar neumáticos.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "3xbzs0",
+        "readmeLength": 3290
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:04:13.035Z"
     },
     "40619002": {
       "id": 40619002,
@@ -2105,6 +2168,27 @@
         "readmeLength": 5296
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
+    },
+    "584843480": {
+      "id": 584843480,
+      "fullName": "monarch-initiative/ontogpt",
+      "text": "Es una biblioteca de Python diseñada para extraer información estructurada de textos utilizando modelos de lenguaje grandes. Permite validar nombres contra ontologías para evitar errores, procesar documentos en lotes desde la terminal o mediante código, y generar resultados en formatos como YAML o JSON. Está pensada para programadores que necesitan integrar estas capacidades en sus propios proyectos o agentes de IA.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1us5ztk",
+        "readmeLength": 8068
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:03:48.611Z"
     },
     "590327621": {
       "id": 590327621,
@@ -3983,6 +4067,27 @@
       },
       "updatedAt": "2026-11-22T07:07:14.894Z"
     },
+    "1330299249": {
+      "id": 1330299249,
+      "fullName": "dwalter/ShinyGen",
+      "text": "ShinyGen es una herramienta de creación de videojuegos retro que funciona en el navegador o en dispositivos móviles. Permite describir un juego y el sistema genera, juega y corrige automáticamente el código para consolas como Game Boy Color, N64 o Godot. Es útil para desarrolladores que quieren prototipar juegos en múltiples plataformas sin escribir código manualmente.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "t50md7",
+        "readmeLength": 15365
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:08:55.758Z"
+    },
     "1330517212": {
       "id": 1330517212,
       "fullName": "ShoshinFauteux/GBAdhoc",
@@ -4326,6 +4431,48 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-21T07:28:47.531Z"
+    },
+    "1419075597": {
+      "id": 1419075597,
+      "fullName": "Yannis100/vita-port-skill",
+      "text": "Es una biblioteca de habilidades para agentes de inteligencia artificial diseñada para portar juegos y aplicaciones a la consola Sony PS Vita. Permite definir rutas de porteo como la compilación estática, la emulación de APIs o la carga de archivos .so de Android, además de gestionar la conversión de shaders y la mapeo de controles. Está pensada para desarrolladores que quieran adaptar software existente a esta plataforma específica.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "10yz683",
+        "readmeLength": 2655
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:07:45.071Z"
+    },
+    "1419437726": {
+      "id": 1419437726,
+      "fullName": "SecondaryLifer/StarHaven",
+      "text": "Es un programa nativo para la consola Nintendo 3DS que ejecuta Paper Mario (N64) sin usar emuladores. Permite cargar tus propias ROMs y gestionar partidas guardadas desde el navegador o directamente en el juego. Útil para jugadores que quieren jugar esta versión específica en su 3DS con firmware personalizado.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "kl6vny",
+        "readmeLength": 4078
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:06:58.486Z"
     },
     "1419484961": {
       "id": 1419484961,
@@ -4808,6 +4955,27 @@
       },
       "updatedAt": "2026-11-20T08:31:25.643Z"
     },
+    "1452417546": {
+      "id": 1452417546,
+      "fullName": "devgyurak/cleancart.nds",
+      "text": "Es una colección de juegos homebrew para Nintendo DS con código propio y activos generados por código. Permite a desarrolladores de emuladores probar juegos completos que se evalúan a sí mismos para verificar el comportamiento del hardware. Útil para equipos que necesitan pruebas reproducibles y limpias en licencias en sus entornos de desarrollo.",
+      "detail": null,
+      "kinds": [
+        "config"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1dk1vs1",
+        "readmeLength": 53158
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:05:50.291Z"
+    },
     "1453471566": {
       "id": 1453471566,
       "fullName": "HFYKratos/3ds2apple",
@@ -4861,6 +5029,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-22T19:59:41.924Z"
+    },
+    "1454641530": {
+      "id": 1454641530,
+      "fullName": "EstebanPdN/forge.store",
+      "text": "Es una tienda nativa para la consola Nintendo 3DS que gestiona aplicaciones de la comunidad. Permite navegar por banners y trailers, leer documentación de proyectos y descargar o instalar juegos sin salir del dispositivo. Útil para usuarios que buscan ejecutar software de la comunidad en esta consola específica.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "17bfyw1",
+        "readmeLength": 4069
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:07:18.931Z"
     },
     "1456815425": {
       "id": 1456815425,
@@ -5088,6 +5277,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "1462536037": {
+      "id": 1462536037,
+      "fullName": "domhit/GameVault-Nintendo-3DS-Exporter",
+      "text": "Es una herramienta pequeña para escanear los juegos instalados en una consola Nintendo 3DS y generar un archivo de texto con los datos. Permite leer información como el nombre del juego, el editor y la región sin necesidad de desbloquear nada en el sistema. Útil para crear inventarios de juegos en la consola.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1yp4ysj",
+        "readmeLength": 2440
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:06:35.391Z"
+    },
     "1462706965": {
       "id": 1462706965,
       "fullName": "michvllni/rmxp3ds",
@@ -5223,6 +5433,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-23T07:53:36.391Z"
+    },
+    "1466614032": {
+      "id": 1466614032,
+      "fullName": "ReiKatari/STORM_3DS",
+      "text": "STORM 3DS es un emulador híbrido de alta gama para Android que combina el núcleo Azahar con mejoras de Citra MMJ y Borked3DS. Permite ejecutar juegos de Nintendo 3DS en Android 10+ con soporte para múltiples formatos de archivo, instalación automática de DLC y gráficos optimizados mediante Vulkan y OpenGL ES 3.2. Está diseñado específicamente para dispositivos Android y requiere conocimientos técnicos para configurar sus archivos de claves y drivers.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "23jlsx",
+        "readmeLength": 8120
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:04:43.435Z"
     },
     "1466632978": {
       "id": 1466632978,
@@ -5389,6 +5620,71 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-23T07:56:39.597Z"
+    },
+    "1468707958": {
+      "id": 1468707958,
+      "fullName": "doctor-utsugi/smz3-universe",
+      "text": "Es una aplicación que permite jugar Super Metroid y A Link to the Past en dos pantallas simultáneamente. Permite configurar reglas personalizadas, gestionar partidas diarias o semanales y acceder a pistas durante el juego. Útil para jugadores que usan consolas como Nintendo 3DS o AYN Thor junto con un ordenador.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "iwe1re",
+        "readmeLength": 8920
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:08:07.624Z"
+    },
+    "1468820355": {
+      "id": 1468820355,
+      "fullName": "albxncom/3dstocktheme",
+      "text": "Es una aplicación de software no oficial para consolas Nintendo 3DS europeas. Permite instalar temas personalizados y conjuntos de insignias desde tarjetas SD o códigos QR, además de previsualizar música y fondos antes de guardarlos. Útil para usuarios con firmware personalizado que desean personalizar la interfaz de inicio de su consola.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1hph2k9",
+        "readmeLength": 5610
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:06:12.647Z"
+    },
+    "1469318277": {
+      "id": 1469318277,
+      "fullName": "finthetechguy/ctrpass",
+      "text": "Es una biblioteca y utilidad de línea de comandos para conectar Nintendo 3DS mediante StreetPass. Permite encontrar consolas cercanas, intercambiar mensajes, gestionar cajas de entrada y salida y crear inspeccionar mensajes de Mii Plaza. También facilita importar mensajes desde imágenes de guardado CEC y copiarlos a carpetas de emuladores.",
+      "detail": null,
+      "kinds": [
+        "app",
+        "cli",
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1hjsxal",
+        "readmeLength": 2972
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T00:08:30.617Z"
     }
   }
 }

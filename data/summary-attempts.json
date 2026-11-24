@@ -86,6 +86,19 @@
         "El nombre «PlayStation» no aparece en la documentación."
       ]
     },
+    "1423937563": {
+      "fullName": "Asenix/Chicago3DS",
+      "basis": {
+        "description": "wuunrn",
+        "readmeLength": 7430
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-24T00:09:43.961Z",
+      "problems": [
+        "Menciona «libre» pero la documentación no lo respalda.",
+        "Con documentación escasa el texto debe decir que faltan datos."
+      ]
+    },
     "1439262012": {
       "fullName": "yefan911/automated-recompilers",
       "basis": {

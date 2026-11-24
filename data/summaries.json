@@ -1744,6 +1744,27 @@
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
     },
+    "365300077": {
+      "id": 365300077,
+      "fullName": "OliveTin/OliveTin",
+      "text": "OliveTin es un sistema que se instala en un servidor propio para ejecutar comandos de shell desde una interfaz web. Permite ejecutar órdenes predefinidas de forma segura, como reiniciar Plex o actualizar paquetes, y ofrece una configuración sencilla en YAML con modo oscuro. Está diseñado para facilitar el acceso a tareas técnicas a personas no expertas o para automatizar flujos de trabajo en entornos Linux.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "12u7xca",
+        "readmeLength": 4878
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T22:36:27.602Z"
+    },
     "369374514": {
       "id": 369374514,
       "fullName": "skylersaleh/SkyEmu",
@@ -2647,6 +2668,27 @@
       },
       "updatedAt": "2026-11-19T08:25:51.666Z"
     },
+    "767183985": {
+      "id": 767183985,
+      "fullName": "azahar-emu/azahar",
+      "text": "Azahar es un emulador de consolas para PC y dispositivos móviles que permite jugar en Nintendo 3DS. Permite disfrutar de la librería de títulos con mejoras como mayor resolución, controladores modernos y guardado de partidas. Está disponible para Windows, macOS, Android y Linux.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1n24upj",
+        "readmeLength": 4839
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T22:36:48.141Z"
+    },
     "771115174": {
       "id": 771115174,
       "fullName": "mierak/rmpc",
@@ -2996,6 +3038,27 @@
         "readmeLength": 15487
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
+    },
+    "909341777": {
+      "id": 909341777,
+      "fullName": "entitybtw/mcsm_portable",
+      "text": "Es una versión portada de la serie interactiva Minecraft: Story Mode para la consola portátil Sony PSP. Permite jugar los cinco episodios con sus decisiones y guardados, además de ofrecer siete idiomas y zonas interactivas. Es un proyecto de fans sin relación con los desarrolladores originales.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1212jy1",
+        "readmeLength": 3578
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T22:37:58.873Z"
     },
     "912164685": {
       "id": 912164685,
@@ -3649,14 +3712,14 @@
     "1101649719": {
       "id": 1101649719,
       "fullName": "ZimengXiong/ExcaliDash",
-      "text": "Es un sistema que se instala en un servidor propio para crear espacios de trabajo colaborativos basados en Excalidraw. Permite dibujos persistentes, historial de versiones, copias de seguridad y autenticación mediante OpenID Connect. Se utiliza desde el navegador sin necesidad de instalar nada en el ordenador del usuario.",
+      "text": "ExcaliDash es un entorno de trabajo para Excalidraw que se instala en un servidor propio. Permite dibujar y colaborar en tiempo real, además de guardar historial de versiones y respaldos. Se puede configurar para usar autenticación con OpenID Connect y almacenar datos en bases de datos como PostgreSQL o servicios de almacenamiento como S3.",
       "detail": null,
       "kinds": [
         "selfhosted"
       ],
       "origin": "llm",
       "basis": {
-        "description": "1be3j0v",
+        "description": "4ghvzv",
         "readmeLength": 1263
       },
       "generator": {
@@ -3665,7 +3728,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-24T10:12:48.990Z"
+      "updatedAt": "2026-11-24T22:40:09.617Z"
     },
     "1131512003": {
       "id": 1131512003,
@@ -4114,6 +4177,27 @@
       },
       "updatedAt": "2026-11-22T07:07:14.894Z"
     },
+    "1326165590": {
+      "id": 1326165590,
+      "fullName": "visorcraft/GhostGalleon",
+      "text": "Es una aplicación para reemplazar la pantalla de inicio de dispositivos Android con pantalla doble, diseñada principalmente para el One X Sugar. Permite organizar juegos en una cuadrícula estilo 3DS o un carrusel de tarjetas, con un catálogo de ROMs que incluye arte y un control directo desde el emulador. Funciona en dispositivos con una o dos pantallas, adaptándose a la configuración del usuario.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1p4nvxp",
+        "readmeLength": 13111
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T22:38:47.484Z"
+    },
     "1330299249": {
       "id": 1330299249,
       "fullName": "dwalter/ShinyGen",
@@ -4218,6 +4302,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T08:31:56.289Z"
+    },
+    "1387704818": {
+      "id": 1387704818,
+      "fullName": "fearkov/3dsrecomp",
+      "text": "Es una biblioteca en Rust que convierte el código de juegos para Nintendo 3DS en C. Permite encontrar funciones en los ejecutables, generar código C para arquitecturas ARM y Thumb, y verificar el resultado contra un intérprete. Útil para desarrolladores que quieren modificar juegos o crear versiones más rápidas integrando código personalizado.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "3erdca",
+        "readmeLength": 2836
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T22:39:37.774Z"
     },
     "1388370711": {
       "id": 1388370711,
@@ -4911,6 +5016,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-21T19:33:30.935Z"
+    },
+    "1443402075": {
+      "id": 1443402075,
+      "fullName": "isaiahboland-dotcom/3ds-kingdom-newlands-port",
+      "text": "Es un proyecto experimental que reescribe el juego Kingdom: New Lands en Rust para la consola Nintendo 3DS. Permite jugar con controles, guardar partidas en tarjetas SD y renderizado en 3D estereoscópico, aunque aún tiene problemas con la iluminación nocturna y el rendimiento en modelos antiguos. Requiere que el usuario tenga su propia copia del juego original en PC para convertir sus activos localmente.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1xxuzuw",
+        "readmeLength": 12789
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T22:38:22.618Z"
     },
     "1445217332": {
       "id": 1445217332,
@@ -5716,14 +5842,14 @@
     "1468385707": {
       "id": 1468385707,
       "fullName": "zeranemesis/ctrnative",
-      "text": "Es un proyecto experimental que permite ejecutar juegos de Nintendo 3DS directamente en PC y Android sin usar un emulador. Faltan datos sobre su estado actual, ya que la documentación indica que solo un juego inicia sin pruebas completas de niveles, sonido o velocidad.",
+      "text": "Es un proyecto experimental que permite ejecutar juegos de Nintendo 3DS en PC y Android sin usar un emulador tradicional. Faltan datos sobre su estado actual, ya que la documentación indica que solo un juego inicia sin pruebas completas de niveles, sonido o velocidad, y que la traducción del código y los shaders es un proceso en desarrollo temprano.",
       "detail": null,
       "kinds": [],
       "origin": "llm",
       "limited": true,
       "basis": {
         "description": "1usnm7t",
-        "readmeLength": 2043
+        "readmeLength": 5142
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -5731,7 +5857,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-23T07:56:39.597Z"
+      "updatedAt": "2026-11-24T22:40:59.111Z"
     },
     "1468707958": {
       "id": 1468707958,
@@ -5860,6 +5986,26 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-24T10:09:02.270Z"
+    },
+    "1470692278": {
+      "id": 1470692278,
+      "fullName": "wegnertom85-spec/F1-Game-demake-f1-2011-for-nintendo-dsi",
+      "text": "Faltan datos sobre qué hace exactamente este proyecto, ya que no hay documentación disponible. Se trata de un juego creado con código en C para la consola Nintendo DS, basado en la versión de 3DS del F1 2011.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "1ykvz80",
+        "readmeLength": null
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T22:39:49.892Z"
     }
   }
 }

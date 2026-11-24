@@ -1,6 +1,18 @@
 {
   "version": 1,
   "attempts": {
+    "123738376": {
+      "fullName": "shawly/docker-ps3netsrv",
+      "basis": {
+        "description": "1ftnx58",
+        "readmeLength": 11449
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-24T22:37:37.987Z",
+      "problems": [
+        "El nombre «PlayStation» no aparece en la documentación."
+      ]
+    },
     "395383178": {
       "fullName": "premohq/PlayTendoh",
       "basis": {

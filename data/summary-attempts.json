@@ -25,6 +25,18 @@
         "No parece estar redactado en español."
       ]
     },
+    "864559870": {
+      "fullName": "mentalblank/PYXIS",
+      "basis": {
+        "description": "xnp7n6",
+        "readmeLength": 3688
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-24T10:07:44.490Z",
+      "problems": [
+        "Menciona «tiempo real» pero la documentación no lo respalda."
+      ]
+    },
     "1038196040": {
       "fullName": "yashabcyber7/nexadroid",
       "basis": {

@@ -841,17 +841,23 @@
     "122707902": {
       "id": 122707902,
       "fullName": "zelon88/HRConvert2",
-      "text": "Es un conversor de archivos que instalas en tu propio servidor y que admite más de 500 formatos: documentos, imágenes, libros electrónicos, archivos comprimidos y más. Arrastras un archivo, eliges el formato y descargas el resultado sin que tus datos salgan de tu equipo. Es una alternativa privada a los conversores gratuitos en línea.",
-      "detail": "Incluye reconocimiento de texto (OCR), funciona en 26 idiomas y hasta en una Raspberry Pi. Cada conversor se ejecuta aislado por seguridad.",
+      "text": "Es un servidor propio para convertir archivos en tu ordenador o en un Raspberry Pi. Permite procesar más de 530 formatos y ejecutar flujos de trabajo con múltiples pasos, como escanear documentos o comprimir archivos, sin que tus datos salgan de tu control. Útil para gestionar conversiones de documentos, imágenes o archivos 3D de forma segura y privada.",
+      "detail": null,
       "kinds": [
         "selfhosted"
       ],
-      "origin": "curated",
+      "origin": "llm",
       "basis": {
-        "description": "1mypd28",
-        "readmeLength": 11013
+        "description": "11g1ct1",
+        "readmeLength": 11401
       },
-      "updatedAt": "2026-11-19T08:27:41.922Z"
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:13:29.633Z"
     },
     "123695736": {
       "id": 123695736,
@@ -1259,6 +1265,27 @@
         "readmeLength": 3175
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
+    },
+    "211715048": {
+      "id": 211715048,
+      "fullName": "timothymiller/cloudflare-ddns",
+      "text": "Es un cliente para actualizar registros de DNS dinámico en Cloudflare, escrito en Rust. Permite mantener tus direcciones IP públicas actualizadas automáticamente mediante múltiples proveedores de detección y soporta IPv4 e IPv6. Se ejecuta como contenedor Docker o como binario estático en sistemas como Raspberry Pi o servidores propios.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1upt2dt",
+        "readmeLength": 15019
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:05:55.864Z"
     },
     "213067642": {
       "id": 213067642,
@@ -2241,6 +2268,27 @@
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
     },
+    "627369610": {
+      "id": 627369610,
+      "fullName": "arianrhodsandlot/retroassembly",
+      "text": "RetroAssembly es una aplicación web que funciona como una consola de videojuegos retro en tu navegador. Permite jugar a juegos de sistemas clásicos como NES, SNES o GameBoy, ver las carátulas de tus juegos y guardar tu progreso para continuar después. También incluye un controlador virtual para jugar sin mando físico y permite auto-alojarse con Docker para usuarios avanzados.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "3gtdje",
+        "readmeLength": 2550
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:06:34.305Z"
+    },
     "628729877": {
       "id": 628729877,
       "fullName": "langroid/langroid",
@@ -2915,16 +2963,15 @@
     "894433723": {
       "id": 894433723,
       "fullName": "ASCIT31/Dark-Moon",
-      "text": "Es una herramienta de prueba de penetración autónoma basada en IA de código abierto. Permite ejecutar evaluaciones completas en infraestructuras propias, detectando y probando vulnerabilidades en sistemas como Active Directory o Kubernetes. Funciona como una herramienta de línea de comandos que se integra con plataformas como GitHub, GitLab o Jenkins para automatizar el análisis de seguridad.",
+      "text": "Es una herramienta de prueba de penetración autónoma basada en IA de código abierto que se ejecuta en tu propia infraestructura. Permite encontrar y demostrar vulnerabilidades en sistemas web, nube o Active Directory, generando un gráfico de rutas de ataque con pruebas verificadas. Útil para equipos de seguridad que necesitan evaluar infraestructuras locales sin enviar datos a la nube.",
       "detail": null,
       "kinds": [
-        "selfhosted",
-        "cli"
+        "selfhosted"
       ],
       "origin": "llm",
       "basis": {
-        "description": "1euqeeg",
-        "readmeLength": 11362
+        "description": "203xnk",
+        "readmeLength": 18598
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -2932,7 +2979,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-19T20:48:30.741Z"
+      "updatedAt": "2026-11-24T10:14:14.803Z"
     },
     "897595329": {
       "id": 897595329,
@@ -3602,7 +3649,7 @@
     "1101649719": {
       "id": 1101649719,
       "fullName": "ZimengXiong/ExcaliDash",
-      "text": "ExcaliDash es un sistema que se instala en tu propio servidor para usar Excalidraw. Permite trabajar en tiempo real con varios usuarios, gestionar colecciones de dibujos y acceder desde cualquier navegador. Se puede desplegar utilizando Docker Compose y requiere configuración previa de autenticación.",
+      "text": "Es un sistema que se instala en un servidor propio para crear espacios de trabajo colaborativos basados en Excalidraw. Permite dibujos persistentes, historial de versiones, copias de seguridad y autenticación mediante OpenID Connect. Se utiliza desde el navegador sin necesidad de instalar nada en el ordenador del usuario.",
       "detail": null,
       "kinds": [
         "selfhosted"
@@ -3610,7 +3657,7 @@
       "origin": "llm",
       "basis": {
         "description": "1be3j0v",
-        "readmeLength": 342
+        "readmeLength": 1263
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -3618,7 +3665,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-22T07:01:54.147Z"
+      "updatedAt": "2026-11-24T10:12:48.990Z"
     },
     "1131512003": {
       "id": 1131512003,
@@ -4251,6 +4298,27 @@
       },
       "updatedAt": "2026-11-23T07:51:57.654Z"
     },
+    "1399733514": {
+      "id": 1399733514,
+      "fullName": "ogumaza/3sf",
+      "text": "3sf es un formato de archivo de música para la consola Nintendo 3DS que permite reproducir sonidos dentro del sistema de la consola. Permite cargar archivos de sonido (BCSAR) y ejecutarlos mediante un firmware específico, ofreciendo modos de juego y archivo para gestionar efectos como reverberación. Está diseñado para desarrolladores que trabajan con emuladores de DSP y archivos de audio de esta consola.",
+      "detail": null,
+      "kinds": [
+        "library"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1djqkke",
+        "readmeLength": 18218
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:10:22.105Z"
+    },
     "1400723317": {
       "id": 1400723317,
       "fullName": "cobanov/PS5LM",
@@ -4694,6 +4762,27 @@
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
     },
+    "1432788252": {
+      "id": 1432788252,
+      "fullName": "BreadChaser/BreadBox",
+      "text": "Es un emulador multi-sistema para consolas Nintendo 3DS y 2DS que permite jugar PlayStation y Game Boy Advance. Permite continuar partidas guardadas automáticamente, descargar portadas de juegos y usar trucos en ambas consolas. Útil para usuarios que quieren jugar juegos de otras plataformas en sus dispositivos portátiles antiguos.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1trf7i9",
+        "readmeLength": 7665
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:09:38.739Z"
+    },
     "1433356643": {
       "id": 1433356643,
       "fullName": "infosecanalyst-creator/uqm-3ds",
@@ -4979,18 +5068,23 @@
     "1453471566": {
       "id": 1453471566,
       "fullName": "HFYKratos/3ds2apple",
-      "text": "Es un proyecto que convierte juegos de Nintendo 3DS que poseas en aplicaciones nativas para iPhone y iPad. En lugar de emular, traduce el código del juego por adelantado para que funcione directamente en el procesador del teléfono. Necesitas tus propias copias desencriptadas de los juegos.",
-      "detail": "Incluye lanzadores para Windows y macOS y una app para iOS 16 o posterior. Está en una versión muy temprana (0.1).",
+      "text": "Es un pipeline de portabilidad nativa para ejecutar tus propios juegos de Nintendo 3DS en iPhone y iPad. Permite traducir el código de los juegos a C y compilarlo en ARM64 usando LLVM o Apple clang, integrando gráficos con Metal a través de MoltenVK. Útil para usuarios que ya poseen ROMs descifradas y quieren jugar en sus dispositivos móviles sin emuladores tradicionales.",
+      "detail": null,
       "kinds": [
-        "config",
-        "experimental"
+        "app"
       ],
-      "origin": "curated",
+      "origin": "llm",
       "basis": {
-        "description": "10x8nxa",
-        "readmeLength": 15763
+        "description": "jata40",
+        "readmeLength": 26632
       },
-      "updatedAt": "2026-11-19T08:29:38.702Z"
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:14:57.262Z"
     },
     "1453857537": {
       "id": 1453857537,
@@ -5164,15 +5258,13 @@
     "1460214881": {
       "id": 1460214881,
       "fullName": "devilAPI/ios3ds",
-      "text": "Es un proyecto de investigación que ejecuta iOS 4.2.1 nativamente en una Nintendo 3DS antigua usando C. Permite arrancar el sistema operativo original de Apple en el hardware real de la consola, con soporte para pantalla, botones y aplicaciones. Útil para investigadores que estudian la arquitectura de la 3DS o quieren probar software antiguo en un dispositivo físico.",
+      "text": "Es un proyecto experimental que ejecuta iOS 4.2.1 nativamente en una Nintendo 3DS real. Permite que aplicaciones como Cydia y Safari funcionen directamente en el hardware sin emulación. Útil para usuarios con una 3DS modificada que deseen probar un sistema operativo antiguo en su consola.",
       "detail": null,
-      "kinds": [
-        "experimental"
-      ],
+      "kinds": [],
       "origin": "llm",
       "basis": {
-        "description": "1ci8g3d",
-        "readmeLength": 6587
+        "description": "ah6yoe",
+        "readmeLength": 17244
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -5180,7 +5272,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-19T20:51:29.055Z"
+      "updatedAt": "2026-11-24T10:16:19.149Z"
     },
     "1461374590": {
       "id": 1461374590,
@@ -5319,6 +5411,27 @@
       },
       "updatedAt": "2026-11-20T07:31:47.823Z"
     },
+    "1463065189": {
+      "id": 1463065189,
+      "fullName": "getBoolean/dartbrew",
+      "text": "Es una herramienta de línea de comandos para construir y ejecutar programas en consolas Nintendo 3DS. Permite compilar aplicaciones en dos modos: compilación previa a ejecución (AOT) o compilación en tiempo de ejecución (JIT), y probarlas directamente en el dispositivo. Está diseñada para desarrolladores que quieren crear juegos o aplicaciones para la plataforma New Nintendo 3DS usando el lenguaje Dart.",
+      "detail": null,
+      "kinds": [
+        "cli"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "s3b1ed",
+        "readmeLength": 3231
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:11:03.144Z"
+    },
     "1463393513": {
       "id": 1463393513,
       "fullName": "NintendoDS-Homebrew-Community/.github",
@@ -5354,16 +5467,15 @@
     "1464480996": {
       "id": 1464480996,
       "fullName": "levkeveli/Min3DStry",
-      "text": "Min3DStry es un proyecto experimental que intenta llevar el juego Mindustry a las consolas Nintendo 3DS y 2DS como software nativo. Actualmente solo contiene la infraestructura del proyecto, ya que la jugabilidad, el soporte de hardware y la compatibilidad con mapas y guardados permanecen por verificar. Faltan datos sobre el estado final del desarrollo.",
+      "text": "Min3DStry es una versión experimental de la consola Nintendo 3DS y 2DS para el juego Mindustry. Permite jugar la versión completa del juego en hardware real, con soporte para mapas personalizados y partidas multijugador. Está diseñada para desarrolladores que quieran portar el código Java original a la arquitectura ARM11 de la consola.",
       "detail": null,
       "kinds": [
         "experimental"
       ],
       "origin": "llm",
-      "limited": true,
       "basis": {
         "description": "nlnez6",
-        "readmeLength": 992
+        "readmeLength": 3409
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -5371,7 +5483,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-20T07:32:36.892Z"
+      "updatedAt": "2026-11-24T10:16:59.084Z"
     },
     "1465596771": {
       "id": 1465596771,
@@ -5685,6 +5797,69 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-24T00:08:30.617Z"
+    },
+    "1469805211": {
+      "id": 1469805211,
+      "fullName": "ohquebacan/oqb-updater-3ds",
+      "text": "Es una aplicación nativa para la consola Nintendo 3DS que funciona como una tienda integrada para descubrir y gestionar software. Permite descargar, instalar y abrir aplicaciones de la comunidad, así como actualizarlas automáticamente y cambiar entre temas claros y oscuros. Útil para usuarios que quieren acceder a homebrew y ports sin salir del sistema de la consola.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1iw874w",
+        "readmeLength": 3213
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:12:22.588Z"
+    },
+    "1469815272": {
+      "id": 1469815272,
+      "fullName": "oli-bot/3DShell",
+      "text": "3DShell es un cliente SSH para la consola Nintendo 3DS que permite gestionar servidores remotos desde el dispositivo. Permite escribir en chino mediante diccionario por voz, usar un teclado virtual dibujado por el programa y acceder a múltiples máquinas remotas. Es útil para desarrolladores que necesitan ejecutar código o comandos en la consola sin usar un ordenador.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1e5w7ke",
+        "readmeLength": 51583
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:11:43.184Z"
+    },
+    "1469860454": {
+      "id": 1469860454,
+      "fullName": "MadeOfBees/3Drop",
+      "text": "3Drop es una aplicación de escritorio para desarrolladores que gestiona instalaciones en consolas Nintendo 3DS. Permite instalar y lanzar archivos CIA desde la terminal, sincronizar datos y transferir archivos por Wi-Fi sin intervención manual. Está diseñada para acelerar el desarrollo de software en dispositivos antiguos de la consola.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "136uj",
+        "readmeLength": 22172
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-24T10:09:02.270Z"
     }
   }
 }

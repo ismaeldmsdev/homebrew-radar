@@ -613,6 +613,27 @@
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
     },
+    "61173624": {
+      "id": 61173624,
+      "fullName": "mikekazakov/nimble-commander",
+      "text": "Es una aplicación de gestión de archivos para macOS que muestra dos paneles a la vez. Permite navegar rápidamente usando el teclado y combina la experiencia de los gestores de archivos clásicos con el diseño moderno de Mac. Útil para usuarios que prefieren un control total desde el teclado en su ordenador.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1fa6x43",
+        "readmeLength": 1739
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T08:49:06.069Z"
+    },
     "65464094": {
       "id": 65464094,
       "fullName": "BlitterStudio/amiberry",
@@ -3712,15 +3733,15 @@
     "1101649719": {
       "id": 1101649719,
       "fullName": "ZimengXiong/ExcaliDash",
-      "text": "ExcaliDash es un entorno de trabajo para Excalidraw que se instala en un servidor propio. Permite dibujar y colaborar en tiempo real, además de guardar historial de versiones y respaldos. Se puede configurar para usar autenticación con OpenID Connect y almacenar datos en bases de datos como PostgreSQL o servicios de almacenamiento como S3.",
+      "text": "ExcaliDash es un entorno de trabajo para dibujar diagramas que se instala en tu propio servidor usando Docker. Permite guardar dibujos, gestionar colecciones y colaborar en tiempo real sin necesidad de configurar un frontend personalizado. Es útil para equipos que necesitan un espacio de trabajo persistente y seguro en su infraestructura local.",
       "detail": null,
       "kinds": [
         "selfhosted"
       ],
       "origin": "llm",
       "basis": {
-        "description": "4ghvzv",
-        "readmeLength": 1263
+        "description": "cbgl9v",
+        "readmeLength": 2444
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -3728,7 +3749,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-24T22:40:09.617Z"
+      "updatedAt": "2026-11-25T08:56:07.772Z"
     },
     "1131512003": {
       "id": 1131512003,
@@ -4072,6 +4093,28 @@
       },
       "updatedAt": "2026-11-20T07:31:17.773Z"
     },
+    "1292438658": {
+      "id": 1292438658,
+      "fullName": "TetraSsky/DualRip",
+      "text": "DualRip es una herramienta de línea de comandos y con interfaz gráfica para extraer audio de consolas Nintendo DS y 3DS. Permite convertir efectos de sonido y música en archivos WAV simulando los drivers de audio originales, manteniendo puntos de repetición y canales múltiples. Útil para desarrolladores o entusiastas que necesitan audio de juegos retro en formato estándar.",
+      "detail": null,
+      "kinds": [
+        "app",
+        "cli"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "ffd66w",
+        "readmeLength": 5391
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T08:49:46.793Z"
+    },
     "1298231915": {
       "id": 1298231915,
       "fullName": "pocket-nexus/pocket-shell",
@@ -4281,6 +4324,25 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-22T19:56:23.071Z"
+    },
+    "1356409935": {
+      "id": 1356409935,
+      "fullName": "wozt/capture2cloud",
+      "text": "Capture2Cloud es una solución de streaming de juegos de bajo retraso para Linux. Permite capturar video y audio desde una consola y transmitirlo a navegadores, dispositivos Android o consolas como Nintendo Switch y Wii U, además de enviar controles desde dispositivos Bluetooth. Útil para jugar remotamente en Linux sin necesidad de hardware adicional específico.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "wfmob6",
+        "readmeLength": 9984
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T08:51:43.121Z"
     },
     "1368794432": {
       "id": 1368794432,
@@ -4669,6 +4731,27 @@
       },
       "updatedAt": "2026-11-21T19:30:18.934Z"
     },
+    "1420422696": {
+      "id": 1420422696,
+      "fullName": "Shield-77/Shield-DJ-Lite",
+      "text": "Es un reproductor de música para la consola Nintendo 3DS. Permite controlar la velocidad y el tono sincronizados, ajustar el boost de graves, mezclar canciones y aplicar efectos como reverberación. Está optimizado para modelos antiguos de la consola y soporta archivos MP3 y OGG desde la tarjeta SD.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1lrx7zo",
+        "readmeLength": 4364
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T08:52:23.304Z"
+    },
     "1420958706": {
       "id": 1420958706,
       "fullName": "arturofuentes1988/EmuSuNi",
@@ -4908,6 +4991,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T07:32:24.752Z"
+    },
+    "1435370926": {
+      "id": 1435370926,
+      "fullName": "IvaYar/dead-space-3ds-port",
+      "text": "Es un proyecto experimental que intenta ejecutar el juego Dead Space Mobile en la consola New Nintendo 3DS. Utiliza el motor original del juego y traduce su renderizado para que funcione en la GPU de la consola. Actualmente está en desarrollo y no hay una versión jugable final disponible.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1lhdpx3",
+        "readmeLength": 9106
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T08:52:59.176Z"
     },
     "1435557891": {
       "id": 1435557891,
@@ -5271,6 +5375,27 @@
       },
       "updatedAt": "2026-11-24T00:07:18.931Z"
     },
+    "1455997011": {
+      "id": 1455997011,
+      "fullName": "AureoLightz/CitroWaker",
+      "text": "CitroWaker es un proyecto experimental que lleva el juego The Legend of Zelda: The Wind Waker a la consola New Nintendo 3DS. Permite ejecutar la versión nativa del juego en hardware real, traduciendo comandos gráficos de GameCube para la GPU PICA de la consola portátil. Útil para jugadores que tienen una New Nintendo 3DS con firmware personalizado y quieren probar la aventura original en dos pantallas.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1ptg10x",
+        "readmeLength": 4802
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T08:50:28.698Z"
+    },
     "1456815425": {
       "id": 1456815425,
       "fullName": "Soap-n-Cartridge/flipper_amiibo",
@@ -5611,6 +5736,27 @@
       },
       "updatedAt": "2026-11-24T10:16:59.084Z"
     },
+    "1464948216": {
+      "id": 1464948216,
+      "fullName": "mchurcher92/3ds-ocr",
+      "text": "Es una biblioteca o plugin para desarrolladores que crean software para consolas Nintendo 3DS. Permite integrar reconocimiento de texto japonés en tiempo real, búsqueda en diccionarios y traducción con IA directamente en la consola. Útil para programadores que quieren añadir herramientas de aprendizaje o lectura a sus juegos o aplicaciones propias para esta consola.",
+      "detail": null,
+      "kinds": [
+        "plugin"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "6bb6k",
+        "readmeLength": 12163
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T08:54:27.179Z"
+    },
     "1465596771": {
       "id": 1465596771,
       "fullName": "QMrNobodix/N3DS",
@@ -5797,6 +5943,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-22T19:57:16.255Z"
+    },
+    "1467986778": {
+      "id": 1467986778,
+      "fullName": "Smartdude400/flute-of-age-2ds",
+      "text": "Es un proyecto de desarrollo para consolas Nintendo 2DS y 3DS que ejecuta el juego Flute of Age directamente en el hardware sin emuladores. Permite convertir tus propios archivos ROM en datos nativos para renderizar gráficos y sonido con fidelidad completa. Es útil para desarrolladores o entusiastas que quieran ejecutar juegos antiguos en sus propias máquinas sin depender de software externo.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "qrcskb",
+        "readmeLength": 6046
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T08:53:44.294Z"
     },
     "1468106840": {
       "id": 1468106840,
@@ -6006,6 +6173,28 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-24T22:39:49.892Z"
+    },
+    "1471392255": {
+      "id": 1471392255,
+      "fullName": "BlazeVertex/Pushmo-Dutch",
+      "text": "Es un proyecto de traducción de fans para la consola Nintendo 3DS que adapta el juego Pushmo al idioma holandés. Faltan datos sobre cómo instalarlo o qué herramientas se necesitan para aplicar la traducción al juego, ya que no se proporciona una guía completa de instalación.",
+      "detail": null,
+      "kinds": [
+        "config"
+      ],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "1hzdczs",
+        "readmeLength": 1821
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T08:55:27.482Z"
     }
   }
 }

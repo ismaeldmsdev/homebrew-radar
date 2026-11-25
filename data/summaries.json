@@ -548,6 +548,28 @@
       },
       "updatedAt": "2026-11-21T19:35:47.647Z"
     },
+    "52383057": {
+      "id": 52383057,
+      "fullName": "richelbilderbeek/city_of_thieves",
+      "text": "Es un juego de aventuras de texto basado en la novela de Ian Livingstone. Faltan datos sobre cómo se juega o qué funciones concretas ofrece la aplicación.",
+      "detail": null,
+      "kinds": [
+        "cli"
+      ],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "1q6elfh",
+        "readmeLength": 959
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:51:31.114Z"
+    },
     "52849620": {
       "id": 52849620,
       "fullName": "aldostools/webMAN-MOD",
@@ -813,6 +835,25 @@
         "readmeLength": 12687
       },
       "updatedAt": "2026-11-19T08:28:38.807Z"
+    },
+    "114127484": {
+      "id": 114127484,
+      "fullName": "zaksabeast/PokemonRNGGuides",
+      "text": "Es un repositorio que contiene guías sobre trucos para obtener Pokémon específicos en consolas como la 3DS, GBA, NDS o Switch. Permite consultar instrucciones detalladas sobre cómo manipular los generadores de números aleatorios para conseguir ciertos Pokémon en partidas. Está pensado para jugadores que quieran dominar estas mecánicas en sus consolas Nintendo.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "jb8ytw",
+        "readmeLength": 418
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:51:49.643Z"
     },
     "116140523": {
       "id": 116140523,
@@ -2298,17 +2339,23 @@
     "627024850": {
       "id": 627024850,
       "fullName": "OpenAdaptAI/OpenAdapt",
-      "text": "Es una herramienta para automatizar tareas repetitivas en aplicaciones web, de escritorio o de escritorio remoto: una persona o un agente de IA hace la tarea una vez y OpenAdapt la convierte en un programa que la repite. Ese programa funciona sin llamar a modelos de IA, comprueba cada guardado y se detiene si algo no coincide. Está orientada a empresas, por ejemplo para gestionar historias clínicas o portales de aseguradoras.",
+      "text": "Es una herramienta para programadores que permite compilar, verificar y reparar automáticamente agentes de IA que interactúan con interfaces gráficas. Permite añadir comprobaciones antes de hacer clic, recargar páginas y generar recibidos firmados con Ed25519 para garantizar la fiabilidad de cada acción. Útil para automatizar tareas en escritorio o navegador sin errores silenciosos.",
       "detail": null,
       "kinds": [
-        "config"
+        "library"
       ],
-      "origin": "curated",
+      "origin": "llm",
       "basis": {
-        "description": "rnuq1x",
-        "readmeLength": 12712
+        "description": "1exx1ch",
+        "readmeLength": 6428
       },
-      "updatedAt": "2026-11-19T08:24:51.773Z"
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:58:16.339Z"
     },
     "627369610": {
       "id": 627369610,
@@ -4325,6 +4372,27 @@
       },
       "updatedAt": "2026-11-22T19:56:23.071Z"
     },
+    "1346298174": {
+      "id": 1346298174,
+      "fullName": "djaysan/pico-launcher-dsbios",
+      "text": "Es una versión modificada del lanzador de juegos para consola Nintendo DS que funciona como tema en la pantalla principal. Permite mostrar un reloj analógico, calendario y barra de estado dibujados con código, además de gestionar favoritos, estadísticas de partidas y guías de texto para los juegos. Está diseñado para funcionar en tarjetas SD de flashcarts en consolas Nintendo DS y DSi.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1590dh6",
+        "readmeLength": 7691
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:52:23.831Z"
+    },
     "1356409935": {
       "id": 1356409935,
       "fullName": "wozt/capture2cloud",
@@ -4815,6 +4883,25 @@
       },
       "updatedAt": "2026-11-21T19:31:39.251Z"
     },
+    "1426340523": {
+      "id": 1426340523,
+      "fullName": "Zanchizz/tempad-3ds",
+      "text": "Es un simulador interactivo para la consola Nintendo 3DS que recrea el dispositivo TemPad de la TVA, inspirado en la serie Loki. Permite navegar por una interfaz con pantalla superior y inferior, gestionar un catálogo de destinos temporales y realizar selecciones táctiles o con D-Pad. Está desarrollado en C nativo para la plataforma Homebrew de 3DS.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "yomhjf",
+        "readmeLength": 7422
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:54:41.784Z"
+    },
     "1427401105": {
       "id": 1427401105,
       "fullName": "LNPANDY/NX2Apple",
@@ -4938,17 +5025,23 @@
     "1432448483": {
       "id": 1432448483,
       "fullName": "unowncollectables/Pokemon-HeartGold-SoulSilver-New3ds",
-      "text": "Es una adaptación nativa de Pokémon Oro HeartGold y Plata SoulSilver para New Nintendo 3DS, creada a partir de la decompilación del juego. Añade 3D estereoscópico, pantalla panorámica y el Pokégear en la pantalla táctil. Necesitas tu propia ROM del juego: el repositorio no incluye ninguna.",
-      "detail": "Se prepara con un programa para Windows y funciona a unas 60 imágenes por segundo.",
+      "text": "Es un proyecto de software para la consola Nintendo New 3DS que recrea Pokémon HeartGold y SoulSilver. Permite jugar con gráficos en 3D estereoscópico, pantalla ancha y controles táctiles en el Pokégear, además de incluir funciones como el comercio global (GTS) y regalos misteriosos. Es útil para jugadores que quieren experimentar la versión original en hardware moderno, aunque requiere que traigan su propia ROM y no viene preinstalada.",
+      "detail": null,
       "kinds": [
-        "config"
+        "app"
       ],
-      "origin": "curated",
+      "origin": "llm",
       "basis": {
         "description": "shwvef",
-        "readmeLength": 12990
+        "readmeLength": 21970
       },
-      "updatedAt": "2026-11-19T08:29:38.702Z"
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:59:20.780Z"
     },
     "1432788252": {
       "id": 1432788252,
@@ -5042,6 +5135,27 @@
         "readmeLength": 3295
       },
       "updatedAt": "2026-11-19T08:29:38.702Z"
+    },
+    "1437821996": {
+      "id": 1437821996,
+      "fullName": "Ann0ying/3DSnitch",
+      "text": "Es un bot automatizado gratuito que vigila proyectos de Nintendo 3DS en GitHub y envía resúmenes en Telegram. Utiliza inteligencia artificial para analizar cambios recientes y filtrar resultados irrelevantes antes de enviarlos. Es útil para mantenerse al día con el desarrollo de emuladores o herramientas para esta consola sin tener que revisar cada repositorio manualmente.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1qwzr8c",
+        "readmeLength": 3968
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:56:27.426Z"
     },
     "1438188384": {
       "id": 1438188384,
@@ -5295,6 +5409,27 @@
       },
       "updatedAt": "2026-11-24T00:05:50.291Z"
     },
+    "1452909836": {
+      "id": 1452909836,
+      "fullName": "njlent/tougelike-3ds-pub",
+      "text": "Es un juego de carreras estilo roguelike diseñado para la consola Nintendo 3DS y 2DS. Permite jugar en carreteras japonesas oscuras, realizar derrapes y gestionar partidas guardadas en tarjetas SD. También ofrece una versión web para PC y móvil que permite transferir los avances entre dispositivos.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1fepew6",
+        "readmeLength": 3847
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:54:04.831Z"
+    },
     "1453471566": {
       "id": 1453471566,
       "fullName": "HFYKratos/3ds2apple",
@@ -5478,17 +5613,23 @@
     "1457913893": {
       "id": 1457913893,
       "fullName": "nextcode4u/gloam-shell-theme-directory",
-      "text": "Es una colección de temas creados por la comunidad y temas originales para Gloam Shell NDX, el menú de inicio para Nintendo DSi. Cada tema incluye capturas, instrucciones de instalación y créditos. Útil si usas Gloam y quieres cambiar su aspecto.",
-      "detail": "Algunos temas requieren Gloam 1.1.0 o 1.2.0 o posterior.",
+      "text": "Es un repositorio que recopila diseños y temas para Gloam Shell NDX, un lanzador de tarjetas SD para Nintendo DSi. Permite navegar por las opciones disponibles, instalarlos directamente en la tarjeta SD o copiarlos manualmente en la carpeta de temas del sistema. También incluye una herramienta llamada Theme Studio para crear o editar tus propios diseños desde el navegador.",
+      "detail": null,
       "kinds": [
         "list"
       ],
-      "origin": "curated",
+      "origin": "llm",
       "basis": {
         "description": "2mude6",
-        "readmeLength": 4936
+        "readmeLength": 1646
       },
-      "updatedAt": "2026-11-19T08:29:38.702Z"
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:58:42.654Z"
     },
     "1459360503": {
       "id": 1459360503,
@@ -6006,6 +6147,27 @@
       },
       "updatedAt": "2026-11-23T07:54:00.922Z"
     },
+    "1468159415": {
+      "id": 1468159415,
+      "fullName": "everythings-gonna-be-alright/moonlight360",
+      "text": "Es un cliente no oficial para transmitir juegos de PC a una consola Xbox 360 modificada. Permite jugar en 1080p a 60 fps con bajo retraso y controla el ordenador desde el mando de la consola. Requiere una consola con RGH/JTAG y un PC con Sunshine, Apollo o Vibeshine en la misma red.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "2jplur",
+        "readmeLength": 4868
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:53:01.697Z"
+    },
     "1468385707": {
       "id": 1468385707,
       "fullName": "zeranemesis/ctrnative",
@@ -6195,6 +6357,26 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-25T08:55:27.482Z"
+    },
+    "1472118436": {
+      "id": 1472118436,
+      "fullName": "Darknesstate/Tomodachi-Life-Save-Editor-V2",
+      "text": "Es un editor de guardados para la consola Nintendo 3DS. Permite modificar los archivos de partida guardada de Tomodachi Life. Faltan datos sobre cómo se usa la herramienta.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "x9dnib",
+        "readmeLength": null
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-25T21:57:04.476Z"
     }
   }
 }

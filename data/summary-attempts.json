@@ -74,6 +74,18 @@
         "Con documentación escasa el texto debe decir que faltan datos."
       ]
     },
+    "1286522041": {
+      "fullName": "SomeoneIsWorking/mm3d-decomp",
+      "basis": {
+        "description": "grtla",
+        "readmeLength": 2983
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-25T21:55:54.372Z",
+      "problems": [
+        "Con documentación escasa el texto debe decir que faltan datos."
+      ]
+    },
     "1307151511": {
       "fullName": "PS4-OpenGNM/opengnm",
       "basis": {
@@ -121,6 +133,18 @@
       "problems": [
         "Menciona «libre» pero la documentación no lo respalda.",
         "Con documentación escasa el texto debe decir que faltan datos."
+      ]
+    },
+    "1438941223": {
+      "fullName": "designsystemsinternational/homebrew-tap",
+      "basis": {
+        "description": "oregjc",
+        "readmeLength": 192
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-25T21:56:52.752Z",
+      "problems": [
+        "No menciona la plataforma principal que indica la descripción del autor."
       ]
     },
     "1439262012": {

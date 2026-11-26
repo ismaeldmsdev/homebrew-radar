@@ -2575,6 +2575,27 @@
       },
       "updatedAt": "2026-11-21T07:23:04.223Z"
     },
+    "685392779": {
+      "id": 685392779,
+      "fullName": "msgbyte/tianji",
+      "text": "Tianji es una herramienta de análisis de sitios web que se instala en un servidor propio o mediante Docker. Permite obtener estadísticas de visitas, vigilar la disponibilidad de la red y consultar el estado de los servidores. Es útil para quienes gestionan múltiples aplicaciones y necesitan un panel unificado de control.",
+      "detail": null,
+      "kinds": [
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "5a2kht",
+        "readmeLength": 2854
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T21:44:02.766Z"
+    },
     "697523442": {
       "id": 697523442,
       "fullName": "gopher64/gopher64",
@@ -3221,18 +3242,23 @@
     "927847000": {
       "id": 927847000,
       "fullName": "Roy3838/Observer",
-      "text": "Es una herramienta que crea pequeños agentes de IA que vigilan tu pantalla, cámara o micrófono y actúan cuando ocurre algo. Por ejemplo, puede avisarte por WhatsApp, Telegram, SMS o llamada si falla un proceso o algo vuelve a estar disponible. Funciona con modelos locales, así que tus datos no salen del equipo.",
-      "detail": "Tiene versión web sin instalación y aplicación de escritorio para macOS, Windows y Linux, que incluye llama.cpp. También admite tu propio servidor compatible con OpenAI.",
+      "text": "Observer es un framework de agentes de IA que monitoriza tu pantalla, cámara y audio para actuar ante eventos específicos. Permite configurar reglas como llamar cuando una partida se cuelga o enviar un mensaje de WhatsApp cuando un artículo vuelve a estar disponible. Funciona ejecutando modelos locales para mantener tus datos privados, aunque también soporta servidores externos como Ollama.",
+      "detail": null,
       "kinds": [
-        "app",
-        "config"
+        "library"
       ],
-      "origin": "curated",
+      "origin": "llm",
       "basis": {
-        "description": "1cble0i",
+        "description": "tbo5yw",
         "readmeLength": 4189
       },
-      "updatedAt": "2026-11-19T08:24:51.773Z"
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T21:47:55.744Z"
     },
     "936331478": {
       "id": 936331478,
@@ -3338,17 +3364,23 @@
     "956947576": {
       "id": 956947576,
       "fullName": "bahdotsh/wrkflw",
-      "text": "Es un programa de terminal para comprobar y ejecutar en tu ordenador los flujos de trabajo de GitHub Actions. Permite detectar errores y probar las automatizaciones antes de subirlas a GitHub. Útil para programadores que mantienen procesos de integración continua.",
-      "detail": "Incluye una interfaz interactiva en la terminal y puede ejecutar los trabajos con Docker, Podman, en emulación o en un clúster de Kubernetes. Tiene un modo que los relanza al cambiar archivos.",
+      "text": "WRKFLW es una herramienta de línea de comandos para ejecutar flujos de trabajo de GitHub Actions localmente. Permite probar acciones en tu máquina antes de enviarlas, obteniendo un veredicto sobre si pasan o fallan. También puede comparar resultados locales con ejecuciones reales en GitHub para detectar discrepancias.",
+      "detail": null,
       "kinds": [
         "cli"
       ],
-      "origin": "curated",
+      "origin": "llm",
       "basis": {
         "description": "noqbzl",
-        "readmeLength": 38118
+        "readmeLength": 12156
       },
-      "updatedAt": "2026-11-19T08:24:51.773Z"
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T21:48:42.585Z"
     },
     "957592072": {
       "id": 957592072,
@@ -6500,6 +6532,70 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-26T08:36:15.840Z"
+    },
+    "1472912620": {
+      "id": 1472912620,
+      "fullName": "mkworldbigfan/MyCoolMusicPlayer",
+      "text": "Es un reproductor de música para la consola Nintendo 3DS desarrollado en C. Permite reproducir formatos como MP3, WAV y FLAC, descarga letras de canciones desde Last.FM y permite cambiar al personaje principal mediante animaciones personalizadas en la tarjeta SD.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "gwjec4",
+        "readmeLength": 1317
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T21:45:33.173Z"
+    },
+    "1473488738": {
+      "id": 1473488738,
+      "fullName": "sylvyrbullyt/mkds-nx",
+      "text": "Es un lanzador para Nintendo Switch que permite jugar Mario Kart DS con un menú personalizado y controles táctiles. Permite gestionar cuatro configuraciones de pantalla, guardar partidas y acelerar la velocidad de juego. Requiere una consola con firmware personalizado y el archivo del juego propio.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1yo5ez",
+        "readmeLength": 4474
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T21:45:54.429Z"
+    },
+    "1473592615": {
+      "id": 1473592615,
+      "fullName": "ToastLinus/hay-week",
+      "text": "Es un juego de granjas para la consola Nintendo 3DS, pero la documentación no aclara si es una aplicación lista para usar o requiere configuración técnica. Faltan datos sobre cómo se instala o qué funciones concretas tiene.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "1melelx",
+        "readmeLength": 121
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T21:47:13.527Z"
     }
   }
 }

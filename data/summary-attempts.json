@@ -110,6 +110,19 @@
         "Longitud fuera de rango (483 caracteres)."
       ]
     },
+    "1384100839": {
+      "fullName": "ZeroGhayan/empireofLusts",
+      "basis": {
+        "description": "j3autz",
+        "readmeLength": null
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-26T21:47:31.887Z",
+      "problems": [
+        "Debe tener 2 o 3 frases (tiene 1).",
+        "Con documentación escasa el texto debe decir que faltan datos."
+      ]
+    },
     "1403658157": {
       "fullName": "MisterTemaki/snes9xPS5",
       "basis": {
@@ -160,6 +173,18 @@
         "Con documentación escasa el texto debe decir que faltan datos."
       ]
     },
+    "1442078962": {
+      "fullName": "maurizi/ff9-3ds",
+      "basis": {
+        "description": "xo39pb",
+        "readmeLength": 2285
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-26T21:44:52.916Z",
+      "problems": [
+        "El nombre «PlayStation» no aparece en la documentación."
+      ]
+    },
     "1450441861": {
       "fullName": "Tim-campy/pocket-league-story-3ds",
       "basis": {
@@ -170,6 +195,18 @@
       "at": "2026-11-23T07:58:50.704Z",
       "problems": [
         "Menciona «código abierto» pero la documentación no lo respalda."
+      ]
+    },
+    "1467618290": {
+      "fullName": "hiimivex/Arcadia",
+      "basis": {
+        "description": "dg2j3b",
+        "readmeLength": 5647
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-26T21:46:46.039Z",
+      "problems": [
+        "No menciona la plataforma principal que indica la descripción del autor."
       ]
     }
   }

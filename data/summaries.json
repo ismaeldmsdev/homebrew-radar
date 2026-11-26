@@ -723,6 +723,27 @@
       },
       "updatedAt": "2026-11-19T08:26:45.260Z"
     },
+    "74321451": {
+      "id": 74321451,
+      "fullName": "admpub/nging",
+      "text": "Es un panel de administración web para gestionar servidores y servicios. Permite administrar MySQL, Redis, FTP y SSH, además de configurar Caddy y Nginx. Funciona en sistemas como Windows, Linux y macOS, así como en dispositivos ARM.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1an69tp",
+        "readmeLength": 2231
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T08:34:13.128Z"
+    },
     "74436942": {
       "id": 74436942,
       "fullName": "prest/prest",
@@ -4596,6 +4617,27 @@
       },
       "updatedAt": "2026-11-20T08:29:23.796Z"
     },
+    "1404572425": {
+      "id": 1404572425,
+      "fullName": "spidychoipro/Age-of-War-3DS",
+      "text": "Es un port no oficial del juego Age of War para la consola Nintendo 3DS, desarrollado en C++ y libctru. Permite jugar la versión de defensa en dos pantallas con 16 unidades y 15 torretas, manteniendo la mecánica original de producción y evolución. Se puede instalar mediante QR en el FBI o copiar el archivo .cia en una tarjeta SD.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "12frhd2",
+        "readmeLength": 2853
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T08:35:50.054Z"
+    },
     "1404614225": {
       "id": 1404614225,
       "fullName": "centollOS/SwitchWaker",
@@ -4695,6 +4737,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-21T19:38:18.335Z"
+    },
+    "1412432972": {
+      "id": 1412432972,
+      "fullName": "alex61194/twin-embers",
+      "text": "Es un proyecto experimental que recrea Pokémon FireRed para la consola Nintendo 3DS, aprovechando ambas pantallas del dispositivo. Permite jugar con la pantalla superior ocupada y la inferior táctil, además de incluir modos de juego como Nuzlocke y partidas en línea a través de un servidor de retransmisión. Está en fase alfa y requiere que el usuario prepare su propio archivo de juego y una tarjeta SD para ejecutarlo en la consola.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "4ywet7",
+        "readmeLength": 27032
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T08:35:12.723Z"
     },
     "1415749885": {
       "id": 1415749885,
@@ -6064,6 +6127,27 @@
       },
       "updatedAt": "2026-11-22T07:02:58.948Z"
     },
+    "1467214211": {
+      "id": 1467214211,
+      "fullName": "revive360/tube360",
+      "text": "Tube360 es una aplicación nativa para la consola Xbox 360 que permite ver YouTube sin necesidad de un ordenador. Permite gestionar tu cuenta, historial y suscripciones directamente en la consola, además de ofrecer funciones como saltar segmentos de patrocinadores, elegir manualmente la calidad de video y guardar la reproducción para continuar después. Es útil para usuarios que desean acceder a contenido de YouTube en su consola antigua de forma independiente a la PC.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1lhib7e",
+        "readmeLength": 21661
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T08:34:43.401Z"
+    },
     "1467690980": {
       "id": 1467690980,
       "fullName": "underplayer100/CyberSensation-3DS",
@@ -6088,15 +6172,15 @@
     "1467986778": {
       "id": 1467986778,
       "fullName": "Smartdude400/flute-of-age-2ds",
-      "text": "Es un proyecto de desarrollo para consolas Nintendo 2DS y 3DS que ejecuta el juego Flute of Age directamente en el hardware sin emuladores. Permite convertir tus propios archivos ROM en datos nativos para renderizar gráficos y sonido con fidelidad completa. Es útil para desarrolladores o entusiastas que quieran ejecutar juegos antiguos en sus propias máquinas sin depender de software externo.",
+      "text": "Es una versión nativa para consolas Nintendo 2DS y 3DS que ejecuta el código original del juego Flute of Age sin usar emuladores. Permite jugar a 60 fps con un renderizado de alta fidelidad y una interfaz de dos pantallas que incluye menú de pausa. Es útil para desarrolladores que quieren probar la versión decompilada del juego en hardware real, pero requiere que traigas tu propia copia del archivo ROM.",
       "detail": null,
       "kinds": [
         "app"
       ],
       "origin": "llm",
       "basis": {
-        "description": "qrcskb",
-        "readmeLength": 6046
+        "description": "172z5v6",
+        "readmeLength": 7788
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -6104,7 +6188,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-25T08:53:44.294Z"
+      "updatedAt": "2026-11-26T08:37:29.633Z"
     },
     "1468106840": {
       "id": 1468106840,
@@ -6316,6 +6400,26 @@
       },
       "updatedAt": "2026-11-24T10:09:02.270Z"
     },
+    "1470484327": {
+      "id": 1470484327,
+      "fullName": "RetroVentures-Hayden/PwnPantry",
+      "text": "Es un repositorio que documenta experimentos técnicos y progreso en el desarrollo de consolas como Switch 2 y 3DS. Faltan datos sobre qué tipo de proyecto es exactamente, ya que la descripción solo menciona notas de campo y archivos de texto en formato Markdown.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "16g0pqa",
+        "readmeLength": 1465
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T08:36:59.112Z"
+    },
     "1470692278": {
       "id": 1470692278,
       "fullName": "wegnertom85-spec/F1-Game-demake-f1-2011-for-nintendo-dsi",
@@ -6377,6 +6481,25 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-25T21:57:04.476Z"
+    },
+    "1472447075": {
+      "id": 1472447075,
+      "fullName": "watchmakerers/homebrew-eshop",
+      "text": "Es un servidor propio para reemplazar la tienda de aplicaciones de la consola Nintendo 3DS y DSi. Permite conectar la consola a fuentes de contenido configurables como tiendas universales, repositorios de GitHub o carpetas locales con tus propios juegos. Útil para usuarios que quieren descargar software alternativo o copias de seguridad en su propio ordenador.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "1cjzo4m",
+        "readmeLength": 3162
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-26T08:36:15.840Z"
     }
   }
 }

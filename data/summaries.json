@@ -1744,6 +1744,28 @@
       },
       "updatedAt": "2026-11-19T08:24:51.773Z"
     },
+    "335558932": {
+      "id": 335558932,
+      "fullName": "TomBursch/kitchenowl",
+      "text": "KitchenOwl es una aplicación para gestionar listas de la compra y recetas que puedes instalar en tu propio servidor. Permite añadir productos a la lista antes de ir al supermercado, crear recetas y sugerir qué cocinar, además de controlar gastos y compartir planes de comidas con familiares. Está disponible en versión pública alfa y soporta uso offline parcial.",
+      "detail": null,
+      "kinds": [
+        "app",
+        "selfhosted"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "wcbz63",
+        "readmeLength": 2524
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:27:51.271Z"
+    },
     "338701749": {
       "id": 338701749,
       "fullName": "GoobyCorp/Xbox-360-Crypto",
@@ -3211,17 +3233,23 @@
     "920297904": {
       "id": 920297904,
       "fullName": "wickenico/WailBrew",
-      "text": "Es una aplicación para Mac que da una interfaz gráfica a Homebrew, el gestor de paquetes de macOS. Permite instalar, actualizar y desinstalar programas y servicios con botones, sin escribir órdenes en la terminal. Útil si usas Homebrew pero prefieres no trabajar con comandos.",
-      "detail": "Se presenta como alternativa actualizada a Cakebrew y gestiona fórmulas, casks, taps y servicios. Se descarga como aplicación desde la página de versiones.",
+      "text": "Es una aplicación de escritorio para macOS que gestiona paquetes de Homebrew sin necesidad de usar la terminal. Permite instalar, actualizar y eliminar programas, así como buscar y filtrar entre fórmulas y cask de forma visual. Útil para usuarios de Mac que quieren administrar software sin escribir comandos en consola.",
+      "detail": null,
       "kinds": [
         "app"
       ],
-      "origin": "curated",
+      "origin": "llm",
       "basis": {
-        "description": "1tei069",
-        "readmeLength": 8723
+        "description": "1sy12v2",
+        "readmeLength": 9389
       },
-      "updatedAt": "2026-11-19T08:24:51.773Z"
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:30:58.323Z"
     },
     "924592126": {
       "id": 924592126,
@@ -3738,6 +3766,27 @@
         "readmeLength": 6748
       },
       "updatedAt": "2026-11-19T08:27:41.922Z"
+    },
+    "1078891299": {
+      "id": 1078891299,
+      "fullName": "Feyzee61/psx_payload_injector",
+      "text": "Es una herramienta ligera para Windows que permite enviar archivos de carga a consolas PlayStation 4 y 5 a través de la red local. Permite arrastrar y soltar archivos .elf o .bin, configurar manualmente la dirección IP y el puerto, y realizar una comprobación de ping antes de conectar. Útil para usuarios que necesitan inyectar payloads específicos en sus propios dispositivos PlayStation.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "19h5d58",
+        "readmeLength": 3549
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:29:28.624Z"
     },
     "1079769187": {
       "id": 1079769187,
@@ -4506,6 +4555,27 @@
       },
       "updatedAt": "2026-11-20T08:31:56.289Z"
     },
+    "1372002486": {
+      "id": 1372002486,
+      "fullName": "Faveing2/th06-3ds-native",
+      "text": "Este proyecto es una versión portada del juego Touhou 6 para la consola Nintendo 3DS. Permite cambiar entre diferentes proporciones de pantalla y soporta un renderizado en 3D estereoscópico experimental. Está diseñado para funcionar en modelos antiguos y nuevos de la consola, aunque puede haber problemas de rendimiento en las versiones más viejas.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "5ay2xa",
+        "readmeLength": 1914
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:28:57.281Z"
+    },
     "1387704818": {
       "id": 1387704818,
       "fullName": "fearkov/3dsrecomp",
@@ -5080,6 +5150,27 @@
       },
       "updatedAt": "2026-11-22T07:10:01.558Z"
     },
+    "1429455362": {
+      "id": 1429455362,
+      "fullName": "Bifold-Emu/Bifold",
+      "text": "Bifold es una aplicación para iOS que permite jugar a consolas antiguas como la Nintendo 3DS. Permite ejecutar juegos mediante un emulador llamado Azahar, gestionar controles táctiles y soporta tres métodos de juego en red. Está diseñada para funcionar en dispositivos Apple con chips modernos.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "yacoyt",
+        "readmeLength": 9880
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:30:27.010Z"
+    },
     "1430116208": {
       "id": 1430116208,
       "fullName": "0x1a4-dev/DSiDrop",
@@ -5199,6 +5290,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-20T07:32:24.752Z"
+    },
+    "1433559443": {
+      "id": 1433559443,
+      "fullName": "EstebanPdN/sm64ds-3ds",
+      "text": "Es un proyecto en desarrollo que adapta el videojuego Super Mario 64 DS para la consola Nintendo 3DS. Permite jugar con controles analógicos, pantalla táctil y una interfaz que utiliza ambas pantallas de la consola. Está diseñado para funcionar en sistemas Old y New Nintendo 3DS, aunque su rendimiento aún está siendo probado.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "vmw1yl",
+        "readmeLength": 4805
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:29:44.493Z"
     },
     "1435370926": {
       "id": 1435370926,
@@ -5328,6 +5440,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-23T07:51:11.585Z"
+    },
+    "1442223436": {
+      "id": 1442223436,
+      "fullName": "ethanseagull/MarioKartWiiDS",
+      "text": "Es un proyecto de código abierto que permite jugar Mario Kart Wii en una consola Nintendo 3DS. Permite ejecutar todas las carreras del Grand Prix y los modos de batalla, con soporte para múltiples personajes, vehículos y efectos visuales originales. Requiere tener tu propia copia del juego en disco y una computadora con Windows, macOS o Linux para construirlo.",
+      "detail": null,
+      "kinds": [
+        "config"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1em8d5p",
+        "readmeLength": 4582
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:29:12.965Z"
     },
     "1443388506": {
       "id": 1443388506,
@@ -5548,15 +5681,15 @@
     "1453471566": {
       "id": 1453471566,
       "fullName": "HFYKratos/3ds2apple",
-      "text": "3ds2apple es una herramienta para convertir juegos de Nintendo 3DS en código ARM64 nativo para ejecutarse en iPhone y iPad. Permite importar ROMs descifradas que el usuario posee, compilarlas con LLVM o Apple clang y ejecutarlas mediante el runtime Zakuro HLE y la API Metal. Útil para jugadores que quieren correr sus propios juegos retro en dispositivos Apple sin emulación tradicional.",
+      "text": "Es un sistema para ejecutar juegos de Nintendo 3DS directamente en iPhone y iPad, sin usar emuladores. Permite compilar el código de los juegos en ARM64 y usar la GPU Metal para que funcionen de forma nativa. Útil para jugadores que ya tienen sus propios juegos descifrados y quieren jugarlos en dispositivos Apple.",
       "detail": null,
       "kinds": [
         "app"
       ],
       "origin": "llm",
       "basis": {
-        "description": "jata40",
-        "readmeLength": 42510
+        "description": "o44qs1",
+        "readmeLength": 48977
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -5564,7 +5697,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-27T08:48:32.885Z"
+      "updatedAt": "2026-11-27T21:31:15.354Z"
     },
     "1453857537": {
       "id": 1453857537,
@@ -6137,6 +6270,27 @@
       },
       "updatedAt": "2026-11-21T19:38:52.083Z"
     },
+    "1466783785": {
+      "id": 1466783785,
+      "fullName": "pleft/PSP2DC",
+      "text": "Es un proyecto de hardware que convierte una consola PSP en controlador y pantalla para una Dreamcast. Permite jugar a la Dreamcast usando los botones de la PSP y ver la pantalla del VMU en el dispositivo, además de usar la PSP como teclado o memoria. Funciona mediante un adaptador con chip RP2040-Zero que se conecta por USB y utiliza el bus Maple.",
+      "detail": null,
+      "kinds": [
+        "config"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "t06d9f",
+        "readmeLength": 10530
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:28:08.484Z"
+    },
     "1466840764": {
       "id": 1466840764,
       "fullName": "meerok/MeerThemeManager3ds",
@@ -6556,6 +6710,27 @@
       },
       "updatedAt": "2026-11-25T08:55:27.482Z"
     },
+    "1471645109": {
+      "id": 1471645109,
+      "fullName": "Sabicool/clamshell",
+      "text": "Clamshell es un cliente de tarjetas de memoria compatible con Anki diseñado específicamente para la consola New Nintendo 3DS. Permite repasar colecciones con el mismo sistema de programación que la versión de escritorio (FSRS), sincronizar datos con un servidor Anki autoalojado y mostrar tarjetas con formato HTML, CSS y matemáticas complejas. Está en fase alfa y está pensado para funcionar en dispositivos de Nintendo 3DS.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1vujs2l",
+        "readmeLength": 11394
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:30:01.589Z"
+    },
     "1472118436": {
       "id": 1472118436,
       "fullName": "Darknesstate/Tomodachi-Life-Save-Editor-V2",
@@ -6658,6 +6833,47 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-26T21:47:13.527Z"
+    },
+    "1474550806": {
+      "id": 1474550806,
+      "fullName": "TT-Emulator/TT-Emulator",
+      "text": "Es un programa para Windows que permite jugar a consolas retro como GBA, NDS o 3DS. Permite cargar juegos, cambiar la velocidad de reproducción y guardar partidas manualmente. Útil para usuarios que ya tienen sus propios archivos de juegos y buscan una interfaz unificada para jugar en PC.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "hcv4ao",
+        "readmeLength": 1857
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:28:42.512Z"
+    },
+    "1474867621": {
+      "id": 1474867621,
+      "fullName": "aamiso/LiteTube",
+      "text": "Es un cliente de video ligero y de código abierto para jugar en consolas. Actualmente solo soporta Nintendo 3DS y está en desarrollo temprano. Faltan datos sobre sus funciones concretas y cómo se instala.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "acihxh",
+        "readmeLength": 271
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T21:30:42.576Z"
     }
   }
 }

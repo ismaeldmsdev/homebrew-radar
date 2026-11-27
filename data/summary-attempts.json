@@ -110,6 +110,19 @@
         "Longitud fuera de rango (483 caracteres)."
       ]
     },
+    "1376170277": {
+      "fullName": "morrisonion/TID-DB",
+      "basis": {
+        "description": "jhuhr0",
+        "readmeLength": 1570
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-27T08:47:53.853Z",
+      "problems": [
+        "Menciona «código abierto» pero la documentación no lo respalda.",
+        "Con documentación escasa el texto debe decir que faltan datos."
+      ]
+    },
     "1384100839": {
       "fullName": "ZeroGhayan/empireofLusts",
       "basis": {
@@ -207,6 +220,18 @@
       "at": "2026-11-26T21:46:46.039Z",
       "problems": [
         "No menciona la plataforma principal que indica la descripción del autor."
+      ]
+    },
+    "1471810997": {
+      "fullName": "kellyyyy0101/MC3DS-UpdateAquaticAndMore",
+      "basis": {
+        "description": "1b6552p",
+        "readmeLength": 194
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-27T08:48:09.789Z",
+      "problems": [
+        "Con documentación escasa el texto debe decir que faltan datos."
       ]
     }
   }

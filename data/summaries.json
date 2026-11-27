@@ -3851,6 +3851,26 @@
       },
       "updatedAt": "2026-11-25T08:56:07.772Z"
     },
+    "1107260015": {
+      "id": 1107260015,
+      "fullName": "elithom09/nds-what",
+      "text": "Faltan datos sobre qué hace exactamente este proyecto, ya que no hay documentación disponible. Se trata de un código escrito en C destinado a la consola Nintendo DS, pero no se especifica su función ni su estado actual.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "limited": true,
+      "basis": {
+        "description": "zomqjn",
+        "readmeLength": null
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T08:48:15.883Z"
+    },
     "1131512003": {
       "id": 1131512003,
       "fullName": "phantomptr/ps5upload",
@@ -5528,7 +5548,7 @@
     "1453471566": {
       "id": 1453471566,
       "fullName": "HFYKratos/3ds2apple",
-      "text": "Es un pipeline de portabilidad nativa para ejecutar tus propios juegos de Nintendo 3DS en iPhone y iPad. Permite traducir el código de los juegos a C y compilarlo en ARM64 usando LLVM o Apple clang, integrando gráficos con Metal a través de MoltenVK. Útil para usuarios que ya poseen ROMs descifradas y quieren jugar en sus dispositivos móviles sin emuladores tradicionales.",
+      "text": "3ds2apple es una herramienta para convertir juegos de Nintendo 3DS en código ARM64 nativo para ejecutarse en iPhone y iPad. Permite importar ROMs descifradas que el usuario posee, compilarlas con LLVM o Apple clang y ejecutarlas mediante el runtime Zakuro HLE y la API Metal. Útil para jugadores que quieren correr sus propios juegos retro en dispositivos Apple sin emulación tradicional.",
       "detail": null,
       "kinds": [
         "app"
@@ -5536,7 +5556,7 @@
       "origin": "llm",
       "basis": {
         "description": "jata40",
-        "readmeLength": 26632
+        "readmeLength": 42510
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -5544,7 +5564,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-24T10:14:57.262Z"
+      "updatedAt": "2026-11-27T08:48:32.885Z"
     },
     "1453857537": {
       "id": 1453857537,
@@ -5646,6 +5666,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-21T19:37:40.380Z"
+    },
+    "1457046401": {
+      "id": 1457046401,
+      "fullName": "estyseesghosts/kohjoh",
+      "text": "Es un proyecto experimental que adapta el juego Pokémon HeartGold y SoulSilver para la consola Nintendo 3DS. Permite cargar partidas guardadas desde cartuchos físicos o emuladores y requiere archivos específicos de los juegos originales para funcionar. Está diseñado para ejecutarse en hardware real con firmware personalizado, aunque los autores advierten que es un prototipo y puede presentar fallos.",
+      "detail": null,
+      "kinds": [
+        "experimental"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "djc1xd",
+        "readmeLength": 2871
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T08:47:12.202Z"
     },
     "1457143626": {
       "id": 1457143626,
@@ -6283,6 +6324,27 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-25T21:53:01.697Z"
+    },
+    "1468192891": {
+      "id": 1468192891,
+      "fullName": "Jasifryx/wiidrop",
+      "text": "Es un programa para la consola Wii U que descarga juegos de Nintendo directamente desde enlaces web y los instala en la tarjeta SD. Permite gestionar archivos grandes dividiéndolos automáticamente, verificar si los enlaces son válidos antes de empezar y reanudar descargas si se pierde la conexión. Útil para usuarios que quieren instalar sus propios juegos en la consola sin usar un ordenador.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "1oz8rtm",
+        "readmeLength": 13566
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-27T08:47:29.095Z"
     },
     "1468385707": {
       "id": 1468385707,

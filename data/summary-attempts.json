@@ -161,6 +161,19 @@
         "Con documentación escasa el texto debe decir que faltan datos."
       ]
     },
+    "1433719862": {
+      "fullName": "infosecanalyst-creator/goldbox-3ds",
+      "basis": {
+        "description": "122fv37",
+        "readmeLength": 3483
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-28T08:02:34.888Z",
+      "problems": [
+        "Debe terminar en punto.",
+        "Con documentación escasa el texto debe decir que faltan datos."
+      ]
+    },
     "1438941223": {
       "fullName": "designsystemsinternational/homebrew-tap",
       "basis": {
@@ -198,6 +211,18 @@
         "El nombre «PlayStation» no aparece en la documentación."
       ]
     },
+    "1449594387": {
+      "fullName": "simplysanatori/AzaharVR",
+      "basis": {
+        "description": "ydtu0p",
+        "readmeLength": 10687
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-28T08:01:04.460Z",
+      "problems": [
+        "El nombre «Boy» no aparece en la documentación."
+      ]
+    },
     "1450441861": {
       "fullName": "Tim-campy/pocket-league-story-3ds",
       "basis": {
@@ -230,6 +255,30 @@
       },
       "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
       "at": "2026-11-27T08:48:09.789Z",
+      "problems": [
+        "Con documentación escasa el texto debe decir que faltan datos."
+      ]
+    },
+    "1473122518": {
+      "fullName": "regularfoot/ReMaxPayne-3ds",
+      "basis": {
+        "description": "1qvsifz",
+        "readmeLength": 5283
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-28T08:01:51.784Z",
+      "problems": [
+        "Menciona «código abierto» pero la documentación no lo respalda."
+      ]
+    },
+    "1475165387": {
+      "fullName": "BadgettGames/MapDesk-DS",
+      "basis": {
+        "description": "1s0ofai",
+        "readmeLength": null
+      },
+      "generator": "Qwen3.5-4B (Q4_K_M)|b12532|2026-11-19.3",
+      "at": "2026-11-28T08:02:47.090Z",
       "problems": [
         "Con documentación escasa el texto debe decir que faltan datos."
       ]

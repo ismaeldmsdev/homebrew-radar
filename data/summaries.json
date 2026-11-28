@@ -4718,6 +4718,27 @@
       },
       "updatedAt": "2026-11-20T20:37:06.321Z"
     },
+    "1402417597": {
+      "id": 1402417597,
+      "fullName": "ewanc26/indigo",
+      "text": "Indigo es un cliente nativo para la consola Nintendo 3DS que permite interactuar con la red social Bluesky. Permite publicar mensajes, ver imágenes a tamaño completo, gestionar suscripciones a listas personalizadas y realizar búsquedas de usuarios o publicaciones. Está diseñado específicamente para aprovechar el hardware y la pantalla dual de la 3DS, funcionando sin emuladores.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "10qbcyh",
+        "readmeLength": 17073
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-28T08:00:25.737Z"
+    },
     "1403848767": {
       "id": 1403848767,
       "fullName": "elripalda/Porpoise-Dolphin-Emulator-for-PS5",
@@ -5408,17 +5429,23 @@
     "1439875697": {
       "id": 1439875697,
       "fullName": "infosecanalyst-creator/fs2-3ds",
-      "text": "Es una adaptación del juego de combate espacial FreeSpace 2 para New Nintendo 3DS. Muestra la cabina en la pantalla superior y usa la táctil como panel de control con información y órdenes. Necesitas tus propios archivos del juego de GOG o Steam.",
-      "detail": "Incluye el manual dentro del juego y controles adaptados a la consola.",
+      "text": "Es una versión portada del juego FreeSpace 2 diseñada para la consola New Nintendo 3DS. Permite jugar con la pantalla superior para ver el panel de vuelo y la inferior para usar el panel táctil, además de incluir un manual integrado. Requiere que el usuario tenga su propia copia del juego original desde GOG o Steam para poder ejecutarlo.",
+      "detail": null,
       "kinds": [
-        "config"
+        "app"
       ],
-      "origin": "curated",
+      "origin": "llm",
       "basis": {
         "description": "zmtg3e",
-        "readmeLength": 2915
+        "readmeLength": 4383
       },
-      "updatedAt": "2026-11-19T08:29:38.702Z"
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-28T08:03:51.469Z"
     },
     "1440549278": {
       "id": 1440549278,
@@ -6186,6 +6213,27 @@
       },
       "updatedAt": "2026-11-22T19:56:39.228Z"
     },
+    "1465985425": {
+      "id": 1465985425,
+      "fullName": "aamiso/A-brick-cube",
+      "text": "Es un juego de mundo abierto en estilo voxel para PlayStation Vita y Nintendo 3DS. Permite explorar una ciudad hecha a mano, conducir vehículos con tráfico simulado y completar misiones de entrega, carreras o destrucción. Actualmente está en fase alfa y no incluye aún la historia ni el modo online.",
+      "detail": null,
+      "kinds": [
+        "app"
+      ],
+      "origin": "llm",
+      "basis": {
+        "description": "gfsxan",
+        "readmeLength": 4623
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-28T08:01:19.861Z"
+    },
     "1466001081": {
       "id": 1466001081,
       "fullName": "Grimoire-du-Coeur/PQ2-FR-3DS",
@@ -6773,7 +6821,7 @@
     "1472912620": {
       "id": 1472912620,
       "fullName": "mkworldbigfan/MyCoolMusicPlayer",
-      "text": "Es un reproductor de música para la consola Nintendo 3DS desarrollado en C. Permite reproducir formatos como MP3, WAV y FLAC, descarga letras de canciones desde Last.FM y permite cambiar al personaje principal mediante animaciones personalizadas en la tarjeta SD.",
+      "text": "Es un reproductor de música para la consola Nintendo 3DS creado en C. Permite reproducir formatos como MP3, WAV, FLAC y AAC, descarga automáticamente letras de canciones y recuerda tu última canción, carpeta y volumen. Está diseñado para funcionar en la consola 3DS y requiere instalar archivos específicos en su tarjeta SD.",
       "detail": null,
       "kinds": [
         "app"
@@ -6781,7 +6829,7 @@
       "origin": "llm",
       "basis": {
         "description": "gwjec4",
-        "readmeLength": 1317
+        "readmeLength": 2704
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -6789,7 +6837,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-26T21:45:33.173Z"
+      "updatedAt": "2026-11-28T08:03:34.502Z"
     },
     "1473488738": {
       "id": 1473488738,
@@ -6837,7 +6885,7 @@
     "1474550806": {
       "id": 1474550806,
       "fullName": "TT-Emulator/TT-Emulator",
-      "text": "Es un programa para Windows que permite jugar a consolas retro como GBA, NDS o 3DS. Permite cargar juegos, cambiar la velocidad de reproducción y guardar partidas manualmente. Útil para usuarios que ya tienen sus propios archivos de juegos y buscan una interfaz unificada para jugar en PC.",
+      "text": "Es una aplicación de escritorio para Windows que emula consolas retro como GBA, NDS o 3DS. Permite cargar juegos desde carpetas o arrastrarlos, y ofrece funciones de guardado instantáneo con hasta 30 posiciones y un sistema de deshacer. Está diseñada para funcionar sin instalar nada extra, aunque requiere Windows 10 o 11 y una tarjeta gráfica compatible para algunas consolas.",
       "detail": null,
       "kinds": [
         "app"
@@ -6845,7 +6893,7 @@
       "origin": "llm",
       "basis": {
         "description": "hcv4ao",
-        "readmeLength": 1857
+        "readmeLength": 7726
       },
       "generator": {
         "model": "Qwen3.5-4B (Q4_K_M)",
@@ -6853,7 +6901,7 @@
         "llamaCpp": "b12532",
         "promptVersion": "2026-11-19.3"
       },
-      "updatedAt": "2026-11-27T21:28:42.512Z"
+      "updatedAt": "2026-11-28T08:03:15.914Z"
     },
     "1474867621": {
       "id": 1474867621,
@@ -6874,6 +6922,25 @@
         "promptVersion": "2026-11-19.3"
       },
       "updatedAt": "2026-11-27T21:30:42.576Z"
+    },
+    "1475249843": {
+      "id": 1475249843,
+      "fullName": "Lesac20/devkit-online",
+      "text": "Es un compilador en la nube para la consola Nintendo 3DS. Permite generar ejecutables para la plataforma y personalizar elementos como las texturas de la mascota o la gestión del catálogo. Está diseñado para desarrolladores que quieren crear software para esta consola específica.",
+      "detail": null,
+      "kinds": [],
+      "origin": "llm",
+      "basis": {
+        "description": "7001fe",
+        "readmeLength": 553
+      },
+      "generator": {
+        "model": "Qwen3.5-4B (Q4_K_M)",
+        "file": "Qwen3.5-4B-Q4_K_M.gguf",
+        "llamaCpp": "b12532",
+        "promptVersion": "2026-11-19.3"
+      },
+      "updatedAt": "2026-11-28T08:02:01.007Z"
     }
   }
 }
